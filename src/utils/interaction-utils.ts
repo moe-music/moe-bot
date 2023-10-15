@@ -173,4 +173,22 @@ export class InteractionUtils {
             }
         }
     }
+    // deleteReply
+    public static async deleteReply(
+        intr: CommandInteraction | MessageComponentInteraction | ModalSubmitInteraction
+    ): Promise<void> {
+        try {
+            return await intr.deleteReply();
+        } catch (error) {
+            if (
+                error instanceof DiscordAPIError &&
+                typeof error.code == 'number' &&
+                IGNORED_ERRORS.includes(error.code)
+            ) {
+                return;
+            } else {
+                throw error;
+            }
+        }
+    }
 }

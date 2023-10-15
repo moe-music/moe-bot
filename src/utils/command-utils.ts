@@ -1,8 +1,6 @@
 import {
     CommandInteraction,
     GuildChannel,
-    MessageComponentInteraction,
-    ModalSubmitInteraction,
     ThreadChannel,
 } from 'discord.js';
 
@@ -16,8 +14,7 @@ export class CommandUtils {
         let closestMatch: BaseCommand;
         for (let [index, commandPart] of commandParts.entries()) {
             found =
-                found.filter(command => command.name[index] === commandPart) ||
-                found.filter(command => command.aliases[index] === commandPart);
+                found.filter(command => command.name[index] === commandPart);
             if (found.length === 0) {
                 return closestMatch;
             }
@@ -27,8 +24,7 @@ export class CommandUtils {
             }
 
             let exactMatch =
-                found.find(command => command.name.length === index + 1) ||
-                found.find(command => command.aliases.length === index + 1);
+                found.find(command => command.name.length === index + 1);
             if (exactMatch) {
                 closestMatch = exactMatch;
             }
@@ -38,7 +34,7 @@ export class CommandUtils {
 
     public static async runChecks(
         command: BaseCommand,
-        intr: CommandInteraction | MessageComponentInteraction | ModalSubmitInteraction
+        intr: CommandInteraction
     ): Promise<boolean> {
         if (command.cooldown) {
             let limited = command.cooldown.take(intr.user.id);

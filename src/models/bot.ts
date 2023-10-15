@@ -1,7 +1,6 @@
 import {
     AutocompleteInteraction,
     ButtonInteraction,
-    Client,
     CommandInteraction,
     Events,
     Guild,
@@ -16,8 +15,11 @@ import {
 } from 'discord.js';
 import { createRequire } from 'node:module';
 
+import { InteractionHandler } from '../events/index.js';
+import { MoeClient } from '../extensions/moe-client.js';
 import { JobService, Logger } from '../services/index.js';
 import { PartialUtils } from '../utils/index.js';
+
 
 
 const require = createRequire(import.meta.url);
@@ -29,7 +31,8 @@ export class Bot {
     private logger = new Logger();
     constructor(
         private token: string,
-        private client: Client,
+        private client: MoeClient,
+        private interactionHandler: InteractionHandler,
         private jobService: JobService
     ) {}
 
@@ -56,7 +59,6 @@ export class Bot {
             this.onRateLimit(rateLimitData)
         );
     }
-
     private async login(token: string): Promise<void> {
         try {
             await this.client.login(token);
@@ -133,10 +135,9 @@ export class Bot {
         ) {
             return;
         }
-
         if (intr instanceof CommandInteraction || intr instanceof AutocompleteInteraction) {
             try {
-                // await this.commandHandler.process(intr);
+                await this.interactionHandler.process(intr);
             } catch (error) {
                 this.logger.error(`Error processing command: ${error}`);
             }

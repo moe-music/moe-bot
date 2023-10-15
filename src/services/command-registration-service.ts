@@ -133,16 +133,4 @@ export class CommandRegistrationService {
             ? cmds.map((cmd: { name: string }) => `'${cmd.name}'`).join(', ')
             : 'N/A';
     }
-
-    public getCommands(): RESTPostAPIApplicationCommandsJSONBody[] {
-        let commands = [];
-        for (let command of Config.commands) {
-            commands.push({
-                name: command.name,
-                description: command.description,
-                options: command.options,
-            });
-        }
-        return commands;
-    }
 }

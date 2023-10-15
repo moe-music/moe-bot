@@ -21,6 +21,7 @@ import {
 } from 'discord.js';
 
 import { MoeClient } from '../extensions/moe-client.js';
+import { InteractionUtils, MessageUtils } from '../utils/index.js';
 
 export class Context {
     private _options: ContextOptions;
@@ -28,12 +29,8 @@ export class Context {
     public interaction: ChatInputCommandInteraction | null = null;
     public message: Message | null = null;
     public repliedMessage: any = null;
-    public channel:
-        | PartialDMChannel
-        | GuildTextBasedChannel
-        | TextChannel
-        | DMChannel
-        | null = null;
+    public channel: PartialDMChannel | GuildTextBasedChannel | TextChannel | DMChannel | null =
+        null;
     public channelId: string;
     public member: GuildMember | APIInteractionGuildMember | null = null;
     public client: MoeClient;
@@ -119,14 +116,14 @@ export class Context {
     ): Promise<Message | void> {
         try {
             if (this.isInteraction) {
-                this.repliedMessage = await this.interaction.reply(
-                    content as string | InteractionReplyOptions | MessagePayload
+                this.repliedMessage = await InteractionUtils.send(
+                    this.interaction,
+                    content as any,
+                    false
                 );
                 return this.repliedMessage;
             } else if (this.message) {
-                this.repliedMessage = await (this.message.channel as TextChannel).send(
-                    content as string | BaseMessageOptions | MessagePayload
-                );
+                this.repliedMessage = await MessageUtils.reply(this.message, content as any);
                 return this.repliedMessage;
             } else {
                 throw new Error('The message property is not defined.');
@@ -139,24 +136,23 @@ export class Context {
         content: string | BaseMessageOptions | WebhookMessageEditOptions | MessageEditOptions
     ): Promise<Message | void> {
         if (this.isInteraction) {
-            return await this.interaction.editReply(
+            return await InteractionUtils.editReply(
+                this.interaction,
                 content as string | WebhookMessageEditOptions | MessageEditOptions
             );
         } else {
             if (this.repliedMessage && this.repliedMessage.editable)
-                return await this.repliedMessage.edit(content);
+                return await MessageUtils.edit(this.repliedMessage, content);
         }
     }
     public async sendDeferMessage(
         content: string | BaseMessageOptions | InteractionDeferReplyOptions | MessagePayload
     ): Promise<Message | void> {
         if (this.isInteraction) {
-            this.repliedMessage = await this.deferReply({ fetchReply: true });
+            this.repliedMessage = InteractionUtils.deferReply(this.interaction, false);
             return this.repliedMessage;
         } else {
-            this.repliedMessage = await this.channel.send(
-                content as string | BaseMessageOptions | MessagePayload
-            );
+            this.repliedMessage = await MessageUtils.reply(this.message, content as any);
             return this.repliedMessage;
         }
     }
@@ -164,25 +160,27 @@ export class Context {
         content: string | BaseMessageOptions | WebhookMessageEditOptions | MessageEditOptions
     ): Promise<Message | void> {
         if (this.isInteraction) {
-            return await this.interaction.editReply(
+            return await InteractionUtils.editReply(
+                this.interaction,
                 content as string | WebhookMessageEditOptions | MessageEditOptions
             );
         } else {
             if (this.repliedMessage && this.repliedMessage.editable)
-                return await this.repliedMessage.edit(content);
+                return await MessageUtils.edit(this.repliedMessage, content);
         }
     }
 
     public async deferReply(options?: InteractionDeferReplyOptions | undefined): Promise<any> {
-        return await this.interaction.deferReply(options);
+        return await InteractionUtils.deferReply(this.interaction, options as any);
     }
 
     public deleteReply(): Promise<void> {
         if (this.isInteraction) {
-            return this.interaction?.deleteReply();
+            return InteractionUtils.deleteReply(this.interaction);
         } else {
             if (this.repliedMessage && this.repliedMessage.deletable)
-                return this.repliedMessage.delete();
+                MessageUtils.delete(this.repliedMessage);
+            return;
         }
     }
     /* public async paginate(ctx: Context, content: string | BaseMessageOptions | MessagePayload) {
