@@ -16,8 +16,13 @@ export class EventDataService {
             channel?: Channel | PartialDMChannel;
             guild?: Guild;
             args?: Omit<CommandInteractionOptionResolver, 'getMessage' | 'getFocused'>;
-        } = {}
+            prefix: string;
+            lang: string;
+        } = {
+            prefix: '',
+            lang: 'EnglishUS',
+        }
     ): Promise<EventData> {
-        return new EventData();
+        return new EventData(options.args, options.prefix, options.lang);
     }
 }

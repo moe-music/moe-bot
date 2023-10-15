@@ -1,0 +1,957 @@
+{
+	"cmd": {
+		"247": {
+			"description": "Habilita o deshabilita el modo 24/7.",
+			"enabled": " {{{emoji}}} Modo 24/7 habilitado.",
+			"disabled": " {{{emoji}}} Modo 24/7 deshabilitado."
+		},
+		"ping": {
+			"description": "Muestra la latencia del bot.",
+			"author": "Latencia del Bot",
+			"content": "**Shard**: `{{{shardPing}}}ms`\n**API**: `{{{latency}}}ms`",
+			"footer": "• Obtén más información en el canal de estado del servidor de soporte."
+		},
+		"invite": {
+			"description": "Invita al bot a tu servidor.",
+			"buttons": {
+				"invite": "Invitar MoE",
+				"invite2": "Invitar MoE2",
+				"invite3": "Invitar MoE3",
+				"support": "Soporte"
+			},
+			"content": "Si te ha gustado usar el bot, considera [invitarme]({{{invite}}}) a tu servidor ahora. Y también no olvides unirte al [servidor de soporte]({{{support}}})."
+		},
+		"help": {
+			"description": "Muestra una lista de comandos o información sobre un comando específico.",
+			"options": {
+				"command": "El nombre del comando o categoría para obtener ayuda."
+			},
+			"title": " Comando",
+			"footer": "Página {{{page}}} de {{{pagesNum}}}",
+			"title2": "Ayuda - {{{cmd}}}",
+			"title3": "Ayuda",
+			"manContent": " Aquí está la lista de todas las categorías:\n{{{catagory}}}\n\n- Enlaces:\n[Servidor de Soporte]({{{server}}}) | [Invitación]({{{invite}}}) | [Votar]({{{vote}}}) | [Patreon]({{{patreon}}}) | [Sitio Web]({{{website}}}) | [Documentación]({{{docs}}})",
+			"footer2": "- Para obtener más información sobre un comando: {{{prefix}}}help <comando> o {{{prefix}}}help <categoría>",
+			"cooldown": "Enfriamiento",
+			"aliases": "Alias",
+			"category": "Categoría",
+			"examples": "Ejemplo(s)",
+			"userPerms": "Permisos de Usuario",
+			"botPerms": "Permisos del Bot",
+			"requirements": "Requisitos",
+			"subCommands": "Sub Comandos",
+			"subSubCommands": "Sub Sub Comandos",
+			"buttons": {
+				"previous": "Anterior",
+				"stop": "Detener",
+				"next": "Siguiente",
+				"home": "Inicio",
+				"config": "Configuración",
+				"music": "Música",
+				"filter": "Filtro",
+				"general": "General",
+				"playlists": "Listas de Reproducción"
+			},
+			"notFound": "`{{{cmd}}}` no es un comando o categoría válida.",
+			"voice": {
+				"inVoice": "- Debes estar en un canal de voz",
+				"sameVoice": "- Debes estar en el mismo canal de voz",
+				"playing": "- Debes estar reproduciendo música en este servidor"
+			},
+			"voteLock": "- Debes haber [votado]({{{link}}}) para usar este comando",
+			"premiumCmd": "- Debes tener [premium]({{{link}}}) para usar este comando"
+		},
+		"premium": {
+			"description": "Muestra el estado premium del usuario o del servidor.",
+			"guildPremiumStatus": "Estado Premium del Servidor",
+			"userPremiumStatus": "Estado Premium del Usuario",
+			"premium": "Premium",
+			"notPremium": "No Premium",
+			"guildPremiumExpires": "Vencimiento Premium del Servidor",
+			"userPremiumExpires": "Vencimiento Premium del Usuario"
+		},
+		"redeem": {
+			"description": "Canjear un código premium.",
+			"options": {
+				"code": "El código premium a canjear."
+			},
+			"noArg": "Por favor, proporciona un código premium para canjear.",
+			"invalidCode": "Código premium proporcionado inválido.",
+			"confirmation": " ¿Estás seguro de que quieres canjear el código premium `{{{code}}}`?",
+			"type": "Tipo",
+			"expiresAt": "Expira en",
+			"buttons": {
+				"yes": "Sí",
+				"no": "No"
+			},
+			"alreadyPremium": "Ya eres miembro premium.",
+			"success": " ¡Has canjeado exitosamente tu código premium! Ahora puedes usar comandos premium.",
+			"canceled": "Se canceló el canje del código premium."
+		},
+		"stats": {
+			"description": "Muestra las estadísticas del bot."
+		},
+		"support": {
+			"description": "Enlace al servidor de soporte.",
+			"content": " Si necesitas ayuda con el bot o simplemente quieres pasar un rato con nosotros, únete al [servidor de soporte]({{{link}}}).",
+			"buttons": {
+				"support": "Servidor de Soporte"
+			}
+		},
+		"vote": {
+			"description": "Enlace para votar por el bot.",
+			"content": " Si te gusta el bot, por favor considera votar por él en [top.gg]({{{link}}}).",
+			"buttons": {
+				"vote": "Votar"
+			}
+		},
+		"player": {
+			"description": "Muestra el estado del reproductor.",
+			"nowPlaying": "Reproduciendo Ahora",
+			"noSong": "Actualmente no se está reproduciendo ninguna canción.",
+			"volume": "Volumen",
+			"totalDuration": "Duración Total",
+			"loopMode": "Modo de Repetición",
+			"filters": "Filtros",
+			"noFilters": "Actualmente no se aplican filtros.",
+			"title": "Reproductor: {{{status}}}",
+			"online": "En Línea",
+			"offline": "Desconectado"
+		},
+		"autoplay": {
+			"description": "Habilita o deshabilita el modo de reproducción automática.",
+			"enabled": " Modo de reproducción automática habilitado\nEl bot añadirá automáticamente canciones similares a la cola.",
+			"disabled": " Modo de reproducción automática deshabilitado\nEl bot ya no añadirá automáticamente canciones similares a la cola."
+		},
+		"clear": {
+			"description": "Limpia la cola o los filtros del reproductor.",
+			"options": {
+				"input": "La cola o los filtros a limpiar."
+			},
+			"content": " Por favor, selecciona una cola o filtro para limpiar. (cola/filtros)",
+			"queue": {
+				"noSong": "No hay canciones en la cola para limpiar.",
+				"success": " Cola limpiada con éxito."
+			},
+			"filters": {
+				"noFilter": "No hay filtros para limpiar.",
+				"success": " Filtros limpiados con éxito."
+			},
+			"buttons": {
+				"queue": "Cola",
+				"filters": "Filtros"
+			}
+		},
+		"forceskip": {
+			"description": "Omitir forzadamente la canción actual.",
+			"success": " Se omitió forzadamente la canción {{{title}}}."
+		},
+		"forward": {
+			"description": "Avanzar la canción actual.",
+			"options": {
+				"seconds": "La cantidad de segundos para avanzar"
+			},
+			"unseekable": "{{{emoji}}} La canción actual no se puede buscar.",
+			"tooLong": "{{{emoji}}} No puedes avanzar más que la duración de la canción.",
+			"success": " {{{emoji}}} Se avanzó con éxito la canción en `{{{time}}}`."
+		},
+		"grab": {
+			"description": "Capturar la canción actual.",
+			"dm": "{{{emoji}}} No puedo enviarte la canción porque tienes deshabilitados los mensajes directos.",
+			"grabbed": " {{{emoji}}} Se capturó con éxito la canción."
+		},
+		"join": {
+			"description": "Invocar al bot a tu canal de voz.",
+			"no-perms": "{{{emoji}}} No tengo los permisos necesarios para unirme a tu canal de voz. Necesito permisos de `Ver canales`, `Conectar` y `Hablar`. [Ejemplo de permisos](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\n Si el problema persiste, cambia la región del canal de voz a `Europa`",
+			"already-in": "{{{emoji}}} ¡Ya estoy en un canal de voz!",
+			"joined": " Se unió con éxito al canal de voz {{{channel}}}"
+		},
+		"leave": {
+			"description": "Salir del canal de voz.",
+			"not-playing": "{{{emoji}}} ¡No estoy reproduciendo nada en este momento!",
+			"success": " {{{emoji}}} Se salió con éxito del canal de voz."
+		},
+		"leavecleanup": {
+			"description": "Eliminar todas las canciones de usuarios que no están en el canal de voz.",
+			"removing": " Eliminando canciones de usuarios que ya no están en el canal de voz. Por favor, espera",
+			"removed": " Se eliminaron con éxito `{{{count}}}` canciones de usuarios que ya no están en el canal de voz."
+		},
+		"loop": {
+			"description": "Repetir la canción actual o la cola.",
+			"options": {
+				"mode": "El modo de repetición a establecer"
+			},
+			"specify": " Por favor, especifica el modo de repetición. (canción, cola, apagado) desde los botones a continuación.",
+			"buttons": {
+				"song": "Canción",
+				"queue": "Cola",
+				"off": "Apagar"
+			},
+			"song": " {{{emoji}}} Se repitió con éxito la canción actual.",
+			"queue": " {{{emoji}}} Se repitió con éxito la cola.",
+			"off": " {{{emoji}}} Repetición desactivada con éxito.",
+			"song_already": " {{{emoji}}} La canción actual ya está repetida.",
+			"queue_already": " {{{emoji}}} La cola ya está repetida.",
+			"off_already": " {{{emoji}}} La repetición ya está desactivada.",
+			"invalid_mode": " {{{emoji}}} Modo de repetición no válido. Por favor, proporciona un modo de repetición válido. (canción, cola, apagado)"
+		},
+		"lyrics": {
+			"description": "Mostrar la letra de la canción actual o de un nombre de canción.",
+			"options": {
+				"song": "El nombre de la canción a buscar"
+			},
+			"noQuery": " Por favor, proporciona un nombre de canción para buscar.",
+			"noLyrics": " No pude encontrar la letra de esta canción.",
+			"page": "Página {{{page}}} de {{{pages}}}"
+		},
+		"move": {
+			"description": "Mover una canción a una posición específica en la cola.",
+			"options": {
+				"song": "La canción a mover",
+				"position": "La posición a la que mover la canción"
+			},
+			"invalidNumber": " Por favor, proporciona un número válido para la posición.",
+			"invalidPosition": " Posición no válida proporcionada. Por favor, proporciona una posición válida.",
+			"success": " Movida la canción **[{{{title}}}]({{{uri}}})** desde la posición **{{{from}}}** a **{{{to}}}**."
+		},
+		"nowplaying": {
+			"description": "Muestra la canción que se está reproduciendo actualmente.",
+			"nowplaying": " Reproduciendo ahora: [{{{title}}}]({{{uri}}})",
+			"author": "Autor",
+			"requester": "Solicitada por",
+			"duration": "Duración",
+			"progress": "Progreso"
+		},
+		"pause": {
+			"description": "Pausar la canción actual.",
+			"alreadyPaused": " La canción actual ya está en pausa.",
+			"paused": " Pausada [{{{title}}}]({{{uri}}})"
+		},
+		"play": {
+			"description": "Reproducir una canción de Spotify, SoundCloud, Deezer, etc.",
+			"options": {
+				"query": "La búsqueda a realizar",
+				"source": "La fuente para realizar la búsqueda"
+			},
+			"no-query": "Por favor, proporciona un nombre de canción para buscar.",
+			"no-results": " No se encontraron resultados para `{{{query}}}`.",
+			"playlist-loaded": " Cargadas `{{{count}}}` pistas de la lista de reproducción **[{{{name}}}]({{{url}}})**",
+			"footer": "Gracias por usar {{{bot}}}",
+			"added": " Añadida **[{{{title}}}]({{{uri}}})** a la cola (solicitada por <@{{{requester}}}>) en la posición `#{{{position}}}`",
+			"youtube-not-supported": " Lo siento, pero YouTube no es compatible con los TOS de MoE para Discord. No podemos usar la API de YouTube para escuchar música. Pedimos disculpas por cualquier inconveniente que esto pueda causarle."
+		},
+		"playprevious": {
+			"description": "Reproducir la canción anterior.",
+			"noPreviousTrack": " {{{emoji}}} No hay ninguna canción anterior para reproducir.",
+			"success": " {{{emoji}}} ¡Reproduciendo ahora la canción anterior en tu cola!"
+		},
+		"queue": {
+			"description": "Muestra la cola para el servidor actual.",
+			"options": {
+				"page": "El número de página a ver"
+			},
+			"queue": " Cola para {{{guild}}} ({{{songs}}} canciones)",
+			"nowPlaying": " Reproduciendo ahora: [{{{title}}}]({{{uri}}}) `[{{{length}}}]`- (<@{{{requester}}}>)\n\n",
+			"upNext": " A continuación: {{{str}}}",
+			"noSongs": " ¡Todavía no hay canciones en la cola! Añade una usando {{{cmd}}}",
+			"page": "Página {{{page}}} | {{{songs}}} canción(es) | Duración total: {{{duration}}}",
+			"notNumber": " {{{emoji}}} El número de página debe ser un número.",
+			"pageLimit": " {{{emoji}}} El número de página debe ser menor o igual a {{{pages}}}.",
+			"clearQueue": "Vaciar Cola",
+			"noTracks": " No hay pistas en la cola.",
+			"noDjRole": " Necesitas el rol de DJ para usar este botón.",
+			"clearedQueue": " {{{user}}} Vació la cola."
+		},
+		"remove": {
+			"description": "Eliminar una canción de la cola.",
+			"options": {
+				"track": "La canción a eliminar.",
+				"number": "El número de la canción o el título de la canción a eliminar.",
+				"dupes": "Eliminar todas las copias de la canción."
+			},
+			"trackNotFound": " No hay una canción con ese número en la cola",
+			"invalidNumber": " Por favor, introduce un número entre 1 y {{{length}}}.",
+			"removed": " Eliminada **[{{{title}}}]({{{uri}}})** de la cola.",
+			"noDupes": " No hay canciones duplicadas en la cola.",
+			"removedDupes": " Eliminadas **{{{length}}}** canciones duplicadas de la cola."
+		},
+		"replay": {
+			"description": "Reproducir de nuevo la canción actual.",
+			"replaying": " Reproduciendo de nuevo [{{{title}}}]({{{uri}}})"
+		},
+		"resume": {
+			"description": "Reanudar la canción actual.",
+			"notPaused": " La canción actual no está pausada.",
+			"resumed": " Reanudado [{{{title}}}]({{{uri}}})"
+		},
+		"rewind": {
+			"description": "Retroceder la canción actual.",
+			"options": {
+				"time": "El momento al que deseas retroceder la canción."
+			},
+			"notSeekable": " {{{emoji}}} La canción actual no se puede retroceder.",
+			"negativePosition": " {{{emoji}}} La posición debe estar entre 0 y {{{length}}}.",
+			"success": " {{{emoji}}} Se retrocedió la canción a {{{length}}}."
+		},
+		"search": {
+			"description": "Buscar una canción en Spotify, SoundCloud o Deezer.",
+			"options": {
+				"query": "Consulta de búsqueda",
+				"source": "Origen de búsqueda"
+			},
+			"no-playlist": " {{{emoji}}} ¡Las listas de reproducción no son compatibles! En el comando de búsqueda, por favor usa el comando {{{cmd}}}.",
+			"no-track": " {{{emoji}}} ¡Las pistas de música no son compatibles! En el comando de búsqueda, por favor usa el comando {{{cmd}}}.",
+			"results": " Resultados de búsqueda para `{{{query}}}`\n\n{{{results}}}",
+			"footer": "Por favor, selecciona una canción de la lista a continuación.",
+			"placeholder": "Selecciona una canción de la lista para reproducirla.",
+			"footerTimeout": "Tiempo de espera de resultados de búsqueda agotado.",
+			"no-voice": " {{{emoji}}} Debes estar en un canal de voz para usar este menú.",
+			"wrong-voice": " {{{emoji}}} Debes estar en el mismo canal de voz que yo para usar este menú.",
+			"added": " {{{emoji}}} Se añadió/aron {{{count}}} pista(s) a la cola de reproducción."
+		},
+		"seek": {
+			"description": "Ir a un tiempo específico en la canción actual.",
+			"options": {
+				"time": "El momento al que deseas ir en la canción."
+			},
+			"invalidPosition": " El tiempo debe estar entre 0 y {{{length}}}.",
+			"seeked": " Buscado `{{{position}}}` a `{{{time}}}`"
+		},
+		"shuffle": {
+			"description": "Mezclar la cola de reproducción.",
+			"success": " La cola de reproducción del servidor ha sido mezclada exitosamente (**{{{length}}}** canciones).",
+			"unshuffle": " La cola de reproducción del servidor ha sido desmezclada exitosamente (**{{{length}}}** canciones)."
+		},
+		"skip": {
+			"description": "Saltar la canción actual.",
+			"nothing": " No hay nada después en la cola. Usa {{{queue}}} para ver la cola del servidor.\n¿Quieres probar el modo de reproducción automática? Haz {{{autoplay}}}.",
+			"paused": " El reproductor está pausado. Usa el comando de reanudar para continuar la reproducción.\n¿Quieres reanudar? Haz {{{resume}}}.",
+			"voteSkip": " {{{user}}} ha solicitado saltar la canción actual.\n\n{{{voted}}}",
+			"skip": " Saltando la canción **{{{title}}}**."
+		},
+		"skipto": {
+			"description": "Ir a una canción específica en la cola de reproducción.",
+			"options": {
+				"number": "El número o título de la canción a la que deseas ir."
+			},
+			"invalidNumber": " {{{emoji}}} Por favor, introduce un número de pista entre 1 y {{{length}}}.",
+			"success": " {{{emoji}}} Se ha saltado a **[{{{title}}}]({{{uri}}})**."
+		},
+		"stop": {
+			"description": "Detener el reproductor y borrar la cola de reproducción.",
+			"stopped": " {{{emoji}}} Se detuvo el reproductor y se borró la cola de reproducción."
+		},
+		"topsongs": {
+			"description": "Muestra las canciones más populares reproducidas por el bot.",
+			"noTopSongs": " No hay canciones populares en la base de datos.",
+			"timesPlayed": "Veces Reproducida(s)",
+			"selectSong": "Selecciona una canción de la lista a continuación para reproducirla.",
+			"added": " Añadido **[{{{title}}}]({{{uri}}})** a la cola de reproducción."
+		},
+		"volume": {
+			"description": "Cambiar el volumen del reproductor.",
+			"options": {
+				"volume": "El volumen que deseas establecer."
+			},
+			"invalidVolume": " {{{emoji}}} Por favor, introduce un número entre 0 y 100.",
+			"success": " {{{emoji}}} Se ha establecido el volumen a **{{{volume}}}**."
+		},
+		"voteskip": {
+			"description": "Votar para saltar la canción actual."
+		},
+		"filters": {
+			"filters": " Todos los filtros aplicados a la canción que se está reproduciendo actualmente:\n\n{{{filters}}}",
+			"pitchNaN": " {{{emoji}}} El tono debe ser un número entre 1 y 5.",
+			"description": {
+				"8d": "Aplicar el filtro 8D a la canción que se está reproduciendo actualmente.",
+				"bassboost": "Aplicar el filtro de refuerzo de graves a la canción que se está reproduciendo actualmente.",
+				"channelmix": "Aplicar el filtro de mezcla de canales a la canción que se está reproduciendo actualmente.",
+				"electronic": "Aplicar el filtro electrónico a la canción que se está reproduciendo actualmente.",
+				"filters": "Obtener una lista de filtros que se pueden aplicar a la canción que se está reproduciendo actualmente.",
+				"jazz": "Aplicar el filtro de jazz a la canción que se está reproduciendo actualmente.",
+				"karaoke": "Aplicar el filtro de karaoke a la canción que se está reproduciendo actualmente.",
+				"lowpass": "Aplicar el filtro de paso bajo a la canción que se está reproduciendo actualmente.",
+				"nightcore": "Aplicar el filtro nightcore a la canción que se está reproduciendo actualmente.",
+				"pitch": "Aplicar el filtro de tono a la canción que se está reproduciendo actualmente.",
+				"pop": "Aplicar el filtro de pop a la canción que se está reproduciendo actualmente.",
+				"radio": "Aplicar el filtro de radio a la canción que se está reproduciendo actualmente.",
+				"rock": "Aplicar el filtro de rock a la canción que se está reproduciendo actualmente.",
+				"rotation": "Aplicar el filtro de rotación a la canción que se está reproduciendo actualmente.",
+				"soft": "Aplicar el filtro suave a la canción que se está reproduciendo actualmente.",
+				"speed": "Aplicar el filtro de velocidad a la canción que se está reproduciendo actualmente.",
+				"treblebass": "Aplicar el filtro de agudos y graves a la canción que se está reproduciendo actualmente.",
+				"tremolo": "Aplicar el filtro de trémolo a la canción que se está reproduciendo actualmente.",
+				"vaporwave": "Aplicar el filtro de vaporwave a la canción que se está reproduciendo actualmente.",
+				"vibrato": "Aplicar el filtro de vibrato a la canción que se está reproduciendo actualmente."
+			},
+			"enabled": " {{{emoji}}} Se ha habilitado el filtro {{{name}}}.",
+			"disabled": " {{{emoji}}} Se ha deshabilitado el filtro {{{name}}}.",
+			"speed": " {{{emoji}}} Se ha ajustado el filtro de velocidad a **{{{value}}}**.",
+			"options": {
+				"speed": "La velocidad que deseas establecer.",
+				"pitch": "El tono a aplicar."
+			}
+		},
+		"announce": {
+			"description": "Para configurar el anuncio del mensaje de inicio de la pista.",
+			"options": {
+				"set": "Establece el canal donde se enviará el mensaje de inicio de la pista.",
+				"channel": "El canal que deseas establecer.",
+				"toggle": "Activa o desactiva el anuncio del mensaje de inicio de la pista.",
+				"prunning": "Activa o desactiva la poda del mensaje de inicio de la pista.",
+				"reset": "Restablece el canal donde se enviará el mensaje de inicio de la pista."
+			},
+			"noChannel": " {{{emoji}}} Por favor, proporciona un canal de texto válido.",
+			"noTextChannel": " {{{emoji}}} Por favor, proporciona un canal de texto válido.",
+			"sameChannel": " {{{emoji}}} El canal que proporcionaste ya existe en la base de datos.",
+			"setChannel": " {{{emoji}}} Canal de anuncio establecido exitosamente en {{{channel}}}.",
+			"noChannelInDB": " {{{emoji}}} El canal de anuncio no ha sido configurado en la base de datos.",
+			"toggle": " {{{emoji}}} Anuncio del mensaje de inicio de la pista {{{status}}} exitosamente.",
+			"enabled": "activado",
+			"disabled": "desactivado",
+			"reset": " {{{emoji}}} Canal de anuncio restablecido exitosamente."
+		},
+		"botchannel": {
+			"description": "Establece el canal del bot para escuchar comandos.",
+			"options": {
+				"add": "Añade un canal a la lista de canales del bot.",
+				"channel": "El canal que deseas establecer.",
+				"remove": "Elimina un canal de la lista de canales del bot.",
+				"clear": "Borra la lista de canales del bot.",
+				"info": "Obtiene la lista de canales del bot y la información sobre los canales del bot."
+			},
+			"noChannel": " {{{emoji}}} Por favor, proporciona un canal de texto válido.",
+			"noTextChannel": " {{{emoji}}} Por favor, proporciona un canal de texto válido.",
+			"sameChannel": " {{{emoji}}} El canal que proporcionaste ya existe en la base de datos.",
+			"maxChannel": " {{{emoji}}} No puedes agregar más de 5 canales a la lista de canales del bot.",
+			"addedChannel": " {{{emoji}}} Canal {{{channel}}} añadido exitosamente a la lista de canales del bot.",
+			"noChannelInDB": " {{{emoji}}} No hay canales del bot en la base de datos.",
+			"removedChannel": " {{{emoji}}} Canal {{{channel}}} eliminado exitosamente de la lista de canales del bot.",
+			"clearedChannel": " {{{emoji}}} Lista de canales del bot borrada exitosamente.",
+			"info": ">>> **Canal:** {{{channel}}}\n**Moderador:** {{{moderator}}}\n**Añadido en:** {{{addedAt}}}",
+			"title": "Canales del Bot ({{count}})"
+		},
+		"clean": {
+			"description": "Limpia mis mensajes en el canal.",
+			"success": " {{{emoji}}} Se limpiaron exitosamente **{{{count}}}** mensajes."
+		},
+		"defaultvolume": {
+			"description": "Establece el volumen predeterminado para el servidor.",
+			"options": {
+				"number": "El número para establecer el volumen predeterminado."
+			},
+			"invalidNumber": " {{{emoji}}} Por favor, introduce un número entre 0 y 200.",
+			"success": " {{{emoji}}} Volumen predeterminado establecido exitosamente a **{{{volume}}}**."
+		},
+		"disablecommands": {
+			"description": "Desactiva los comandos para el servidor.",
+			"options": {
+				"add": "Añade un comando a la lista de comandos desactivados.",
+				"command": "El nombre del comando.",
+				"remove": "Elimina un comando de la lista de comandos desactivados.",
+				"list": "Obtiene la lista de comandos desactivados.",
+				"clear": "Borra la lista de comandos desactivados."
+			},
+			"noCommand": " {{{emoji}}} Por favor, proporciona el nombre de un comando para desactivar o activar.",
+			"commandNotExist": " {{{emoji}}} Ese comando no existe en el bot.",
+			"commandAlreadyDisabled": " {{{emoji}}} Ese comando ya está desactivado.",
+			"commandDisabled": " {{{emoji}}} Comando **{{{command}}}** desactivado exitosamente.",
+			"noDisabledCommands": " {{{emoji}}} Este comando no está desactivado.",
+			"commandEnabled": " {{{emoji}}} Comando **{{{command}}}** activado exitosamente.",
+			"disabledCommands": "Comandos Desactivados",
+			"disabledCommandsForThisServer": "Comandos desactivados para este servidor",
+			"total": "Total: {{{total}}}",
+			"disabledCommandsCleared": " {{{emoji}}} Lista de comandos desactivados borrada exitosamente."
+		},
+		"dj": {
+			"description": "Establece el rol de DJ para el servidor.",
+			"options": {
+				"add": "Añade un rol a la lista de roles de DJ.",
+				"role": "El rol que deseas (añadir/eliminar).",
+				"remove": "Elimina un rol de la lista de roles de DJ.",
+				"list": "Muestra la lista de roles de DJ.",
+				"clear": "Borra la lista de roles de DJ.",
+				"toggle": "Activa o desactiva el modo de rol de DJ.",
+				"info": "Obtiene la lista de roles de DJ y la información sobre los roles de DJ."
+			},
+			"noRole": " {{{emoji}}} Por favor, proporciona un rol válido para (añadir/eliminar).",
+			"maxRoles": " {{{emoji}}} No puedes añadir más de 5 roles a la lista de roles de DJ.",
+			"alreadyInList": " {{{emoji}}} El rol que proporcionaste ya está en la base de datos.",
+			"addedRole": " {{{emoji}}} Rol {{{role}}} añadido exitosamente a la lista de roles de DJ.",
+			"noRolesSetup": " {{{emoji}}} No se han configurado roles de DJ en este servidor.",
+			"notInList": " {{{emoji}}} Este rol no está en la lista de roles de DJ.",
+			"removedRole": " {{{emoji}}} Rol {{{role}}} eliminado exitosamente de la lista de roles de DJ.",
+			"list": ">>> **Rol:** {{{role}}}\n**Moderador:** {{{moderator}}}\n**Añadido en:** {{{addedAt}}}",
+			"listTotal": " Total de roles de DJ: {{{total}}}",
+			"clearedList": " {{{emoji}}} Lista de roles de DJ borrada exitosamente.",
+			"enabledToggle": " {{{emoji}}} Modo de rol de DJ activado exitosamente.",
+			"disabledToggle": " {{{emoji}}} Modo de rol de DJ desactivado exitosamente.",
+			"info": {
+				"djRoles": "Rol(es) de DJ",
+				"enabled": "Activado",
+				"disabled": "Desactivado",
+				"djMode": "Modo de DJ",
+				"djMembers": "Miembro(s) de DJ",
+				"description": "Información del rol de DJ para {{{guild}}}"
+			}
+		},
+		"fixvoice": {
+			"description": "Arregla la conexión de voz si el bot no está reproduciendo música.",
+			"joining": " Volviendo a unirme al canal de voz y reanudando la música.",
+			"failed": " No se pudo cambiar la región de voz. Por favor, inténtalo de nuevo más tarde.",
+			"error": "{{{emoji}}} No puedo encontrar ninguna solución en este momento. Tal vez pide ayuda en el [servidor de soporte]({{{server}}})).",
+			"success": " {{{emoji}}} Región de voz cambiada exitosamente a **{{{region}}}**."
+		},
+		"forcejoin": {
+			"description": "Fuerza al bot a unirse al canal de voz.",
+			"already-in": "{{{emoji}}} ¡Ya estoy en un canal de voz!",
+			"joined": " {{{emoji}}} Me uní exitosamente al canal de voz **{{{channel}}}**."
+		},
+		"languages": {
+			"description": "Establece el idioma del bot para el servidor.",
+			"options": {
+				"add": "Añade un idioma para el servidor.",
+				"language": "El idioma que deseas establecer.",
+				"info": "Obtiene información sobre los idiomas.",
+				"reset": "Restablece el idioma al idioma predeterminado.",
+				"set": "cmd.languages.options.set"
+			},
+			"success": " {{{emoji}}} Idioma del bot establecido exitosamente a {{{language}}} `({{{languageCode}}})`.",
+			"info": " El idioma actual en este servidor es: **{{{language}}}** `({{{languageCode}}})`.",
+			"reset": " {{{emoji}}} Idioma del bot restablecido exitosamente al idioma predeterminado.",
+			"translationProgress": "Progreso de la traducción: {{{progress}}}",
+			"selectLanguage": "Por favor, selecciona el idioma que deseas establecer en el menú siguiente."
+		},
+		"noprefix": {
+			"description": "Activa o desactiva el no prefijo para el usuario o el servidor.",
+			"toggle": " Activa o desactiva el no prefijo para el usuario o el servidor.",
+			"buttons": {
+				"server": "Servidor",
+				"user": "Usuario"
+			},
+			"premium": " Necesitas ser un usuario premium para usar este comando.",
+			"disabledUser": " {{{emoji}}} No prefijo desactivado exitosamente para el usuario.",
+			"enabledUser": " {{{emoji}}} No prefijo activado exitosamente para el usuario.",
+			"noPerm": " No tienes los permisos necesarios para usar este comando.",
+			"disabledServer": " {{{emoji}}} No prefijo desactivado exitosamente para el servidor.",
+			"enabledServer": " {{{emoji}}} No prefijo activado exitosamente para el servidor."
+		},
+		"prefix": {
+			"description": "Establece el prefijo para el servidor.",
+			"options": {
+				"set": "Establece el prefijo para el servidor.",
+				"prefix": "El prefijo que deseas (establecer/eliminar).",
+				"info": "Obtiene el prefijo para el servidor.",
+				"clear": "Borra el prefijo para el servidor.",
+				"remove": "Elimina el prefijo para el servidor."
+			},
+			"info": ">>> **Prefijo:** `{{{prefix}}}`\n**Moderador:** {{{moderator}}}\n**Añadido en:** {{{timestamp}}}",
+			"noPrefix": " {{{emoji}}} Por favor, proporciona un prefijo para establecer.",
+			"noPrefixAdded": " {{{emoji}}} No hay prefijos añadidos al servidor.",
+			"prefixLength": " {{{emoji}}} El prefijo no puede tener más de 5 caracteres.",
+			"prefixLimit": " {{{emoji}}} El límite de prefijos es de 4, por favor, elimina algunos prefijos con `prefix remove`.",
+			"prefixCharacters": " {{{emoji}}} El prefijo no puede contener ninguno de los siguientes caracteres: `[]{}\\`",
+			"prefixExists": " {{{emoji}}} El prefijo `{{{prefix}}}` ya ha sido añadido por {{{moderator}}}",
+			"prefixCleared": " {{{emoji}}} Todos los prefijos han sido borrados exitosamente para volver al predeterminado.",
+			"prefixNotExists": " {{{emoji}}} El prefijo `{{{prefix}}}` no ha sido añadido.",
+			"prefixRemoved": " {{{emoji}}} Prefijo `{{{prefix}}}` eliminado exitosamente.",
+			"prefixAdded": " {{{emoji}}} Prefijo `{{{prefix}}}` añadido exitosamente."
+		},
+		"profile": {
+			"description": "Muestra tu perfil o el perfil de otra persona.",
+			"options": {
+				"set": "Configura el color, color o visibilidad de tu perfil.",
+				"bio": "Establece la biografía de tu perfil.",
+				"color": "Establece el color de tu perfil.",
+				"visibility": "Establece la visibilidad de tu perfil.",
+				"view": "Muestra tu perfil o el perfil de otra persona.",
+				"user": "El usuario cuyo perfil deseas ver."
+			},
+			"noBio": " {{{emoji}}} Debes proporcionar una biografía.",
+			"bioLength": " {{{emoji}}} Tu biografía no puede tener más de 50 caracteres.",
+			"bioSet": " {{{emoji}}} Tu biografía se ha configurado correctamente a `{{{bio}}}`.",
+			"noColor": " {{{emoji}}} Por favor, proporciona un código hexadecimal de color [Ejemplo: #FF0000](https://g.co/kgs/q5nhF7)\n\nTambién puedes usar los siguientes nombres de colores: {{{colors}}}",
+			"sameColor": " {{{emoji}}} Tu color ya está configurado como `{{{color}}}`.",
+			"colorSet": " {{{emoji}}} Tu color se ha configurado correctamente como `{{{color}}}`.",
+			"sameVisibility": " {{{emoji}}} Tu visibilidad ya está configurada como `{{{visibility}}}`.",
+			"noVisibility": " {{{emoji}}} Por favor, proporciona una visibilidad (pública/privada).",
+			"visibilitySet": " {{{emoji}}} Tu visibilidad se ha configurado correctamente como `{{{visibility}}}`.",
+			"privateProfile": " {{{emoji}}} El perfil de este usuario es privado."
+		},
+		"setting": {
+			"description": "Cambia la configuración del servidor o obtén información sobre la configuración del servidor.",
+			"options": {
+				"reset": "Restablece todas las configuraciones del servidor a los valores predeterminados.",
+				"info": "Obtén información sobre la configuración del servidor."
+			},
+			"noPermission": " {{{emoji}}} No tienes permisos para usar este comando (`manageGuild`).",
+			"isSure": " ¿Estás seguro de que quieres restablecer la configuración del servidor?\nEsto restablecerá todas las configuraciones a sus valores predeterminados.\n\n**Si estás seguro, presiona el botón de abajo.**",
+			"buttons": {
+				"reset": "Restablecer"
+			},
+			"fields": {
+				"247": "24/7",
+				"trackButton": "Botón de Seguimiento",
+				"dj": "DJ",
+				"botChannel": "Canal del Bot",
+				"disableCommand": "Comando Deshabilitado",
+				"defaultVolume": "Volumen Predeterminado",
+				"announce": "Anunciar",
+				"prunning": "Podar",
+				"noPrefix": "Sin Prefijo",
+				"prefix": "Prefijo",
+				"djRole": "Rol de DJ",
+				"setup": "Configuración",
+				"voteSkip": "Votar para Omitir",
+				"language": "Idioma",
+				"trackButtonValue": "Modo: {{{mode}}}\nModerador: {{{moderator}}}\nAñadido: {{{added}}}",
+				"setupValue": "Moderador: {{{moderator}}}\nAñadido: {{{added}}}\n\n**Canales:**\n{{{channels}}}",
+				"djValue": "Modo: {{{mode}}}\nRoles: {{{roles}}}\nAñadido: {{{added}}}",
+				"defaultvolumeValue": "Volumen: {{{volume}}}\nAñadido: {{{added}}}\nModerador: {{{moderator}}}",
+				"announceValue": "Modo: {{{mode}}}\nCanal: {{{channel}}}\nAñadido: {{{added}}}\nModerador: {{{moderator}}}",
+				"prunningValue": "Modo: {{{mode}}}\nAñadido: {{{added}}}\nModerador: {{{moderator}}}",
+				"disableCommandValue": "Comandos: {{{commands}}}\nAñadido: {{{added}}}\nModerador: {{{moderator}}}",
+				"prefixValue": "Prefijo: {{{prefix}}}\nAñadido: {{{added}}}\nModerador: {{{moderator}}}",
+				"voteSkipValue": "Modo: {{{mode}}}\nAñadido: {{{added}}}\nModerador: {{{moderator}}}",
+				"247Value": "Modo: {{{mode}}}\nAñadido: {{{added}}}\nModerador: {{{moderator}}}\nCanal: {{{channel}}}",
+				"botChannelValue": "Canal: {{{channel}}}\nAñadido: {{{added}}}\nModerador: {{{moderator}}}",
+				"languageValue": "Idioma: {{{language}}}",
+				"enabled": "Habilitado",
+				"disabled": "Deshabilitado",
+				"none": "Ninguno"
+			},
+			"resetSuccess": " {{{emoji}}} La configuración del servidor se ha restablecido correctamente a los valores predeterminados.",
+			"info": " Aquí está la información de configuración para este servidor:",
+			"noSettings": " {{{emoji}}} No hay configuraciones para este servidor."
+		},
+		"voteskipsetting": {
+			"description": "Configura la opción de votar para omitir canciones.",
+			"options": {
+				"set": "Establece el modo de votar para omitir.",
+				"action": "La acción que deseas establecer (habilitar/deshabilitar)."
+			},
+			"success": " {{{emoji}}} Votar para omitir se ha {{{action}}} correctamente.",
+			"isConfirm": " ¿Quieres habilitar o deshabilitar votar para omitir?",
+			"canceled": " {{{emoji}}} La configuración de votar para omitir ha sido cancelada.",
+			"alreadyEnabled": " Votar para omitir ya está habilitado.",
+			"alreadyDisabled": " Votar para omitir ya está deshabilitado.",
+			"buttons": {
+				"enable": "Habilitar",
+				"disable": "Deshabilitar",
+				"cancel": "Cancelar"
+			}
+		},
+		"add": {
+			"description": "Añade una canción a una lista de reproducción.",
+			"options": {
+				"playlist": "La lista de reproducción a la que deseas añadir la canción.",
+				"song": "La canción (nombre/URL) que deseas añadir a la lista de reproducción."
+			},
+			"playlistLength": " {{{emoji}}} El nombre de la lista de reproducción debe tener entre 3 y 50 caracteres.",
+			"noPlaylists": " {{{emoji}}} No se encontraron listas de reproducción en tu cuenta, por favor crea una primero.",
+			"noResults": " {{{emoji}}} No se encontraron resultados para `{{{song}}}`.",
+			"playlistFull": " {{{emoji}}} Tu lista de reproducción está llena, por favor elimina algunas canciones antes de añadir más.",
+			"playlistAdded": " {{{emoji}}} Se añadieron **{{{count}}}** canciones a la lista de reproducción **{{{playlist}}}** exitosamente."
+		},
+		"addnowplaying": {
+			"description": "Añade la canción actual a una lista de reproducción.",
+			"options": {
+				"playlist": "La lista de reproducción a la que deseas añadir la canción."
+			},
+			"noSong": " {{{emoji}}} No hay ninguna canción reproduciéndose.",
+			"songAlreadyInPlaylist": " {{{emoji}}} Esta canción ya está en la lista de reproducción.",
+			"success": " {{{emoji}}} Se añadió **{{{song}}}** a **{{{playlist}}}** exitosamente."
+		},
+		"addqueue": {
+			"description": "Añade una lista de reproducción a la cola.",
+			"options": {
+				"name": "El nombre de la lista de reproducción que deseas añadir a la cola."
+			},
+			"noQueue": " {{{emoji}}} No hay una cola.",
+			"success": " {{{emoji}}} Se añadieron las **{{{queueLength}}}** canciones de la cola a la lista de reproducción **{{{playlistName}}}** exitosamente."
+		},
+		"create": {
+			"description": "Crea una lista de reproducción.",
+			"options": {
+				"playlist": "El nombre de la lista de reproducción que deseas crear.",
+				"visibility": "La visibilidad de la lista de reproducción."
+			},
+			"playlist": " {{{emoji}}} Por favor, proporciona un nombre para la lista de reproducción.",
+			"visibility": " {{{emoji}}} La visibilidad debe ser `pública` o `privada`.",
+			"maxPlaylists": " {{{emoji}}} Puedes crear hasta 10 listas de reproducción.",
+			"playlistExists": " {{{emoji}}} Ya tienes una lista de reproducción con el nombre **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Se creó exitosamente la lista de reproducción **{{{playlist}}}**."
+		},
+		"delete": {
+			"description": "Elimina una lista de reproducción.",
+			"options": {
+				"playlist": "El nombre de la lista de reproducción que deseas eliminar."
+			},
+			"noPlaylists": " {{{emoji}}} No tienes una lista de reproducción con el nombre **{{{playlist}}}**.",
+			"buttons": {
+				"confirm": "Confirmar",
+				"cancel": "Cancelar"
+			},
+			"confirm": " ¿Estás seguro de que deseas eliminar la lista de reproducción **{{{playlist}}}**?",
+			"success": " {{{emoji}}} Se eliminó exitosamente la lista de reproducción **{{{playlist}}}**.",
+			"cancel": " {{{emoji}}} Cancelaste la eliminación de la lista de reproducción **{{{playlist}}}**."
+		},
+		"dupes": {
+			"description": "Elimina todas las canciones duplicadas de una lista de reproducción.",
+			"options": {
+				"playlist": "El nombre de la lista de reproducción de la que deseas eliminar las duplicadas."
+			},
+			"noDupes": " {{{emoji}}} No hay canciones duplicadas en la lista de reproducción **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Se eliminaron exitosamente **{{{count}}}** canciones duplicadas de la lista de reproducción **{{{playlist}}}**."
+		},
+		"edit": {
+			"description": "Edita una lista de reproducción.",
+			"options": {
+				"playlist": "El nombre de la lista de reproducción que deseas editar.",
+				"old-name": "El nombre antiguo de la lista de reproducción.",
+				"new-name": "El nuevo nombre de la lista de reproducción.",
+				"playlist-visibility": "Cambia la visibilidad de la lista de reproducción.",
+				"visibility": "La visibilidad de la lista de reproducción."
+			},
+			"sameName": " {{{emoji}}} El nuevo nombre debe ser diferente del nombre antiguo.",
+			"successName": " {{{emoji}}} Se cambió exitosamente el nombre de la lista de reproducción **{{{oldName}}}** a **{{{newName}}}**.",
+			"sameVisibility": " {{{emoji}}} La lista de reproducción **{{{playlist}}}** ya tiene la visibilidad **{{{visibility}}}**.",
+			"successVisibility": " {{{emoji}}} Se cambió exitosamente la visibilidad de la lista de reproducción **{{{playlist}}}** a **{{{visibility}}}**.",
+			"buttons": {
+				"playlist": "Nombre de la lista de reproducción",
+				"visibility": "Visibilidad de la lista de reproducción",
+				"public": "Pública",
+				"private": "Privada"
+			},
+			"selectOption": " Selecciona una opción para editar tu lista de reproducción de los botones de abajo.",
+			"oldName": " Ingresa el nombre antiguo de la lista de reproducción.",
+			"newName": " Ingresa el nuevo nombre de la lista de reproducción.",
+			"cancelled": " {{{emoji}}} Se canceló el cambio de nombre de la lista de reproducción.",
+			"playlist": " Ingresa el nombre de la lista de reproducción.",
+			"selectVisibility": " Selecciona la visibilidad de la lista de reproducción de los botones de abajo.",
+			"liked": " {{{emoji}}} No puedes editar la lista de reproducción de favoritos."
+		},
+		"import": {
+			"description": "Importa una lista de reproducción usando su identificador.",
+			"options": {
+				"id": "El identificador de la lista de reproducción que deseas importar."
+			},
+			"noPlaylist": " {{{emoji}}} No se encontró ninguna lista de reproducción con el identificador **{{{id}}}**.",
+			"sameUser": " {{{emoji}}} No puedes importar tu propia lista de reproducción.",
+			"privatePlaylist": " {{{emoji}}} No puedes importar una lista de reproducción privada.",
+			"success": " {{{emoji}}} Se importó exitosamente la lista de reproducción **{{{playlist}}}**."
+		},
+		"list": {
+			"description": "Lista todas tus listas de reproducción.",
+			"tracks": "Canciones: {{{tracks}}}"
+		},
+		"load": {
+			"description": "Carga una lista de reproducción a la cola.",
+			"options": {
+				"song": "Carga una canción específica de una lista de reproducción.",
+				"name": "El nombre de la lista de reproducción que deseas cargar.",
+				"track": "El número de la canción o el título de la canción a cargar."
+			},
+			"noPlaylists": " {{{emoji}}} No tienes una lista de reproducción con el nombre **{{{playlist}}}**.",
+			"noTracks": " {{{emoji}}} No hay canciones en la lista de reproducción **{{{playlist}}}**.",
+			"noTrackFound": " {{{emoji}}} No se encontró ninguna canción con el número o título de la canción `{{{track}}}`.",
+			"trackLoaded": " {{{emoji}}} Se cargó **{{{track}}}** desde **{{{playlist}}}**.",
+			"privatePlaylist": " {{{emoji}}} No puedes cargar una lista de reproducción privada de otro usuario.",
+			"playlistLoaded": " {{{emoji}}} Se cargaron **{{{count}}}** canciones desde la lista de reproducción **{{{playlist}}}**."
+		},
+		"pl-remove": {
+			"description": "Elimina una canción de una lista de reproducción.",
+			"options": {
+				"playlist": "El nombre de la lista de reproducción de la que deseas eliminar la canción.",
+				"track": "El número de la canción o el título de la canción a eliminar."
+			},
+			"notFound": " {{{emoji}}} No se encontró ninguna canción con ese número o título.",
+			"success": " {{{emoji}}} Se eliminó exitosamente **{{{track}}}** de **{{{playlist}}}**."
+		},
+		"view": {
+			"description": "Muestra una lista de reproducción.",
+			"options": {
+				"playlist": "El nombre de la lista de reproducción que deseas ver."
+			},
+			"footer": "Página {{{page}}} de {{{pages}}} | {{{tracks}}} canciones | Duración: {{{duration}}}",
+			"buttons": {
+				"previous": "Anterior",
+				"stop": "Detener",
+				"next": "Siguiente"
+			}
+		},
+		"playradio": {
+			"description": "Reproduce una estación de radio.",
+			"options": {
+				"station": "El nombre de la estación de radio que deseas reproducir.",
+				"language": "cmd.playradio.options.language",
+				"country": "cmd.playradio.options.country"
+			},
+			"noStation": " {{{emoji}}} No pude encontrar una estación de radio con ese nombre.",
+			"country": "**País:** {{{country}}}",
+			"votes": "**Votos:** {{{votes}}}",
+			"codec": "**Códec:** {{{codec}}}",
+			"bitrate": "**Velocidad de bits:** {{{bitrate}}}",
+			"tags": "**Etiquetas:** {{{tags}}}",
+			"results": " Aquí están los resultados de tu búsqueda:\n\n{{{results}}}",
+			"select": "Selecciona una estación entre 1 y 10 en el menú desplegable de abajo.",
+			"added": " {{{emoji}}} Añadido [**{{{name}}}**]({{{homepage}}}) a la cola."
+		},
+		"setup": {
+			"description": "Configurar el canal de solicitud de canciones.",
+			"options": {
+				"create": "Crear el canal de configuración",
+				"delete": "Eliminar el canal de configuración",
+				"info": "Obtener información del canal de configuración",
+				"change": "Cambiar el canal de configuración",
+				"channel": "El canal que deseas configurar."
+			},
+			"alreadySetup": " {{{emoji}}} El canal de configuración ya está establecido en **{{{channel}}}**.",
+			"created": " {{{emoji}}} Se ha creado con éxito el canal de configuración **{{{channel}}}**.\n*Puedes renombrar/mover este canal si lo deseas.\n\nNota: Eliminar la plantilla incrustada allí puede hacer que esta configuración deje de funcionar. (Por favor, no la elimines.)*",
+			"notSetup": " {{{emoji}}} El canal de configuración no está establecido.",
+			"deleted": " {{{emoji}}} Se ha eliminado con éxito el canal de configuración.",
+			"noChannel": " {{{emoji}}} Por favor, proporciona un canal de texto válido.",
+			"notTextChannel": " {{{emoji}}} Por favor, proporciona un canal de texto válido.",
+			"sameChannel": " {{{emoji}}} El canal que proporcionaste ya está en la base de datos.",
+			"join": "**Únete a un canal de voz y encola canciones por nombre/url.**",
+			"info": {
+				"title": "Información del Canal de Configuración",
+				"description": "Aquí tienes la información del canal de configuración para este servidor",
+				"channel": "Canal",
+				"moderator": "Moderador",
+				"message": "Mensaje",
+				"addedAt": "Agregado en"
+			}
+		},
+		"buttonmode": {
+			"description": "Enable or disable button mode.",
+			"options": {
+				"boolean": "The boolean to set (true/false)"
+			}
+		}
+	},
+	"player": {
+		"embed": {
+			"247": " Alguien me desconectó del canal de voz, ¡pero aún estoy aquí gracias al modo **24/7**!\n\nPuedes desactivar esto usando el comando {{{cmd}}} o el comando {{{cmd2}}} si no quieres que esté siempre activo.",
+			"nowPlaying": "Reproduciendo Ahora",
+			"nowPlayingDesc": " **[{{{songName}}}]({{{songUrl}}})** Por [{{{songAuthor}}}]({{{songAuthorUrl}}}) - Solicitado por {{{requester}}}",
+			"footer": "Duración: {{{duration}}} | Cola: {{{queue}}} | Volumen: {{{volume}}}%",
+			"end": " Nadie ha estado escuchando durante el último minuto, saliendo del canal.\n\nPuedes desactivar esto activando el modo **24/7** usando el comando {{{cmd}}}!",
+			"endTitle": "Cola Concluida",
+			"endDesc": " La cola de música ha finalizado. ¡Puedes agregar música de nuevo usando el comando {{{cmd}}}! ¿Disfrutando de la música conmigo? Considera [votar por mí]({{{link}}}) si lo deseas.",
+			"queue": "Pistas en cola",
+			"trackLoop": "Repetir pista",
+			"queueLoop": "Repetir cola",
+			"volume": "Volumen",
+			"autoplay": "Reproducción automática",
+			"duration": "Duración",
+			"upcoming": "Próximas pistas",
+			"queueStats": "Estadísticas de la cola"
+		},
+		"error": "Error de Pista",
+		"description": " [{{{title}}}]({{{uri}}}) no está disponible en tu país debido a restricciones de edad.",
+		"buttons": {
+			"resume": "Reanudar",
+			"pause": "Pausar",
+			"previous": "Anterior",
+			"shuffle": "Aleatorio",
+			"skip": "Saltar",
+			"stop": "Detener",
+			"voldown": "Bajar Volumen",
+			"volup": "Subir Volumen",
+			"loop": "Bucle",
+			"like": "Me Gusta"
+		},
+		"noDispatcher": " En este momento no hay nada reproduciéndose.",
+		"nothingPlaying": " En este momento no hay nada reproduciéndose."
+	},
+	"events": {
+		"buttonHandle": {
+			"notInVoice": "¡Debes unirte a un canal de voz {{{channel}}} para usar este botón!",
+			"noPrevious": "No hay ninguna canción anterior en la cola.",
+			"playingPrevious": "{{{user}}} está reproduciendo la pista anterior.",
+			"nothingToSkip": "No hay nada en la cola para saltar.",
+			"alreadyVote": "{{{user}}} Ya hay una votación en este servidor. Por favor, espera a que termine o cancela la votación.",
+			"voteSkip": "{{{user}}} ha solicitado saltar la pista actual. ¿Deseas detener la votación? Usa el comando {{{cmd}}}",
+			"voteSkipLabel": "¡Vota para saltar la pista actual!",
+			"alreadyVoted": "{{{user}}} Ya has votado para saltar la pista actual.",
+			"voteSkip2": "{{{user}}} ha solicitado saltar la pista actual.",
+			"voteSkipLabel2": "¡Vota para saltar la pista actual! ({{{count}}}/{{{n}}})",
+			"needVoice": "{{{user}}} Debes unirte al canal de voz {{{channel}}} para usar este botón.",
+			"voteSkipTrack": "{{{user}}} está saltando la pista después de recibir {{{count}}} votos positivos.",
+			"notEnoughVote": " No hay suficientes votos para saltar la pista actual.",
+			"skipTrack": "{{{user}}} ha saltado la pista actual.",
+			"playTrack": "{{{user}}} ha {{{paused}}} la pista actual.",
+			"paused": "Pausado",
+			"resumed": "Reanudado",
+			"stopTrack": "{{{user}}} ha detenido la pista actual.",
+			"volMax": " El volumen ya está al máximo.",
+			"volUp": "{{{user}}} ha aumentado el volumen al **{{{vol}}}**%.",
+			"volMin": " El volumen ya está al mínimo.",
+			"volDown": "{{{user}}} ha disminuido el volumen al **{{{vol}}}**%.",
+			"shuffleError": "{{{user}}} No hay suficientes canciones en la cola para aleatorizar.",
+			"shuffleDisabled": "{{{user}}} Aleatorio desactivado.",
+			"shuffleEnabled": "{{{user}}} Aleatorio activado.",
+			"loopSong": "{{{user}}} Repitiendo la canción actual.",
+			"loopQueue": "{{{user}}} Repitiendo la cola de reproducción.",
+			"loopDisabled": "{{{user}}} Repetición desactivada.",
+			"noTrack": "{{{user}}} En este momento no se está reproduciendo nada.",
+			"liked": "{{{user}}} Le ha dado **Me Gusta** a **{{{title}}}**.",
+			"unliked": "{{{user}}} Ya no le gusta **{{{title}}}**.",
+			"notSeekable": "Esta canción no se puede buscar.",
+			"isPaused": "Esta canción está en pausa.",
+			"rewindTrack": "{{{user}}} retrocedió la pista actual a **{{{time}}}**.",
+			"forwardTrack": "{{{user}}} adelantó la pista actual a **{{{time}}}**.",
+			"autoplayDisabled": "{{{user}}} Desactivó correctamente la reproducción automática.",
+			"autoplayEnabled": "{{{user}}} Activó correctamente la reproducción automática."
+		},
+		"int": {
+			"noSendMessages": " ¡Oye! He intentado enviar una respuesta a tu comando, pero no tengo permiso para hacerlo. Por favor, pide a alguien del personal que me dé el permiso de Discord para enviar mensajes.\n\nServidor: **{{{guildName}}}**\nComando: **{{{commandName}}}**\n¿Necesitas ayuda con los permisos? Únete al servidor de soporte: {{{supportServer}}}",
+			"noEmbedLinks": " {{{emoji}}} El bot necesita el permiso de Discord `Enlaces de Incrustados` para funcionar correctamente. Por favor, pide a alguien del personal que me dé este permiso.",
+			"noBotChannel": " No se me permite responder comandos en este canal. Por favor, usa {{{emoji}}} <#{{{botChannel}}}> para comandos del bot. Gracias por tu cooperación.",
+			"deleteFooter": "• Este mensaje se eliminará en 5 segundos",
+			"disabledCommand": " Este comando está deshabilitado en este servidor para todos los usuarios. Solo los DJs pueden usar este comando.",
+			"disabledCommandList": "Lista de Comandos Deshabilitados",
+			"noBotPermissions": " {{{emoji}}} No tengo los permisos **{{{permissions}}}** necesarios para ejecutar este comando.",
+			"noUserPermissions": " {{{emoji}}} No tienes los permisos **{{{permissions}}}** necesarios para ejecutar este comando.",
+			"voteLocks": [
+				" Debes votar por mí para usar este comando. Puedes votar en [Top.gg]({{{link}}})",
+				" Debes votar por mí para usar este comando. Puedes votar en [Top.gg]({{{link}}}) o\ntambién puedes obtener premium donando [aquí]({{{link2}}})"
+			],
+			"buttons": {
+				"vote": "Votar",
+				"donate": "Donar",
+				"invite": "Invitar",
+				"support": "Soporte"
+			},
+			"cooldown": " Por favor, espera **{{{timeLeft}}}** segundos más antes de volver a usar el comando **{{{command}}}**.",
+			"noDjRole": " {{{emoji}}} Necesitas el rol de DJ para usar este comando.",
+			"noPremium": " Necesitas la versión premium del bot para usar este comando. Puedes obtenerla donando [aquí]({{{link}}})",
+			"voicePerm": " {{{emoji}}} No tengo los permisos necesarios para unirme a tu canal de voz. Necesito los permisos `Ver Canales`, `Conectar` y `Hablar`. [Ejemplo de Permisos](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\nSi el problema persiste, cambia la región del canal de voz a `Europa`.",
+			"voiceJoin": " {{{emoji}}} ¡Debes estar conectado a un canal de voz en este servidor para usar este comando!\n\n¿Cómo unirse a un canal de voz? Simplemente haz clic en un canal con un icono de altavoz (por ejemplo, haz clic aquí:  {{{channel}}}) [Ver la guía oficial de Discord](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord#h_9de92bc2-3bca-459f-8efd-e1e2739ca4f4)",
+			"voiceChannel": " {{{emoji}}} Debes estar en el canal de voz **{{{channel}}}** para usar este comando.",
+			"noPlayer": " {{{emoji}}} No estoy conectado a ningún canal de voz. Por favor, usa el comando {{{command}}} para llamarme.",
+			"noQueue": " {{{emoji}}} No hay cola de reproducción. Por favor, usa el comando {{{command}}} para agregar una canción a la cola.",
+			"noSong": " {{{emoji}}} No hay ninguna canción reproduciéndose. Por favor, usa el comando {{{command}}} para agregar una canción a la cola.",
+			"error": " {{{emoji}}} Se produjo un error al ejecutar el comando. Por favor, informa este error en el [Servidor de Soporte]({{{link}}})"
+		}
+	},
+	"get_started": {
+		"embed_title": "Moe Bot | Empezar",
+		"embed_description": " ¡Hola <@{{{user}}}>! Mis prefijos son: `{{{prefixList}}}`\nPor ejemplo: `{{{prefix}}}help`, `{{{prefix}}}ping`",
+		"embed_description2": " ¡Hola <@{{{user}}}>! Mi prefijo es: `sin prefijo`, lo que significa que puedes usar cualquier comando sin prefijo.\nPor ejemplo: `help`, `ping`"
+	},
+	"options": {
+		"title": "Opciones para {{{commandName}}}",
+		"no_description": "Sin descripción",
+		"options": "Opciones",
+		"examples": "Ejemplo(s)",
+		"long_des": "Esto es para navegar entre las páginas",
+		"examples_button": "Ejemplos",
+		"footer": "<Requerido> | [Opcional] {{{long_des}}} Página {{{page}}} de {{{total_pages}}}",
+		"title2": "Ejemplos para {{{commandName}}}"
+	},
+	"Evaluate JavaScript code": "Evaluate JavaScript code",
+	"Generate a premium key": "Generate a premium key",
+	"Give a user premium.": "Give a user premium."
+}

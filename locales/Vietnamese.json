@@ -1,0 +1,957 @@
+{
+	"cmd": {
+		"247": {
+			"description": "bật hoặc tắt chế độ 24/7.",
+			"enabled": " {{{emoji}}} Chế độ 24/7 đã được bật.",
+			"disabled": " {{{emoji}}} Chế độ 24/7 đã được tắt."
+		},
+		"ping": {
+			"description": "Hiển thị độ trễ của bot.",
+			"author": "Độ trễ Bot",
+			"content": "**Shard**: `{{{shardPing}}}ms`\n**API**: `{{{latency}}}ms`",
+			"footer": "• Xem thông tin chi tiết trên kênh trạng thái của máy chủ hỗ trợ"
+		},
+		"invite": {
+			"description": "Mời bot vào máy chủ của bạn.",
+			"buttons": {
+				"invite": "Mời MoE",
+				"invite2": "Mời MoE2",
+				"invite3": "Mời MoE3",
+				"support": "Hỗ trợ"
+			},
+			"content": "Nếu bạn thích tôi, hãy [mời tôi]({{{invite}}}) vào máy chủ của bạn ngay bây giờ. Đừng quên tham gia [máy chủ hỗ trợ]({{{support}}})."
+		},
+		"help": {
+			"description": "Hiển thị danh sách lệnh hoặc thông tin về một lệnh cụ thể",
+			"options": {
+				"command": "Tên lệnh hoặc danh mục cần trợ giúp"
+			},
+			"title": " Lệnh",
+			"footer": "Trang {{{page}}} của {{{pagesNum}}}",
+			"title2": "Trợ giúp - {{{cmd}}}",
+			"title3": "Trợ giúp",
+			"manContent": " Dưới đây là danh sách tất cả các danh mục\n{{{catagory}}}\n\n- Liên kết:\n[Máy chủ Hỗ trợ]({{{server}}}) | [Mời]({{{invite}}}) | [Bỏ phiếu]({{{vote}}}) | [Patreon]({{{patreon}}}) | [Trang web]({{{website}}}) | [Tài liệu]({{{docs}}})",
+			"footer2": "- Để biết thông tin chi tiết về một lệnh: {{{prefix}}}help <lệnh> hoặc {{{prefix}}}help <danh mục>",
+			"cooldown": "Thời gian chờ",
+			"aliases": "Bí danh",
+			"category": "Danh mục",
+			"examples": "Ví dụ",
+			"userPerms": "Quyền người dùng",
+			"botPerms": "Quyền Bot",
+			"requirements": "Yêu cầu",
+			"subCommands": "Lệnh phụ",
+			"subSubCommands": "Lệnh phụ phụ",
+			"buttons": {
+				"previous": "Trước",
+				"stop": "Dừng",
+				"next": "Tiếp",
+				"home": "Trang chủ",
+				"config": "Cấu hình",
+				"music": "Âm nhạc",
+				"filter": "Bộ lọc",
+				"general": "Chung",
+				"playlists": "Danh sách nhạc"
+			},
+			"notFound": "`{{{cmd}}}` không phải là lệnh hoặc danh mục hợp lệ!",
+			"voice": {
+				"inVoice": "- Phải ở trong kênh thoại",
+				"sameVoice": "- Phải ở trong cùng một kênh thoại",
+				"playing": "- Phải đang phát nhạc trong máy chủ này"
+			},
+			"voteLock": "- Phải [bỏ phiếu]({{{link}}}) để sử dụng lệnh này",
+			"premiumCmd": "- Phải có [tài khoản premium]({{{link}}}) để sử dụng lệnh này"
+		},
+		"premium": {
+			"description": "Hiển thị trạng thái premium của người dùng hoặc máy chủ.",
+			"guildPremiumStatus": "Trạng thái Premium của Máy chủ",
+			"userPremiumStatus": "Trạng thái Premium của Người dùng",
+			"premium": "Premium",
+			"notPremium": "Không có Premium",
+			"guildPremiumExpires": "Hết hạn Premium của Máy chủ",
+			"userPremiumExpires": "Hết hạn Premium của Người dùng"
+		},
+		"redeem": {
+			"description": "Rút mã premium.",
+			"options": {
+				"code": "Mã premium để rút"
+			},
+			"noArg": "Vui lòng cung cấp mã premium để rút.",
+			"invalidCode": "Mã premium không hợp lệ được cung cấp.",
+			"confirmation": " Bạn có chắc chắn muốn rút mã premium `{{{code}}}` không?",
+			"type": "Loại",
+			"expiresAt": "Hết hạn lúc",
+			"buttons": {
+				"yes": "Có",
+				"no": "Không"
+			},
+			"alreadyPremium": "Bạn đã là thành viên premium.",
+			"success": " Rút mã premium thành công. Bây giờ bạn có thể sử dụng các lệnh premium!",
+			"canceled": "Đã hủy rút mã premium."
+		},
+		"stats": {
+			"description": "Hiển thị thống kê bot."
+		},
+		"support": {
+			"description": "Liên kết máy chủ hỗ trợ",
+			"content": " Nếu bạn cần trợ giúp với bot hoặc chỉ muốn tham gia cùng chúng tôi, hãy tham gia [máy chủ hỗ trợ]({{{link}}}).",
+			"buttons": {
+				"support": "Máy chủ Hỗ trợ"
+			}
+		},
+		"vote": {
+			"description": "Liên kết bỏ phiếu cho bot",
+			"content": " Nếu bạn thích tôi, hãy cân nhắc bỏ phiếu cho tôi trên [top.gg]({{{link}}}).",
+			"buttons": {
+				"vote": "Bỏ phiếu"
+			}
+		},
+		"player": {
+			"description": "Hiển thị bài hát đang phát bây giờ.",
+			"nowPlaying": "Đang Phát",
+			"noSong": "Không có bài hát đang phát.",
+			"volume": "Âm lượng",
+			"totalDuration": "Tổng Thời lượng",
+			"loopMode": "Chế độ Lặp",
+			"filters": "Bộ lọc",
+			"noFilters": "Hiện không áp dụng bộ lọc nào.",
+			"title": "Đang phát: {{{status}}}",
+			"online": "Trực tuyến",
+			"offline": "Ngoại tuyến"
+		},
+		"autoplay": {
+			"description": "Bật hoặc tắt chế độ tự động phát.",
+			"enabled": " Đã chuyển chế độ tự động phát thành `Bật`\nTôi sẽ tự động thêm nhạc tương tự vào hàng đợi.",
+			"disabled": " Đã chuyển chế độ tự động phát tiếp thành `Tắt`\nTôi sẽ không tự động thêm nhạc tương tự vào hàng đợi nữa."
+		},
+		"clear": {
+			"description": "Xóa hàng đợi hoặc bộ lọc khỏi trình phát.",
+			"options": {
+				"input": "Hàng đợi hoặc bộ lọc để xóa"
+			},
+			"content": " Vui lòng chọn hàng đợi hoặc bộ lọc để xóa. (queue/filters)",
+			"queue": {
+				"noSong": "Không có bài hát trong hàng đợi để xóa.",
+				"success": " Đã xóa hàng đợi thành công."
+			},
+			"filters": {
+				"noFilter": "Không có bộ lọc để xóa.",
+				"success": " Đã xóa bộ lọc thành công."
+			},
+			"buttons": {
+				"queue": "Hàng đợi",
+				"filters": "Bộ lọc"
+			}
+		},
+		"forceskip": {
+			"description": "Bỏ qua bài hát hiện tại.",
+			"success": " Đã bỏ qua bài hát {{{title}}}."
+		},
+		"forward": {
+			"description": "Tiến tới bài hát hiện tại.",
+			"options": {
+				"seconds": "Số giây để tiến tới"
+			},
+			"unseekable": "{{{emoji}}} Bài hát hiện tại không thể tiến tới.",
+			"tooLong": "{{{emoji}}} Bạn không thể tiến tới quá độ dài của bài hát.",
+			"success": " {{{emoji}}} Đã tiến tới bài hát thành công `{{{time}}}`."
+		},
+		"grab": {
+			"description": "Lấy thông tin bài hát hiện tại.",
+			"dm": "{{{emoji}}} tôi không thể gửi cho bạn bài hát vì bạn đã tắt tin nhắn riêng.",
+			"grabbed": " {{{emoji}}} Đã lấy thành công bài hát."
+		},
+		"join": {
+			"description": "Gọi bot vào kênh thoại của bạn.",
+			"no-perms": "{{{emoji}}} Tôi không có đủ quyền để tham gia kênh thoại của bạn! Tôi cần quyền `Xem kênh`, `Kết nối` và `Nói`. [Ví dụ về quyền](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\nNếu vấn đề vẫn tiếp tục, hãy thay đổi khu vực kênh thoại thành `Europe`",
+			"already-in": "{{{emoji}}} Tôi đã ở trong một kênh thoại rồi!",
+			"joined": " Tham gia thành công vào kênh thoại {{{channel}}}"
+		},
+		"leave": {
+			"description": "Rời khỏi kênh thoại.",
+			"not-playing": "{{{emoji}}} Hiện tại tôi không phát bất cứ điều gì!",
+			"success": " {{{emoji}}} Đã rời khỏi kênh thoại thành công."
+		},
+		"leavecleanup": {
+			"description": "Xóa tất cả các bài hát của người dùng không còn ở trong kênh thoại.",
+			"removing": " Đang xóa bài hát của những người dùng không còn ở trong kênh thoại. Xin vui lòng đợi",
+			"removed": " Đã xóa thành công `{{{count}}}` bài hát của người dùng không còn ở trong kênh thoại."
+		},
+		"loop": {
+			"description": "Lặp lại bài hát hiện tại hoặc danh sách phát.",
+			"options": {
+				"mode": "Chế độ lặp lại cần thiết"
+			},
+			"specify": " Vui lòng chỉ định chế độ lặp lại. (bài hát, danh sách phát, tắt) từ các nút bên dưới.",
+			"buttons": {
+				"song": "Bài hát",
+				"queue": "Danh sách phát",
+				"off": "Tắt"
+			},
+			"song": " {{{emoji}}} Đã lặp lại bài hát hiện tại thành công.",
+			"queue": " {{{emoji}}} Đã lặp lại danh sách phát thành công.",
+			"off": " {{{emoji}}} Đã tắt chế độ lặp lại thành công.",
+			"song_already": " {{{emoji}}} Bài hát hiện tại đã được lặp lại.",
+			"queue_already": " {{{emoji}}} Danh sách phát đã được lặp lại.",
+			"off_already": " {{{emoji}}} Chế độ lặp lại đã bị tắt.",
+			"invalid_mode": " {{{emoji}}} Chế độ lặp lại không hợp lệ được cung cấp. Hãy cung cấp chế độ lặp lại hợp lệ. (bài hát, danh sách phát, tắt)"
+		},
+		"lyrics": {
+			"description": "Hiển thị lời bài hát hiện tại hoặc theo tên bài hát.",
+			"options": {
+				"song": "Tên bài hát để tìm kiếm"
+			},
+			"noQuery": " Vui lòng cung cấp tên bài hát để tìm kiếm.",
+			"noLyrics": " Tôi không thể tìm thấy lời bài hát này.",
+			"page": "Trang {{{page}}} của {{{pages}}}"
+		},
+		"move": {
+			"description": "Di chuyển bài hát đến vị trí cụ thể trong danh sách phát.",
+			"options": {
+				"song": "Bài hát để di chuyển",
+				"position": "Vị trí để di chuyển bài hát đến"
+			},
+			"invalidNumber": " Vui lòng cung cấp một số hợp lệ cho vị trí.",
+			"invalidPosition": " Vị trí cung cấp không hợp lệ. Vui lòng cung cấp vị trí hợp lệ.",
+			"success": " Đã di chuyển **[{{{title}}}]({{{uri}}})** từ vị trí **{{{from}}}** đến **{{{to}}}**."
+		},
+		"nowplaying": {
+			"description": "Hiển thị bài hát hiện đang phát.",
+			"nowplaying": " Đang phát: [{{{title}}}]({{{uri}}})",
+			"author": "Tác giả",
+			"requester": "Yêu cầu bởi",
+			"duration": "Thời lượng",
+			"progress": "Tiến độ"
+		},
+		"pause": {
+			"description": "Tạm dừng bài hát hiện tại.",
+			"alreadyPaused": " Bài hát hiện tại đã được tạm dừng.",
+			"paused": " Đã tạm dừng [{{{title}}}]({{{uri}}})"
+		},
+		"play": {
+			"description": "Phát bài hát từ Spotify, SoundCloud, Deezer, v.v...",
+			"options": {
+				"query": "Từ khóa để tìm kiếm",
+				"source": "Nguồn tìm kiếm"
+			},
+			"no-query": "Vui lòng cung cấp tên bài hát để tìm kiếm.",
+			"no-results": " Không tìm thấy kết quả nào cho `{{{query}}}`.",
+			"playlist-loaded": " Đã tải `{{{count}}}` bài hát từ danh sách phát **[{{{name}}}]({{{url}}})**",
+			"footer": "Cảm ơn bạn đã sử dụng {{{bot}}}",
+			"added": " Đã thêm **[{{{title}}}]({{{uri}}})** vào danh sách phát (yêu cầu bởi <@{{{requester}}}>) ở vị trí `#{{{position}}}`",
+			"youtube-not-supported": " Tôi rất tiếc phải thông báo cho bạn rằng YouTube không được hỗ trợ trong MoE for Discord TOS. Chúng tôi không thể sử dụng API của YouTube để nghe nhạc. Chúng tôi xin lỗi vì bất kỳ sự bất tiện nào mà điều này có thể gây ra cho bạn."
+		},
+		"playprevious": {
+			"description": "Phát bài hát trước đó.",
+			"noPreviousTrack": " {{{emoji}}} Không có bài hát trước đó để phát.",
+			"success": " {{{emoji}}} Đang phát bài hát trước đó từ danh sách phát của bạn!"
+		},
+		"queue": {
+			"description": "Hiển thị danh sách phát cho máy chủ hiện tại.",
+			"options": {
+				"page": "Số trang để xem"
+			},
+			"queue": "Danh sách phát cho {{{guild}}} ({{{songs}}} bài hát)",
+			"nowPlaying": " Đang phát: [{{{title}}}]({{{uri}}}) `[{{{length}}}]`- (<@{{{requester}}}>)\n\n",
+			"upNext": " Tiếp theo: {{{str}}}",
+			"noSongs": " Chưa có bài hát nào trong danh sách phát! Thêm một bài hát bằng cách sử dụng {{{cmd}}}",
+			"page": "Trang {{{page}}} | {{{songs}}} bài hát | Tổng thời lượng: {{{duration}}}",
+			"notNumber": " {{{emoji}}} Số trang phải là một số.",
+			"pageLimit": " {{{emoji}}} Số trang phải nhỏ hơn hoặc bằng {{{pages}}}.",
+			"clearQueue": "Xóa Danh sách phát",
+			"noTracks": " Không có bài hát nào trong danh sách phát.",
+			"noDjRole": " Bạn cần vai trò DJ để sử dụng nút này.",
+			"clearedQueue": " {{{user}}} Đã xóa danh sách phát."
+		},
+		"remove": {
+			"description": "Xóa bài hát khỏi danh sách phát.",
+			"options": {
+				"track": "Bài hát để xóa.",
+				"number": "Số bài hát hoặc tên bài hát để xóa.",
+				"dupes": "Xóa tất cả các bản sao của bài hát."
+			},
+			"trackNotFound": " Không có bài hát nào với số này trong danh sách phát",
+			"invalidNumber": " Vui lòng nhập một số từ 1 đến {{{length}}}.",
+			"removed": " Đã xóa **[{{{title}}}]({{{uri}}})** khỏi danh sách phát.",
+			"noDupes": " Không có bài hát trùng lặp trong danh sách phát.",
+			"removedDupes": " Đã xóa **{{{length}}}** bài hát trùng lặp khỏi danh sách phát."
+		},
+		"replay": {
+			"description": "Chơi lại bài hát hiện tại.",
+			"replaying": " Đang chơi lại [{{{title}}}]({{{uri}}})"
+		},
+		"resume": {
+			"description": "Tiếp tục bài hát hiện tại.",
+			"notPaused": " Bài hát hiện tại không bị tạm dừng.",
+			"resumed": " Tiếp tục phát [{{{title}}}]({{{uri}}})"
+		},
+		"rewind": {
+			"description": "Tua lại bài hát hiện tại.",
+			"options": {
+				"time": "Thời điểm bạn muốn tua lại bài hát đến."
+			},
+			"notSeekable": " {{{emoji}}} Bài hát hiện tại không thể tua lại.",
+			"negativePosition": " {{{emoji}}} Vị trí phải nằm trong khoảng từ 0 đến {{{length}}}.",
+			"success": " {{{emoji}}} Đã tua lại bài hát đến {{{length}}}."
+		},
+		"search": {
+			"description": "tìm kiếm một bài hát từ Spotify, Soundcloud hoặc Deezer",
+			"options": {
+				"query": "Từ khóa tìm kiếm",
+				"source": "Nguồn tìm kiếm"
+			},
+			"no-playlist": " {{{emoji}}} Hãy sử dụng lệnh {{{cmd}}} trong tìm kiếm, không hỗ trợ danh sách phát!",
+			"no-track": " {{{emoji}}} Hãy sử dụng lệnh {{{cmd}}} trong tìm kiếm, không hỗ trợ bài hát!",
+			"results": " Kết quả tìm kiếm cho `{{{query}}}`\n\n{{{results}}}",
+			"footer": "Vui lòng chọn một bài hát từ menu chọn bên dưới.",
+			"placeholder": "Chọn một bài hát từ danh sách bên dưới để phát.",
+			"footerTimeout": "Hết thời gian kết quả tìm kiếm.",
+			"no-voice": " {{{emoji}}} Bạn phải đang ở trong kênh thoại để sử dụng menu này.",
+			"wrong-voice": " {{{emoji}}} Bạn phải ở cùng kênh thoại với tôi để sử dụng menu này.",
+			"added": " {{{emoji}}} Đã thêm {{{count}}} bài hát vào hàng đợi."
+		},
+		"seek": {
+			"description": "Chuyển đến thời gian cụ thể trong bài hát hiện tại.",
+			"options": {
+				"time": "Thời gian bạn muốn chuyển đến trong bài hát."
+			},
+			"invalidPosition": " Thời gian phải nằm trong khoảng từ 0 đến {{{length}}}.",
+			"seeked": " Chuyển đến `{{{position}}}` vào `{{{time}}}`"
+		},
+		"shuffle": {
+			"description": "Trộn hàng đợi.",
+			"success": " Hàng đợi của máy chủ đã được trộn thành công (**{{{length}}}** bài hát).",
+			"unshuffle": " Hàng đợi của máy chủ đã được gỡ bỏ trạng thái trộn (**{{{length}}}** bài hát)."
+		},
+		"skip": {
+			"description": "Bỏ qua bài hát hiện tại.",
+			"nothing": " Không có bài hát tiếp theo trong hàng đợi. Sử dụng lệnh {{{queue}}} để xem hàng đợi của máy chủ.\nMuốn thử autoplay? thực hiện lệnh {{{autoplay}}}",
+			"paused": " Trình phát đang bị tạm dừng. Sử dụng lệnh tiếp tục để tiếp tục phát.\nMuốn tiếp tục? thực hiện lệnh {{{resume}}}",
+			"voteSkip": " {{{user}}} yêu cầu bỏ qua bài hát hiện tại.\n\n{{{voted}}}",
+			"skip": " Bỏ qua bài hát **{{{title}}}**."
+		},
+		"skipto": {
+			"description": "Bỏ qua đến một bài hát cụ thể trong hàng đợi.",
+			"options": {
+				"number": "Số bài hát hoặc tiêu đề bài hát để bỏ qua đến."
+			},
+			"invalidNumber": " {{{emoji}}} Vui lòng nhập số bài hát trong khoảng từ 1 đến {{{length}}}.",
+			"success": " {{{emoji}}} Bỏ qua đến **[{{{title}}}]({{{uri}}})**."
+		},
+		"stop": {
+			"description": "Dừng trình phát và xóa hàng đợi.",
+			"stopped": " {{{emoji}}} Đã dừng trình phát và xóa hàng đợi."
+		},
+		"topsongs": {
+			"description": "Hiển thị danh sách nhạc hot được phát bởi bot.",
+			"noTopSongs": " Không có bài hát hot nào trong cơ sở dữ liệu.",
+			"timesPlayed": "Lượt phát",
+			"selectSong": "Chọn một bài hát từ danh sách bên dưới để phát.",
+			"added": " Đã thêm **[{{{title}}}]({{{uri}}})** vào hàng đợi."
+		},
+		"volume": {
+			"description": "Thay đổi âm lượng của trình phát.",
+			"options": {
+				"volume": "Âm lượng bạn muốn đặt."
+			},
+			"invalidVolume": " {{{emoji}}} Vui lòng nhập một số từ 0 đến 100.",
+			"success": " {{{emoji}}} Đã đặt âm lượng thành **{{{volume}}}**."
+		},
+		"voteskip": {
+			"description": "Bình chọn để bỏ qua bài hát hiện tại."
+		},
+		"filters": {
+			"filters": " Tất cả các bộ lọc được áp dụng cho bài hát đang phát:\n\n{{{filters}}}",
+			"pitchNaN": " {{{emoji}}} Giá trị pitch phải là một số từ 1 đến 5.",
+			"description": {
+				"8d": "Áp dụng bộ lọc 8D cho bài hát đang phát.",
+				"bassboost": "Áp dụng bộ lọc bassboost cho bài hát đang phát.",
+				"channelmix": "Áp dụng bộ lọc channelmix cho bài hát đang phát.",
+				"electronic": "Áp dụng bộ lọc electronic cho bài hát đang phát.",
+				"filters": "Lấy danh sách các bộ lọc có thể áp dụng cho bài hát đang phát.",
+				"jazz": "Áp dụng bộ lọc jazz cho bài hát đang phát.",
+				"karaoke": "Áp dụng bộ lọc karaoke cho bài hát đang phát.",
+				"lowpass": "Áp dụng bộ lọc lowpass cho bài hát đang phát.",
+				"nightcore": "Áp dụng bộ lọc nightcore cho bài hát đang phát.",
+				"pitch": "Áp dụng bộ lọc pitch cho bài hát đang phát.",
+				"pop": "Áp dụng bộ lọc pop cho bài hát đang phát.",
+				"radio": "Áp dụng bộ lọc radio cho bài hát đang phát.",
+				"rock": "Áp dụng bộ lọc rock cho bài hát đang phát.",
+				"rotation": "Áp dụng bộ lọc rotation cho bài hát đang phát.",
+				"soft": "Áp dụng bộ lọc soft cho bài hát đang phát.",
+				"speed": "Áp dụng bộ lọc speed cho bài hát đang phát.",
+				"treblebass": "Áp dụng bộ lọc treblebass cho bài hát đang phát.",
+				"tremolo": "Áp dụng bộ lọc tremolo cho bài hát đang phát.",
+				"vaporwave": "Áp dụng bộ lọc vaporwave cho bài hát đang phát.",
+				"vibrato": "Áp dụng bộ lọc vibrato cho bài hát đang phát."
+			},
+			"enabled": " {{{emoji}}} Bộ lọc {{{name}}} đã được kích hoạt.",
+			"disabled": " {{{emoji}}} Bộ lọc {{{name}}} đã được tắt.",
+			"speed": " {{{emoji}}} Bộ lọc tốc độ đã được đặt thành **{{{value}}}**.",
+			"options": {
+				"speed": "Tốc độ bạn muốn đặt.",
+				"pitch": "Giá trị pitch để áp dụng."
+			}
+		},
+		"announce": {
+			"description": "Cấu hình thông báo khi bắt đầu phát bài hát.",
+			"options": {
+				"set": "Đặt kênh nơi thông báo sẽ được gửi.",
+				"channel": "Kênh bạn muốn đặt.",
+				"toggle": "Chuyển đổi thông báo khi bắt đầu phát bài hát.",
+				"prunning": "Chuyển đổi loại bỏ thông báo khi bắt đầu phát bài hát.",
+				"reset": "Đặt lại kênh thông báo khi bắt đầu phát bài hát."
+			},
+			"noChannel": " {{{emoji}}} Vui lòng cung cấp một kênh văn bản hợp lệ.",
+			"noTextChannel": " {{{emoji}}} Vui lòng cung cấp một kênh văn bản hợp lệ.",
+			"sameChannel": " {{{emoji}}} Kênh bạn cung cấp đã có trong cơ sở dữ liệu.",
+			"setChannel": " {{{emoji}}} Đã đặt kênh thông báo thành công: {{{channel}}}.",
+			"noChannelInDB": " {{{emoji}}} Chưa cài đặt kênh thông báo trong cơ sở dữ liệu.",
+			"toggle": " {{{emoji}}} Đã {{{status}}} thông báo khi bắt đầu phát bài hát.",
+			"enabled": "bật",
+			"disabled": "tắt",
+			"reset": " {{{emoji}}} Đã đặt lại kênh thông báo thành công."
+		},
+		"botchannel": {
+			"description": "Thiết lập kênh bot để lắng nghe các lệnh.",
+			"options": {
+				"add": "Thêm một kênh vào danh sách kênh bot",
+				"channel": "Kênh bạn muốn đặt.",
+				"remove": "Xóa một kênh khỏi danh sách kênh bot",
+				"clear": "Xóa danh sách kênh bot",
+				"info": "Lấy danh sách kênh bot và thông tin về kênh bot"
+			},
+			"noChannel": " {{{emoji}}} Vui lòng cung cấp một kênh văn bản hợp lệ.",
+			"noTextChannel": " {{{emoji}}} Vui lòng cung cấp một kênh văn bản hợp lệ.",
+			"sameChannel": " {{{emoji}}} Kênh bạn cung cấp đã có trong cơ sở dữ liệu.",
+			"maxChannel": " {{{emoji}}} Bạn không thể thêm nhiều hơn 5 kênh vào danh sách kênh bot.",
+			"addedChannel": " {{{emoji}}} Đã thêm thành công kênh {{{channel}}} vào danh sách kênh bot.",
+			"noChannelInDB": " {{{emoji}}} Không có kênh bot nào trong cơ sở dữ liệu.",
+			"removedChannel": " {{{emoji}}} Đã xóa thành công kênh {{{channel}}} khỏi danh sách kênh bot.",
+			"clearedChannel": " {{{emoji}}} Đã xóa thành công danh sách kênh bot.",
+			"info": ">>> **Kênh:** {{{channel}}}\n**Người điều hành:** {{{moderator}}}\n**Thêm vào lúc:** {{{addedAt}}}",
+			"title": "Các kênh bot ({{count}})"
+		},
+		"clean": {
+			"description": "Xoá các tin nhắn của tôi trong kênh.",
+			"success": " {{{emoji}}} Đã xoá thành công **{{{count}}}** tin nhắn."
+		},
+		"defaultvolume": {
+			"description": "Thiết lập âm lượng mặc định cho máy chủ",
+			"options": {
+				"number": "Số để thiết lập âm lượng mặc định"
+			},
+			"invalidNumber": " {{{emoji}}} Vui lòng nhập một số trong khoảng từ 0 đến 200.",
+			"success": " {{{emoji}}} Đã thiết lập thành công âm lượng mặc định là **{{{volume}}}**."
+		},
+		"disablecommands": {
+			"description": "Vô hiệu hóa các lệnh cho máy chủ",
+			"options": {
+				"add": "Thêm một lệnh vào danh sách lệnh bị vô hiệu hóa",
+				"command": "Tên lệnh",
+				"remove": "Gỡ bỏ một lệnh khỏi danh sách lệnh bị vô hiệu hóa",
+				"list": "Lấy danh sách các lệnh bị vô hiệu hóa",
+				"clear": "Xoá danh sách các lệnh bị vô hiệu hóa"
+			},
+			"noCommand": " {{{emoji}}} Vui lòng cung cấp tên lệnh để vô hiệu hóa/khôi phục.",
+			"commandNotExist": " {{{emoji}}} Lệnh đó không tồn tại trong bot",
+			"commandAlreadyDisabled": " {{{emoji}}} Lệnh đó đã bị vô hiệu hóa.",
+			"commandDisabled": " {{{emoji}}} Đã vô hiệu hóa thành công lệnh **{{{command}}}**.",
+			"noDisabledCommands": " {{{emoji}}} Lệnh này chưa bị vô hiệu hóa.",
+			"commandEnabled": " {{{emoji}}} Đã khôi phục thành công lệnh **{{{command}}}**.",
+			"disabledCommands": "Các lệnh bị vô hiệu hóa",
+			"disabledCommandsForThisServer": "Các lệnh bị vô hiệu hóa cho máy chủ này",
+			"total": "Tổng: {{{total}}}",
+			"disabledCommandsCleared": " {{{emoji}}} Đã xoá thành công danh sách các lệnh bị vô hiệu hóa."
+		},
+		"dj": {
+			"description": "Thiết lập vai trò DJ cho máy chủ",
+			"options": {
+				"add": "Thêm một vai trò vào danh sách vai trò DJ",
+				"role": "Vai trò bạn muốn (thêm/xóa)",
+				"remove": "Gỡ bỏ một vai trò khỏi danh sách vai trò DJ",
+				"list": "Liệt kê danh sách vai trò DJ",
+				"clear": "Xoá danh sách vai trò DJ",
+				"toggle": "Bật/tắt chế độ vai trò DJ",
+				"info": "Lấy danh sách vai trò DJ và thông tin về vai trò DJ"
+			},
+			"noRole": " {{{emoji}}} Vui lòng cung cấp một vai trò hợp lệ để (thêm/xóa).",
+			"maxRoles": " {{{emoji}}} Bạn không thể thêm nhiều hơn 5 vai trò vào danh sách DJ.",
+			"alreadyInList": " {{{emoji}}} Vai trò bạn cung cấp đã có trong cơ sở dữ liệu.",
+			"addedRole": " {{{emoji}}} Đã thêm thành công vai trò **{{{role}}}** vào danh sách DJ.",
+			"noRolesSetup": " {{{emoji}}} Không có vai trò DJ nào được thiết lập trong máy chủ này.",
+			"notInList": " {{{emoji}}} Vai trò này không có trong danh sách DJ.",
+			"removedRole": " {{{emoji}}} Đã gỡ bỏ thành công vai trò **{{{role}}}** khỏi danh sách DJ.",
+			"list": ">>> **Vai trò:** {{{role}}}\n**Người quản lý:** {{{moderator}}}\n**Được thêm vào lúc:** {{{addedAt}}}",
+			"listTotal": " Tổng số vai trò DJ: {{{total}}}",
+			"clearedList": " {{{emoji}}} Đã xoá thành công danh sách DJ.",
+			"enabledToggle": " {{{emoji}}} Đã bật chế độ chuyển đổi vai trò DJ thành công.",
+			"disabledToggle": " {{{emoji}}} Đã tắt chế độ chuyển đổi vai trò DJ thành công.",
+			"info": {
+				"djRoles": "Vai trò DJ",
+				"enabled": "Đã bật",
+				"disabled": "Đã tắt",
+				"djMode": "Chế độ DJ",
+				"djMembers": "Thành viên DJ",
+				"description": "Thông tin về vai trò DJ cho {{{guild}}}"
+			}
+		},
+		"fixvoice": {
+			"description": "Sửa kết nối âm thanh nếu bot không phát nhạc.",
+			"joining": " Đang tham gia kênh âm thanh và tiếp tục phát nhạc.",
+			"failed": " Không thể thay đổi khu vực âm thanh. Vui lòng thử lại sau.",
+			"error": "{{{emoji}}} Tôi không thể tìm thấy bất kỳ giải pháp nào lúc này. Có thể hỏi về sự trợ giúp trong [máy chủ hỗ trợ]({{{server}}}).",
+			"success": " {{{emoji}}} Đã thay đổi khu vực âm thanh thành công thành **{{{region}}}**."
+		},
+		"forcejoin": {
+			"description": "Bắt buộc bot tham gia kênh âm thanh.",
+			"already-in": "{{{emoji}}} Tôi đã ở trong một kênh âm thanh!",
+			"joined": " {{{emoji}}} Đã tham gia thành công vào kênh âm thanh **{{{channel}}}**."
+		},
+		"languages": {
+			"description": "Thiết lập ngôn ngữ của bot cho máy chủ",
+			"options": {
+				"add": "Thêm một ngôn ngữ cho máy chủ",
+				"language": "Ngôn ngữ bạn muốn thiết lập",
+				"info": "Lấy thông tin về các ngôn ngữ",
+				"reset": "Đặt lại ngôn ngữ thành ngôn ngữ mặc định",
+				"set": "cmd.languages.options.set"
+			},
+			"success": " {{{emoji}}} Đã thiết lập thành công ngôn ngữ của bot là {{{language}}} `({{{languageCode}}})`.",
+			"info": " Ngôn ngữ hiện tại trong máy chủ này là: **{{{language}}}** `({{{languageCode}}})`.",
+			"reset": " {{{emoji}}} Đã đặt lại thành công ngôn ngữ của bot về ngôn ngữ mặc định.",
+			"translationProgress": "Tiến độ dịch: {{{progress}}}",
+			"selectLanguage": "Vui lòng chọn ngôn ngữ mà bạn muốn thiết lập từ menu dưới đây."
+		},
+		"noprefix": {
+			"description": "Chuyển đổi chế độ không có tiền tố cho người dùng hoặc máy chủ.",
+			"toggle": " Chuyển đổi chế độ không có tiền tố cho người dùng hoặc máy chủ.",
+			"buttons": {
+				"server": "Máy chủ",
+				"user": "Người dùng"
+			},
+			"premium": " Bạn cần là người dùng cao cấp để sử dụng lệnh này.",
+			"disabledUser": " {{{emoji}}} Đã vô hiệu hóa thành công chế độ không có tiền tố cho người dùng.",
+			"enabledUser": " {{{emoji}}} Đã kích hoạt thành công chế độ không có tiền tố cho người dùng.",
+			"noPerm": " Bạn không có quyền sử dụng lệnh này.",
+			"disabledServer": " {{{emoji}}} Đã vô hiệu hóa thành công chế độ không có tiền tố cho máy chủ.",
+			"enabledServer": " {{{emoji}}} Đã kích hoạt thành công chế độ không có tiền tố cho máy chủ."
+		},
+		"prefix": {
+			"description": "Thiết lập tiền tố cho máy chủ",
+			"options": {
+				"set": "Thiết lập tiền tố cho máy chủ",
+				"prefix": "Tiền tố bạn muốn (thiết lập/xóa)",
+				"info": "Lấy tiền tố cho máy chủ",
+				"clear": "Xoá tiền tố cho máy chủ",
+				"remove": "Gỡ bỏ tiền tố cho máy chủ"
+			},
+			"info": ">>> **Tiền tố:** `{{{prefix}}}`\n**Người quản lý:** {{{moderator}}}\n**Được thêm vào lúc:** {{{timestamp}}}",
+			"noPrefix": " {{{emoji}}} Vui lòng cung cấp một tiền tố để thiết lập.",
+			"noPrefixAdded": " {{{emoji}}} Không có tiền tố nào được thêm vào máy chủ.",
+			"prefixLength": " {{{emoji}}} Tiền tố không thể dài hơn 5 ký tự.",
+			"prefixLimit": " {{{emoji}}} Giới hạn tiền tố là 4, vui lòng gỡ bỏ một số tiền tố bằng `prefix remove`",
+			"prefixCharacters": " {{{emoji}}} Tiền tố không thể chứa bất kỳ ký tự nào sau `[]{}\\`",
+			"prefixExists": " {{{emoji}}} Tiền tố `{{{prefix}}}` đã được thêm bởi {{{moderator}}}",
+			"prefixCleared": " {{{emoji}}} Đã xoá thành công tất cả các tiền tố về mặc định",
+			"prefixNotExists": " {{{emoji}}} Tiền tố `{{{prefix}}}` không được thêm",
+			"prefixRemoved": " {{{emoji}}} Đã gỡ bỏ thành công tiền tố `{{{prefix}}}`",
+			"prefixAdded": " {{{emoji}}} Đã thêm thành công tiền tố `{{{prefix}}}`"
+		},
+		"profile": {
+			"description": "Hiển thị hồ sơ của bạn hoặc hồ sơ của người khác.",
+			"options": {
+				"set": "Thiết lập màu sắc, màu sắc hoặc khả năng hiển thị của hồ sơ của bạn.",
+				"bio": "Thiết lập tiểu sử của hồ sơ của bạn.",
+				"color": "Thiết lập màu sắc của hồ sơ của bạn.",
+				"visibility": "Thiết lập khả năng hiển thị của hồ sơ của bạn.",
+				"view": "Xem hồ sơ của bạn hoặc hồ sơ của người khác.",
+				"user": "Người dùng mà bạn muốn xem hồ sơ của họ."
+			},
+			"noBio": " {{{emoji}}} Bạn cần cung cấp tiểu sử",
+			"bioLength": " {{{emoji}}} Tiểu sử của bạn không được dài hơn 50 ký tự",
+			"bioSet": " {{{emoji}}} Đã thiết lập tiểu sử của bạn thành `{{{bio}}}`",
+			"noColor": " {{{emoji}}} Vui lòng cung cấp mã màu hex [Ví dụ: #FF0000](https://g.co/kgs/q5nhF7)\n\nBạn cũng có thể sử dụng tên màu sau: {{{colors}}}",
+			"sameColor": " {{{emoji}}} Màu sắc của bạn đã được thiết lập thành `{{{color}}}`",
+			"colorSet": " {{{emoji}}} Đã thiết lập màu sắc của bạn thành `{{{color}}}`",
+			"sameVisibility": " {{{emoji}}} Khả năng hiển thị của bạn đã được thiết lập thành `{{{visibility}}}`",
+			"noVisibility": " {{{emoji}}} Vui lòng cung cấp khả năng hiển thị (công khai/riêng tư)",
+			"visibilitySet": " {{{emoji}}} Đã thiết lập khả năng hiển thị của bạn thành `{{{visibility}}}`",
+			"privateProfile": " {{{emoji}}} Hồ sơ của người dùng này là riêng tư"
+		},
+		"setting": {
+			"description": "Thay đổi cài đặt máy chủ hoặc lấy thông tin cài đặt máy chủ",
+			"options": {
+				"reset": "Đặt lại tất cả cài đặt máy chủ về giá trị mặc định",
+				"info": "Lấy thông tin cài đặt máy chủ"
+			},
+			"noPermission": " {{{emoji}}} Bạn không có quyền `manageGuild` để sử dụng lệnh này.",
+			"isSure": " Bạn có chắc chắn muốn đặt lại cài đặt máy chủ không?\nĐiều này sẽ đặt lại tất cả các cài đặt về giá trị mặc định\n\n**nếu bạn chắc chắn, hãy nhấn nút bên dưới**",
+			"buttons": {
+				"reset": "Đặt lại"
+			},
+			"fields": {
+				"247": "24/7",
+				"trackButton": "Nút Theo Dõi",
+				"dj": "DJ",
+				"botChannel": "Kênh Bot",
+				"disableCommand": "Tắt Lệnh",
+				"defaultVolume": "Âm Lượng Mặc Định",
+				"announce": "Thông Báo",
+				"prunning": "Làm Sạch",
+				"noPrefix": "Không Tiền Tố",
+				"prefix": "Tiền Tố",
+				"djRole": "Vai Trò DJ",
+				"setup": "Cài Đặt",
+				"voteSkip": "Bỏ Qua Bằng Bỏ Phiếu",
+				"language": "Ngôn Ngữ",
+				"trackButtonValue": "Chế Độ: {{{mode}}}\nNgười Kiểm Duyệt: {{{moderator}}}\nĐã Thêm: {{{added}}}",
+				"setupValue": "Người Kiểm Duyệt: {{{moderator}}}\nĐã Thêm: {{{added}}}\n\n**Các Kênh:**\n{{{channels}}}",
+				"djValue": "Chế Độ: {{{mode}}}\nVai Trò: {{{roles}}}\nĐã Thêm: {{{added}}}",
+				"defaultvolumeValue": "Âm Lượng: {{{volume}}}\nĐã Thêm: {{{added}}}\nNgười Kiểm Duyệt: {{{moderator}}}",
+				"announceValue": "Chế Độ: {{{mode}}}\nKênh: {{{channel}}}\nĐã Thêm: {{{added}}}\nNgười Kiểm Duyệt: {{{moderator}}}",
+				"prunningValue": "Chế Độ: {{{mode}}}\nĐã Thêm: {{{added}}}\nNgười Kiểm Duyệt: {{{moderator}}}",
+				"disableCommandValue": "Lệnh: {{{commands}}}\nĐã Thêm: {{{added}}}\nNgười Kiểm Duyệt: {{{moderator}}}",
+				"prefixValue": "Tiền Tố: {{{prefix}}}\nĐã Thêm: {{{added}}}\nNgười Kiểm Duyệt: {{{moderator}}}",
+				"voteSkipValue": "Chế Độ: {{{mode}}}\nĐã Thêm: {{{added}}}\nNgười Kiểm Duyệt: {{{moderator}}}",
+				"247Value": "Chế Độ: {{{mode}}}\nĐã Thêm: {{{added}}}\nNgười Kiểm Duyệt: {{{moderator}}}\nKênh: {{{channel}}}",
+				"botChannelValue": "Kênh: {{{channel}}}\nĐã Thêm: {{{added}}}\nNgười Kiểm Duyệt: {{{moderator}}}",
+				"languageValue": "Ngôn Ngữ: {{{language}}}",
+				"enabled": "Bật",
+				"disabled": "Tắt",
+				"none": "Không Có"
+			},
+			"resetSuccess": " {{{emoji}}} Đã đặt lại thành công cài đặt máy chủ về giá trị mặc định.",
+			"info": " Đây là thông tin cấu hình cho máy chủ này",
+			"noSettings": " {{{emoji}}} Không có cài đặt nào cho máy chủ này."
+		},
+		"voteskipsetting": {
+			"description": "Cấu hình cài đặt bỏ qua bằng bỏ phiếu.",
+			"options": {
+				"set": "Thiết lập chế độ bỏ qua bằng bỏ phiếu.",
+				"action": "Hành động bạn muốn thiết lập (bật/tắt)."
+			},
+			"success": " {{{emoji}}} Đã {{{action}}} thành công bỏ qua bằng bỏ phiếu.",
+			"isConfirm": " Bạn muốn bật hoặc tắt chế độ bỏ qua bằng bỏ phiếu?",
+			"canceled": " {{{emoji}}} Cài đặt bỏ qua bằng bỏ phiếu đã bị hủy.",
+			"alreadyEnabled": " Chế độ bỏ qua bằng bỏ phiếu đã được bật.",
+			"alreadyDisabled": " Chế độ bỏ qua bằng bỏ phiếu đã được tắt.",
+			"buttons": {
+				"enable": "Bật",
+				"disable": "Tắt",
+				"cancel": "Hủy"
+			}
+		},
+		"add": {
+			"description": "Thêm một bài hát vào danh sách phát.",
+			"options": {
+				"playlist": "Danh sách phát mà bạn muốn thêm bài hát vào.",
+				"song": "Bài hát (tên/url) mà bạn muốn thêm vào danh sách phát."
+			},
+			"playlistLength": " {{{emoji}}} Tên danh sách phát phải có từ 3 đến 50 ký tự.",
+			"noPlaylists": " {{{emoji}}} Tôi không thể tìm thấy bất kỳ danh sách phát nào trong tài khoản của bạn, vui lòng tạo một danh sách phát trước.",
+			"noResults": " {{{emoji}}} Tôi không thể tìm thấy kết quả nào cho `{{{song}}}`.",
+			"playlistFull": " {{{emoji}}} Danh sách phát của bạn đã đầy, vui lòng loại bỏ một số bài hát trước khi thêm thêm.",
+			"playlistAdded": " {{{emoji}}} Đã thành công thêm **{{{count}}}** bài hát vào danh sách phát **{{{playlist}}}**."
+		},
+		"addnowplaying": {
+			"description": "Thêm bài hát hiện tại vào danh sách phát.",
+			"options": {
+				"playlist": "Danh sách phát mà bạn muốn thêm bài hát vào."
+			},
+			"noSong": " {{{emoji}}} Hiện không có bài hát nào đang phát.",
+			"songAlreadyInPlaylist": " {{{emoji}}} Bài hát này đã có trong danh sách phát.",
+			"success": " {{{emoji}}} Đã thêm **{{{song}}}** vào **{{{playlist}}}**."
+		},
+		"addqueue": {
+			"description": "Thêm danh sách phát vào hàng đợi.",
+			"options": {
+				"name": "Tên của danh sách phát mà bạn muốn thêm vào hàng đợi."
+			},
+			"noQueue": " {{{emoji}}} Hiện không có hàng đợi nào.",
+			"success": " {{{emoji}}} Đã thêm **{{{queueLength}}}** bài hát trong hàng đợi vào danh sách phát **{{{playlistName}}}**."
+		},
+		"create": {
+			"description": "Tạo một danh sách phát.",
+			"options": {
+				"playlist": "Tên của danh sách phát mà bạn muốn tạo.",
+				"visibility": "Khả năng hiển thị của danh sách phát."
+			},
+			"playlist": " {{{emoji}}} Vui lòng cung cấp tên danh sách phát.",
+			"visibility": " {{{emoji}}} Khả năng hiển thị phải là `public` hoặc `private`.",
+			"maxPlaylists": " {{{emoji}}} Bạn có thể tạo tối đa 10 danh sách phát.",
+			"playlistExists": " {{{emoji}}} Bạn đã có một danh sách phát với tên **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Đã tạo thành công danh sách phát **{{{playlist}}}**."
+		},
+		"delete": {
+			"description": "Xóa một danh sách phát.",
+			"options": {
+				"playlist": "Tên của danh sách phát mà bạn muốn xóa."
+			},
+			"noPlaylists": " {{{emoji}}} Bạn không có danh sách phát có tên **{{{playlist}}}**.",
+			"buttons": {
+				"confirm": "Xác nhận",
+				"cancel": "Hủy"
+			},
+			"confirm": " Bạn có chắc chắn muốn xóa danh sách phát **{{{playlist}}}** không?",
+			"success": " {{{emoji}}} Đã xóa thành công danh sách phát **{{{playlist}}}**.",
+			"cancel": " {{{emoji}}} Đã hủy xóa danh sách phát **{{{playlist}}}**."
+		},
+		"dupes": {
+			"description": "Xoá tất cả các bài hát trùng lặp trong danh sách phát.",
+			"options": {
+				"playlist": "Tên danh sách phát mà bạn muốn xoá các bài hát trùng lặp."
+			},
+			"noDupes": " {{{emoji}}} Không có bài hát trùng lặp trong danh sách phát **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Đã xoá thành công **{{{count}}}** bài hát trùng lặp trong danh sách phát **{{{playlist}}}**."
+		},
+		"edit": {
+			"description": "Chỉnh sửa danh sách phát.",
+			"options": {
+				"playlist": "Tên danh sách phát mà bạn muốn chỉnh sửa.",
+				"old-name": "Tên cũ của danh sách phát.",
+				"new-name": "Tên mới của danh sách phát.",
+				"playlist-visibility": "Thay đổi hiển thị của danh sách phát.",
+				"visibility": "Tùy chọn hiển thị của danh sách phát."
+			},
+			"sameName": " {{{emoji}}} Tên mới phải khác với tên cũ.",
+			"successName": " {{{emoji}}} Đổi tên danh sách phát từ **{{{oldName}}}** thành **{{{newName}}}** thành công.",
+			"sameVisibility": " {{{emoji}}} Danh sách phát **{{{playlist}}}** đã được đặt là **{{{visibility}}}**.",
+			"successVisibility": " {{{emoji}}} Thay đổi hiển thị của danh sách phát **{{{playlist}}}** thành **{{{visibility}}}** thành công.",
+			"buttons": {
+				"playlist": "Tên danh sách phát",
+				"visibility": "Hiển thị danh sách phát",
+				"public": "Công khai",
+				"private": "Riêng tư"
+			},
+			"selectOption": " Chọn một tùy chọn để chỉnh sửa danh sách phát của bạn từ các nút dưới đây.",
+			"oldName": " Nhập tên cũ của danh sách phát.",
+			"newName": " Nhập tên mới của danh sách phát.",
+			"cancelled": " {{{emoji}}} Đã hủy việc thay đổi tên danh sách phát.",
+			"playlist": " Nhập tên của danh sách phát.",
+			"selectVisibility": " Chọn tùy chọn hiển thị của danh sách phát từ các nút dưới đây.",
+			"liked": " {{{emoji}}} Bạn không thể chỉnh sửa danh sách phát đã thích."
+		},
+		"import": {
+			"description": "Nhập một danh sách phát từ ID danh sách phát.",
+			"options": {
+				"id": "ID của danh sách phát mà bạn muốn nhập."
+			},
+			"noPlaylist": " {{{emoji}}} Không thể tìm thấy bất kỳ danh sách phát nào với ID **{{{id}}}**.",
+			"sameUser": " {{{emoji}}} Bạn không thể nhập danh sách phát của chính bạn.",
+			"privatePlaylist": " {{{emoji}}} Bạn không thể nhập danh sách phát riêng tư.",
+			"success": " {{{emoji}}} Đã nhập thành công danh sách phát **{{{playlist}}}**."
+		},
+		"list": {
+			"description": "Liệt kê tất cả các danh sách phát của bạn.",
+			"tracks": "Bài hát(s): {{{tracks}}}"
+		},
+		"load": {
+			"description": "Tải một danh sách phát vào hàng đợi.",
+			"options": {
+				"song": "Tải một bài hát cụ thể từ danh sách phát.",
+				"name": "Tên danh sách phát mà bạn muốn tải.",
+				"track": "Số thứ tự hoặc tiêu đề bài hát để tải."
+			},
+			"noPlaylists": " {{{emoji}}} Bạn không có danh sách phát nào có tên **{{{playlist}}}**.",
+			"noTracks": " {{{emoji}}} Không có bài hát nào trong danh sách phát **{{{playlist}}}**.",
+			"noTrackFound": " {{{emoji}}} Không tìm thấy bài hát nào với số thứ tự hoặc tiêu đề `{{{track}}}`.",
+			"trackLoaded": " {{{emoji}}} Đã tải **{{{track}}}** từ danh sách phát **{{{playlist}}}**.",
+			"privatePlaylist": " {{{emoji}}} Bạn không thể tải danh sách phát riêng tư từ người dùng khác.",
+			"playlistLoaded": " {{{emoji}}} Đã tải **{{{count}}}** bài hát từ danh sách phát **{{{playlist}}}**."
+		},
+		"pl-remove": {
+			"description": "Xoá một bài hát khỏi danh sách phát.",
+			"options": {
+				"playlist": "Tên danh sách phát mà bạn muốn xoá bài hát.",
+				"track": "Số thứ tự hoặc tiêu đề bài hát để xoá."
+			},
+			"notFound": " {{{emoji}}} Không tìm thấy bài hát với số thứ tự hoặc tiêu đề đó.",
+			"success": " {{{emoji}}} Đã xoá thành công **{{{track}}}** từ **{{{playlist}}}**."
+		},
+		"view": {
+			"description": "Xem một danh sách phát.",
+			"options": {
+				"playlist": "Tên danh sách phát mà bạn muốn xem."
+			},
+			"footer": "Trang {{{page}}} của {{{pages}}} | {{{tracks}}} bài hát | {{{duration}}}",
+			"buttons": {
+				"previous": "Trước",
+				"stop": "Dừng",
+				"next": "Tiếp theo"
+			}
+		},
+		"playradio": {
+			"description": "Phát một đài phát thanh.",
+			"options": {
+				"station": "Tên của đài phát thanh bạn muốn phát.",
+				"language": "cmd.playradio.options.language",
+				"country": "cmd.playradio.options.country"
+			},
+			"noStation": " {{{emoji}}} Tôi không thể tìm thấy đài phát thanh có tên như vậy.",
+			"country": "**Quốc gia:** {{{country}}}",
+			"votes": "**Phiếu bầu:** {{{votes}}}",
+			"codec": "**Codec:** {{{codec}}}",
+			"bitrate": "**Bitrate:** {{{bitrate}}}",
+			"tags": "**Thẻ:** {{{tags}}}",
+			"results": " Đây là kết quả của tìm kiếm của bạn:\n\n{{{results}}}",
+			"select": "Chọn một đài từ 1 đến 10 trong menu thả xuống dưới đây.",
+			"added": " {{{emoji}}} Đã thêm [**{{{name}}}**]({{{homepage}}}) vào hàng đợi."
+		},
+		"setup": {
+			"description": "Cài đặt Kênh Yêu Cầu Bài Hát.",
+			"options": {
+				"create": "Tạo kênh cài đặt",
+				"delete": "Xóa kênh cài đặt",
+				"info": "Nhận thông tin kênh cài đặt",
+				"change": "Thay đổi kênh cài đặt",
+				"channel": "Kênh bạn muốn thiết lập."
+			},
+			"alreadySetup": " {{{emoji}}} Kênh cài đặt đã được thiết lập thành công thành **{{{channel}}}**.",
+			"created": " {{{emoji}}} Đã tạo kênh cài đặt **{{{channel}}}** thành công.\n*Bạn có thể đổi tên/đổi vị trí cho kênh này nếu bạn muốn.\n\nLưu ý: Xóa bỏ mẫu nhúng trong đó có thể làm cho cài đặt này ngừng hoạt động. (Xin đừng xóa nó.)*",
+			"notSetup": " {{{emoji}}} Kênh cài đặt chưa được thiết lập.",
+			"deleted": " {{{emoji}}} Đã xóa kênh cài đặt thành công.",
+			"noChannel": " {{{emoji}}} Vui lòng cung cấp một kênh văn bản hợp lệ.",
+			"notTextChannel": " {{{emoji}}} Vui lòng cung cấp một kênh văn bản hợp lệ.",
+			"sameChannel": " {{{emoji}}} Kênh bạn đã cung cấp đã có trong cơ sở dữ liệu.",
+			"join": "**Tham gia một kênh thoại và thêm bài hát bằng tên/URL.**",
+			"info": {
+				"title": "Thông Tin Kênh Cài Đặt",
+				"description": "Dưới đây là thông tin kênh cài đặt cho máy chủ này",
+				"channel": "Kênh",
+				"moderator": "Người điều hành",
+				"message": "Tin nhắn",
+				"addedAt": "Thêm vào lúc"
+			}
+		},
+		"buttonmode": {
+			"description": "Enable or disable button mode.",
+			"options": {
+				"boolean": "The boolean to set (true/false)"
+			}
+		}
+	},
+	"player": {
+		"embed": {
+			"247": " Ai đó đã ngắt kết nối tôi khỏi kênh thoại, nhưng tôi vẫn đang ở đây nhờ **chế độ 24/7**!\n\nBạn có thể tắt chế độ này bằng cách tắt **chế độ 24/7** sử dụng lệnh {{{cmd}}} hoặc bằng cách sử dụng lệnh {{{cmd2}}}!",
+			"nowPlaying": "Đang Phát",
+			"nowPlayingDesc": " **[{{{songName}}}]({{{songUrl}}})** Bởi [{{{songAuthor}}}]({{{songAuthorUrl}}}) - {{{requester}}}",
+			"footer": "Thời lượng: {{{duration}}} | Hàng đợi: {{{queue}}} | Âm lượng: {{{volume}}}%",
+			"end": " Không ai nghe trong vòng 1 phút qua, tôi sẽ rời khỏi kênh.\n\nBạn có thể tắt tính năng này bằng cách bật **chế độ 24/7** sử dụng lệnh {{{cmd}}}!",
+			"endTitle": "Hàng đợi Kết thúc",
+			"endDesc": " Hàng đợi nhạc của bạn đã kết thúc. Bạn có thể thêm nhạc bằng cách sử dụng lệnh {{{cmd}}}! Thích thú với âm nhạc cùng tôi? Hãy cân nhắc [bỏ phiếu cho tôi]({{{link}}})!",
+			"queue": "Danh sách đợi Bài hát",
+			"trackLoop": "Lặp lại Bài hát",
+			"queueLoop": "Lặp lại Danh sách đợi",
+			"volume": "Âm lượng",
+			"autoplay": "Tự động phát",
+			"duration": "Thời lượng",
+			"upcoming": "Bài hát sắp tới",
+			"queueStats": "Thống kê Danh sách đợi"
+		},
+		"error": "Lỗi Bài hát",
+		"description": " [{{{title}}}]({{{uri}}}) không khả dụng trong nước của bạn vì bị hạn chế độ tuổi!",
+		"buttons": {
+			"resume": "Tiếp Tục",
+			"pause": "Tạm Dừng",
+			"previous": "Trước Đó",
+			"shuffle": "Ngẫu Nhiên",
+			"skip": "Bỏ Qua",
+			"stop": "Dừng",
+			"voldown": "Giảm Âm Lượng",
+			"volup": "Tăng Âm Lượng",
+			"loop": "Lặp Lại",
+			"like": "Thích"
+		},
+		"noDispatcher": " Hiện tại không có gì đang phát..",
+		"nothingPlaying": " Hiện tại không có gì đang phát.."
+	},
+	"events": {
+		"buttonHandle": {
+			"notInVoice": "Bạn cần tham gia một kênh thoại {{{channel}}} để sử dụng nút này!",
+			"noPrevious": "Không có bài hát trước đó trong hàng đợi.",
+			"playingPrevious": "{{{user}}} đang phát bài hát trước đó.",
+			"nothingToSkip": "Không có gì trong hàng đợi để bỏ qua.",
+			"alreadyVote": "{{{user}}} Đã có một phiếu bầu trong máy chủ này. Vui lòng đợi cho nó hoàn thành hoặc hủy bỏ nó.",
+			"voteSkip": "{{{user}}} đã yêu cầu bỏ qua bài hát hiện tại. Bạn có muốn dừng phiếu bỏ qua? Sử dụng lệnh {{{cmd}}}",
+			"voteSkipLabel": "Bỏ phiếu bỏ qua bài hát hiện tại!",
+			"alreadyVoted": "{{{user}}} Bạn đã bỏ phiếu bỏ qua bài hát hiện tại.",
+			"voteSkip2": "{{{user}}} đã yêu cầu bỏ qua bài hát hiện tại.",
+			"voteSkipLabel2": "Bỏ phiếu bỏ qua bài hát hiện tại! ({{{count}}}/{{{n}}})",
+			"needVoice": "{{{user}}} Bạn cần tham gia kênh thoại {{{channel}}} để sử dụng nút này!",
+			"voteSkipTrack": "{{{user}}} đang bỏ qua bài hát sau khi có {{{count}}} phiếu bỏ qua tích cực!",
+			"notEnoughVote": " Không đủ phiếu bỏ qua bài hát hiện tại.",
+			"skipTrack": "{{{user}}} đã bỏ qua bài hát hiện tại.",
+			"playTrack": "{{{user}}} {{{paused}}} bài hát hiện tại.",
+			"paused": "Tạm dừng",
+			"resumed": "Tiếp tục",
+			"stopTrack": "{{{user}}} đã dừng bài hát hiện tại.",
+			"volMax": " Âm lượng đã ở mức tối đa.",
+			"volUp": "{{{user}}} đã tăng âm lượng lên **{{{vol}}}**%.",
+			"volMin": " Âm lượng đã ở mức tối thiểu.",
+			"volDown": "{{{user}}} đã giảm âm lượng xuống **{{{vol}}}**%.",
+			"shuffleError": "{{{user}}} Không có đủ bài hát trong hàng đợi để trộn.",
+			"shuffleDisabled": "{{{user}}} Không trộn bài hát.",
+			"shuffleEnabled": "{{{user}}} Bật trộn bài hát.",
+			"loopSong": "{{{user}}} Lặp lại bài hát hiện tại.",
+			"loopQueue": "{{{user}}} Lặp lại hàng đợi.",
+			"loopDisabled": "{{{user}}} Không lặp lại.",
+			"noTrack": "{{{user}}} Hiện tại không có bài hát nào đang phát.",
+			"liked": "{{{user}}} Thích **{{{title}}}**.",
+			"unliked": "{{{user}}} Bỏ thích **{{{title}}}**.",
+			"notSeekable": " Bài hát này không thể tua.",
+			"isPaused": " Bài hát này đã tạm dừng.",
+			"rewindTrack": "{{{user}}} Đã tua lại bài hát hiện tại đến **{{{time}}}**.",
+			"forwardTrack": "{{{user}}} Đã tua tiến bài hát hiện tại đến **{{{time}}}**.",
+			"autoplayDisabled": "{{{user}}} Đã tắt chế độ tự động phát.",
+			"autoplayEnabled": "{{{user}}} Đã bật chế độ tự động phát."
+		},
+		"int": {
+			"noSendMessages": " Xin lỗi! Tôi đã cố gửi phản hồi đến lệnh của bạn; tuy nhiên, tôi thiếu quyền để làm điều đó. Vui lòng yêu cầu người từ nhóm hỗ trợ cấp quyền `Gửi Tin Nhắn` cho tôi.\n\nMáy chủ: **{{{guildName}}}**\nLệnh: **{{{commandName}}}**\nCần trợ giúp về quyền hạn? Tham gia máy chủ hỗ trợ: {{{supportServer}}}",
+			"noEmbedLinks": " {{{emoji}}} Bot cần quyền `Embed links` để hoạt động đúng cách! Vui lòng cấp quyền này cho tôi.",
+			"noBotChannel": " Tôi không được phép trả lời lệnh trong kênh này. Vui lòng sử dụng {{{emoji}}} <#{{{botChannel}}}> để sử dụng các lệnh của bot. Cảm ơn bạn đã hợp tác.",
+			"deleteFooter": "• Tin nhắn này sẽ bị xóa trong 5 giây",
+			"disabledCommand": " Lệnh này đã bị vô hiệu hóa trong máy chủ này cho tất cả mọi người. Chỉ DJ mới có thể sử dụng lệnh này.",
+			"disabledCommandList": "Danh sách đã vô hiệu hóa",
+			"noBotPermissions": " {{{emoji}}} Tôi không có quyền **{{{permissions}}}** để thực hiện lệnh này.",
+			"noUserPermissions": " {{{emoji}}} Bạn không có quyền **{{{permissions}}}** để thực hiện lệnh này.",
+			"voteLocks": [
+				" Bạn cần bình chọn cho tôi để sử dụng lệnh này. Bạn có thể bình chọn tại [Top.gg]({{{link}}})",
+				" Bạn cần bình chọn cho tôi để sử dụng lệnh này. Bạn có thể bình chọn tại [Top.gg]({{{link}}}) hoặc\nBạn cũng có thể mua phiên bản Premium bằng cách tặng [ở đây]({{{link2}}})"
+			],
+			"buttons": {
+				"vote": "Bình chọn",
+				"donate": "Quyên góp",
+				"invite": "Mời",
+				"support": "Hỗ trợ"
+			},
+			"cooldown": " Vui lòng đợi thêm **{{{timeLeft}}}** giây trước khi sử dụng lại lệnh **{{{command}}}**.",
+			"noDjRole": " {{{emoji}}} Bạn cần có vai trò DJ để sử dụng lệnh này.",
+			"noPremium": " Bạn cần có phiên bản Premium của bot để sử dụng lệnh này. Bạn có thể mua phiên bản Premium bằng cách tặng [ở đây]({{{link}}})",
+			"voicePerm": " {{{emoji}}} Tôi không có quyền cần thiết để tham gia kênh thoại của bạn! Tôi cần quyền `Xem Kênh`, `Kết nối`, và `Nói`. [Ví dụ về quyền hạn](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\nNếu vấn đề vẫn tiếp tục, hãy thay đổi khu vực kênh thoại sang `Châu Âu`.",
+			"voiceJoin": " {{{emoji}}} Bạn phải kết nối với một kênh thoại trên máy chủ này để sử dụng lệnh này!\n\nCách kết nối với kênh thoại? Chỉ cần nhấp vào một kênh có biểu tượng loa (ví dụ, nhấp vào đây:  {{{channel}}}) [Xem hướng dẫn chính thức của Discord](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord#h_9de92bc2-3bca-459f-8efd-e1e2739ca4f4)",
+			"voiceChannel": " {{{emoji}}} Bạn phải ở trong kênh thoại **{{{channel}}}** để sử dụng lệnh này.",
+			"noPlayer": " {{{emoji}}} Tôi không được kết nối với bất kỳ kênh thoại nào. Vui lòng sử dụng lệnh {{{command}}} để triệu tôi.",
+			"noQueue": " {{{emoji}}} Hiện tại không có hàng đợi nào. Vui lòng sử dụng lệnh {{{command}}} để thêm một bài hát vào hàng đợi.",
+			"noSong": " {{{emoji}}} Hiện tại không có bài hát nào đang phát. Vui lòng sử dụng lệnh {{{command}}} để thêm một bài hát vào hàng đợi.",
+			"error": " {{{emoji}}} Đã xảy ra lỗi trong quá trình thực hiện lệnh. Vui lòng báo cáo lỗi này tới [Máy chủ Hỗ trợ]({{{link}}})"
+		}
+	},
+	"get_started": {
+		"embed_title": "Moe Bot | Bắt đầu",
+		"embed_description": " Chào <@{{{user}}}>! Tiền tố của tôi là: `{{{prefixList}}}`\nVí dụ: `{{{prefix}}}help`, `{{{prefix}}}ping`",
+		"embed_description2": " Chào <@{{{user}}}>! Tiền tố của tôi là: `no prefix`, nghĩa là bạn có thể sử dụng bất kỳ lệnh nào mà không cần tiền tố.\nVí dụ: `help`, `ping`"
+	},
+	"options": {
+		"title": "Tùy chọn cho {{{commandName}}}",
+		"no_description": "Không có mô tả",
+		"options": "Tùy chọn",
+		"examples": "Ví dụ",
+		"long_des": "Đây là để chuyển đổi giữa các trang",
+		"examples_button": "Ví dụ",
+		"footer": "<Bắt buộc> | [Tùy chọn] {{{long_des}}} Trang {{{page}}} trên tổng số {{{total_pages}}}",
+		"title2": "Ví dụ cho {{{commandName}}}"
+	},
+	"Evaluate JavaScript code": "Evaluate JavaScript code",
+	"Generate a premium key": "Generate a premium key",
+	"Give a user premium.": "Give a user premium."
+}

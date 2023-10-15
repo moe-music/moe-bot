@@ -1,0 +1,957 @@
+{
+	"cmd": {
+		"247": {
+			"description": "Activează sau dezactivează modul 24/7.",
+			"enabled": " {{{emoji}}} Modul 24/7 a fost activat.",
+			"disabled": " {{{emoji}}} Modul 24/7 a fost dezactivat."
+		},
+		"ping": {
+			"description": "Afișează timpul de răspuns al botului.",
+			"author": "Timp de răspuns al botului",
+			"content": "**Shard**: `{{{shardPing}}}ms`\n**API**: `{{{latency}}}ms`",
+			"footer": "• Obține mai multe informații în canalul de stări din serverul de suport"
+		},
+		"invite": {
+			"description": "Invită botul pe serverul tău.",
+			"buttons": {
+				"invite": "Invită MoE",
+				"invite2": "Invită MoE2",
+				"invite3": "Invită MoE3",
+				"support": "Suport"
+			},
+			"content": "Dacă te-ai bucurat să mă folosești, atunci consideră să [mă inviți]({{{invite}}}) pe serverul tău acum. Și, de asemenea, nu uita să te alături [serverului de suport]({{{support}}})."
+		},
+		"help": {
+			"description": "Afișează o listă de comenzi sau informații despre o comandă specifică.",
+			"options": {
+				"command": "Numele comenzii sau categoria pentru care vrei să primești ajutor"
+			},
+			"title": " Comandă",
+			"footer": "Pagina {{{page}}} din {{{pagesNum}}}",
+			"title2": "Ajutor - {{{cmd}}}",
+			"title3": "Ajutor",
+			"manContent": " Aici este o listă cu toate categoriile\n{{{catagory}}}\n\n- Link-uri:\n[Server de Suport]({{{server}}}) | [Invitație]({{{invite}}}) | [Vot]({{{vote}}}) | [Patreon]({{{patreon}}}) | [Site web]({{{website}}}) | [Documentație]({{{docs}}})",
+			"footer2": "- Pentru mai multe informații despre o comandă: {{{prefix}}}ajutor <comandă> sau {{{prefix}}}ajutor <categorie>",
+			"cooldown": "Timp de așteptare",
+			"aliases": "Pseudonime",
+			"category": "Categorie",
+			"examples": "Exemplu/Exemple",
+			"userPerms": "Permisiuni pentru utilizator",
+			"botPerms": "Permisiuni pentru bot",
+			"requirements": "Cerințe",
+			"subCommands": "Subcomenzi",
+			"subSubCommands": "Subsubcomenzi",
+			"buttons": {
+				"previous": "Anterior",
+				"stop": "Oprire",
+				"next": "Următor",
+				"home": "Acasă",
+				"config": "Configurație",
+				"music": "Muzică",
+				"filter": "Filtru",
+				"general": "General",
+				"playlists": "Liste de redare"
+			},
+			"notFound": "`{{{cmd}}}` nu este o comandă sau o categorie validă!",
+			"voice": {
+				"inVoice": "- Trebuie să fi într-un canal vocal",
+				"sameVoice": "- Trebuie să fi în același canal vocal",
+				"playing": "- Trebuie să fie redată muzică pe acest server"
+			},
+			"voteLock": "- Trebuie să fi [votat]({{{link}}}) pentru a folosi această comandă",
+			"premiumCmd": "- Trebuie să ai [premium]({{{link}}}) pentru a folosi această comandă"
+		},
+		"premium": {
+			"description": "Afișează statusul premium al utilizatorului sau serverului.",
+			"guildPremiumStatus": "Statusul premium al serverului",
+			"userPremiumStatus": "Statusul premium al utilizatorului",
+			"premium": "Premium",
+			"notPremium": "Nu Premium",
+			"guildPremiumExpires": "Expiră Premium pe server",
+			"userPremiumExpires": "Expiră Premium pentru utilizator"
+		},
+		"redeem": {
+			"description": "Răscumpără un cod premium.",
+			"options": {
+				"code": "Codul premium de răscumpărat"
+			},
+			"noArg": "Te rog furnizează un cod premium pentru a fi răscumpărat.",
+			"invalidCode": "Codul premium furnizat este invalid.",
+			"confirmation": " Ești sigur că vrei să răscumperi codul premium `{{{code}}}`?",
+			"type": "Tip",
+			"expiresAt": "Expiră la",
+			"buttons": {
+				"yes": "Da",
+				"no": "Nu"
+			},
+			"alreadyPremium": "Ești deja membru premium.",
+			"success": " Codul premium a fost răscumpărat cu succes. Acum poți folosi comenzile premium!",
+			"canceled": "Răscumpărarea codului premium a fost anulată."
+		},
+		"stats": {
+			"description": "Afișează statistici despre bot."
+		},
+		"support": {
+			"description": "Link către serverul de suport",
+			"content": " Dacă ai nevoie de ajutor cu botul sau vrei să petreci timp cu noi, alătură-te [serverului de suport]({{{link}}}).",
+			"buttons": {
+				"support": "Server de Suport"
+			}
+		},
+		"vote": {
+			"description": "Link pentru votul botului",
+			"content": " Dacă îți place botul, te rog să îl votezi pe [top.gg]({{{link}}}).",
+			"buttons": {
+				"vote": "Vot"
+			}
+		},
+		"player": {
+			"description": "Afișează starea playerului.",
+			"nowPlaying": "În prezent se redă",
+			"noSong": "În prezent nu se redă nicio melodie.",
+			"volume": "Volum",
+			"totalDuration": "Durată totală",
+			"loopMode": "Mod buclă",
+			"filters": "Filtre",
+			"noFilters": "În prezent nu sunt aplicate filtre.",
+			"title": "Player: {{{status}}}",
+			"online": "Conectat",
+			"offline": "Deconectat"
+		},
+		"autoplay": {
+			"description": "Activează sau dezactivează modul de redare automată.",
+			"enabled": " Modul de redare automată a fost activat cu succes\nBotul va adăuga automat melodii similare în coadă.",
+			"disabled": " Modul de redare automată a fost dezactivat cu succes\nBotul nu va mai adăuga automat melodii similare în coadă."
+		},
+		"clear": {
+			"description": "Șterge coada sau filtrele din player.",
+			"options": {
+				"input": "Coadă sau filtre de șters"
+			},
+			"content": " Te rog să selectezi o coadă sau filtre pentru ștergere. (coadă/filtre)",
+			"queue": {
+				"noSong": "Nu sunt melodii în coadă de șters.",
+				"success": " Coada a fost ștearsă cu succes."
+			},
+			"filters": {
+				"noFilter": "Nu există filtre de șters.",
+				"success": " Filtrele au fost șterse cu succes."
+			},
+			"buttons": {
+				"queue": "Coadă",
+				"filters": "Filtre"
+			}
+		},
+		"forceskip": {
+			"description": "Sari peste melodia curentă.",
+			"success": " S-a trecut cu forța peste melodia «{{{title}}}»."
+		},
+		"forward": {
+			"description": "Saltă înainte melodia curentă.",
+			"options": {
+				"seconds": "Numărul de secunde pentru salt"
+			},
+			"unseekable": "{{{emoji}}} Melodia curentă nu poate fi saltată.",
+			"tooLong": "{{{emoji}}} Nu poți sări mai mult decât lungimea melodiei.",
+			"success": " {{{emoji}}} Melodia a fost saltată cu succes cu `{{{time}}}`."
+		},
+		"grab": {
+			"description": "Preia melodia curentă.",
+			"dm": "{{{emoji}}} nu pot să-ți trimit melodia pentru că ți-ai dezactivat mesajele directe.",
+			"grabbed": " {{{emoji}}} Melodia a fost preluată cu succes."
+		},
+		"join": {
+			"description": "Cheamă botul în canalul tău vocal.",
+			"no-perms": "{{{emoji}}} Nu am permisiunile necesare pentru a intra în canalul vocal! Am nevoie de permisiunile `Vizualizează canalele`, `Conectare` și `Redă vorbind`. [Exemplu de permisiuni](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\n Dacă problema persistă, schimbă regiunea canalului vocal în `Europa`.",
+			"already-in": "{{{emoji}}} Sunt deja într-un canal vocal!",
+			"joined": " Am intrat cu succes în canalul vocal {{{channel}}}"
+		},
+		"leave": {
+			"description": "Părăsește canalul vocal.",
+			"not-playing": "{{{emoji}}} În acest moment nu redau nimic!",
+			"success": " {{{emoji}}} Am părăsit cu succes canalul vocal."
+		},
+		"leavecleanup": {
+			"description": "Șterge toate melodiile de la utilizatorii care nu se mai află în canalul vocal.",
+			"removing": " Se șterg melodiile de la utilizatorii care nu sunt în VC. Te rog așteaptă",
+			"removed": " S-au eliminat cu succes `{{{count}}}` de melodii de la utilizatorii care nu se mai află în VC."
+		},
+		"loop": {
+			"description": "Activează bucla pentru melodia curentă sau coadă.",
+			"options": {
+				"mode": "Modul de buclă pentru a seta"
+			},
+			"specify": " Te rog specifică modul de buclă. (melodie, coadă, dezactivat) din opțiunile de mai jos.",
+			"buttons": {
+				"song": "Melodie",
+				"queue": "Coadă",
+				"off": "Dezactivat"
+			},
+			"song": " {{{emoji}}} Bucla pentru melodia curentă a fost activată cu succes.",
+			"queue": " {{{emoji}}} Bucla pentru coadă a fost activată cu succes.",
+			"off": " {{{emoji}}} Bucla a fost dezactivată cu succes.",
+			"song_already": " {{{emoji}}} Melodia curentă este deja în buclă.",
+			"queue_already": " {{{emoji}}} Coadă este deja în buclă.",
+			"off_already": " {{{emoji}}} Bucla este deja dezactivată.",
+			"invalid_mode": " {{{emoji}}} Mod de buclă invalid. Te rog specifică un mod valid de buclă. (melodie, coadă, dezactivat)"
+		},
+		"lyrics": {
+			"description": "Afișează versurile melodiei curente sau ale unei melodii după nume.",
+			"options": {
+				"song": "Numele melodiei pentru căutare"
+			},
+			"noQuery": " Te rog oferă un nume de melodie pentru căutare.",
+			"noLyrics": " Nu am putut găsi versurile pentru această melodie.",
+			"page": "Pagina {{{page}}} din {{{pages}}}"
+		},
+		"move": {
+			"description": "Mută o melodie la o poziție specifică în coadă.",
+			"options": {
+				"song": "Melodia de mutat",
+				"position": "Poziția la care să muți melodia"
+			},
+			"invalidNumber": " Te rog oferă un număr valid pentru poziție.",
+			"invalidPosition": " Poziție invalidă. Te rog oferă o poziție validă.",
+			"success": " Mutat **[{{{title}}}]({{{uri}}})** de la poziția **{{{from}}}** la **{{{to}}}**."
+		},
+		"nowplaying": {
+			"description": "Afișează melodia care se redă în acest moment.",
+			"nowplaying": " Se redă acum: [{{{title}}}]({{{uri}}})",
+			"author": "Autor",
+			"requester": "Cerută de",
+			"duration": "Durată",
+			"progress": "Progres"
+		},
+		"pause": {
+			"description": "Pune pe pauză melodia curentă.",
+			"alreadyPaused": " Melodia curentă este deja pe pauză.",
+			"paused": " Pus pe pauză [{{{title}}}]({{{uri}}})"
+		},
+		"play": {
+			"description": "Redă o melodie de pe Spotify, SoundCloud, Deezer, etc...",
+			"options": {
+				"query": "Cuvântul cheie pentru căutare",
+				"source": "Sursa de căutare"
+			},
+			"no-query": "Te rog oferă un nume de melodie pentru căutare.",
+			"no-results": " Niciun rezultat găsit pentru `{{{query}}}`.",
+			"playlist-loaded": " Încărcate `{{{count}}}` melodii din lista de redare **[{{{name}}}]({{{url}}})**",
+			"footer": "Mulțumim că folosești {{{bot}}}",
+			"added": " Adăugat **[{{{title}}}]({{{uri}}})** în coadă (cerută de <@{{{requester}}}>) la poziția `#{{{position}}}`",
+			"youtube-not-supported": " Îmi pare rău să vă informez că YouTube nu este acceptat în MoE pentru Discord TOS. Nu putem folosi API-ul YouTube pentru a asculta muzică. Ne cerem scuze pentru orice neplăcere pe care am putea să v-o fi cauzat."
+		},
+		"playprevious": {
+			"description": "Redă melodia anterioară.",
+			"noPreviousTrack": " {{{emoji}}} Nu există nicio melodie anterioară de redat.",
+			"success": " {{{emoji}}} Redau acum melodia anterioară din coadă!"
+		},
+		"queue": {
+			"description": "Afișează coada de redare pentru acest server.",
+			"options": {
+				"page": "Numărul paginii pentru vizualizare"
+			},
+			"queue": "Coadă pentru {{{guild}}} ({{{songs}}} melodii)",
+			"nowPlaying": " Se redă acum: [{{{title}}}]({{{uri}}}) `[{{{length}}}]`- (<@{{{requester}}}>)\n\n",
+			"upNext": " Următoarele: {{{str}}}",
+			"noSongs": " Încă nu există melodii în coadă! Adaugă una folosind comanda {{{cmd}}}",
+			"page": "Pagina {{{page}}} | {{{songs}}} melodii | Durată totală: {{{duration}}}",
+			"notNumber": " {{{emoji}}} Numărul paginii trebuie să fie un număr.",
+			"pageLimit": " {{{emoji}}} Numărul paginii trebuie să fie mai mic sau egal cu {{{pages}}}.",
+			"clearQueue": "Golește coada",
+			"noTracks": " Nu există melodii în coadă.",
+			"noDjRole": " Ai nevoie de rolul DJ pentru a folosi acest buton.",
+			"clearedQueue": " {{{user}}} A golit coada."
+		},
+		"remove": {
+			"description": "Pentru a scoate o melodie din coadă.",
+			"options": {
+				"track": "Melodia de eliminat.",
+				"number": "Numărul sau numele melodiei de eliminat.",
+				"dupes": "Șterge toate duplicatelor melodiei."
+			},
+			"trackNotFound": " Nu există o melodie cu acel număr în coadă",
+			"invalidNumber": " Te rog introdu un număr între 1 și {{{length}}}.",
+			"removed": " Eliminat **[{{{title}}}]({{{uri}}})** din coadă.",
+			"noDupes": " Nu există melodii duplicate în coadă.",
+			"removedDupes": " Eliminate **{{{length}}}** melodii duplicate din coadă."
+		},
+		"replay": {
+			"description": "Redă din nou melodia curentă.",
+			"replaying": " Se redă din nou [{{{title}}}]({{{uri}}})"
+		},
+		"resume": {
+			"description": "Continuă redarea melodiei curente.",
+			"notPaused": " Melodia curentă nu este pe pauză.",
+			"resumed": " Continuare redare [{{{title}}}]({{{uri}}})"
+		},
+		"rewind": {
+			"description": "Înapoiază melodia curentă.",
+			"options": {
+				"time": "Timpul la care vrei să înapoiezi melodia."
+			},
+			"notSeekable": " {{{emoji}}} Melodia curentă nu poate fi înapoiată.",
+			"negativePosition": " {{{emoji}}} Poziția trebuie să fie între 0 și {{{length}}}.",
+			"success": " {{{emoji}}} Melodia a fost înapoiată la {{{length}}}."
+		},
+		"search": {
+			"description": "caută o melodie de pe Spotify, SoundCloud sau Deezer",
+			"options": {
+				"query": "Căutarea pentru",
+				"source": "Sursa de căutare"
+			},
+			"no-playlist": " {{{emoji}}} Lista de redare nu este suportată! Te rog folosește comanda {{{cmd}}} în locul comenzii de căutare.",
+			"no-track": " {{{emoji}}} Pista nu este suportată! Te rog folosește comanda {{{cmd}}} în locul comenzii de căutare.",
+			"results": " Rezultatele căutării pentru `{{{query}}}`\n\n{{{results}}}",
+			"footer": "Te rog selectează o melodie din meniul de mai jos.",
+			"placeholder": "Selectează o melodie din lista de mai jos pentru a o reda.",
+			"footerTimeout": "Rezultatele căutării au expirat.",
+			"no-voice": " {{{emoji}}} Trebuie să fii într-un canal vocal pentru a utiliza acest meniu.",
+			"wrong-voice": " {{{emoji}}} Trebuie să fii în același canal vocal cu mine pentru a utiliza acest meniu.",
+			"added": " {{{emoji}}} Adăugat {{{count}}} melodie/melodii în coadă."
+		},
+		"seek": {
+			"description": "Sare la un moment specific în melodia curentă.",
+			"options": {
+				"time": "Momentul la care vrei să sari în melodie."
+			},
+			"invalidPosition": " Momentul trebuie să fie între 0 și {{{length}}}.",
+			"seeked": " Sărit la `{{{position}}}` la `{{{time}}}`"
+		},
+		"shuffle": {
+			"description": "Amestecă coada de redare.",
+			"success": " Coada serverului a fost amestecată cu succes (**{{{length}}}** melodii).",
+			"unshuffle": " Coada serverului a fost reașezată cu succes (**{{{length}}}** melodii)."
+		},
+		"skip": {
+			"description": "Trece la melodia următoare.",
+			"nothing": " Nu există nimic în coadă. Folosește {{{queue}}} pentru a vedea coada serverului.\nVrei să încerci autoplay? Folosește {{{autoplay}}}.",
+			"paused": " Playerul este în pauză. Folosește comanda de reluare pentru a continua redarea.\nVrei să reiei redarea? Folosește {{{resume}}}.",
+			"voteSkip": " {{{user}}} a cerut să se sara peste melodia curentă.\n\n{{{voted}}}",
+			"skip": " Se sare peste melodia **{{{title}}}**."
+		},
+		"skipto": {
+			"description": "Sare la o melodie specifică din coadă.",
+			"options": {
+				"number": "Numărul melodiei sau titlul melodiei la care vrei să sari."
+			},
+			"invalidNumber": " {{{emoji}}} Te rog introdu un număr de melodie între 1 și {{{length}}}.",
+			"success": " {{{emoji}}} Sărit la **[{{{title}}}]({{{uri}}})**."
+		},
+		"stop": {
+			"description": "Oprește playerul și golește coada de redare.",
+			"stopped": " {{{emoji}}} Playerul a fost oprit și coada a fost golită."
+		},
+		"topsongs": {
+			"description": "Arată melodiile cele mai ascultate de bot.",
+			"noTopSongs": " Nu există melodii populare în baza de date.",
+			"timesPlayed": "Ori redată",
+			"selectSong": "Selectează o melodie din lista de mai jos pentru a o reda.",
+			"added": " Adăugat **[{{{title}}}]({{{uri}}})** în coadă."
+		},
+		"volume": {
+			"description": "Schimbă volumul playerului.",
+			"options": {
+				"volume": "Volumul pe care vrei să-l setezi."
+			},
+			"invalidVolume": " {{{emoji}}} Te rog introdu o valoare între 0 și 100.",
+			"success": " {{{emoji}}} Volumul a fost setat la **{{{volume}}}**."
+		},
+		"voteskip": {
+			"description": "Votează pentru a sari peste melodia curentă."
+		},
+		"filters": {
+			"filters": " Toate filtrele aplicate în melodia curentă:\n\n{{{filters}}}",
+			"pitchNaN": " {{{emoji}}} Tonul trebuie să fie un număr între 1 și 5.",
+			"description": {
+				"8d": "Aplică filtrul 8D în melodia curentă.",
+				"bassboost": "Aplică filtrul de bassboost în melodia curentă.",
+				"channelmix": "Aplică filtrul de mixare a canalelor în melodia curentă.",
+				"electronic": "Aplică filtrul electronic în melodia curentă.",
+				"filters": "Obține o listă cu filtrele care pot fi aplicate în melodia curentă.",
+				"jazz": "Aplică filtrul de jazz în melodia curentă.",
+				"karaoke": "Aplică filtrul de karaoke în melodia curentă.",
+				"lowpass": "Aplică filtrul de lowpass în melodia curentă.",
+				"nightcore": "Aplică filtrul de nightcore în melodia curentă.",
+				"pitch": "Aplică filtrul de ton în melodia curentă.",
+				"pop": "Aplică filtrul de pop în melodia curentă.",
+				"radio": "Aplică filtrul de radio în melodia curentă.",
+				"rock": "Aplică filtrul de rock în melodia curentă.",
+				"rotation": "Aplică filtrul de rotație în melodia curentă.",
+				"soft": "Aplică filtrul soft în melodia curentă.",
+				"speed": "Aplică filtrul de viteză în melodia curentă.",
+				"treblebass": "Aplică filtrul de treblebass în melodia curentă.",
+				"tremolo": "Aplică filtrul de tremolo în melodia curentă.",
+				"vaporwave": "Aplică filtrul de vaporwave în melodia curentă.",
+				"vibrato": "Aplică filtrul de vibrato în melodia curentă."
+			},
+			"enabled": " {{{emoji}}} Filtrul {{{name}}} a fost activat.",
+			"disabled": " {{{emoji}}} Filtrul {{{name}}} a fost dezactivat.",
+			"speed": " {{{emoji}}} Filtrul de viteză a fost setat la **{{{value}}}**.",
+			"options": {
+				"speed": "Viteza pe care vrei să o setezi.",
+				"pitch": "Tonul pe care vrei să-l aplici."
+			}
+		},
+		"announce": {
+			"description": "Pentru a configura anunțarea mesajului de începere a melodiilor.",
+			"options": {
+				"set": "Setează canalul în care va fi trimis mesajul de începere a melodiilor.",
+				"channel": "Canalul pe care vrei să îl setezi.",
+				"toggle": "Comută anunțarea mesajului de începere a melodiilor.",
+				"prunning": "Comută curățarea mesajului de începere a melodiilor.",
+				"reset": "Resetează canalul în care va fi trimis mesajul de începere a melodiilor."
+			},
+			"noChannel": " {{{emoji}}} Te rog furnizează un canal text valid.",
+			"noTextChannel": " {{{emoji}}} Te rog furnizează un canal text valid.",
+			"sameChannel": " {{{emoji}}} Canalul pe care l-ai furnizat este deja în baza de date.",
+			"setChannel": " {{{emoji}}} Canalul de anunțuri a fost setat cu succes la {{{channel}}}.",
+			"noChannelInDB": " {{{emoji}}} Canalul de anunțuri nu a fost configurat în baza de date.",
+			"toggle": " {{{emoji}}} Anunțarea mesajului de începere a melodiilor a fost {{{status}}}.",
+			"enabled": "activat",
+			"disabled": "dezactivat",
+			"reset": " {{{emoji}}} Canalul de anunțuri a fost resetat cu succes."
+		},
+		"botchannel": {
+			"description": "Setează canalul bot-ului pentru ascultarea comenzilor.",
+			"options": {
+				"add": "Adaugă un canal la lista canalului bot-ului.",
+				"channel": "Canalul pe care vrei să îl setezi.",
+				"remove": "Înlătură un canal din lista canalului bot-ului.",
+				"clear": "Curăță lista canalului bot-ului.",
+				"info": "Obține lista canalului bot-ului și informații despre canalul bot-ului."
+			},
+			"noChannel": " {{{emoji}}} Te rog furnizează un canal text valid.",
+			"noTextChannel": " {{{emoji}}} Te rog furnizează un canal text valid.",
+			"sameChannel": " {{{emoji}}} Canalul pe care l-ai furnizat există deja în baza de date.",
+			"maxChannel": " {{{emoji}}} Nu poți adăuga mai mult de 5 canale în lista canalului bot-ului.",
+			"addedChannel": " {{{emoji}}} Canalul {{{channel}}} a fost adăugat cu succes în lista canalului bot-ului.",
+			"noChannelInDB": " {{{emoji}}} Nu există canale bot în baza de date.",
+			"removedChannel": " {{{emoji}}} Canalul {{{channel}}} a fost înlăturat cu succes din lista canalului bot-ului.",
+			"clearedChannel": " {{{emoji}}} Lista canalului bot-ului a fost curățată cu succes.",
+			"info": ">>> **Canal:** {{{channel}}}\n**Moderator:** {{{moderator}}}\n**Adăugat la:** {{{addedAt}}}",
+			"title": "Canalele bot-ului ({{count}})"
+		},
+		"clean": {
+			"description": "Șterge mesajele mele din canal.",
+			"success": " {{{emoji}}} Mesajele **{{{count}}}** au fost șterse cu succes."
+		},
+		"defaultvolume": {
+			"description": "Setează volumul implicit pentru server.",
+			"options": {
+				"number": "Numărul pentru volumul implicit"
+			},
+			"invalidNumber": " {{{emoji}}} Te rog introdu un număr între 0 și 200.",
+			"success": " {{{emoji}}} Volumul implicit a fost setat cu succes la **{{{volume}}}**."
+		},
+		"disablecommands": {
+			"description": "Dezactivează comenzile pentru server.",
+			"options": {
+				"add": "Adaugă o comandă în lista de comenzi dezactivate",
+				"command": "Numele comenzii",
+				"remove": "Elimină o comandă din lista de comenzi dezactivate",
+				"list": "Obține lista de comenzi dezactivate",
+				"clear": "Șterge lista de comenzi dezactivate"
+			},
+			"noCommand": " {{{emoji}}} Te rog furnizează un nume de comandă pentru a o dezactiva/activa.",
+			"commandNotExist": " {{{emoji}}} Această comandă nu există în bot.",
+			"commandAlreadyDisabled": " {{{emoji}}} Această comandă este deja dezactivată.",
+			"commandDisabled": " {{{emoji}}} Comanda **{{{command}}}** a fost dezactivată cu succes.",
+			"noDisabledCommands": " {{{emoji}}} Această comandă nu este dezactivată.",
+			"commandEnabled": " {{{emoji}}} Comanda **{{{command}}}** a fost activată cu succes.",
+			"disabledCommands": "Comenzi Dezactivate",
+			"disabledCommandsForThisServer": "Comenzi dezactivate pentru acest server",
+			"total": "Total: {{{total}}}",
+			"disabledCommandsCleared": " {{{emoji}}} Lista de comenzi dezactivate a fost ștearsă cu succes."
+		},
+		"dj": {
+			"description": "Setează rolul DJ pentru server.",
+			"options": {
+				"add": "Adaugă un rol în lista de roluri DJ",
+				"role": "Rolul pe care dorești să-l (adaugi/elimini)",
+				"remove": "Elimină un rol din lista de roluri DJ",
+				"list": "Afișează lista de roluri DJ",
+				"clear": "Șterge lista de roluri DJ",
+				"toggle": "Comută modul DJ",
+				"info": "Obține lista de roluri DJ și informații despre rolul DJ"
+			},
+			"noRole": " {{{emoji}}} Te rog furnizează un rol valid pentru (adaugare/eliminare).",
+			"maxRoles": " {{{emoji}}} Nu poți adăuga mai mult de 5 roluri în lista DJ.",
+			"alreadyInList": " {{{emoji}}} Rolul pe care l-ai furnizat există deja în baza de date.",
+			"addedRole": " {{{emoji}}} Rolul {{{role}}} a fost adăugat cu succes în lista DJ.",
+			"noRolesSetup": " {{{emoji}}} În acest server nu au fost setate roluri DJ.",
+			"notInList": " {{{emoji}}} Acest rol nu este în lista DJ.",
+			"removedRole": " {{{emoji}}} Rolul {{{role}}} a fost eliminat cu succes din lista DJ.",
+			"list": ">>> **Rol:** {{{role}}}\n**Moderator:** {{{moderator}}}\n**Adăugat la:** {{{addedAt}}}",
+			"listTotal": " Total roluri DJ: {{{total}}}",
+			"clearedList": " {{{emoji}}} Lista DJ a fost ștearsă cu succes.",
+			"enabledToggle": " {{{emoji}}} Modul DJ a fost activat cu succes.",
+			"disabledToggle": " {{{emoji}}} Modul DJ a fost dezactivat cu succes.",
+			"info": {
+				"djRoles": "Roluri DJ",
+				"enabled": "Activat",
+				"disabled": "Dezactivat",
+				"djMode": "Mod DJ",
+				"djMembers": "Membri DJ",
+				"description": "Informații despre rolul DJ pentru {{{guild}}}"
+			}
+		},
+		"fixvoice": {
+			"description": "Repară conexiunea audio dacă botul nu redă muzică.",
+			"joining": " Conectare la canalul audio și reluare a redării muzicii.",
+			"failed": " Eșec la schimbarea regiunii audio. Te rog încearcă mai târziu.",
+			"error": "{{{emoji}}} În acest moment, nu am găsit nicio soluție de rezolvare. Poți cere ajutor în [serverul de suport]({{{server}}})).",
+			"success": " {{{emoji}}} Regiunea audio a fost schimbată cu succes la **{{{region}}}**."
+		},
+		"forcejoin": {
+			"description": "Fortsează botul să se alăture canalului audio.",
+			"already-in": "{{{emoji}}} Sunt deja într-un canal audio!",
+			"joined": " {{{emoji}}} Botul s-a alăturat cu succes canalului audio **{{{channel}}}**."
+		},
+		"languages": {
+			"description": "Setează limba botului pentru server.",
+			"options": {
+				"add": "Adaugă o limbă pentru server",
+				"language": "Limbajul pe care dorești să-l setezi",
+				"info": "Obține informații despre limbaje",
+				"reset": "Resetează limba la limba implicită",
+				"set": "cmd.languages.options.set"
+			},
+			"success": " {{{emoji}}} Limba botului a fost setată cu succes la {{{language}}} `({{{languageCode}}})`.",
+			"info": " Limba curentă în acest server este: **{{{language}}}** `({{{languageCode}}})`.",
+			"reset": " {{{emoji}}} Limba botului a fost resetată cu succes la limba implicită.",
+			"translationProgress": "Progres traducere: {{{progress}}}",
+			"selectLanguage": "Te rog selectează limba pe care dorești să o setezi din meniul de mai jos."
+		},
+		"noprefix": {
+			"description": "Comută fără prefix pentru utilizator sau server.",
+			"toggle": " Comută fără prefix pentru utilizator sau server.",
+			"buttons": {
+				"server": "Server",
+				"user": "Utilizator"
+			},
+			"premium": " Trebuie să ai cont premium pentru a utiliza această comandă.",
+			"disabledUser": " {{{emoji}}} Fără prefix a fost dezactivat cu succes pentru utilizator.",
+			"enabledUser": " {{{emoji}}} Fără prefix a fost activat cu succes pentru utilizator.",
+			"noPerm": " Nu ai permisiunile necesare pentru a utiliza această comandă.",
+			"disabledServer": " {{{emoji}}} Fără prefix a fost dezactivat cu succes pentru server.",
+			"enabledServer": " {{{emoji}}} Fără prefix a fost activat cu succes pentru server."
+		},
+		"prefix": {
+			"description": "Setează prefixul pentru server.",
+			"options": {
+				"set": "Setează prefixul pentru server",
+				"prefix": "Prefixul pe care dorești să-l (setezi/elimini)",
+				"info": "Obține prefixul pentru server",
+				"clear": "Șterge prefixul pentru server",
+				"remove": "Elimină prefixul pentru server"
+			},
+			"info": ">>> **Prefix:** `{{{prefix}}}`\n**Moderator:** {{{moderator}}}\n**Adăugat la:** {{{timestamp}}}",
+			"noPrefix": " {{{emoji}}} Te rog furnizează un prefix pentru a-l seta.",
+			"noPrefixAdded": " {{{emoji}}} Nu există niciun prefix adăugat pe server.",
+			"prefixLength": " {{{emoji}}} Prefixul nu poate fi mai lung de 5 caractere.",
+			"prefixLimit": " {{{emoji}}} Limita de prefixe este 4. Te rog elimină câteva prefixe folosind comanda `prefix remove`.",
+			"prefixCharacters": " {{{emoji}}} Prefixul nu poate conține următoarele caractere `[]{}\\`",
+			"prefixExists": " {{{emoji}}} Prefixul `{{{prefix}}}` este deja adăugat de către {{{moderator}}}",
+			"prefixCleared": " {{{emoji}}} Toate prefixele au fost șterse cu succes și au revenit la prefixul implicit.",
+			"prefixNotExists": " {{{emoji}}} Prefixul `{{{prefix}}}` nu este adăugat",
+			"prefixRemoved": " {{{emoji}}} Prefixul `{{{prefix}}}` a fost eliminat cu succes.",
+			"prefixAdded": " {{{emoji}}} Prefixul `{{{prefix}}}` a fost adăugat cu succes."
+		},
+		"profile": {
+			"description": "Afișează profilul tău sau al altcuiva.",
+			"options": {
+				"set": "Setează culoarea, culoarea profilului sau vizibilitatea profilului.",
+				"bio": "Setează biografia profilului tău.",
+				"color": "Setează culoarea profilului tău.",
+				"visibility": "Setează vizibilitatea profilului tău.",
+				"view": "Afișează profilul tău sau al altcuiva.",
+				"user": "Utilizatorul al cărui profil dorești să-l vezi."
+			},
+			"noBio": " {{{emoji}}} Trebuie să furnizezi o biografie",
+			"bioLength": " {{{emoji}}} Biografia ta nu poate conține mai mult de 50 de caractere",
+			"bioSet": " {{{emoji}}} Biografia ta a fost setată cu succes la `{{{bio}}}`",
+			"noColor": " {{{emoji}}} Te rog furnizează un cod hexagonal de culoare [Exemplu: #FF0000](https://g.co/kgs/q5nhF7)\n\nPoți folosi, de asemenea, numele următoarelor culori: {{{colors}}}",
+			"sameColor": " {{{emoji}}} Culoarea ta este deja setată la `{{{color}}}`",
+			"colorSet": " {{{emoji}}} Culoarea ta a fost setată cu succes la `{{{color}}}`",
+			"sameVisibility": " {{{emoji}}} Vizibilitatea ta este deja setată la `{{{visibility}}}`",
+			"noVisibility": " {{{emoji}}} Te rog furnizează o vizibilitate (public/privat)",
+			"visibilitySet": " {{{emoji}}} Vizibilitatea ta a fost setată cu succes la `{{{visibility}}}`",
+			"privateProfile": " {{{emoji}}} Profilul acestui utilizator este privat"
+		},
+		"setting": {
+			"description": "Schimbați setările serverului sau obțineți informații despre setările serverului",
+			"options": {
+				"reset": "Resetați toate setările serverului la setările implicite",
+				"info": "Obțineți informații despre setările serverului"
+			},
+			"noPermission": " {{{emoji}}} Nu aveți permisiunea `manageGuild` pentru a utiliza această comandă.",
+			"isSure": " Sunteți sigur că doriți să resetați setările serverului?\nAceasta va reseta toate setările la valoarea implicită\n\n**dacă sunteți sigur, apăsați butonul de mai jos**",
+			"buttons": {
+				"reset": "Resetați"
+			},
+			"fields": {
+				"247": "24/7",
+				"trackButton": "Buton de urmărire",
+				"dj": "DJ",
+				"botChannel": "Canalul botului",
+				"disableCommand": "Comandă dezactivată",
+				"defaultVolume": "Volum implicit",
+				"announce": "Anunță",
+				"prunning": "Prunning",
+				"noPrefix": "Fără prefix",
+				"prefix": "Prefix",
+				"djRole": "Rol DJ",
+				"setup": "Configurare",
+				"voteSkip": "Vote Skip",
+				"language": "Limbă",
+				"trackButtonValue": "Mod: {{{mode}}}\nModerator: {{{moderator}}}\nAdăugat: {{{added}}}",
+				"setupValue": "Moderator: {{{moderator}}}\nAdăugat: {{{added}}}\n\n**Canale:**\n{{{channels}}}",
+				"djValue": "Mod: {{{mode}}}\nRoluri: {{{roles}}}\nAdăugat: {{{added}}}",
+				"defaultvolumeValue": "Volum: {{{volume}}}\nAdăugat: {{{added}}}\nModerator: {{{moderator}}}",
+				"announceValue": "Mod: {{{mode}}}\nCanal: {{{channel}}}\nAdăugat: {{{added}}}\nModerator: {{{moderator}}}",
+				"prunningValue": "Mod: {{{mode}}}\nAdăugat: {{{added}}}\nModerator: {{{moderator}}}",
+				"disableCommandValue": "Comenzi: {{{commands}}}\nAdăugat: {{{added}}}\nModerator: {{{moderator}}}",
+				"prefixValue": "Prefix: {{{prefix}}}\nAdăugat: {{{added}}}\nModerator: {{{moderator}}}",
+				"voteSkipValue": "Mod: {{{mode}}}\nAdăugat: {{{added}}}\nModerator: {{{moderator}}}",
+				"247Value": "Mod: {{{mode}}}\nAdăugat: {{{added}}}\nModerator: {{{moderator}}}\nCanal: {{{channel}}}",
+				"botChannelValue": "Canal: {{{channel}}}\nAdăugat: {{{added}}}\nModerator: {{{moderator}}}",
+				"languageValue": "Limbă: {{{language}}}",
+				"enabled": "Activat",
+				"disabled": "Dezactivat",
+				"none": "Niciunul"
+			},
+			"resetSuccess": " {{{emoji}}} Setările serverului au fost resetate cu succes la setările implicite.",
+			"info": " Iată informațiile de configurare pentru acest server",
+			"noSettings": " {{{emoji}}} Nu există setări pentru acest server."
+		},
+		"voteskipsetting": {
+			"description": "Configurați setările voteskip.",
+			"options": {
+				"set": "Setați modul voteskip.",
+				"action": "Acțiunea pe care doriți să o setați (activare/dezactivare)."
+			},
+			"success": " {{{emoji}}} Voteskip a fost {{{action}}} cu succes.",
+			"isConfirm": " Doriți să activați sau să dezactivați voteskip?",
+			"canceled": " {{{emoji}}} Setarea voteskip a fost anulată.",
+			"alreadyEnabled": " Voteskip este deja activat.",
+			"alreadyDisabled": " Voteskip este deja dezactivat.",
+			"buttons": {
+				"enable": "Activează",
+				"disable": "Dezactivează",
+				"cancel": "Anulează"
+			}
+		},
+		"add": {
+			"description": "Adăugați o melodie la o listă de redare.",
+			"options": {
+				"playlist": "Lista de redare la care doriți să adăugați melodia.",
+				"song": "Melodia (nume/URL) pe care doriți să o adăugați la lista de redare."
+			},
+			"playlistLength": " {{{emoji}}} Numele listei de redare trebuie să aibă între 3 și 50 de caractere.",
+			"noPlaylists": " {{{emoji}}} Nu am putut găsi nicio listă de redare în contul dvs., vă rugăm să creați una mai întâi.",
+			"noResults": " {{{emoji}}} Nu am găsit niciun rezultat pentru `{{{song}}}`.",
+			"playlistFull": " {{{emoji}}} Lista dvs. de redare este plină, vă rugăm să ștergeți câteva melodii înainte de a adăuga altele.",
+			"playlistAdded": " {{{emoji}}} Au fost adăugate cu succes **{{{count}}}** melodii în lista de redare **{{{playlist}}}**."
+		},
+		"addnowplaying": {
+			"description": "Adăugați melodia curentă la o listă de redare.",
+			"options": {
+				"playlist": "Lista de redare la care doriți să adăugați melodia."
+			},
+			"noSong": " {{{emoji}}} Nu există nicio melodie în redare.",
+			"songAlreadyInPlaylist": " {{{emoji}}} Această melodie este deja în lista de redare.",
+			"success": " {{{emoji}}} **{{{song}}}** a fost adăugată la **{{{playlist}}}**."
+		},
+		"addqueue": {
+			"description": "Adăugați o listă de redare la coadă.",
+			"options": {
+				"name": "Numele listei de redare pe care doriți să o adăugați la coadă."
+			},
+			"noQueue": " {{{emoji}}} Nu există nicio coadă.",
+			"success": " {{{emoji}}} Au fost adăugate **{{{queueLength}}}** melodii din coadă în lista de redare **{{{playlistName}}}**."
+		},
+		"create": {
+			"description": "Creați o listă de redare.",
+			"options": {
+				"playlist": "Numele listei de redare pe care doriți să o creați.",
+				"visibility": "Vizibilitatea listei de redare."
+			},
+			"playlist": " {{{emoji}}} Vă rugăm să furnizați un nume pentru lista de redare.",
+			"visibility": " {{{emoji}}} Vizibilitatea trebuie să fie fie `publică` sau `privată`.",
+			"maxPlaylists": " {{{emoji}}} Puteți crea până la 10 liste de redare.",
+			"playlistExists": " {{{emoji}}} Aveți deja o listă de redare cu numele **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Lista de redare **{{{playlist}}}** a fost creată cu succes."
+		},
+		"delete": {
+			"description": "Ștergeți o listă de redare.",
+			"options": {
+				"playlist": "Numele listei de redare pe care doriți să o ștergeți."
+			},
+			"noPlaylists": " {{{emoji}}} Nu aveți o listă de redare cu numele **{{{playlist}}}**.",
+			"buttons": {
+				"confirm": "Confirmă",
+				"cancel": "Anulează"
+			},
+			"confirm": " Sunteți sigur că doriți să ștergeți lista de redare **{{{playlist}}}**?",
+			"success": " {{{emoji}}} Lista de redare **{{{playlist}}}** a fost ștearsă cu succes.",
+			"cancel": " {{{emoji}}} Ștergerea listei de redare **{{{playlist}}}** a fost anulată."
+		},
+		"dupes": {
+			"description": "Elimină toate melodiile duplicate dintr-o listă de redare.",
+			"options": {
+				"playlist": "Numele listei de redare din care doriți să eliminați duplicatelor."
+			},
+			"noDupes": " {{{emoji}}} Nu există melodii duplicate în lista de redare **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Am eliminat cu succes **{{{count}}}** melodii duplicate din lista de redare **{{{playlist}}}**."
+		},
+		"edit": {
+			"description": "Editează o listă de redare.",
+			"options": {
+				"playlist": "Numele listei de redare pe care doriți să o editați.",
+				"old-name": "Vechiul nume al listei de redare.",
+				"new-name": "Noul nume al listei de redare.",
+				"playlist-visibility": "Schimbă vizibilitatea listei de redare.",
+				"visibility": "Vizibilitatea listei de redare."
+			},
+			"sameName": " {{{emoji}}} Noul nume trebuie să fie diferit de vechiul nume.",
+			"successName": " {{{emoji}}} Numele listei de redare **{{{oldName}}}** a fost redenumit cu succes în **{{{newName}}}**.",
+			"sameVisibility": " {{{emoji}}} Lista de redare **{{{playlist}}}** are deja vizibilitatea **{{{visibility}}}**.",
+			"successVisibility": " {{{emoji}}} Am schimbat cu succes vizibilitatea listei de redare **{{{playlist}}}** în **{{{visibility}}}**.",
+			"buttons": {
+				"playlist": "Numele listei de redare",
+				"visibility": "Vizibilitatea listei de redare",
+				"public": "Publică",
+				"private": "Privată"
+			},
+			"selectOption": " Selectați o opțiune pentru a edita lista de redare din butoanele de mai jos.",
+			"oldName": " Introduceți vechiul nume al listei de redare.",
+			"newName": " Introduceți noul nume al listei de redare.",
+			"cancelled": " {{{emoji}}} Modificarea numelui listei de redare a fost anulată.",
+			"playlist": " Introduceți numele listei de redare.",
+			"selectVisibility": " Selectați vizibilitatea listei de redare din butoanele de mai jos.",
+			"liked": " {{{emoji}}} Nu puteți edita lista de redare preferată."
+		},
+		"import": {
+			"description": "Importă o listă de redare prin id-ul listei.",
+			"options": {
+				"id": "Id-ul listei de redare pe care doriți să o importați."
+			},
+			"noPlaylist": " {{{emoji}}} Nu am putut găsi nicio listă de redare cu id-ul **{{{id}}}**.",
+			"sameUser": " {{{emoji}}} Nu puteți importa propria listă de redare.",
+			"privatePlaylist": " {{{emoji}}} Nu puteți importa o listă de redare privată.",
+			"success": " {{{emoji}}} Lista de redare **{{{playlist}}}** a fost importată cu succes."
+		},
+		"list": {
+			"description": "Afișează toate listele tale de redare.",
+			"tracks": "Melodii: {{{tracks}}}"
+		},
+		"load": {
+			"description": "Încarcă o listă de redare în coadă.",
+			"options": {
+				"song": "Încarcă o melodie specifică dintr-o listă de redare.",
+				"name": "Numele listei de redare pe care doriți să o încărcați.",
+				"track": "Numărul sau titlul melodiei pentru a fi încărcată."
+			},
+			"noPlaylists": " {{{emoji}}} Nu aveți o listă de redare cu numele **{{{playlist}}}**.",
+			"noTracks": " {{{emoji}}} Nu există melodii în lista de redare **{{{playlist}}}**.",
+			"noTrackFound": " {{{emoji}}} Nu am găsit nicio melodie cu numărul sau titlul **{{{track}}}**.",
+			"trackLoaded": " {{{emoji}}} Melodia **{{{track}}}** a fost încărcată din lista de redare **{{{playlist}}}**.",
+			"privatePlaylist": " {{{emoji}}} Nu puteți încărca o listă de redare privată de la un alt utilizator.",
+			"playlistLoaded": " {{{emoji}}} Au fost încărcate **{{{count}}}** melodii din lista de redare **{{{playlist}}}**."
+		},
+		"pl-remove": {
+			"description": "Elimină o melodie dintr-o listă de redare.",
+			"options": {
+				"playlist": "Numele listei de redare din care doriți să eliminați melodia.",
+				"track": "Numărul sau titlul melodiei de eliminat."
+			},
+			"notFound": " {{{emoji}}} Nu am putut găsi o melodie cu numărul sau titlul specificat.",
+			"success": " {{{emoji}}} Melodia **{{{track}}}** a fost eliminată din lista de redare **{{{playlist}}}**."
+		},
+		"view": {
+			"description": "Vizualizează o listă de redare.",
+			"options": {
+				"playlist": "Numele listei de redare pe care doriți să o vizualizați."
+			},
+			"footer": "Pagina {{{page}}} din {{{pages}}} | Melodii: {{{tracks}}} | Durată: {{{duration}}}",
+			"buttons": {
+				"previous": "Anterior",
+				"stop": "Oprire",
+				"next": "Următor"
+			}
+		},
+		"playradio": {
+			"description": "Redă o stație de radio.",
+			"options": {
+				"station": "Numele stației de radio pe care doriți să o redați.",
+				"language": "cmd.playradio.options.language",
+				"country": "cmd.playradio.options.country"
+			},
+			"noStation": " {{{emoji}}} Nu am putut găsi o stație de radio cu acest nume.",
+			"country": "**Țară:** {{{country}}}",
+			"votes": "**Voturi:** {{{votes}}}",
+			"codec": "**Codec:** {{{codec}}}",
+			"bitrate": "**Bitrate:** {{{bitrate}}}",
+			"tags": "**Etichete:** {{{tags}}}",
+			"results": " Acestea sunt rezultatele căutării tale:\n\n{{{results}}}",
+			"select": "Selectați o stație între 1 și 10 în meniul de selecție de mai jos.",
+			"added": " {{{emoji}}} Adăugat [**{{{name}}}**]({{{homepage}}}) în coadă."
+		},
+		"setup": {
+			"description": "Configurează canalul de solicitare a cântecului.",
+			"options": {
+				"create": "Creează canalul de configurare",
+				"delete": "Șterge canalul de configurare",
+				"info": "Obține informații despre canalul de configurare",
+				"change": "Schimbă canalul de configurare",
+				"channel": "Canalul pe care dorești să-l setezi."
+			},
+			"alreadySetup": " {{{emoji}}} Canalul de configurare este deja setat la **{{{channel}}}**.",
+			"created": " {{{emoji}}} Canalul de configurare **{{{channel}}}** a fost creat cu succes.\n*Poți redenumi/muta acest canal dacă dorești.\n\nNotă: Ștergerea încorporării șablon din el poate duce la oprirea funcționării acestei configurații. (Te rog să nu o ștergi.)*",
+			"notSetup": " {{{emoji}}} Canalul de configurare nu este setat.",
+			"deleted": " {{{emoji}}} Canalul de configurare a fost șters cu succes.",
+			"noChannel": " {{{emoji}}} Te rog furnizează un canal text valid.",
+			"notTextChannel": " {{{emoji}}} Te rog furnizează un canal text valid.",
+			"sameChannel": " {{{emoji}}} Canalul pe care l-ai furnizat este deja în baza de date.",
+			"join": "**Conectează-te la un canal vocal și adaugă cântece după nume/URL.**",
+			"info": {
+				"title": "Informații despre Canalul de Configurare",
+				"description": "Aici sunt informațiile despre canalul de configurare pentru acest server",
+				"channel": "Canal",
+				"moderator": "Moderator",
+				"mesaj": "Mesaj",
+				"adaugatLa": "Adăugat la"
+			}
+		},
+		"buttonmode": {
+			"description": "Enable or disable button mode.",
+			"options": {
+				"boolean": "The boolean to set (true/false)"
+			}
+		}
+	},
+	"player": {
+		"embed": {
+			"247": " Cineva m-a deconectat din canalul vocal, dar rămân aici datorită modului **24/7**!\n\nPuteți dezactiva această funcționalitate folosind comanda {{{cmd}}} sau comanda {{{cmd2}}}!",
+			"nowPlaying": "În prezent se redă",
+			"nowPlayingDesc": " **[{{{songName}}}]({{{songUrl}}})** De [{{{songAuthor}}}]({{{songAuthorUrl}}}) - {{{requester}}}",
+			"footer": "Durată: {{{duration}}} | Coadă: {{{queue}}} | Volum: {{{volume}}}%",
+			"end": " Nimeni nu a ascultat în ultimul minut, părăsesc canalul vocal.\n\nPuteți dezactiva aceasta prin activarea modului **24/7** folosind comanda {{{cmd}}}!",
+			"endTitle": "Coadă Concluzionată",
+			"endDesc": " Lista de redare a muzicii s-a încheiat. Puteți adăuga din nou muzică folosind comanda {{{cmd}}}! Vă bucurați de muzică cu mine? Luați în considerare [votarea pentru mine]({{{link}}})!",
+			"queue": "Melodii în Așteptare",
+			"trackLoop": "Buclă Melodie",
+			"queueLoop": "Buclă Coadă",
+			"volume": "Volum",
+			"autoplay": "Redare Automată",
+			"duration": "Durată",
+			"upcoming": "Melodii Viitoare",
+			"queueStats": "Statistici Coadă"
+		},
+		"error": "Eroare melodie",
+		"description": " [{{{title}}}]({{{uri}}}) nu este disponibilă în țara dvs. din cauza restricțiilor de vârstă!",
+		"buttons": {
+			"resume": "Reluați",
+			"pause": "Pauză",
+			"previous": "Anterior",
+			"shuffle": "Amestecare",
+			"skip": "Salt",
+			"stop": "Oprire",
+			"voldown": "Redu volumul",
+			"volup": "Crește volumul",
+			"loop": "Buclă",
+			"like": "Apreciez"
+		},
+		"noDispatcher": " În prezent nu se redă nimic..",
+		"nothingPlaying": " În prezent nu se redă nimic.."
+	},
+	"events": {
+		"buttonHandle": {
+			"notInVoice": "Trebuie să vă alăturați unui canal vocal {{{channel}}} pentru a folosi acest buton!",
+			"noPrevious": "Nu există o melodie anterioară în coadă.",
+			"playingPrevious": "{{{user}}} redă melodia anterioară.",
+			"nothingToSkip": "Nu există nimic în coadă pentru a sări.",
+			"alreadyVote": "{{{user}}} Există deja un vot în acest server. Vă rugăm să așteptați să se termine sau să-l anulați.",
+			"voteSkip": "{{{user}}} a cerut sărirea melodiei curente. Doriți să opriți votarea pentru sărire? Folosiți comanda {{{cmd}}}",
+			"voteSkipLabel": "Votați pentru sărirea melodie curente!",
+			"alreadyVoted": "{{{user}}} Ați votat deja pentru sărirea melodiei curente.",
+			"voteSkip2": "{{{user}}} a cerut sărirea melodie curente.",
+			"voteSkipLabel2": "Votați pentru sărirea melodie curente! ({{{count}}}/{{{n}}})",
+			"needVoice": "{{{user}}} Trebuie să vă alăturați canalului vocal {{{channel}}} pentru a folosi acest buton!",
+			"voteSkipTrack": "{{{user}}} sare la melodia următoare după {{{count}}} voturi pozitive!",
+			"notEnoughVote": " Nu există suficiente voturi pentru a sări la melodia curentă.",
+			"skipTrack": "{{{user}}} a sărit peste melodia curentă.",
+			"playTrack": "{{{user}}} {{{paused}}} melodia curentă.",
+			"paused": "Pus pe pauză",
+			"resumed": "Reluat",
+			"stopTrack": "{{{user}}} a oprit melodia curentă.",
+			"volMax": " Volumul este deja la maxim.",
+			"volUp": "{{{user}}} a crescut volumul la **{{{vol}}}**%.",
+			"volMin": " Volumul este deja la minim.",
+			"volDown": "{{{user}}} a redus volumul la **{{{vol}}}**%.",
+			"shuffleError": "{{{user}}} Nu există suficiente melodii în coadă pentru a fi amestecate.",
+			"shuffleDisabled": "{{{user}}} Amestecarea dezactivată.",
+			"shuffleEnabled": "{{{user}}} Amestecarea activată.",
+			"loopSong": "{{{user}}} Bucla melodia curentă.",
+			"loopQueue": "{{{user}}} Bucla coada de redare.",
+			"loopDisabled": "{{{user}}} Bucla dezactivată.",
+			"noTrack": "{{{user}}} În prezent nu se redă nimic.",
+			"liked": "{{{user}}} Apreciat **{{{title}}}**.",
+			"unliked": "{{{user}}} Nepotrivit **{{{title}}}**.",
+			"notSeekable": "Această melodie nu poate fi căutată.",
+			"isPaused": "Această melodie este în pauză.",
+			"rewindTrack": "{{{user}}} a derulat înapoi piesa curentă la **{{{time}}}**.",
+			"forwardTrack": "{{{user}}} a derulat înainte piesa curentă la **{{{time}}}**.",
+			"autoplayDisabled": "{{{user}}} Autoplay dezactivat cu succes.",
+			"autoplayEnabled": "{{{user}}} Autoplay activat cu succes."
+		},
+		"int": {
+			"noSendMessages": " Hei! Am încercat să răspund comenzii dvs., dar nu am permisiunea să fac acest lucru. Rugați pe cineva din personalul serverului să-mi acorde permisiunea Discord de a „Trimite mesaje”.\n\nServer: **{{{guildName}}}**\nComandă: **{{{commandName}}}**\nAveți nevoie de ajutor cu permisiunile? Alăturați-vă serverului de suport: {{{supportServer}}}",
+			"noEmbedLinks": " {{{emoji}}} Botul trebuie să aibă permisiunea Discord „Embed links” pentru a funcționa corect! Rugați pe cineva din personalul serverului să-mi acorde această permisiune.",
+			"noBotChannel": " Nu mi se permite să răspund comenzilor în acest canal. Folosiți {{{emoji}}} <#{{{botChannel}}}> pentru comenzile botului. Vă mulțumim pentru cooperare.",
+			"deleteFooter": "• Acest mesaj va fi șters în 5 secunde",
+			"disabledCommand": " Această comandă este dezactivată în acest server pentru toți utilizatorii. Numai DJ-ii pot folosi această comandă.",
+			"disabledCommandList": "Listă comenzi dezactivate",
+			"noBotPermissions": " {{{emoji}}} Nu am permisiunile **{{{permissions}}}** necesare pentru a executa această comandă.",
+			"noUserPermissions": " {{{emoji}}} Nu aveți permisiunile **{{{permissions}}}** necesare pentru a executa această comandă.",
+			"voteLocks": [
+				" Trebuie să votați pentru mine pentru a folosi această comandă. Puteți vota [Top.gg]({{{link}}})",
+				" Trebuie să votați pentru mine pentru a folosi această comandă. Puteți vota [Top.gg]({{{link}}}) sau\nDe asemenea, puteți obține un cont premium prin donații [aici]({{{link2}}})"
+			],
+			"buttons": {
+				"vote": "Vot",
+				"donate": "Donează",
+				"invite": "Invită",
+				"support": "Suport"
+			},
+			"cooldown": " Așteptați încă **{{{timeLeft}}}** secundă(e) înainte de a folosi din nou comanda **{{{command}}}**.",
+			"noDjRole": " {{{emoji}}} Aveți nevoie de rolul DJ pentru a folosi această comandă.",
+			"noPremium": " Aveți nevoie de cont premium pentru bot pentru a folosi această comandă. Puteți obține un cont premium prin donații [aici]({{{link}}})",
+			"voicePerm": " {{{emoji}}} Nu am permisiunile necesare pentru a me alătura canalului vocal! Am nevoie de permisiunile „Vezi canalele”, „Conectează” și „Vorbește”. [Exemplu de permisiuni](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\nDacă problema persistă, schimbați regiunea canalului vocal la „Europe”.",
+			"voiceJoin": " {{{emoji}}} Trebuie să fiți conectat la un canal vocal pe acest server pentru a folosi această comandă!\n\nCum să vă alăturați unui canal vocal? Faceți clic pe un canal cu un iconiță de difuzor (de exemplu, faceți clic aici:  {{{channel}}}) [Vezi ghidul oficial Discord](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord#h_9de92bc2-3bca-459f-8efd-e1e2739ca4f4)",
+			"voiceChannel": " {{{emoji}}} Trebuie să fiți în canalul vocal **{{{channel}}}** pentru a folosi această comandă.",
+			"noPlayer": " {{{emoji}}} Nu sunt conectat la niciun canal vocal. Utilizați comanda {{{command}}} pentru a mă aduce.",
+			"noQueue": " {{{emoji}}} Nu există o coadă. Utilizați comanda {{{command}}} pentru a adăuga o melodie în coadă.",
+			"noSong": " {{{emoji}}} Nu se redă nicio melodie. Utilizați comanda {{{command}}} pentru a adăuga o melodie în coadă.",
+			"error": " {{{emoji}}} A apărut o eroare la executarea comenzii. Vă rugăm să raportați această eroare la [Serverul de Suport]({{{link}}})"
+		}
+	},
+	"get_started": {
+		"embed_title": "Moe Bot | Începeți",
+		"embed_description": " Hei <@{{{user}}}>! Prefixul meu este: `{{{prefixList}}}`\nDe exemplu: `{{{prefix}}}help`, `{{{prefix}}}ping`",
+		"embed_description2": " Hei <@{{{user}}}>! Prefixul meu este: `fără prefix`, ceea ce înseamnă că puteți folosi orice comandă fără un prefix.\nDe exemplu: `help`, `ping`"
+	},
+	"options": {
+		"title": "Opțiuni pentru {{{commandName}}}",
+		"no_description": "Fără descriere",
+		"options": "Opțiuni",
+		"examples": "Exemple",
+		"long_des": "Aceasta este pentru navigarea între pagini",
+		"examples_button": "Exemple",
+		"footer": "<Obligatoriu> | [Opțional] {{{long_des}}} Pagina {{{page}}} din {{{total_pages}}}",
+		"title2": "Exemple pentru {{{commandName}}}"
+	},
+	"Evaluate JavaScript code": "Evaluate JavaScript code",
+	"Generate a premium key": "Generate a premium key",
+	"Give a user premium.": "Give a user premium."
+}

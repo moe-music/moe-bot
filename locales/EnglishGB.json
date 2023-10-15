@@ -1,0 +1,957 @@
+{
+	"cmd": {
+		"247": {
+			"description": "Enable or disable the 24/7 mode.",
+			"enabled": " {{{emoji}}} 24/7 mode has been enabled.",
+			"disabled": " {{{emoji}}} 24/7 mode has been disabled."
+		},
+		"ping": {
+			"description": "Shows the bot latency.",
+			"author": "Bot latency",
+			"content": "**Shard**: `{{{shardPing}}}ms`\n**API**: `{{{latency}}}ms`",
+			"footer": "• Get more information on the status channel of the support server"
+		},
+		"invite": {
+			"description": "Invite the bot to your server.",
+			"buttons": {
+				"invite": "Invite MoE",
+				"invite2": "Invite MoE2",
+				"invite3": "Invite MoE3",
+				"support": "Support"
+			},
+			"content": "If you enjoyed using me, then consider [inviting me]({{{invite}}}) to your server now. And also, don't forget to join the [support server]({{{support}}})."
+		},
+		"help": {
+			"description": "Shows a list of commands or info about a specific command",
+			"options": {
+				"command": "The command name or category to get help for"
+			},
+			"title": " Command",
+			"footer": "Page {{{page}}} of {{{pagesNum}}}",
+			"title2": "Help - {{{cmd}}}",
+			"title3": "Help",
+			"manContent": " Here is a list of all the categories\n{{{catagory}}}\n\n- Links:\n[Support Server]({{{server}}}) | [Invite]({{{invite}}}) | [Vote]({{{vote}}}) | [Patreon]({{{patreon}}}) | [Website]({{{website}}}) | [Docs]({{{docs}}})",
+			"footer2": "- For more information on a command: {{{prefix}}}help <command> or {{{prefix}}}help <category>",
+			"cooldown": "Cooldown",
+			"aliases": "Aliases",
+			"category": "Category",
+			"examples": "Example(s)",
+			"userPerms": "User Permission(s)",
+			"botPerms": "Bot Permission(s)",
+			"requirements": "Requirement(s)",
+			"subCommands": "Sub Command(s)",
+			"subSubCommands": "Sub Sub Command(s)",
+			"buttons": {
+				"previous": "Previous",
+				"stop": "Stop",
+				"next": "Next",
+				"home": "Home",
+				"config": "Config",
+				"music": "Music",
+				"filter": "Filter",
+				"general": "General",
+				"playlists": "Playlists"
+			},
+			"notFound": "`{{{cmd}}}` is not a valid command or category!",
+			"voice": {
+				"inVoice": "- Must be in a voice channel",
+				"sameVoice": "- Must be in the same voice channel",
+				"playing": "- Must be playing music in this server"
+			},
+			"voteLock": "- Must be [voted]({{{link}}}) to use this command",
+			"premiumCmd": "- Must have [premium]({{{link}}}) to use this command"
+		},
+		"premium": {
+			"description": "Shows the user or guild premium status.",
+			"guildPremiumStatus": "Guild Premium Status",
+			"userPremiumStatus": "User Premium Status",
+			"premium": "Premium",
+			"notPremium": "Not Premium",
+			"guildPremiumExpires": "Guild Premium Expires",
+			"userPremiumExpires": "User Premium Expires"
+		},
+		"redeem": {
+			"description": "Redeem a premium code.",
+			"options": {
+				"code": "The premium code to redeem"
+			},
+			"noArg": "Please provide a premium code to redeem.",
+			"invalidCode": "Invalid premium code provided.",
+			"confirmation": " Are you sure you want to redeem the premium code `{{{code}}}`?",
+			"type": "Type",
+			"expiresAt": "Expires At",
+			"buttons": {
+				"yes": "Yes",
+				"no": "No"
+			},
+			"alreadyPremium": "You are already a premium member.",
+			"success": " Successfully redeemed your premium code. Now you can use premium commands!",
+			"canceled": "Canceled the premium code redemption."
+		},
+		"stats": {
+			"description": "Shows the bot stats."
+		},
+		"support": {
+			"description": "Support server link",
+			"content": " If you need help with the bot or just want to hang out with us, join the [support server]({{{link}}}).",
+			"buttons": {
+				"support": "Support Server"
+			}
+		},
+		"vote": {
+			"description": "Bot vote link",
+			"content": " If you like the bot, please consider voting for it on [top.gg]({{{link}}}).",
+			"buttons": {
+				"vote": "Vote"
+			}
+		},
+		"player": {
+			"description": "Shows the player status.",
+			"nowPlaying": "Now Playing",
+			"noSong": "No song is currently playing.",
+			"volume": "Volume",
+			"totalDuration": "Total Duration",
+			"loopMode": "Loop Mode",
+			"filters": "Filters",
+			"noFilters": "No filters are currently applied.",
+			"title": "Player: {{{status}}}",
+			"online": "Online",
+			"offline": "Offline"
+		},
+		"autoplay": {
+			"description": "Enable or disable autoplay mode.",
+			"enabled": " Successfully toggled autoplay mode to `Enabled`\nThe bot will now automatically add similar songs to the queue.",
+			"disabled": " Successfully toggled autoplay mode to `Disabled`\nThe bot will no longer automatically add similar songs to the queue."
+		},
+		"clear": {
+			"description": "Clear the queue or filters from the player.",
+			"options": {
+				"input": "The queue or filters to clear"
+			},
+			"content": " Please select a queue or filter to clear. (queue/filters)",
+			"queue": {
+				"noSong": "There are no songs in the queue to clear.",
+				"success": " Successfully cleared the queue."
+			},
+			"filters": {
+				"noFilter": "There are no filters to clear.",
+				"success": " Successfully cleared the filters."
+			},
+			"buttons": {
+				"queue": "Queue",
+				"filters": "Filters"
+			}
+		},
+		"forceskip": {
+			"description": "Force skip the current song.",
+			"success": " Force skipped the {{{title}}} song."
+		},
+		"forward": {
+			"description": "Forward the current song.",
+			"options": {
+				"seconds": "The amount of seconds to forward"
+			},
+			"unseekable": "{{{emoji}}} The current song is unseekable.",
+			"tooLong": "{{{emoji}}} You can't forward more than the song length.",
+			"success": " {{{emoji}}} Successfully forwarded the song by `{{{time}}}`."
+		},
+		"grab": {
+			"description": "Grab the current song.",
+			"dm": "{{{emoji}}} i can't send you the song because you disabled your DMs.",
+			"grabbed": " {{{emoji}}} Successfully grabbed the song."
+		},
+		"join": {
+			"description": "Summon the bot to your voice channel.",
+			"no-perms": "{{{emoji}}} I don't have the required permissions to join your voice channel! I need `View Channels`, `Connect` and `Speak` permission. [Permissions Example](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\n If the problem persists, change the voice channel region to `Europe`",
+			"already-in": "{{{emoji}}} I'm already in a voice channel!",
+			"joined": " Successfully joined the voice {{{channel}}}"
+		},
+		"leave": {
+			"description": "Leave the voice channel.",
+			"not-playing": "{{{emoji}}} I'm not playing anything right now!",
+			"success": " {{{emoji}}} Successfully left the voice channel."
+		},
+		"leavecleanup": {
+			"description": "Removes all songs from users that are not in the voice channel.",
+			"removing": " Removing songs from users that are no longer in the vc. Please wait",
+			"removed": " Successfully removed `{{{count}}}` songs from users that are no longer in the vc."
+		},
+		"loop": {
+			"description": "Loop the current song or queue.",
+			"options": {
+				"mode": "The loop mode to set"
+			},
+			"specify": " Please specify the mode to loop. (song, queue, off) from the buttons below.",
+			"buttons": {
+				"song": "Song",
+				"queue": "Queue",
+				"off": "Off"
+			},
+			"song": " {{{emoji}}} Successfully looped the current song.",
+			"queue": " {{{emoji}}} Successfully looped the queue.",
+			"off": " {{{emoji}}} Successfully disabled loop.",
+			"song_already": " {{{emoji}}} The current song is already looped.",
+			"queue_already": " {{{emoji}}} The queue is already looped.",
+			"off_already": " {{{emoji}}} Loop is already disabled.",
+			"invalid_mode": " {{{emoji}}} Invalid loop mode provided. please provide a valid loop mode. (song, queue, off)"
+		},
+		"lyrics": {
+			"description": "Shows the lyrics of the current song or a song name.",
+			"options": {
+				"song": "The song name to search for"
+			},
+			"noQuery": " Please provide a song name to search for.",
+			"noLyrics": " i couldn't find any lyrics for this song.",
+			"page": "Page {{{page}}} of {{{pages}}}"
+		},
+		"move": {
+			"description": "Move a song to a specific position in the queue.",
+			"options": {
+				"song": "The song to move",
+				"position": "The position to move the song to"
+			},
+			"invalidNumber": " Please provide a valid number for the position.",
+			"invalidPosition": " Invalid position provided. please provide a valid position.",
+			"success": " Moved **[{{{title}}}]({{{uri}}})** from position **{{{from}}}** to **{{{to}}}**."
+		},
+		"nowplaying": {
+			"description": "Shows the current playing song.",
+			"nowplaying": " Now playing: [{{{title}}}]({{{uri}}})",
+			"author": "Author",
+			"requester": "Requested by",
+			"duration": "Duration",
+			"progress": "Progress"
+		},
+		"pause": {
+			"description": "Pause the current song.",
+			"alreadyPaused": " The current song is already paused.",
+			"paused": " Paused [{{{title}}}]({{{uri}}})"
+		},
+		"play": {
+			"description": "play a song from spotify, soundcloud, deezer, etc...",
+			"options": {
+				"query": "The query to search for",
+				"source": "The source to search from"
+			},
+			"no-query": "Please provide a song name to search for.",
+			"no-results": " No results found for `{{{query}}}`.",
+			"playlist-loaded": " Loaded `{{{count}}}` tracks from playlist **[{{{name}}}]({{{url}}})**",
+			"footer": "Thanks for using {{{bot}}}",
+			"added": " Added **[{{{title}}}]({{{uri}}})** to the queue (requested by <@{{{requester}}}>) in queue position `#{{{position}}}`",
+			"youtube-not-supported": " I am sorry to inform you that YouTube is not supported in the MoE for Discord TOS. We cannot use YouTube's API to listen to music. We apologize for any inconvenience this may have caused you."
+		},
+		"playprevious": {
+			"description": "Play the previous song.",
+			"noPreviousTrack": " {{{emoji}}} There is no previous song to play.",
+			"success": " {{{emoji}}} Now Playing the previous track from your queue!"
+		},
+		"queue": {
+			"description": "Shows the queue for the current server.",
+			"options": {
+				"page": "The page number to view"
+			},
+			"queue": "Queue for {{{guild}}} ({{{songs}}} songs)",
+			"nowPlaying": " Now Playing: [{{{title}}}]({{{uri}}}) `[{{{length}}}]`- (<@{{{requester}}}>)\n\n",
+			"upNext": " Up Next: {{{str}}}",
+			"noSongs": " There are no songs in the queue yet! Add one using {{{cmd}}}",
+			"page": "Page {{{page}}} | {{{songs}}} song(s) | {{{duration}}} total duration",
+			"notNumber": " {{{emoji}}} The page number must be a number.",
+			"pageLimit": " {{{emoji}}} The page number must be less than or equal to {{{pages}}}.",
+			"clearQueue": "Clear Queue",
+			"noTracks": " There are no tracks in the queue.",
+			"noDjRole": " You need the DJ role to use this button.",
+			"clearedQueue": " {{{user}}} Cleared the queue."
+		},
+		"remove": {
+			"description": "To remove a song from the queue.",
+			"options": {
+				"track": "The track to remove.",
+				"number": "The track number or track title to remove.",
+				"dupes": "Remove all duplicates of the track."
+			},
+			"trackNotFound": " There is no track with that number in the queue",
+			"invalidNumber": " Please enter a number between 1 and {{{length}}}.",
+			"removed": " Removed **[{{{title}}}]({{{uri}}})** from the queue.",
+			"noDupes": " There are no duplicate songs in the queue.",
+			"removedDupes": " Removed **{{{length}}}** duplicate songs from the queue."
+		},
+		"replay": {
+			"description": "Replay the current song.",
+			"replaying": " Replaying [{{{title}}}]({{{uri}}})"
+		},
+		"resume": {
+			"description": "Resume the current song.",
+			"notPaused": " The current song is not paused.",
+			"resumed": " Resumed [{{{title}}}]({{{uri}}})"
+		},
+		"rewind": {
+			"description": "Rewind the current song.",
+			"options": {
+				"time": "The time you want to rewind the song to."
+			},
+			"notSeekable": " {{{emoji}}} The current song is not rewindable.",
+			"negativePosition": " {{{emoji}}} The position must be between 0 and {{{length}}}.",
+			"success": " {{{emoji}}} Rewinded the song to {{{length}}}."
+		},
+		"search": {
+			"description": "search a song from spotify, soundcloud or deezer",
+			"options": {
+				"query": "The query to search for",
+				"source": "The source to search from"
+			},
+			"no-playlist": " {{{emoji}}} Playlist are not supported! in search command please use {{{cmd}}} command",
+			"no-track": " {{{emoji}}} Track are not supported! in search command please use {{{cmd}}} command",
+			"results": " Search results for `{{{query}}}`\n\n{{{results}}}",
+			"footer": "Please select a track from the select menu below.",
+			"placeholder": "Select a track from the list below to play it.",
+			"footerTimeout": "Search results timed out.",
+			"no-voice": " {{{emoji}}} You must be in a voice channel to use this menu.",
+			"wrong-voice": " {{{emoji}}} You must be in the same voice channel as me to use this menu.",
+			"added": " {{{emoji}}} Added {{{count}}} track(s) to the queue."
+		},
+		"seek": {
+			"description": "Seeks to a given time in the current song.",
+			"options": {
+				"time": "The time you want to seek the song to."
+			},
+			"invalidPosition": " The time must be between 0 and {{{length}}}.",
+			"seeked": " Seeked `{{{position}}}` to `{{{time}}}`"
+		},
+		"shuffle": {
+			"description": "Shuffle the queue.",
+			"success": " The server queue has been mixed succesfully (**{{{length}}}** songs).",
+			"unshuffle": " The server queue has been un-mixed succesfully (**{{{length}}}** songs)."
+		},
+		"skip": {
+			"description": "Skip the current song.",
+			"nothing": " There is nothing next in the queue. Use {{{queue}}} to see the server's queue.\nWant to try autoplay? do {{{autoplay}}}",
+			"paused": " The player is paused. Use the resume command to resume the player\nWant to resume? do {{{resume}}}",
+			"voteSkip": " {{{user}}} requested to skip the current track.\n\n{{{voted}}}",
+			"skip": " Skipping the **{{{title}}}** song."
+		},
+		"skipto": {
+			"description": "Skip to a specific song in the queue.",
+			"options": {
+				"number": "The track number or track title to skip to."
+			},
+			"invalidNumber": " {{{emoji}}} Please enter a track number between 1 and {{{length}}}.",
+			"success": " {{{emoji}}} Skipped to **[{{{title}}}]({{{uri}}})**."
+		},
+		"stop": {
+			"description": "Stop the player and clear the queue.",
+			"stopped": " {{{emoji}}} Stopped the player and cleared the queue."
+		},
+		"topsongs": {
+			"description": "Shows the top songs played by the bot.",
+			"noTopSongs": " There are no top songs in the database.",
+			"timesPlayed": "Time(s) Played",
+			"selectSong": "Select a song from the list below to play it.",
+			"added": " Added **[{{{title}}}]({{{uri}}})** to the queue."
+		},
+		"volume": {
+			"description": "Change the volume of the player.",
+			"options": {
+				"volume": "The volume you want to set."
+			},
+			"invalidVolume": " {{{emoji}}} Please enter a number between 0 and 100.",
+			"success": " {{{emoji}}} Set the volume to **{{{volume}}}**."
+		},
+		"voteskip": {
+			"description": "Vote to skip the current song."
+		},
+		"filters": {
+			"filters": " All filters applied to the current playing song:\n\n{{{filters}}}",
+			"pitchNaN": " {{{emoji}}} The pitch must be a number between 1 and 5.",
+			"description": {
+				"8d": "Apply the 8D filter to the current playing song.",
+				"bassboost": "Apply bassboost filter to the current playing song.",
+				"channelmix": "Apply channelmix filter to the current playing song.",
+				"electronic": "Apply electronic filter to the current playing song.",
+				"filters": "Get a list of filters which can be applied to the current playing song.",
+				"jazz": "Apply jazz filter to the current playing song.",
+				"karaoke": "Apply karaoke filter to the current playing song.",
+				"lowpass": "Apply lowpass filter to the current playing song.",
+				"nightcore": "Apply nightcore filter to the current playing song.",
+				"pitch": "Apply pitch filter to the current playing song.",
+				"pop": "Apply pop filter to the current playing song.",
+				"radio": "Apply radio filter to the current playing song.",
+				"rock": "Apply rock filter to the current playing song.",
+				"rotation": "Apply rotation filter to the current playing song.",
+				"soft": "Apply soft filter to the current playing song.",
+				"speed": "Apply speed filter to the current playing song.",
+				"treblebass": "Apply treblebass filter to the current playing song.",
+				"tremolo": "Apply tremolo filter to the current playing song.",
+				"vaporwave": "Apply vaporwave filter to the current playing song.",
+				"vibrato": "Apply vibrato filter to the current playing song."
+			},
+			"enabled": " {{{emoji}}} {{{name}}} filter has been enabled.",
+			"disabled": " {{{emoji}}} {{{name}}} filter has been disabled.",
+			"speed": " {{{emoji}}} Speed filter has been set to **{{{value}}}**.",
+			"options": {
+				"speed": "The speed you want to set.",
+				"pitch": "The pitch to apply."
+			}
+		},
+		"announce": {
+			"description": "To configure the announcing of track start message.",
+			"options": {
+				"set": "Set the channel where the track start message will be sent.",
+				"channel": "The channel you want to set.",
+				"toggle": "Toggle the announcing of track start message.",
+				"prunning": "Toggle the pruning of track start message.",
+				"reset": "Reset the channel where the track start message will be sent."
+			},
+			"noChannel": " {{{emoji}}} Please provide a valid text channel.",
+			"noTextChannel": " {{{emoji}}} Please provide a valid text channel.",
+			"sameChannel": " {{{emoji}}} The channel you provided is already have in the database.",
+			"setChannel": " {{{emoji}}} Successfully set the announcing channel to {{{channel}}}.",
+			"noChannelInDB": " {{{emoji}}} Announcing channel has not been setup to the database.",
+			"toggle": " {{{emoji}}} Successfully {{{status}}} the announcing of track start message.",
+			"enabled": "enabled",
+			"disabled": "disabled",
+			"reset": " {{{emoji}}} Successfully reset the announcing channel."
+		},
+		"botchannel": {
+			"description": "Set the bot channel for listening to commands",
+			"options": {
+				"add": "Add a channel to the bot channel list",
+				"channel": "The channel you want to set.",
+				"remove": "Remove a channel from the bot channel list",
+				"clear": "Clear the bot channel list",
+				"info": "Get the bot channel list and information about the bot channel"
+			},
+			"noChannel": " {{{emoji}}} Please provide a valid text channel.",
+			"noTextChannel": " {{{emoji}}} Please provide a valid text channel.",
+			"sameChannel": " {{{emoji}}} The channel you provided is already have in the database.",
+			"maxChannel": " {{{emoji}}} You can't add more than 5 channels to the bot channel list.",
+			"addedChannel": " {{{emoji}}} Successfully added the channel {{{channel}}} to the bot channel list.",
+			"noChannelInDB": " {{{emoji}}} There are no bot channels in the database.",
+			"removedChannel": " {{{emoji}}} Successfully removed the channel {{{channel}}} from the bot channel list.",
+			"clearedChannel": " {{{emoji}}} Successfully cleared the bot channel list.",
+			"info": ">>> **Channel:** {{{channel}}}\n**Moderator:** {{{moderator}}}\n**Added at:** {{{addedAt}}}",
+			"title": "Bot channels ({{count}})"
+		},
+		"clean": {
+			"description": "Clean the my messages in the channel.",
+			"success": " {{{emoji}}} Successfully cleaned **{{{count}}}** messages."
+		},
+		"defaultvolume": {
+			"description": "Set the default volume for the server",
+			"options": {
+				"number": "The number to set the default volume to"
+			},
+			"invalidNumber": " {{{emoji}}} Please enter a number between 0 and 200.",
+			"success": " {{{emoji}}} Successfully set the default volume to **{{{volume}}}**."
+		},
+		"disablecommands": {
+			"description": "Disable commands for the server",
+			"options": {
+				"add": "Add a command to the disabled commands list",
+				"command": "The command name",
+				"remove": "Remove a command from the disabled commands list",
+				"list": "Get the disabled commands list",
+				"clear": "Clear the disabled commands list"
+			},
+			"noCommand": " {{{emoji}}} Please provide a command name to disable/enable.",
+			"commandNotExist": " {{{emoji}}} That command doesn't exist in bot",
+			"commandAlreadyDisabled": " {{{emoji}}} That command is already disabled.",
+			"commandDisabled": " {{{emoji}}} Successfully disabled **{{{command}}}** command.",
+			"noDisabledCommands": " {{{emoji}}} This command is not disabled.",
+			"commandEnabled": " {{{emoji}}} Successfully enabled **{{{command}}}** command.",
+			"disabledCommands": "Disabled Commands",
+			"disabledCommandsForThisServer": "Disabled commands for this server",
+			"total": "Total: {{{total}}}",
+			"disabledCommandsCleared": " {{{emoji}}} Successfully cleared the disabled commands list."
+		},
+		"dj": {
+			"description": "Set the DJ role for the server",
+			"options": {
+				"add": "Add a role to the DJ role list",
+				"role": "The role you want to (add/remove)",
+				"remove": "Remove a role from the DJ role list",
+				"list": "List the DJ role list",
+				"clear": "Clear the DJ role list",
+				"toggle": "Toggle the DJ role",
+				"info": "Get the DJ role list and information about the DJ role"
+			},
+			"noRole": " {{{emoji}}} Please provide a valid role to (add/remove).",
+			"maxRoles": " {{{emoji}}} You can't add more than 5 roles to the DJ list.",
+			"alreadyInList": " {{{emoji}}} The role you provided is already in the database.",
+			"addedRole": " {{{emoji}}} Successfully added the role {{{role}}} to the DJ list.",
+			"noRolesSetup": " {{{emoji}}} There are no DJ roles set up in this server.",
+			"notInList": " {{{emoji}}} This role is not in the DJ list.",
+			"removedRole": " {{{emoji}}} Successfully removed the role {{{role}}} from the DJ list.",
+			"list": ">>> **Role:** {{{role}}}\n**Moderator:** {{{moderator}}}\n**Added at:** {{{addedAt}}}",
+			"listTotal": " Total DJ roles: {{{total}}}",
+			"clearedList": " {{{emoji}}} Successfully cleared the DJ list.",
+			"enabledToggle": " {{{emoji}}} Successfully enabled the DJ Toggle mode.",
+			"disabledToggle": " {{{emoji}}} Successfully disabled the DJ Toggle mode.",
+			"info": {
+				"djRoles": "DJ Role(s)",
+				"enabled": "Enabled",
+				"disabled": "Disabled",
+				"djMode": "DJ Mode",
+				"djMembers": "DJ Member(s)",
+				"description": "DJ role info for {{{guild}}}"
+			}
+		},
+		"fixvoice": {
+			"description": "Fix the voice connection if the bot is not playing music.",
+			"joining": " Joining the voice channel again and resuming the music.",
+			"failed": " Failed to change the voice region. Please try again later.",
+			"error": "{{{emoji}}} I couldn't find any fix at the moment. Maybe ask for help in the [support server]({{{server}}}).",
+			"success": " {{{emoji}}} Successfully changed the voice region to **{{{region}}}**."
+		},
+		"forcejoin": {
+			"description": "Force the bot to join the voice channel.",
+			"already-in": "{{{emoji}}} I'm already in a voice channel!",
+			"joined": " {{{emoji}}} Successfully joined the voice channel **{{{channel}}}**."
+		},
+		"languages": {
+			"description": "Set the bot language for the server",
+			"options": {
+				"add": "Add a language for the server",
+				"language": "The language you want to set",
+				"info": "Get information about the languages",
+				"reset": "Reset the language to the default language",
+				"set": "cmd.languages.options.set"
+			},
+			"success": " {{{emoji}}} Successfully set the language of the bot to {{{language}}} `({{{languageCode}}})`.",
+			"info": " The current language in this server is: **{{{language}}}** `({{{languageCode}}})`.",
+			"reset": " {{{emoji}}} Successfully reset the language of the bot to the default language.",
+			"translationProgress": "Translation progress: {{{progress}}}",
+			"selectLanguage": "Please select the language you want to set from the menu below."
+		},
+		"noprefix": {
+			"description": "Toggles the no prefix for the user or server.",
+			"toggle": " Toggle the no prefix for the user or server.",
+			"buttons": {
+				"server": "Server",
+				"user": "User"
+			},
+			"premium": " You need to be a premium user to use this command.",
+			"disabledUser": " {{{emoji}}} Successfully disabled the no prefix for the user.",
+			"enabledUser": " {{{emoji}}} Successfully enabled the no prefix for the user.",
+			"noPerm": " You don't have the required permissions to use this command.",
+			"disabledServer": " {{{emoji}}} Successfully disabled the no prefix for the server.",
+			"enabledServer": " {{{emoji}}} Successfully enabled the no prefix for the server."
+		},
+		"prefix": {
+			"description": "Set the prefix for the server",
+			"options": {
+				"set": "Set the prefix for the server",
+				"prefix": "The prefix you want to (set/remove)",
+				"info": "Get the prefix for the server",
+				"clear": "Clear the prefix for the server",
+				"remove": "Remove the prefix for the server"
+			},
+			"info": ">>> **Prefix:** `{{{prefix}}}`\n**Moderator:** {{{moderator}}}\n**Added at:** {{{timestamp}}}",
+			"noPrefix": " {{{emoji}}} Please provide a prefix to set.",
+			"noPrefixAdded": " {{{emoji}}} There is no prefix added to the server.",
+			"prefixLength": " {{{emoji}}} The prefix can't be longer than 5 characters.",
+			"prefixLimit": " {{{emoji}}} The prefix limit is 4, please remove some prefixes with `prefix remove`",
+			"prefixCharacters": " {{{emoji}}} The prefix can't contain any of the following characters `[]{}\\`",
+			"prefixExists": " {{{emoji}}} The prefix `{{{prefix}}}` is already added by {{{moderator}}}",
+			"prefixCleared": " {{{emoji}}} Successfully cleared all prefixes to default",
+			"prefixNotExists": " {{{emoji}}} The prefix `{{{prefix}}}` is not added",
+			"prefixRemoved": " {{{emoji}}} Successfully removed the prefix `{{{prefix}}}`",
+			"prefixAdded": " {{{emoji}}} Successfully added the prefix `{{{prefix}}}`"
+		},
+		"profile": {
+			"description": "Show your profile or someone else's profile.",
+			"options": {
+				"set": "Set your profile color, color or visibility.",
+				"bio": "Set your profile bio.",
+				"color": "Set your profile color.",
+				"visibility": "Set your profile visibility.",
+				"view": "View your profile or someone else's profile.",
+				"user": "The user you want to view their profile."
+			},
+			"noBio": " {{{emoji}}} You need to provide a bio",
+			"bioLength": " {{{emoji}}} Your bio can't be longer than 50 characters",
+			"bioSet": " {{{emoji}}} Successfully set your bio to `{{{bio}}}`",
+			"noColor": " {{{emoji}}} Please provide a color hex code [Example: #FF0000](https://g.co/kgs/q5nhF7)\n\nYou can also use the following colors names: {{{colors}}}",
+			"sameColor": " {{{emoji}}} Your color is already set to `{{{color}}}`",
+			"colorSet": " {{{emoji}}} Successfully set your color to `{{{color}}}`",
+			"sameVisibility": " {{{emoji}}} Your visibility is already set to `{{{visibility}}}`",
+			"noVisibility": " {{{emoji}}} Please provide a visibility (public/private)",
+			"visibilitySet": " {{{emoji}}} Successfully set your visibility to `{{{visibility}}}`",
+			"privateProfile": " {{{emoji}}} This user's profile is private"
+		},
+		"setting": {
+			"description": "Change the server settings or get the server settings info",
+			"options": {
+				"reset": "Reset the all server settings to the default settings",
+				"info": "Get the server settings info"
+			},
+			"noPermission": " {{{emoji}}} You don't have the `manageGuild` permission to use this command.",
+			"isSure": " Are you sure you want to reset the server settings?\nThis will reset all the settings to the default value\n\n**if you are sure, than press the button below**",
+			"buttons": {
+				"reset": "Reset"
+			},
+			"fields": {
+				"247": "24/7",
+				"trackButton": "Track Button",
+				"dj": "DJ",
+				"botChannel": "Bot Channel",
+				"disableCommand": "Disabled Command",
+				"defaultVolume": "Default Volume",
+				"announce": "Announce",
+				"prunning": "Prunning",
+				"noPrefix": "No Prefix",
+				"prefix": "Prefix",
+				"djRole": "DJ Role",
+				"setup": "Setup",
+				"voteSkip": "Vote Skip",
+				"language": "Language",
+				"trackButtonValue": "Mode: {{{mode}}}\nModerator: {{{moderator}}}\nAdded: {{{added}}}",
+				"setupValue": "Moderator: {{{moderator}}}\nAdded: {{{added}}}\n\n**Channels:**\n{{{channels}}}",
+				"djValue": "Mode: {{{mode}}}\nRoles: {{{roles}}}\nAdded: {{{added}}}",
+				"defaultvolumeValue": "Volume: {{{volume}}}\nAdded: {{{added}}}\nModerator: {{{moderator}}}",
+				"announceValue": "Mode: {{{mode}}}\nChannel: {{{channel}}}\nAdded: {{{added}}}\nModerator: {{{moderator}}}",
+				"prunningValue": "Mode: {{{mode}}}\nAdded: {{{added}}}\nModerator: {{{moderator}}}",
+				"disableCommandValue": "Commands: {{{commands}}}\nAdded: {{{added}}}\nModerator: {{{moderator}}}",
+				"prefixValue": "Prefix: {{{prefix}}}\nAdded: {{{added}}}\nModerator: {{{moderator}}}",
+				"voteSkipValue": "Mode: {{{mode}}}\nAdded: {{{added}}}\nModerator: {{{moderator}}}",
+				"247Value": "Mode: {{{mode}}}\nAdded: {{{added}}}\nModerator: {{{moderator}}}\nChannel: {{{channel}}}",
+				"botChannelValue": "Channel: {{{channel}}}\nAdded: {{{added}}}\nModerator: {{{moderator}}}",
+				"languageValue": "Language: {{{language}}}",
+				"enabled": "Enabled",
+				"disabled": "Disabled",
+				"none": "None"
+			},
+			"resetSuccess": " {{{emoji}}} Successfully reset the server settings to the default settings.",
+			"info": " Here is the config info for this server",
+			"noSettings": " {{{emoji}}} There are no settings for this server."
+		},
+		"voteskipsetting": {
+			"description": "Configure the voteskip settings.",
+			"options": {
+				"set": "Set the voteskip mode.",
+				"action": "The action you want to set (enable/disable)."
+			},
+			"success": " {{{emoji}}} Successfully {{{action}}}d the voteskip.",
+			"isConfirm": " Do you want to enable or disable the voteskip?",
+			"canceled": " {{{emoji}}} The voteskip setting has been cancelled.",
+			"alreadyEnabled": " The voteskip is already enabled.",
+			"alreadyDisabled": " The voteskip is already disabled.",
+			"buttons": {
+				"enable": "Enable",
+				"disable": "Disable",
+				"cancel": "Cancel"
+			}
+		},
+		"add": {
+			"description": "Add a song to a playlist.",
+			"options": {
+				"playlist": "The playlist you want to add the song to.",
+				"song": "The song (name/url) you want to add to the playlist."
+			},
+			"playlistLength": " {{{emoji}}} The playlist name must be between 3 and 50 characters.",
+			"noPlaylists": " {{{emoji}}} I couldn't find any playlists in your account, please create one first.",
+			"noResults": " {{{emoji}}} I couldn't find any results for `{{{song}}}`.",
+			"playlistFull": " {{{emoji}}} Your playlist is full, please remove some songs before adding more.",
+			"playlistAdded": " {{{emoji}}} Successfully added **{{{count}}}** songs to the playlist **{{{playlist}}}**."
+		},
+		"addnowplaying": {
+			"description": "Add the current song to a playlist.",
+			"options": {
+				"playlist": "The playlist you want to add the song to."
+			},
+			"noSong": " {{{emoji}}} There is no song playing.",
+			"songAlreadyInPlaylist": " {{{emoji}}} This song is already in the playlist.",
+			"success": " {{{emoji}}} Added **{{{song}}}** to **{{{playlist}}}**."
+		},
+		"addqueue": {
+			"description": "Add a playlist to the queue.",
+			"options": {
+				"name": "The name of the playlist you want to add to the queue."
+			},
+			"noQueue": " {{{emoji}}} There is no queue.",
+			"success": " {{{emoji}}} Added the **{{{queueLength}}}** songs in the queue to the playlist **{{{playlistName}}}**."
+		},
+		"create": {
+			"description": "Create a playlist.",
+			"options": {
+				"playlist": "The name of the playlist you want to create.",
+				"visibility": "The visibility of the playlist."
+			},
+			"playlist": " {{{emoji}}} Please provide a playlist name.",
+			"visibility": " {{{emoji}}} The visibility must be either `public` or `private`.",
+			"maxPlaylists": " {{{emoji}}} You can create up to 10 playlists.",
+			"playlistExists": " {{{emoji}}} You already have a playlist with the name **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Successfully created the playlist **{{{playlist}}}**."
+		},
+		"delete": {
+			"description": "Delete a playlist.",
+			"options": {
+				"playlist": "The name of the playlist you want to delete."
+			},
+			"noPlaylists": " {{{emoji}}} You don't have a playlist named **{{{playlist}}}**.",
+			"buttons": {
+				"confirm": "Confirm",
+				"cancel": "Cancel"
+			},
+			"confirm": " Are you sure you want to delete the playlist **{{{playlist}}}**?",
+			"success": " {{{emoji}}} Successfully deleted the playlist **{{{playlist}}}**.",
+			"cancel": " {{{emoji}}} Cancelled the deletion of the playlist **{{{playlist}}}**."
+		},
+		"dupes": {
+			"description": "Remove all duplicate songs from a playlist.",
+			"options": {
+				"playlist": "The name of the playlist you want to remove the duplicates from."
+			},
+			"noDupes": " {{{emoji}}} There are no duplicate songs in the playlist **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Successfully removed **{{{count}}}** duplicate songs from the playlist **{{{playlist}}}**."
+		},
+		"edit": {
+			"description": "Edit a playlist.",
+			"options": {
+				"playlist": "The name of the playlist you want to edit.",
+				"old-name": "The old name of the playlist.",
+				"new-name": "The new name of the playlist.",
+				"playlist-visibility": "Change the visibility of the playlist.",
+				"visibility": "The visibility of the playlist."
+			},
+			"sameName": " {{{emoji}}} The new name must be different from the old name.",
+			"successName": " {{{emoji}}} Successfully renamed the playlist **{{{oldName}}}** to **{{{newName}}}**.",
+			"sameVisibility": " {{{emoji}}} The playlist **{{{playlist}}}** is already **{{{visibility}}}**.",
+			"successVisibility": " {{{emoji}}} Successfully changed the visibility of the playlist **{{{playlist}}}** to **{{{visibility}}}**.",
+			"buttons": {
+				"playlist": "Playlist name",
+				"visibility": "Playlist visibility",
+				"public": "Public",
+				"private": "Private"
+			},
+			"selectOption": " Select an option to edit your playlist from the buttons below.",
+			"oldName": " Enter the old name of the playlist.",
+			"newName": " Enter the new name of the playlist.",
+			"cancelled": " {{{emoji}}} Cancelled the playlist name change.",
+			"playlist": " Enter the name of the playlist.",
+			"selectVisibility": " Select the visibility of the playlist from the buttons below.",
+			"liked": " {{{emoji}}} You can't edit the liked playlist."
+		},
+		"import": {
+			"description": "Import a playlist from playlist id.",
+			"options": {
+				"id": "The id of the playlist you want to import."
+			},
+			"noPlaylist": " {{{emoji}}} I couldn't find any playlist with the id **{{{id}}}**.",
+			"sameUser": " {{{emoji}}} You can't import your own playlist.",
+			"privatePlaylist": " {{{emoji}}} You can't import a private playlist.",
+			"success": " {{{emoji}}} Successfully imported the playlist **{{{playlist}}}**."
+		},
+		"list": {
+			"description": "List all your playlists.",
+			"tracks": "Track(s): {{{tracks}}}"
+		},
+		"load": {
+			"description": "Load a playlist to the queue.",
+			"options": {
+				"song": "Load a specific song from a playlist.",
+				"name": "The name of the playlist you want to load.",
+				"track": "The track number or track title to load."
+			},
+			"noPlaylists": " {{{emoji}}} You don't have a playlist named **{{{playlist}}}**.",
+			"noTracks": " {{{emoji}}} There are no tracks in the playlist **{{{playlist}}}**.",
+			"noTrackFound": " {{{emoji}}} No track found with that track `{{{track}}}`.",
+			"trackLoaded": " {{{emoji}}} Loaded **{{{track}}}** from **{{{playlist}}}**.",
+			"privatePlaylist": " {{{emoji}}} You can't load a private playlist from another user.",
+			"playlistLoaded": " {{{emoji}}} Loaded **{{{count}}}** songs from **{{{playlist}}}**."
+		},
+		"pl-remove": {
+			"description": "Remove a song from a playlist.",
+			"options": {
+				"playlist": "The name of the playlist you want to remove the song from.",
+				"track": "The track number or track title to remove."
+			},
+			"notFound": " {{{emoji}}} I couldn't find a track with that number or title.",
+			"success": " {{{emoji}}} Successfully removed **{{{track}}}** from **{{{playlist}}}**."
+		},
+		"view": {
+			"description": "View a playlist.",
+			"options": {
+				"playlist": "The name of the playlist you want to view."
+			},
+			"footer": "Page {{{page}}} of {{{pages}}} | {{{tracks}}} tracks | {{{duration}}}",
+			"buttons": {
+				"previous": "Previous",
+				"stop": "Stop",
+				"next": "Next"
+			}
+		},
+		"playradio": {
+			"description": "Play a radio station.",
+			"options": {
+				"station": "The name of the radio station you want to play.",
+				"language": "cmd.playradio.options.language",
+				"country": "cmd.playradio.options.country"
+			},
+			"noStation": " {{{emoji}}} I couldn't find a radio station with that name.",
+			"country": "**Country:** {{{country}}}",
+			"votes": "**Votes:** {{{votes}}}",
+			"codec": "**Codec:** {{{codec}}}",
+			"bitrate": "**Bitrate:** {{{bitrate}}}",
+			"tags": "**Tags:** {{{tags}}}",
+			"results": " Here are the results of your search:\n\n{{{results}}}",
+			"select": "Select a station between 1 and 10 in the dropdown menu below.",
+			"added": " {{{emoji}}} Added [**{{{name}}}**]({{{homepage}}}) to the queue."
+		},
+		"setup": {
+			"description": "Setup The Song Request Channel.",
+			"options": {
+				"create": "Create the setup channel",
+				"delete": "Delete the setup channel",
+				"info": "Get the setup channel info",
+				"change": "Change the setup channel",
+				"channel": "The channel you want to set."
+			},
+			"alreadySetup": " {{{emoji}}} The setup channel is already set to **{{{channel}}}**.",
+			"created": " {{{emoji}}} Successfully created the setup channel **{{{channel}}}**.\n*You can rename/move this channel if you want to.\n\nNote: Deleting the template embed in there may cause this setup to stop working. (Please don't delete it.)*",
+			"notSetup": " {{{emoji}}} The setup channel is not set.",
+			"deleted": " {{{emoji}}} Successfully deleted the setup channel.",
+			"noChannel": " {{{emoji}}} Please provide a valid text channel.",
+			"notTextChannel": " {{{emoji}}} Please provide a valid text channel.",
+			"sameChannel": " {{{emoji}}} The channel you provided is already have in the database.",
+			"join": "**Join a voice channel and queue songs by name/url.**",
+			"info": {
+				"title": "Setup Channel Info",
+				"description": "Here is the setup channel info for this server",
+				"channel": "Channel",
+				"moderator": "Moderator",
+				"message": "Message",
+				"addedAt": "Added at"
+			}
+		},
+		"buttonmode": {
+			"description": "Enable or disable button mode.",
+			"options": {
+				"boolean": "The boolean to set (true/false)"
+			}
+		}
+	},
+	"player": {
+		"embed": {
+			"247": " Someone disconnected me from the voice channel, but I'm still here because of the **24/7 mode**!\n\nYou can disable this by disabling the **24/7 mode** using the {{{cmd}}} command or by using the {{{cmd2}}} command!",
+			"nowPlaying": "Now Playing",
+			"nowPlayingDesc": "**[{{{songName}}}]({{{songUrl}}})** By [{{{songAuthor}}}]({{{songAuthorUrl}}}) - {{{requester}}}",
+			"footer": "Duration: {{{duration}}} | Queue: {{{queue}}} | Volume: {{{volume}}}%",
+			"end": " No one has been listening for the past 1 minute, leaving the channel.\n\nYou can disable this by enabling the **24/7 mode** using the {{{cmd}}} command!",
+			"endTitle": "Queue Concluded",
+			"endDesc": " Your music queue has now ended. You can add music again using {{{cmd}}}! Enjoying music with me? Consider [Voting for me]({{{link}}})!",
+			"queue": "Queued Track(s)",
+			"trackLoop": "Track Loop",
+			"queueLoop": "Queue Loop",
+			"volume": "Volume",
+			"autoplay": "Autoplay",
+			"duration": "Duration",
+			"upcoming": "Upcoming Track(s)",
+			"queueStats": "Queue Stats"
+		},
+		"error": "Getting error",
+		"description": " [{{{title}}}]({{{uri}}}) is not available in your country because it's age-restricted!",
+		"buttons": {
+			"resume": "Resume",
+			"pause": "Pause",
+			"previous": "Previous",
+			"shuffle": "Shuffle",
+			"skip": "Skip",
+			"stop": "Stop",
+			"voldown": "Volume Down",
+			"volup": "Volume Up",
+			"loop": "Loop",
+			"like": "Like"
+		},
+		"noDispatcher": " There is nothing playing right now..",
+		"nothingPlaying": " There is nothing playing right now.."
+	},
+	"events": {
+		"buttonHandle": {
+			"notInVoice": "You need to join a voice {{{channel}}} channel to use this button!",
+			"noPrevious": "There is no previous song in the queue.",
+			"playingPrevious": "{{{user}}} is playing the previous track.",
+			"nothingToSkip": "There is nothing in the queue to skip.",
+			"alreadyVote": "{{{user}}} There's already a vote in this server. Please wait for it to finish or cancel it.",
+			"voteSkip": "{{{user}}} requested to skip the current track. Did you want to stop vote skipping? Do {{{cmd}}}",
+			"voteSkipLabel": "Vote to skip the current track!",
+			"alreadyVoted": "{{{user}}} You have already voted to skip the current track.",
+			"voteSkip2": "{{{user}}} requested to skip the current track.",
+			"voteSkipLabel2": "Vote to skip the current track! ({{{count}}}/{{{n}}})",
+			"needVoice": "{{{user}}} You need to join the voice {{{channel}}} channel to use this button!",
+			"voteSkipTrack": "{{{user}}} is skipping the track after {{{count}}} positive votes!",
+			"notEnoughVote": " Not enough votes to skip the current track.",
+			"skipTrack": "{{{user}}} skipped the current track.",
+			"playTrack": "{{{user}}} {{{paused}}} the current track.",
+			"paused": "Paused",
+			"resumed": "Resumed",
+			"stopTrack": "{{{user}}} stopped the current track.",
+			"volMax": " The volume is already at the maximum.",
+			"volUp": "{{{user}}} increased the volume to **{{{vol}}}**%.",
+			"volMin": " The volume is already at the minimum.",
+			"volDown": "{{{user}}} decreased the volume to **{{{vol}}}**%.",
+			"shuffleError": "{{{user}}} There are not enough songs in the queue to shuffle.",
+			"shuffleDisabled": "{{{user}}} Shuffle disabled.",
+			"shuffleEnabled": "{{{user}}} Shuffle enabled.",
+			"loopSong": "{{{user}}} Looping the current song.",
+			"loopQueue": "{{{user}}} Looping the queue.",
+			"loopDisabled": "{{{user}}} Loop disabled.",
+			"noTrack": "{{{user}}} Nothing is playing right now.",
+			"liked": "{{{user}}} Liked **{{{title}}}**.",
+			"unliked": "{{{user}}} Unliked **{{{title}}}**.",
+			"notSeekable": " This song is not seekable.",
+			"isPaused": " This song is paused.",
+			"rewindTrack": "{{{user}}} Rewinded the current track to **{{{time}}}**.",
+			"forwardTrack": "{{{user}}} Forwarded the current track to **{{{time}}}**.",
+			"autoplayDisabled": "{{{user}}} Successfully disabled autoplay.",
+			"autoplayEnabled": "{{{user}}} Successfully enabled autoplay."
+		},
+		"int": {
+			"noSendMessages": " Hey! I tried to send a reply to your command; however, I lack the permission to do so. Please have someone from the staff give me the `Send Messages` Discord permission.\n\nServer: **{{{guildName}}}**\nCommand: **{{{commandName}}}**\nWant help with permissions? Join the support server: {{{supportServer}}}",
+			"noEmbedLinks": " {{{emoji}}} The bot must have the `Embed links` Discord permission to work properly! Please have someone from the staff give me this permission.",
+			"noBotChannel": " I am not allowed to answer commands in this channel. Please use {{{emoji}}} <#{{{botChannel}}}> for bot commands. Thank you for your cooperation.",
+			"deleteFooter": "• This message will be deleted in 5 seconds",
+			"disabledCommand": " This command is disabled in this server for everyone. Only DJs can use this command.",
+			"disabledCommandList": "Disabled list",
+			"noBotPermissions": " {{{emoji}}} I don't have the **{{{permissions}}}** permission(s) to execute this command.",
+			"noUserPermissions": " {{{emoji}}} You don't have the **{{{permissions}}}** permission(s) to execute this command.",
+			"voteLocks": [
+				" You need to vote for me to use this command. You can vote [Top.gg]({{{link}}})",
+				" You need to vote for me to use this command. You can vote [Top.gg]({{{link}}}) or\nYou can also get premium by donating [here]({{{link2}}})"
+			],
+			"buttons": {
+				"vote": "Vote",
+				"donate": "Donate",
+				"invite": "Invite",
+				"support": "Support"
+			},
+			"cooldown": " Please wait **{{{timeLeft}}}** more second(s) before reusing the **{{{command}}}** command.",
+			"noDjRole": " {{{emoji}}} You need the DJ role to use this command.",
+			"noPremium": " You need bot premium to use this command. You can get premium by donating [here]({{{link}}})",
+			"voicePerm": " {{{emoji}}} I don't have the required permissions to join your voice channel! I need `View Channels`, `Connect`, and `Speak` permissions. [Permissions Example](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\nIf the problem persists, change the voice channel region to `Europe`.",
+			"voiceJoin": " {{{emoji}}} You have to be connected to a voice channel on this server to use this command!\n\nHow to join a voice channel? Just click on a channel with a speaker icon (for example, click here:  {{{channel}}}) [See the official Discord guide](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord#h_9de92bc2-3bca-459f-8efd-e1e2739ca4f4)",
+			"voiceChannel": " {{{emoji}}} You must be in the **{{{channel}}}** voice channel to use this command.",
+			"noPlayer": " {{{emoji}}} I'm not connected to any voice channel. Please use the {{{command}}} command to summon me.",
+			"noQueue": " {{{emoji}}} There is no queue. Please use the {{{command}}} command to add a song to the queue.",
+			"noSong": " {{{emoji}}} There is no song playing. Please use the {{{command}}} command to add a song to the queue.",
+			"error": " {{{emoji}}} An error occurred while executing the command. Please report this error to the [Support Server]({{{link}}})"
+		}
+	},
+	"get_started": {
+		"embed_title": "Moe Bot | Get started",
+		"embed_description": " Hey <@{{{user}}}>! My prefix(es) is/are: `{{{prefixList}}}`\nFor example: `{{{prefix}}}help`, `{{{prefix}}}ping`",
+		"embed_description2": " Hey <@{{{user}}}>! My prefix is: `no prefix`, meaning you can use any command without a prefix.\nFor example: `help`, `ping`"
+	},
+	"options": {
+		"title": "Options for {{{commandName}}}",
+		"no_description": "No description",
+		"options": "Options",
+		"examples": "Example(s)",
+		"long_des": "This is for navigating between pages",
+		"examples_button": "Examples",
+		"footer": "<Required> | [Optional] {{{long_des}}} Page {{{page}}} of {{{total_pages}}}",
+		"title2": "Examples for {{{commandName}}}"
+	},
+	"Evaluate JavaScript code": "Evaluate JavaScript code",
+	"Generate a premium key": "Generate a premium key",
+	"Give a user premium.": "Give a user premium."
+}

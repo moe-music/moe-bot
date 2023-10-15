@@ -1,0 +1,959 @@
+{
+	"cmd": {
+		"247": {
+			"description": "Aktifkan atau nonaktifkan mode 24/7.",
+			"enabled": " {{{emoji}}} Mode 24/7 telah diaktifkan.",
+			"disabled": " {{{emoji}}} Mode 24/7 telah dinonaktifkan."
+		},
+		"ping": {
+			"description": "Menampilkan latensi bot.",
+			"author": "Latensi Bot",
+			"content": "**Shard**: `{{{shardPing}}}ms`\n**API**: `{{{latency}}}ms`",
+			"footer": "• Dapatkan lebih banyak informasi di saluran status di server dukungan"
+		},
+		"invite": {
+			"description": "Undang bot ke server Anda.",
+			"buttons": {
+				"invite": "Undang MoE",
+				"invite2": "Undang MoE2",
+				"invite3": "Undang MoE3",
+				"support": "Dukungan"
+			},
+			"content": "Jika Anda menikmati menggunakan saya, pertimbangkan untuk [mengundang saya]({{{invite}}}) ke server Anda sekarang. Dan jangan lupa bergabung dengan [server dukungan]({{{support}}})."
+		},
+		"help": {
+			"description": "Menampilkan daftar perintah atau informasi tentang perintah tertentu.",
+			"options": {
+				"command": "Nama perintah atau kategori untuk mendapatkan bantuan"
+			},
+			"title": " Perintah",
+			"footer": "Halaman {{{page}}} dari {{{pagesNum}}}",
+			"title2": "Bantuan - {{{cmd}}}",
+			"title3": "Bantuan",
+			"manContent": " Berikut adalah daftar semua kategori\n{{{catagory}}}\n\n- Tautan:\n[Server Dukungan]({{{server}}}) | [Undang]({{{invite}}}) | [Vote]({{{vote}}}) | [Patreon]({{{patreon}}}) | [Situs Web]({{{website}}}) | [Dokumentasi]({{{docs}}})",
+			"footer2": "- Untuk informasi lebih lanjut tentang suatu perintah: {{{prefix}}}help <perintah> atau {{{prefix}}}help <kategori>",
+			"cooldown": "Kedinginan",
+			"aliases": "Alias",
+			"category": "Kategori",
+			"examples": "Contoh",
+			"userPerms": "Izin Pengguna",
+			"botPerms": "Izin Bot",
+			"requirements": "Persyaratan",
+			"subCommands": "Perintah Sub",
+			"subSubCommands": "Perintah Sub Sub",
+			"buttons": {
+				"previous": "Sebelumnya",
+				"stop": "Berhenti",
+				"next": "Berikutnya",
+				"home": "Beranda",
+				"config": "Konfigurasi",
+				"music": "Musik",
+				"filter": "Saring",
+				"general": "Umum",
+				"playlists": "Daftar Putar"
+			},
+			"notFound": "`{{{cmd}}}` bukan perintah atau kategori yang valid!",
+			"voice": {
+				"inVoice": "- Harus berada di saluran suara",
+				"sameVoice": "- Harus berada di saluran suara yang sama",
+				"playing": "- Harus memutar musik di server ini"
+			},
+			"voteLock": "- Harus [memilih]({{{link}}}) untuk menggunakan perintah ini",
+			"premiumCmd": "- Harus memiliki [premium]({{{link}}}) untuk menggunakan perintah ini"
+		},
+		"premium": {
+			"description": "Menampilkan status premium pengguna atau guild.",
+			"guildPremiumStatus": "Status Premium Guild",
+			"userPremiumStatus": "Status Premium Pengguna",
+			"premium": "Premium",
+			"notPremium": "Tidak Premium",
+			"guildPremiumExpires": "Kedaluwarsa Premium Guild",
+			"userPremiumExpires": "Kedaluwarsa Premium Pengguna"
+		},
+		"redeem": {
+			"description": "Tukarkan kode premium.",
+			"options": {
+				"code": "Kode premium yang akan ditukarkan"
+			},
+			"noArg": "Harap berikan kode premium untuk ditukarkan.",
+			"invalidCode": "Kode premium yang diberikan tidak valid.",
+			"confirmation": " Apakah Anda yakin ingin menebus kode premium `{{{code}}}`?",
+			"type": "Jenis",
+			"expiresAt": "Kedaluwarsa Pada",
+			"buttons": {
+				"yes": "Ya",
+				"no": "Tidak"
+			},
+			"alreadyPremium": "Anda sudah menjadi anggota premium.",
+			"success": " Berhasil menukarkan kode premium Anda. Sekarang Anda dapat menggunakan perintah premium!",
+			"canceled": "Membatalkan penebusan kode premium."
+		},
+		"stats": {
+			"description": "Menampilkan statistik bot."
+		},
+		"support": {
+			"description": "Tautan server dukungan",
+			"content": " Jika Anda membutuhkan bantuan dengan bot atau hanya ingin bergabung dengan kami, bergabunglah dengan [server dukungan]({{{link}}}).",
+			"buttons": {
+				"support": "Server Dukungan"
+			}
+		},
+		"vote": {
+			"description": "Tautan vote bot",
+			"content": " Jika Anda menyukai bot ini, pertimbangkan untuk memberikan suara untuknya di [top.gg]({{{link}}}).",
+			"buttons": {
+				"vote": "Vote"
+			}
+		},
+		"player": {
+			"description": "Menampilkan status pemutar.",
+			"nowPlaying": "Sedang Diputar",
+			"noSong": "Tidak ada lagu yang sedang diputar saat ini.",
+			"volume": "Volume",
+			"totalDuration": "Durasi Total",
+			"loopMode": "Mode Loop",
+			"filters": "Filter",
+			"noFilters": "Tidak ada filter yang diterapkan saat ini.",
+			"title": "Pemutar: {{{status}}}",
+			"online": "Daring",
+			"offline": "Luring"
+		},
+		"autoplay": {
+			"description": "Aktifkan atau nonaktifkan mode autoplay.",
+			"enabled": " Berhasil mengaktifkan mode autoplay `Aktif`\nBot akan otomatis menambahkan lagu-lagu serupa ke dalam antrian.",
+			"disabled": " Berhasil menonaktifkan mode autoplay `Nonaktif`\nBot tidak akan lagi otomatis menambahkan lagu-lagu serupa ke dalam antrian."
+		},
+		"clear": {
+			"description": "Hapus antrian atau filter dari pemutar.",
+			"options": {
+				"input": "Antrian atau filter yang ingin dihapus"
+			},
+			"content": " Harap pilih antrian atau filter yang ingin dihapus. (antrian/filter)",
+			"queue": {
+				"noSong": "Tidak ada lagu dalam antrian yang dapat dihapus.",
+				"success": " Berhasil menghapus antrian."
+			},
+			"filters": {
+				"noFilter": "Tidak ada filter yang dapat dihapus.",
+				"success": " Berhasil menghapus filter."
+			},
+			"buttons": {
+				"queue": "Antrian",
+				"filters": "Filter"
+			}
+		},
+		"forceskip": {
+			"description": "Lewati lagu saat ini dengan paksa.",
+			"success": " Berhasil melewati lagu {{{title}}}."
+		},
+		"forward": {
+			"description": "Majukan lagu saat ini.",
+			"options": {
+				"seconds": "Jumlah detik untuk majukan"
+			},
+			"unseekable": "{{{emoji}}} Lagu saat ini tidak bisa dimajukan.",
+			"tooLong": "{{{emoji}}} Kamu tidak dapat majukan lebih dari durasi lagu.",
+			"success": " {{{emoji}}} Berhasil majukan lagu sebanyak `{{{time}}}`."
+		},
+		"grab": {
+			"description": "Ambil lagu saat ini.",
+			"dm": "{{{emoji}}} Aku tidak bisa mengirimkan lagu karena kamu telah menonaktifkan DM-mu.",
+			"grabbed": " {{{emoji}}} Berhasil mengambil lagu."
+		},
+		"join": {
+			"description": "Undang bot ke saluran suara kamu.",
+			"no-perms": "{{{emoji}}} Aku tidak memiliki izin yang diperlukan untuk bergabung dengan saluran suara kamu! Aku memerlukan izin `Lihat Saluran`, `Hubungkan`, dan `Ngomong`. [Contoh Izin](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\n Jika masalah masih berlanjut, ubah wilayah saluran suara menjadi `Eropa`.",
+			"already-in": "{{{emoji}}} Aku sudah berada di saluran suara!",
+			"joined": " Berhasil bergabung ke saluran suara {{{channel}}}"
+		},
+		"leave": {
+			"description": "Keluar dari saluran suara.",
+			"not-playing": "{{{emoji}}} Aku sedang tidak memutar apapun saat ini!",
+			"success": " {{{emoji}}} Berhasil keluar dari saluran suara."
+		},
+		"leavecleanup": {
+			"description": "Hapus semua lagu dari pengguna yang tidak berada di saluran suara.",
+			"removing": " Menghapus lagu dari pengguna yang tidak lagi berada di VC. Harap tunggu",
+			"removed": " Berhasil menghapus `{{{count}}}` lagu dari pengguna yang tidak berada di VC."
+		},
+		"loop": {
+			"description": "Meloop lagu atau antrian saat ini.",
+			"options": {
+				"mode": "Mode loop yang akan diatur"
+			},
+			"specify": " Harap tentukan mode untuk loop. (lagu, antrian, mati) dari tombol di bawah ini.",
+			"buttons": {
+				"song": "Lagu",
+				"queue": "Antrian",
+				"off": "Mati"
+			},
+			"song": " {{{emoji}}} Berhasil meloop lagu saat ini.",
+			"queue": " {{{emoji}}} Berhasil meloop antrian.",
+			"off": " {{{emoji}}} Berhasil menonaktifkan loop.",
+			"song_already": " {{{emoji}}} Lagu saat ini sudah dalam mode loop.",
+			"queue_already": " {{{emoji}}} Antrian sudah dalam mode loop.",
+			"off_already": " {{{emoji}}} Loop sudah dinonaktifkan.",
+			"invalid_mode": " {{{emoji}}} Mode loop yang diberikan tidak valid. Harap berikan mode loop yang valid. (lagu, antrian, mati)"
+		},
+		"lyrics": {
+			"description": "Tampilkan lirik lagu saat ini atau lagu berdasarkan nama.",
+			"options": {
+				"song": "Nama lagu untuk dicari"
+			},
+			"noQuery": " Harap berikan nama lagu untuk dicari.",
+			"noLyrics": " Aku tidak dapat menemukan lirik untuk lagu ini.",
+			"page": "Halaman {{{page}}} dari {{{pages}}}"
+		},
+		"move": {
+			"description": "Pindahkan lagu ke posisi tertentu dalam antrian.",
+			"options": {
+				"song": "Lagu yang akan dipindahkan",
+				"position": "Posisi untuk memindahkan lagu"
+			},
+			"invalidNumber": " Harap berikan nomor yang valid untuk posisi.",
+			"invalidPosition": " Posisi yang diberikan tidak valid. Harap berikan posisi yang valid.",
+			"success": " Memindahkan **[{{{title}}}]({{{uri}}})** dari posisi **{{{from}}}** ke **{{{to}}}**."
+		},
+		"nowplaying": {
+			"description": "Tampilkan lagu yang sedang diputar saat ini.",
+			"nowplaying": " Sedang diputar: [{{{title}}}]({{{uri}}})",
+			"author": "Penyanyi",
+			"requester": "Diminta oleh",
+			"duration": "Durasi",
+			"progress": "Progres"
+		},
+		"pause": {
+			"description": "Jeda lagu saat ini.",
+			"alreadyPaused": " Lagu saat ini sudah dalam keadaan dijeda.",
+			"paused": " Dijeda [{{{title}}}]({{{uri}}})"
+		},
+		"play": {
+			"description": "Putar lagu dari Spotify, SoundCloud, Deezer, dan lain-lain...",
+			"options": {
+				"query": "Kueri untuk mencari",
+				"source": "Sumber pencarian"
+			},
+			"no-query": "Silakan berikan nama lagu untuk dicari.",
+			"no-results": " Tidak ada hasil ditemukan untuk `{{{query}}}`.",
+			"playlist-loaded": " Memuat `{{{count}}}` lagu dari daftar putar **[{{{name}}}]({{{url}}})**",
+			"footer": "Terima kasih telah menggunakan {{{bot}}}",
+			"added": " Ditambahkan **[{{{title}}}]({{{uri}}})** ke antrian (diminta oleh <@{{{requester}}}>) di posisi antrian `#{{{position}}}`",
+			"youtube-not-supported": " Maaf, YouTube tidak didukung di MoE karena TOS Discord. Kami tidak dapat menggunakan API YouTube untuk mendengarkan musik. Kami mohon maaf atas ketidaknyamanan ini."
+		},
+		"playprevious": {
+			"description": "Putar lagu sebelumnya.",
+			"noPreviousTrack": " {{{emoji}}} Tidak ada lagu sebelumnya untuk diputar.",
+			"success": " {{{emoji}}} Memainkan lagu sebelumnya dari daftar antrianmu!"
+		},
+		"queue": {
+			"description": "Tampilkan daftar antrian untuk server saat ini.",
+			"options": {
+				"page": "Nomor halaman untuk ditampilkan"
+			},
+			"queue": "Daftar Antrian untuk {{{guild}}} ({{{songs}}} lagu)",
+			"nowPlaying": " Sedang Diputar: [{{{title}}}]({{{uri}}}) `[{{{length}}}]`- (<@{{{requester}}}>)\n\n",
+			"upNext": " Segera Diputar: {{{str}}}",
+			"noSongs": " Belum ada lagu dalam daftar antrian! Tambahkan dengan menggunakan perintah {{{cmd}}}",
+			"page": "Halaman {{{page}}} | {{{songs}}} lagu | Durasi total {{{duration}}}",
+			"notNumber": " {{{emoji}}} Nomor halaman harus berupa angka.",
+			"pageLimit": " {{{emoji}}} Nomor halaman harus kurang dari atau sama dengan {{{pages}}}.",
+			"clearQueue": "Bersihkan Antrian",
+			"noTracks": " Tidak ada lagu dalam daftar antrian.",
+			"noDjRole": " Anda memerlukan peran DJ untuk menggunakan tombol ini.",
+			"clearedQueue": " {{{user}}} Membersihkan daftar antrian."
+		},
+		"remove": {
+			"description": "Hapus lagu dari daftar antrian.",
+			"options": {
+				"track": "Lagu yang ingin dihapus.",
+				"number": "Nomor lagu atau judul lagu yang ingin dihapus.",
+				"dupes": "Hapus semua lagu duplikat."
+			},
+			"trackNotFound": " Tidak ada lagu dengan nomor tersebut dalam daftar antrian",
+			"invalidNumber": " Silakan masukkan nomor antara 1 dan {{{length}}}.",
+			"removed": " Menghapus **[{{{title}}}]({{{uri}}})** dari daftar antrian.",
+			"noDupes": " Tidak ada lagu duplikat dalam daftar antrian.",
+			"removedDupes": " Menghapus **{{{length}}}** lagu duplikat dari daftar antrian."
+		},
+		"replay": {
+			"description": "Putar ulang lagu saat ini.",
+			"replaying": " Memutar ulang [{{{title}}}]({{{uri}}})"
+		},
+		"resume": {
+			"description": "Lanjutkan lagu saat ini.",
+			"notPaused": " Lagu saat ini tidak dalam keadaan dijeda.",
+			"resumed": " Dilanjutkan [{{{title}}}]({{{uri}}})"
+		},
+		"rewind": {
+			"description": "Putar mundur lagu saat ini.",
+			"options": {
+				"time": "Waktu yang ingin Anda mundurkan pada lagu."
+			},
+			"notSeekable": " {{{emoji}}} Lagu saat ini tidak dapat dimundurkan.",
+			"negativePosition": " {{{emoji}}} Posisi harus antara 0 dan {{{length}}}.",
+			"success": " {{{emoji}}} Lagu diputar mundur hingga {{{length}}}."
+		},
+		"search": {
+			"description": "Cari lagu dari Spotify, SoundCloud, atau Deezer",
+			"options": {
+				"query": "Kueri untuk mencari",
+				"source": "Sumber pencarian"
+			},
+			"no-playlist": " {{{emoji}}} Daftar putar tidak didukung! Harap gunakan perintah {{{cmd}}} untuk mencari.",
+			"no-track": " {{{emoji}}} Lagu tidak didukung! Harap gunakan perintah {{{cmd}}} untuk mencari.",
+			"results": " Hasil Pencarian untuk `{{{query}}}`\n\n{{{results}}}",
+			"footer": "Silakan pilih lagu dari menu pilihan di bawah ini.",
+			"placeholder": "Pilih lagu dari daftar di bawah ini untuk memainkannya.",
+			"footerTimeout": "Waktu pencarian habis.",
+			"no-voice": " {{{emoji}}} Anda harus berada di saluran suara untuk menggunakan menu ini.",
+			"wrong-voice": " {{{emoji}}} Anda harus berada di saluran suara yang sama dengan saya untuk menggunakan menu ini.",
+			"added": " {{{emoji}}} Menambahkan {{{count}}} lagu ke daftar antrian."
+		},
+		"seek": {
+			"description": "Loncat ke waktu tertentu dalam lagu saat ini.",
+			"options": {
+				"time": "Waktu yang ingin Anda loncatkan pada lagu."
+			},
+			"invalidPosition": " Waktu harus antara 0 dan {{{length}}}.",
+			"seeked": " Melompat ke `{{{position}}}` pada `{{{time}}}`"
+		},
+		"shuffle": {
+			"description": "Acak daftar antrian.",
+			"success": " Daftar antrian server telah berhasil diacak (**{{{length}}}** lagu).",
+			"unshuffle": " Daftar antrian server telah dikembalikan seperti semula (**{{{length}}}** lagu)."
+		},
+		"skip": {
+			"description": "Lewati lagu saat ini.",
+			"nothing": " Tidak ada lagu selanjutnya dalam antrian. Gunakan perintah {{{queue}}} untuk melihat daftar antrian server.\nIngin mencoba autoplay? Ketik {{{autoplay}}}",
+			"paused": " Pemain sedang dijeda. Gunakan perintah resume untuk melanjutkan pemutaran.\nIngin melanjutkan? Ketik {{{resume}}}",
+			"voteSkip": " {{{user}}} meminta lagu saat ini untuk dilewati.\n\n{{{voted}}}",
+			"skip": " Melompati lagu **{{{title}}}**."
+		},
+		"skipto": {
+			"description": "Loncat ke lagu tertentu dalam daftar antrian.",
+			"options": {
+				"number": "Nomor lagu atau judul lagu untuk dilewati."
+			},
+			"invalidNumber": " {{{emoji}}} Silakan masukkan nomor lagu antara 1 dan {{{length}}}.",
+			"success": " {{{emoji}}} Loncat ke **[{{{title}}}]({{{uri}}})**."
+		},
+		"stop": {
+			"description": "Hentikan pemutar dan hapus daftar antrian.",
+			"stopped": " {{{emoji}}} Pemutar dihentikan dan daftar antrian telah dihapus."
+		},
+		"topsongs": {
+			"description": "Tampilkan lagu-lagu terpopuler yang dimainkan oleh bot.",
+			"noTopSongs": " Tidak ada lagu terpopuler dalam database.",
+			"timesPlayed": "Jumlah Diputar",
+			"selectSong": "Pilih lagu dari daftar di bawah ini untuk memainkannya.",
+			"added": " Menambahkan **[{{{title}}}]({{{uri}}})** ke daftar antrian."
+		},
+		"volume": {
+			"description": "Ubah volume pemutar.",
+			"options": {
+				"volume": "Volume yang ingin diatur."
+			},
+			"invalidVolume": " {{{emoji}}} Harap masukkan angka antara 0 dan 100.",
+			"success": " {{{emoji}}} Volume diatur ke **{{{volume}}}**."
+		},
+		"voteskip": {
+			"description": "Vote untuk melewati lagu saat ini."
+		},
+		"filters": {
+			"filters": " Semua filter yang diterapkan pada lagu yang sedang diputar:\n\n{{{filters}}}",
+			"pitchNaN": " {{{emoji}}} Pitch harus berupa angka antara 1 dan 5.",
+			"description": {
+				"8d": "Terapkan filter 8D pada lagu yang sedang diputar.",
+				"bassboost": "Terapkan filter bassboost pada lagu yang sedang diputar.",
+				"channelmix": "Terapkan filter channelmix pada lagu yang sedang diputar.",
+				"electronic": "Terapkan filter electronic pada lagu yang sedang diputar.",
+				"filters": "Dapatkan daftar filter yang dapat diterapkan pada lagu yang sedang diputar.",
+				"jazz": "Terapkan filter jazz pada lagu yang sedang diputar.",
+				"karaoke": "Terapkan filter karaoke pada lagu yang sedang diputar.",
+				"lowpass": "Terapkan filter lowpass pada lagu yang sedang diputar.",
+				"nightcore": "Terapkan filter nightcore pada lagu yang sedang diputar.",
+				"pitch": "Terapkan filter pitch pada lagu yang sedang diputar.",
+				"pop": "Terapkan filter pop pada lagu yang sedang diputar.",
+				"radio": "Terapkan filter radio pada lagu yang sedang diputar.",
+				"rock": "Terapkan filter rock pada lagu yang sedang diputar.",
+				"rotation": "Terapkan filter rotation pada lagu yang sedang diputar.",
+				"soft": "Terapkan filter soft pada lagu yang sedang diputar.",
+				"speed": "Terapkan filter speed pada lagu yang sedang diputar.",
+				"treblebass": "Terapkan filter treblebass pada lagu yang sedang diputar.",
+				"tremolo": "Terapkan filter tremolo pada lagu yang sedang diputar.",
+				"vaporwave": "Terapkan filter vaporwave pada lagu yang sedang diputar.",
+				"vibrato": "Terapkan filter vibrato pada lagu yang sedang diputar."
+			},
+			"enabled": " {{{emoji}}} Filter {{{name}}} telah diaktifkan.",
+			"disabled": " {{{emoji}}} Filter {{{name}}} telah dinonaktifkan.",
+			"speed": " {{{emoji}}} Filter speed telah diatur ke **{{{value}}}**.",
+			"options": {
+				"speed": "Kecepatan yang ingin diatur.",
+				"pitch": "Pitch yang ingin diterapkan."
+			}
+		},
+		"announce": {
+			"description": "Konfigurasi pengumuman pesan lagu dimulai.",
+			"options": {
+				"set": "Atur saluran tempat pesan lagu dimulai akan dikirim.",
+				"channel": "Saluran yang ingin diatur.",
+				"toggle": "Ubah status pengumuman pesan lagu dimulai.",
+				"prunning": "Ubah status pemangkasan pesan lagu dimulai.",
+				"reset": "Reset saluran tempat pesan lagu dimulai akan dikirim."
+			},
+			"noChannel": " {{{emoji}}} Harap berikan saluran teks yang valid.",
+			"noTextChannel": " {{{emoji}}} Harap berikan saluran teks yang valid.",
+			"sameChannel": " {{{emoji}}} Saluran yang Anda berikan sudah ada dalam database.",
+			"setChannel": " {{{emoji}}} Berhasil mengatur saluran pengumuman ke {{{channel}}}.",
+			"noChannelInDB": " {{{emoji}}} Saluran pengumuman belum diatur dalam database.",
+			"toggle": " {{{emoji}}} Berhasil {{{status}}} pengumuman pesan lagu dimulai.",
+			"enabled": "diaktifkan",
+			"disabled": "dinonaktifkan",
+			"reset": " {{{emoji}}} Saluran pengumuman berhasil direset."
+		},
+		"botchannel": {
+			"description": "Atur saluran bot untuk mendengarkan perintah.",
+			"options": {
+				"add": "Tambahkan saluran ke daftar saluran bot.",
+				"channel": "Saluran yang ingin diatur.",
+				"remove": "Hapus saluran dari daftar saluran bot.",
+				"clear": "Bersihkan daftar saluran bot.",
+				"info": "Dapatkan daftar saluran bot dan informasi tentang saluran bot."
+			},
+			"noChannel": " {{{emoji}}} Harap berikan saluran teks yang valid.",
+			"noTextChannel": " {{{emoji}}} Harap berikan saluran teks yang valid.",
+			"sameChannel": " {{{emoji}}} Saluran yang Anda berikan sudah ada dalam database.",
+			"maxChannel": " {{{emoji}}} Anda tidak dapat menambahkan lebih dari 5 saluran ke daftar saluran bot.",
+			"addedChannel": " {{{emoji}}} Berhasil menambahkan saluran {{{channel}}} ke daftar saluran bot.",
+			"noChannelInDB": " {{{emoji}}} Tidak ada saluran bot dalam database.",
+			"removedChannel": " {{{emoji}}} Berhasil menghapus saluran {{{channel}}} dari daftar saluran bot.",
+			"clearedChannel": " {{{emoji}}} Daftar saluran bot berhasil dikosongkan.",
+			"info": ">>> **Saluran:** {{{channel}}}\n**Moderator:** {{{moderator}}}\n**Ditambahkan pada:** {{{addedAt}}}",
+			"title": "Saluran bot ({{count}})"
+		},
+		"clean": {
+			"description": "Bersihkan pesan saya di saluran ini.",
+			"success": " {{{emoji}}} Berhasil membersihkan **{{{count}}}** pesan."
+		},
+		"defaultvolume": {
+			"description": "Atur volume default untuk server.",
+			"options": {
+				"number": "Angka untuk mengatur volume default."
+			},
+			"invalidNumber": " {{{emoji}}} Harap masukkan angka antara 0 dan 200.",
+			"success": " {{{emoji}}} Berhasil mengatur volume default ke **{{{volume}}}**."
+		},
+		"disablecommands": {
+			"description": "Menonaktifkan perintah untuk server",
+			"options": {
+				"add": "Menambahkan perintah ke daftar perintah dinonaktifkan",
+				"command": "Nama perintah",
+				"remove": "Menghapus perintah dari daftar perintah dinonaktifkan",
+				"list": "Dapatkan daftar perintah dinonaktifkan",
+				"clear": "Menghapus seluruh daftar perintah dinonaktifkan"
+			},
+			"noCommand": " {{{emoji}}} Harap berikan nama perintah untuk dinonaktifkan/aktifkan.",
+			"commandNotExist": " {{{emoji}}} Perintah tersebut tidak ada di bot",
+			"commandAlreadyDisabled": " {{{emoji}}} Perintah tersebut sudah dinonaktifkan.",
+			"commandDisabled": " {{{emoji}}} Berhasil menonaktifkan perintah **{{{command}}}**.",
+			"noDisabledCommands": " {{{emoji}}} Perintah ini tidak dinonaktifkan.",
+			"commandEnabled": " {{{emoji}}} Berhasil mengaktifkan perintah **{{{command}}}**.",
+			"disabledCommands": "Perintah DInonaktifkan",
+			"disabledCommandsForThisServer": "Perintah dinonaktifkan untuk server ini",
+			"total": "Total: {{{total}}}",
+			"disabledCommandsCleared": " {{{emoji}}} Berhasil menghapus seluruh daftar perintah dinonaktifkan."
+		},
+		"dj": {
+			"description": "Atur peran DJ untuk server",
+			"options": {
+				"add": "Menambahkan peran ke daftar peran DJ",
+				"role": "Peran yang ingin ditambahkan/dihapus",
+				"remove": "Menghapus peran dari daftar peran DJ",
+				"list": "Daftar peran DJ",
+				"clear": "Menghapus seluruh daftar peran DJ",
+				"toggle": "Mengaktifkan/menonaktifkan mode peran DJ",
+				"info": "Dapatkan daftar peran DJ dan informasi tentang peran DJ"
+			},
+			"noRole": " {{{emoji}}} Harap berikan peran yang valid untuk ditambahkan/dihapus.",
+			"maxRoles": " {{{emoji}}} Anda tidak dapat menambahkan lebih dari 5 peran ke daftar DJ.",
+			"alreadyInList": " {{{emoji}}} Peran yang Anda berikan sudah ada dalam database.",
+			"addedRole": " {{{emoji}}} Berhasil menambahkan peran {{{role}}} ke daftar DJ.",
+			"noRolesSetup": " {{{emoji}}} Tidak ada peran DJ yang diatur dalam server ini.",
+			"notInList": " {{{emoji}}} Peran ini tidak ada dalam daftar DJ.",
+			"removedRole": " {{{emoji}}} Berhasil menghapus peran {{{role}}} dari daftar DJ.",
+			"list": ">>> **Peran:** {{{role}}}\n**Moderator:** {{{moderator}}}\n**Ditambahkan pada:** {{{addedAt}}}",
+			"listTotal": " Total peran DJ: {{{total}}}",
+			"clearedList": " {{{emoji}}} Berhasil menghapus seluruh daftar DJ.",
+			"enabledToggle": " {{{emoji}}} Berhasil mengaktifkan mode peran DJ.",
+			"disabledToggle": " {{{emoji}}} Berhasil menonaktifkan mode peran DJ.",
+			"info": {
+				"djRoles": "Peran DJ",
+				"enabled": "Aktif",
+				"disabled": "Nonaktif",
+				"djMode": "Mode DJ",
+				"djMembers": "Anggota DJ",
+				"description": "Informasi peran DJ untuk {{{guild}}}"
+			}
+		},
+		"fixvoice": {
+			"description": "Perbaiki koneksi suara jika bot tidak memutar musik.",
+			"joining": " Bergabung dengan saluran suara lagi dan melanjutkan musik.",
+			"failed": " Gagal mengubah wilayah suara. Harap coba lagi nanti.",
+			"error": "{{{emoji}}} Saat ini saya tidak dapat menemukan solusi. Mungkin minta bantuan di [server dukungan]({{{server}}}.)",
+			"success": " {{{emoji}}} Berhasil mengubah wilayah suara menjadi **{{{region}}}**."
+		},
+		"forcejoin": {
+			"description": "Memaksa bot untuk bergabung dengan saluran suara.",
+			"already-in": "{{{emoji}}} Saya sudah berada di saluran suara!",
+			"joined": " {{{emoji}}} Berhasil bergabung dengan saluran suara **{{{channel}}}**."
+		},
+		"languages": {
+			"description": "Atur bahasa bot untuk server",
+			"options": {
+				"add": "Tambahkan bahasa untuk server",
+				"language": "Bahasa yang ingin diatur",
+				"info": "Dapatkan informasi tentang bahasa",
+				"reset": "Atur ulang bahasa ke bahasa default",
+				"set": "cmd.languages.options.set"
+			},
+			"success": " {{{emoji}}} Berhasil mengatur bahasa bot ke {{{language}}} `({{{languageCode}}})`.",
+			"info": " Bahasa saat ini dalam server ini: **{{{language}}}** `({{{languageCode}}})`.",
+			"reset": " {{{emoji}}} Berhasil mengatur ulang bahasa bot ke bahasa default.",
+			"translationProgress": "Kemajuan terjemahan: {{{progress}}}",
+			"selectLanguage": "Harap pilih bahasa yang ingin diatur dari menu di bawah."
+		},
+		"noprefix": {
+			"description": "Mengaktifkan/menonaktifkan tanpa awalan (prefix) untuk pengguna atau server.",
+			"toggle": " Mengaktifkan/menonaktifkan tanpa awalan (prefix) untuk pengguna atau server.",
+			"buttons": {
+				"server": "Server",
+				"user": "Pengguna"
+			},
+			"premium": " Anda perlu menjadi pengguna premium untuk menggunakan perintah ini.",
+			"disabledUser": " {{{emoji}}} Berhasil menonaktifkan tanpa awalan (prefix) untuk pengguna.",
+			"enabledUser": " {{{emoji}}} Berhasil mengaktifkan tanpa awalan (prefix) untuk pengguna.",
+			"noPerm": " Anda tidak memiliki izin yang diperlukan untuk menggunakan perintah ini.",
+			"disabledServer": " {{{emoji}}} Berhasil menonaktifkan tanpa awalan (prefix) untuk server.",
+			"enabledServer": " {{{emoji}}} Berhasil mengaktifkan tanpa awalan (prefix) untuk server."
+		},
+		"prefix": {
+			"description": "Atur awalan (prefix) untuk server",
+			"options": {
+				"set": "Atur awalan (prefix) untuk server",
+				"prefix": "Awalan (prefix) yang ingin diatur/dihapus",
+				"info": "Dapatkan awalan (prefix) untuk server",
+				"clear": "Hapus awalan (prefix) untuk server",
+				"remove": "Hapus awalan (prefix) untuk server"
+			},
+			"info": ">>> **Awalan (prefix):** `{{{prefix}}}`\n**Moderator:** {{{moderator}}}\n**Ditambahkan pada:** {{{timestamp}}}",
+			"noPrefix": " {{{emoji}}} Harap berikan awalan (prefix) yang ingin diatur.",
+			"noPrefixAdded": " {{{emoji}}} Tidak ada awalan (prefix) yang ditambahkan ke server.",
+			"prefixLength": " {{{emoji}}} Awalan (prefix) tidak boleh lebih dari 5 karakter.",
+			"prefixLimit": " {{{emoji}}} Batas awalan (prefix) adalah 4, harap hapus beberapa awalan dengan `prefix remove`",
+			"prefixCharacters": " {{{emoji}}} Awalan (prefix) tidak boleh mengandung karakter berikut `[]{}\\`",
+			"prefixExists": " {{{emoji}}} Awalan (prefix) `{{{prefix}}}` sudah ditambahkan oleh {{{moderator}}}",
+			"prefixCleared": " {{{emoji}}} Berhasil menghapus seluruh awalan (prefix) menjadi default",
+			"prefixNotExists": " {{{emoji}}} Awalan (prefix) `{{{prefix}}}` belum ditambahkan",
+			"prefixRemoved": " {{{emoji}}} Berhasil menghapus awalan (prefix) `{{{prefix}}}`",
+			"prefixAdded": " {{{emoji}}} Berhasil menambahkan awalan (prefix) `{{{prefix}}}`"
+		},
+		"profile": {
+			"description": "Menampilkan profil Anda atau profil orang lain.",
+			"options": {
+				"set": "Atur warna profil, warna, atau visibilitas profil Anda.",
+				"bio": "Atur bio profil Anda.",
+				"color": "Atur warna profil Anda.",
+				"visibility": "Atur visibilitas profil Anda.",
+				"view": "Lihat profil Anda atau profil orang lain.",
+				"user": "Pengguna yang ingin Anda lihat profilnya."
+			},
+			"noBio": " {{{emoji}}} Anda perlu menyediakan bio",
+			"bioLength": " {{{emoji}}} Bio Anda tidak boleh lebih dari 50 karakter",
+			"bioSet": " {{{emoji}}} Berhasil mengatur bio Anda menjadi `{{{bio}}}`",
+			"noColor": " {{{emoji}}} Silakan berikan kode warna heksa [Contoh: #FF0000](https://g.co/kgs/q5nhF7)\n\nAnda juga dapat menggunakan nama-nama warna berikut: {{{colors}}}",
+			"sameColor": " {{{emoji}}} Warna Anda sudah diatur ke `{{{color}}}`",
+			"colorSet": " {{{emoji}}} Berhasil mengatur warna Anda menjadi `{{{color}}}`",
+			"sameVisibility": " {{{emoji}}} Visibilitas Anda sudah diatur ke `{{{visibility}}}`",
+			"noVisibility": " {{{emoji}}} Silakan tentukan visibilitas (publik/privat)",
+			"visibilitySet": " {{{emoji}}} Berhasil mengatur visibilitas Anda menjadi `{{{visibility}}}`",
+			"privateProfile": " {{{emoji}}} Profil pengguna ini bersifat privat"
+		},
+		"setting": {
+			"description": "Ubah pengaturan server atau dapatkan informasi pengaturan server",
+			"options": {
+				"reset": "Setel ulang semua pengaturan server ke pengaturan default",
+				"info": "Dapatkan informasi pengaturan server"
+			},
+			"noPermission": " {{{emoji}}} Anda tidak memiliki izin `manageGuild` untuk menggunakan perintah ini.",
+			"isSure": " Apakah Anda yakin ingin menyetel ulang pengaturan server?\nIni akan mengatur ulang semua pengaturan ke nilai default\n\n**Jika Anda yakin, tekan tombol di bawah ini**",
+			"buttons": {
+				"reset": "Setel Ulang"
+			},
+			"fields": {
+				"247": "24/7",
+				"trackButton": "Tombol Lacak",
+				"dj": "DJ",
+				"botChannel": "Saluran Bot",
+				"disableCommand": "Nonaktifkan Perintah",
+				"defaultVolume": "Volume Default",
+				"announce": "Umumkan",
+				"prunning": "Pemotongan",
+				"noPrefix": "Tanpa Awalan",
+				"prefix": "Awalan",
+				"djRole": "Peran DJ",
+				"setup": "Penyiapan",
+				"voteSkip": "Vote Skip",
+				"language": "Bahasa",
+				"trackButtonValue": "Mode: {{{mode}}}\nModerator: {{{moderator}}}\nDitambahkan: {{{added}}}",
+				"setupValue": "Moderator: {{{moderator}}}\nDitambahkan: {{{added}}}\n\n**Saluran:**\n{{{channels}}}",
+				"djValue": "Mode: {{{mode}}}\nPeran: {{{roles}}}\nDitambahkan: {{{added}}}",
+				"defaultvolumeValue": "Volume: {{{volume}}}\nDitambahkan: {{{added}}}\nModerator: {{{moderator}}}",
+				"announceValue": "Mode: {{{mode}}}\nSaluran: {{{channel}}}\nDitambahkan: {{{added}}}\nModerator: {{{moderator}}}",
+				"prunningValue": "Mode: {{{mode}}}\nDitambahkan: {{{added}}}\nModerator: {{{moderator}}}",
+				"disableCommandValue": "Perintah: {{{commands}}}\nDitambahkan: {{{added}}}\nModerator: {{{moderator}}}",
+				"prefixValue": "Awalan: {{{prefix}}}\nDitambahkan: {{{added}}}\nModerator: {{{moderator}}}",
+				"voteSkipValue": "Mode: {{{mode}}}\nDitambahkan: {{{added}}}\nModerator: {{{moderator}}}",
+				"247Value": "Mode: {{{mode}}}\nDitambahkan: {{{added}}}\nModerator: {{{moderator}}}\nSaluran: {{{channel}}}",
+				"botChannelValue": "Saluran: {{{channel}}}\nDitambahkan: {{{added}}}\nModerator: {{{moderator}}}",
+				"languageValue": "Bahasa: {{{language}}}",
+				"enabled": "Aktif",
+				"disabled": "Nonaktif",
+				"none": "Tidak Ada"
+			},
+			"resetSuccess": " {{{emoji}}} Berhasil menyetel ulang pengaturan server ke pengaturan default.",
+			"info": " Berikut adalah informasi konfigurasi untuk server ini",
+			"noSettings": " {{{emoji}}} Tidak ada pengaturan untuk server ini."
+		},
+		"voteskipsetting": {
+			"description": "Konfigurasi pengaturan voteskip.",
+			"options": {
+				"set": "Atur mode voteskip.",
+				"action": "Tindakan yang ingin Anda atur (aktif/nonaktif)."
+			},
+			"success": " {{{emoji}}} Berhasil {{{action}}} voteskip.",
+			"isConfirm": " Apakah Anda ingin mengaktifkan atau menonaktifkan voteskip?",
+			"canceled": " {{{emoji}}} Pengaturan voteskip telah dibatalkan.",
+			"alreadyEnabled": " Voteskip sudah diaktifkan.",
+			"alreadyDisabled": " Voteskip sudah dinonaktifkan.",
+			"buttons": {
+				"enable": "Aktifkan",
+				"disable": "Nonaktifkan",
+				"cancel": "Batal"
+			}
+		},
+		"add": {
+			"description": "Tambahkan lagu ke dalam playlist.",
+			"options": {
+				"playlist": "Playlist yang ingin Anda tambahkan lagunya.",
+				"song": "Lagu (nama/url) yang ingin Anda tambahkan ke dalam playlist."
+			},
+			"playlistLength": " {{{emoji}}} Nama playlist harus terdiri dari 3 hingga 50 karakter.",
+			"noPlaylists": " {{{emoji}}} Saya tidak dapat menemukan playlist apa pun di akun Anda, harap buat playlist terlebih dahulu.",
+			"noResults": " {{{emoji}}} Saya tidak dapat menemukan hasil apa pun untuk `{{{song}}}`.",
+			"playlistFull": " {{{emoji}}} Playlist Anda penuh, harap hapus beberapa lagu sebelum menambahkan lebih banyak.",
+			"playlistAdded": " {{{emoji}}} Berhasil menambahkan **{{{count}}}** lagu ke dalam playlist **{{{playlist}}}**."
+		},
+		"addnowplaying": {
+			"description": "Tambahkan lagu saat ini ke dalam playlist.",
+			"options": {
+				"playlist": "Playlist yang ingin Anda tambahkan lagunya."
+			},
+			"noSong": " {{{emoji}}} Tidak ada lagu yang sedang diputar.",
+			"songAlreadyInPlaylist": " {{{emoji}}} Lagu ini sudah ada dalam playlist.",
+			"success": " {{{emoji}}} Menambahkan **{{{song}}}** ke dalam **{{{playlist}}}**."
+		},
+		"addqueue": {
+			"description": "Tambahkan playlist ke dalam antrian.",
+			"options": {
+				"name": "Nama playlist yang ingin Anda tambahkan ke dalam antrian."
+			},
+			"noQueue": " {{{emoji}}} Tidak ada antrian.",
+			"success": " {{{emoji}}} Menambahkan **{{{queueLength}}}** lagu dalam antrian ke dalam playlist **{{{playlistName}}}**."
+		},
+		"create": {
+			"description": "Buat playlist.",
+			"options": {
+				"playlist": "Nama playlist yang ingin Anda buat.",
+				"visibility": "Visibilitas playlist."
+			},
+			"playlist": " {{{emoji}}} Harap berikan nama playlist.",
+			"visibility": " {{{emoji}}} Visibilitas harus berupa `publik` atau `privat`.",
+			"maxPlaylists": " {{{emoji}}} Anda dapat membuat hingga 10 playlist.",
+			"playlistExists": " {{{emoji}}} Anda sudah memiliki playlist dengan nama **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Berhasil membuat playlist **{{{playlist}}}**."
+		},
+		"delete": {
+			"description": "Hapus playlist.",
+			"options": {
+				"playlist": "Nama playlist yang ingin Anda hapus."
+			},
+			"noPlaylists": " {{{emoji}}} Anda tidak memiliki playlist dengan nama **{{{playlist}}}**.",
+			"buttons": {
+				"confirm": "Konfirmasi",
+				"cancel": "Batal"
+			},
+			"confirm": " Apakah Anda yakin ingin menghapus playlist **{{{playlist}}}**?",
+			"success": " {{{emoji}}} Berhasil menghapus playlist **{{{playlist}}}**.",
+			"cancel": " {{{emoji}}} Membatalkan penghapusan playlist **{{{playlist}}}**."
+		},
+		"dupes": {
+			"description": "Menghapus semua lagu duplikat dari playlist.",
+			"options": {
+				"playlist": "Nama playlist tempat Anda ingin menghapus lagu duplikat."
+			},
+			"noDupes": " {{{emoji}}} Tidak ada lagu duplikat dalam playlist **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Berhasil menghapus **{{{count}}}** lagu duplikat dari playlist **{{{playlist}}}**."
+		},
+		"edit": {
+			"description": "Mengedit playlist.",
+			"options": {
+				"playlist": "Nama playlist yang ingin Anda edit.",
+				"old-name": "Nama lama playlist.",
+				"new-name": "Nama baru playlist.",
+				"playlist-visibility": "Mengubah visibilitas playlist.",
+				"visibility": "Visibilitas playlist."
+			},
+			"sameName": " {{{emoji}}} Nama baru harus berbeda dari nama lama.",
+			"successName": " {{{emoji}}} Berhasil mengubah nama playlist **{{{oldName}}}** menjadi **{{{newName}}}**.",
+			"sameVisibility": " {{{emoji}}} Playlist **{{{playlist}}}** sudah dalam visibilitas **{{{visibility}}}**.",
+			"successVisibility": " {{{emoji}}} Berhasil mengubah visibilitas playlist **{{{playlist}}}** menjadi **{{{visibility}}}**.",
+			"buttons": {
+				"playlist": "Nama playlist",
+				"visibility": "Visibilitas playlist",
+				"public": "Publik",
+				"private": "Pribadi"
+			},
+			"selectOption": " Pilih opsi untuk mengedit playlist dari tombol di bawah ini.",
+			"oldName": " Masukkan nama lama playlist.",
+			"newName": " Masukkan nama baru playlist.",
+			"cancelled": " {{{emoji}}} Membatalkan perubahan nama playlist.",
+			"playlist": " Masukkan nama playlist.",
+			"selectVisibility": " Pilih visibilitas playlist dari tombol di bawah ini.",
+			"liked": " {{{emoji}}} Anda tidak dapat mengedit playlist yang disukai."
+		},
+		"import": {
+			"description": "Mengimpor playlist dari ID playlist.",
+			"options": {
+				"id": "ID playlist yang ingin Anda impor."
+			},
+			"noPlaylist": " {{{emoji}}} Saya tidak dapat menemukan playlist dengan ID **{{{id}}}**.",
+			"sameUser": " {{{emoji}}} Anda tidak dapat mengimpor playlist milik Anda sendiri.",
+			"privatePlaylist": " {{{emoji}}} Anda tidak dapat mengimpor playlist pribadi.",
+			"success": " {{{emoji}}} Berhasil mengimpor playlist **{{{playlist}}}**."
+		},
+		"list": {
+			"description": "Menampilkan semua playlist Anda.",
+			"tracks": "Lagu: {{{tracks}}}"
+		},
+		"load": {
+			"description": "Memuat playlist ke dalam antrian.",
+			"options": {
+				"song": "Memuat lagu tertentu dari playlist.",
+				"name": "Nama playlist yang ingin Anda muat.",
+				"track": "Nomor trek atau judul trek yang ingin Anda muat."
+			},
+			"noPlaylists": " {{{emoji}}} Anda tidak memiliki playlist dengan nama **{{{playlist}}}**.",
+			"noTracks": " {{{emoji}}} Tidak ada lagu dalam playlist **{{{playlist}}}**.",
+			"noTrackFound": " {{{emoji}}} Tidak dapat menemukan lagu dengan trek `{{{track}}}`.",
+			"trackLoaded": " {{{emoji}}} Memuat **{{{track}}}** dari **{{{playlist}}}**.",
+			"privatePlaylist": " {{{emoji}}} Anda tidak dapat memuat playlist pribadi milik pengguna lain.",
+			"playlistLoaded": " {{{emoji}}} Memuat **{{{count}}}** lagu dari **{{{playlist}}}**."
+		},
+		"pl-remove": {
+			"description": "Menghapus lagu dari playlist.",
+			"options": {
+				"playlist": "Nama playlist tempat Anda ingin menghapus lagu.",
+				"track": "Nomor trek atau judul trek yang ingin Anda hapus."
+			},
+			"notFound": " {{{emoji}}} Saya tidak dapat menemukan trek dengan nomor atau judul tersebut.",
+			"success": " {{{emoji}}} Berhasil menghapus **{{{track}}}** dari **{{{playlist}}}**."
+		},
+		"view": {
+			"description": "Melihat playlist.",
+			"options": {
+				"playlist": "Nama playlist yang ingin Anda lihat."
+			},
+			"footer": "Halaman {{{page}}} dari {{{pages}}} | Lagu: {{{tracks}}} | Durasi: {{{duration}}}",
+			"buttons": {
+				"previous": "Sebelumnya",
+				"stop": "Berhenti",
+				"next": "Selanjutnya"
+			}
+		},
+		"playradio": {
+			"description": "Memutar stasiun radio.",
+			"options": {
+				"station": "Nama stasiun radio yang ingin Anda putar.",
+				"language": "cmd.playradio.options.language",
+				"country": "cmd.playradio.options.country"
+			},
+			"noStation": " {{{emoji}}} Saya tidak dapat menemukan stasiun radio dengan nama tersebut.",
+			"country": "**Negara:** {{{country}}}",
+			"votes": "**Suara:** {{{votes}}}",
+			"codec": "**Codec:** {{{codec}}}",
+			"bitrate": "**Bitrate:** {{{bitrate}}}",
+			"tags": "**Tag:** {{{tags}}}",
+			"results": " Berikut adalah hasil pencarian Anda:\n\n{{{results}}}",
+			"select": "Pilih stasiun antara 1 dan 10 dalam menu dropdown di bawah ini.",
+			"added": " {{{emoji}}} Ditambahkan [**{{{name}}}**]({{{homepage}}}) ke antrian."
+		},
+		"setup": {
+			"description": "Atur Saluran Permintaan Lagu.",
+			"options": {
+				"create": "Buat saluran pengaturan",
+				"delete": "Hapus saluran pengaturan",
+				"info": "Dapatkan info saluran pengaturan",
+				"change": "Ubah saluran pengaturan",
+				"channel": "Saluran yang ingin Anda atur."
+			},
+			"alreadySetup": " {{{emoji}}} Saluran pengaturan sudah diatur ke **{{{channel}}}**.",
+			"created": " {{{emoji}}} Berhasil membuat saluran pengaturan **{{{channel}}}**.\n*Anda dapat mengubah nama/memindahkan saluran ini jika Anda ingin.\n\nCatatan: Menghapus templat sematan di sana dapat menyebabkan pengaturan ini berhenti berfungsi. (Tolong jangan hapus itu.)*",
+			"notSetup": " {{{emoji}}} Saluran pengaturan belum diatur.",
+			"deleted": " {{{emoji}}} Berhasil menghapus saluran pengaturan.",
+			"noChannel": " {{{emoji}}} Harap berikan saluran teks yang valid.",
+			"notTextChannel": " {{{emoji}}} Harap berikan saluran teks yang valid.",
+			"sameChannel": " {{{emoji}}} Saluran yang Anda berikan sudah ada dalam basis data.",
+			"join": "**Bergabunglah dengan saluran suara dan antrekan lagu dengan nama/URL.**",
+			"info": {
+				"title": "Info Saluran Pengaturan",
+				"description": "Berikut adalah info saluran pengaturan untuk server ini",
+				"channel": "Saluran",
+				"moderator": "Moderator",
+				"message": "Pesan",
+				"addedAt": "Ditambahkan pada"
+			}
+		},
+		"buttonmode": {
+			"description": "Enable or disable button mode.",
+			"options": {
+				"boolean": "The boolean to set (true/false)"
+			}
+		}
+	},
+	"player": {
+		"embed": {
+			"247": " Seseorang telah mencabut saya dari saluran suara, tetapi saya masih ada karena **mode 24/7** aktif!\n\nAnda dapat menonaktifkan mode ini dengan menggunakan perintah {{{cmd}}} atau dengan menggunakan perintah {{{cmd2}}}!",
+			"nowPlaying": "Sedang Diputar",
+			"nowPlayingDesc": " **[{{{songName}}}]({{{songUrl}}})** Oleh [{{{songAuthor}}}]({{{songAuthorUrl}}}) - {{{requester}}}",
+			"footer": "Durasi: {{{duration}}} | Antrian: {{{queue}}} | Volume: {{{volume}}}%",
+			"end": " Tidak ada yang mendengarkan selama 1 menit terakhir, saya akan meninggalkan saluran.\n\nAnda dapat menonaktifkan hal ini dengan mengaktifkan mode **24/7** menggunakan perintah {{{cmd}}}!",
+			"endTitle": "Antrian Selesai",
+			"endDesc": " Antrian musik Anda telah berakhir. Anda dapat menambahkan musik lagi dengan menggunakan perintah {{{cmd}}}! Menikmati musik bersama saya? Pertimbangkan untuk [Memberikan Suara untuk saya]({{{link}}})!",
+			"queue": "Daftar Lagu Antri",
+			"trackLoop": "Ulang Lagu",
+			"queueLoop": "Ulang Daftar Antrian",
+			"volume": "Volume",
+			"autoplay": "Putar Otomatis",
+			"duration": "Durasi",
+			"upcoming": "Lagu yang Akan Datang",
+			"queueStats": "Statistik Daftar Antrian"
+		},
+		"error": "Kesalahan Trek",
+		"description": " [{{{title}}}]({{{uri}}}) tidak tersedia di negara Anda karena dibatasi usia!",
+		"buttons": {
+			"resume": "Lanjutkan",
+			"pause": "Jeda",
+			"previous": "Sebelumnya",
+			"shuffle": "Acak",
+			"skip": "Lewati",
+			"stop": "Berhenti",
+			"voldown": "Volume Turun",
+			"volup": "Volume Naik",
+			"loop": "Ulang",
+			"like": "Suka"
+		},
+		"noDispatcher": " Saat ini tidak ada yang sedang diputar..",
+		"nothingPlaying": " Saat ini tidak ada yang sedang diputar.."
+	},
+	"events": {
+		"buttonHandle": {
+			"notInVoice": "Anda perlu bergabung dengan saluran suara {{{channel}}} untuk menggunakan tombol ini!",
+			"noPrevious": "Tidak ada lagu sebelumnya dalam antrian.",
+			"playingPrevious": "{{{user}}} sedang memutar lagu sebelumnya.",
+			"nothingToSkip": "Tidak ada yang bisa dilewati dalam antrian.",
+			"alreadyVote": "{{{user}}} Sudah ada pemungutan suara di server ini. Harap tunggu hingga selesai atau batalkan.",
+			"voteSkip": "{{{user}}} meminta untuk melewati lagu saat ini. Apakah Anda ingin menghentikan pemungutan suara? Ketik {{{cmd}}}",
+			"voteSkipLabel": "Pilih untuk melewati lagu saat ini!",
+			"alreadyVoted": "{{{user}}} Anda sudah memilih untuk melewati lagu saat ini.",
+			"voteSkip2": "{{{user}}} meminta untuk melewati lagu saat ini.",
+			"voteSkipLabel2": "Pilih untuk melewati lagu saat ini! ({{{count}}}/{{{n}}})",
+			"needVoice": "{{{user}}} Anda perlu bergabung dengan saluran suara {{{channel}}} untuk menggunakan tombol ini!",
+			"voteSkipTrack": "{{{user}}} akan melewati lagu setelah ada {{{count}}} suara positif!",
+			"notEnoughVote": " Tidak cukup suara untuk melewati lagu saat ini.",
+			"skipTrack": "{{{user}}} melewati lagu saat ini.",
+			"playTrack": "{{{user}}} {{{paused}}} lagu saat ini.",
+			"paused": "Dijeda",
+			"resumed": "Dilanjutkan",
+			"stopTrack": "{{{user}}} menghentikan lagu saat ini.",
+			"volMax": " Volume sudah maksimum.",
+			"volUp": "{{{user}}} meningkatkan volume ke **{{{vol}}}**%.",
+			"volMin": " Volume sudah minimum.",
+			"volDown": "{{{user}}} mengurangi volume menjadi **{{{vol}}}**%.",
+			"shuffleError": "{{{user}}} Tidak ada cukup lagu dalam antrian untuk diacak.",
+			"shuffleDisabled": "{{{user}}} Acak dimatikan.",
+			"shuffleEnabled": "{{{user}}} Acak diaktifkan.",
+			"loopSong": "{{{user}}} Mengulang lagu saat ini.",
+			"loopQueue": "{{{user}}} Mengulang antrian.",
+			"loopDisabled": "{{{user}}} Pengulangan dimatikan.",
+			"noTrack": "{{{user}}} Tidak ada yang sedang diputar saat ini.",
+			"liked": "{{{user}}} Menyukai **{{{title}}}**.",
+			"unliked": "{{{user}}} Tidak menyukai **{{{title}}}**.",
+			"queue": "Daftar Lagu Antri",
+			"trackLoop": "Ulang Lagu",
+			"queueLoop": "Ulang Daftar Antrian",
+			"volume": "Volume",
+			"autoplay": "Putar Otomatis",
+			"duration": "Durasi",
+			"upcoming": "Lagu yang Akan Datang",
+			"queueStats": "Statistik Daftar Antrian"
+		},
+		"int": {
+			"noSendMessages": " Hei! Saya mencoba mengirimkan balasan untuk perintah Anda; namun, saya tidak memiliki izin untuk melakukannya. Harap minta anggota staff memberi saya izin `Send Messages` di Discord.\n\nServer: **{{{guildName}}}**\nPerintah: **{{{commandName}}}**\nButuh bantuan dengan izin? Bergabunglah dengan server dukungan: {{{supportServer}}}",
+			"noEmbedLinks": " {{{emoji}}} Bot harus memiliki izin `Embed links` di Discord agar dapat berfungsi dengan baik! Harap minta anggota staff memberi saya izin ini.",
+			"noBotChannel": " Saya tidak diizinkan untuk menjawab perintah di saluran ini. Harap gunakan {{{emoji}}} <#{{{botChannel}}}> untuk perintah bot. Terima kasih atas kerjasamanya.",
+			"deleteFooter": "• Pesan ini akan dihapus dalam 5 detik",
+			"disabledCommand": " Perintah ini dinonaktifkan di server ini untuk semua orang. Hanya DJ yang bisa menggunakan perintah ini.",
+			"disabledCommandList": "Daftar Dinonaktifkan",
+			"noBotPermissions": " {{{emoji}}} Saya tidak memiliki izin **{{{permissions}}}** untuk menjalankan perintah ini.",
+			"noUserPermissions": " {{{emoji}}} Anda tidak memiliki izin **{{{permissions}}}** untuk menjalankan perintah ini.",
+			"voteLocks": [
+				" Anda perlu memberikan suara untuk saya agar dapat menggunakan perintah ini. Anda bisa memberikan suara di [Top.gg]({{{link}}})",
+				" Anda perlu memberikan suara untuk saya agar dapat menggunakan perintah ini. Anda bisa memberikan suara di [Top.gg]({{{link}}}) atau\nAnda juga bisa mendapatkan premium dengan mendonasikan di [sini]({{{link2}}})"
+			],
+			"buttons": {
+				"vote": "Vote",
+				"donate": "Donasi",
+				"invite": "Undang",
+				"support": "Dukungan"
+			},
+			"cooldown": " Harap tunggu **{{{timeLeft}}}** detik lagi sebelum menggunakan kembali perintah **{{{command}}}**.",
+			"noDjRole": " {{{emoji}}} Anda memerlukan peran DJ untuk menggunakan perintah ini.",
+			"noPremium": " Anda memerlukan premium bot untuk menggunakan perintah ini. Anda bisa mendapatkan premium dengan mendonasikan di [sini]({{{link}}})",
+			"voicePerm": " {{{emoji}}} Saya tidak memiliki izin yang dibutuhkan untuk bergabung dengan saluran suara Anda! Saya memerlukan izin `View Channels`, `Connect`, dan `Speak`. [Contoh Izin](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\nJika masalah masih berlanjut, ubah wilayah saluran suara menjadi `Europe`.",
+			"voiceJoin": " {{{emoji}}} Anda harus terhubung dengan saluran suara di server ini untuk menggunakan perintah ini!\n\nCara bergabung dengan saluran suara: Klik saluran dengan ikon speaker (misalnya, klik di sini:  {{{channel}}}) [Lihat panduan resmi Discord](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord#h_9de92bc2-3bca-459f-8efd-e1e2739ca4f4)",
+			"voiceChannel": " {{{emoji}}} Anda harus berada di saluran suara **{{{channel}}}** untuk menggunakan perintah ini.",
+			"noPlayer": " {{{emoji}}} Saya tidak terhubung dengan saluran suara manapun. Harap gunakan perintah {{{command}}} untuk memanggil saya.",
+			"noQueue": " {{{emoji}}} Tidak ada antrian. Harap gunakan perintah {{{command}}} untuk menambahkan lagu ke dalam antrian.",
+			"noSong": " {{{emoji}}} Tidak ada lagu yang sedang diputar. Harap gunakan perintah {{{command}}} untuk menambahkan lagu ke dalam antrian.",
+			"error": " {{{emoji}}} Terjadi kesalahan saat menjalankan perintah. Harap laporkan kesalahan ini di [Server Dukungan]({{{link}}})"
+		}
+	},
+	"get_started": {
+		"embed_title": "Moe Bot | Mulai",
+		"embed_description": " Hai <@{{{user}}}>! Awalan perintah saya adalah: `{{{prefixList}}}`\nContoh: `{{{prefix}}}help`, `{{{prefix}}}ping`",
+		"embed_description2": " Hai <@{{{user}}}>! Awalan perintah saya adalah: tidak ada, yang berarti Anda bisa menggunakan perintah tanpa awalan.\nContoh: `help`, `ping`"
+	},
+	"options": {
+		"title": "Opsi untuk {{{commandName}}}",
+		"no_description": "Tidak ada deskripsi",
+		"options": "Opsi",
+		"examples": "Contoh",
+		"long_des": "Ini untuk menavigasi antara halaman",
+		"examples_button": "Contoh",
+		"footer": "<Wajib> | [Opsional] {{{long_des}}} Halaman {{{page}}} dari {{{total_pages}}}",
+		"title2": "Contoh untuk {{{commandName}}}"
+	},
+	"Evaluate JavaScript code": "Evaluasi kode JavaScript",
+	"Generate a premium key": "Buat kunci premium",
+	"Give a user premium.": "Berikan premium ke pengguna."
+}

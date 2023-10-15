@@ -1,0 +1,957 @@
+{
+	"cmd": {
+		"247": {
+			"description": "Schakel de 24/7-modus in of uit.",
+			"enabled": " {{{emoji}}} 24/7-modus is ingeschakeld.",
+			"disabled": " {{{emoji}}} 24/7-modus is uitgeschakeld."
+		},
+		"ping": {
+			"description": "Toont de vertraging van de bot.",
+			"author": "Bot-vertraging",
+			"content": "**Shard**: `{{{shardPing}}}ms`\n**API**: `{{{latency}}}ms`",
+			"footer": "• Krijg meer informatie op het statuskanaal van de supportserver"
+		},
+		"invite": {
+			"description": "Nodig de bot uit naar jouw server.",
+			"buttons": {
+				"invite": "Nodig MoE uit",
+				"invite2": "Nodig MoE2 uit",
+				"invite3": "Nodig MoE3 uit",
+				"support": "Support"
+			},
+			"content": "Als je het leuk vond om mij te gebruiken, overweeg dan om [mij uit te nodigen]({{{invite}}}) naar jouw server. En vergeet ook niet om de [supportserver]({{{support}}}) te joinen."
+		},
+		"help": {
+			"description": "Toont een lijst met commando's of informatie over een specifiek commando.",
+			"options": {
+				"command": "De naam van het commando of de categorie waarvoor je hulp wilt"
+			},
+			"title": " Commando",
+			"footer": "Pagina {{{page}}} van {{{pagesNum}}}",
+			"title2": "Hulp - {{{cmd}}}",
+			"title3": "Hulp",
+			"manContent": " Hier is een lijst van alle categorieën\n{{{catagory}}}\n\n- Links:\n[Supportserver]({{{server}}}) | [Uitnodiging]({{{invite}}}) | [Stem]({{{vote}}}) | [Patreon]({{{patreon}}}) | [Website]({{{website}}}) | [Documenten]({{{docs}}})",
+			"footer2": "- Voor meer informatie over een commando: {{{prefix}}}help <commando> of {{{prefix}}}help <categorie>",
+			"cooldown": "Cooldown",
+			"aliases": "Aliassen",
+			"category": "Categorie",
+			"examples": "Voorbeeld(en)",
+			"userPerms": "Gebruikerstoestemming(en)",
+			"botPerms": "Bot-toestemming(en)",
+			"requirements": "Vereiste(n)",
+			"subCommands": "Subcommando('s)",
+			"subSubCommands": "Subsubcommando('s)",
+			"buttons": {
+				"previous": "Vorige",
+				"stop": "Stop",
+				"next": "Volgende",
+				"home": "Home",
+				"config": "Configuratie",
+				"music": "Muziek",
+				"filter": "Filter",
+				"general": "Algemeen",
+				"playlists": "Afspeellijsten"
+			},
+			"notFound": "`{{{cmd}}}` is geen geldig commando of categorie!",
+			"voice": {
+				"inVoice": "- Moet in een spraakkanaal zijn",
+				"sameVoice": "- Moet in hetzelfde spraakkanaal zijn",
+				"playing": "- Er moet muziek worden afgespeeld in deze server"
+			},
+			"voteLock": "- Moet [gestemd hebben]({{{link}}}) om dit commando te gebruiken",
+			"premiumCmd": "- Moet [premium]({{{link}}}) zijn om dit commando te gebruiken"
+		},
+		"premium": {
+			"description": "Toont de premiumstatus van de gebruiker of de server.",
+			"guildPremiumStatus": "Server Premium-status",
+			"userPremiumStatus": "Gebruiker Premium-status",
+			"premium": "Premium",
+			"notPremium": "Geen Premium",
+			"guildPremiumExpires": "Verloop Server Premium",
+			"userPremiumExpires": "Verloop Gebruiker Premium"
+		},
+		"redeem": {
+			"description": "Wissel een premiumcode in.",
+			"options": {
+				"code": "De premiumcode om in te wisselen"
+			},
+			"noArg": "Geef een premiumcode op om in te wisselen.",
+			"invalidCode": "Ongeldige premiumcode opgegeven.",
+			"confirmation": " Weet je zeker dat je de premiumcode `{{{code}}}` wilt inwisselen?",
+			"type": "Type",
+			"expiresAt": "Verloopt Op",
+			"buttons": {
+				"yes": "Ja",
+				"no": "Nee"
+			},
+			"alreadyPremium": "Je bent al een premium-lid.",
+			"success": " Je hebt succesvol je premiumcode ingewisseld. Nu kun je premiumcommando's gebruiken!",
+			"canceled": "Het inwisselen van de premiumcode is geannuleerd."
+		},
+		"stats": {
+			"description": "Toont de statistieken van de bot."
+		},
+		"support": {
+			"description": "Link naar de supportserver",
+			"content": " Als je hulp nodig hebt met de bot of gewoon bij ons wilt hangen, kom dan naar de [supportserver]({{{link}}}).",
+			"buttons": {
+				"support": "Supportserver"
+			}
+		},
+		"vote": {
+			"description": "Link naar de botstemming",
+			"content": " Als je de bot leuk vindt, overweeg dan om erop te stemmen op [top.gg]({{{link}}}).",
+			"buttons": {
+				"vote": "Stem"
+			}
+		},
+		"player": {
+			"description": "Toont de status van de speler.",
+			"nowPlaying": "Nu Aan Het Afspelen",
+			"noSong": "Er wordt momenteel geen nummer afgespeeld.",
+			"volume": "Volume",
+			"totalDuration": "Totale Duur",
+			"loopMode": "Herhaalmodus",
+			"filters": "Filters",
+			"noFilters": "Er zijn momenteel geen filters toegepast.",
+			"title": "Speler: {{{status}}}",
+			"online": "Online",
+			"offline": "Offline"
+		},
+		"autoplay": {
+			"description": "Schakel de automatische afspeelmodus in of uit.",
+			"enabled": " Succesvol automatische afspeelmodus ingeschakeld\nDe bot zal nu automatisch vergelijkbare nummers aan de wachtrij toevoegen.",
+			"disabled": " Succesvol automatische afspeelmodus uitgeschakeld\nDe bot zal geen vergelijkbare nummers meer automatisch aan de wachtrij toevoegen."
+		},
+		"clear": {
+			"description": "Maak de wachtrij of filters van de speler leeg.",
+			"options": {
+				"input": "De wachtrij of filters om te wissen"
+			},
+			"content": " Selecteer alstublieft een wachtrij of filter om te wissen. (wachtrij/filters)",
+			"queue": {
+				"noSong": "Er zijn geen nummers in de wachtrij om te wissen.",
+				"success": " Wachtrij succesvol gewist."
+			},
+			"filters": {
+				"noFilter": "Er zijn geen filters om te wissen.",
+				"success": " Filters succesvol gewist."
+			},
+			"buttons": {
+				"queue": "Wachtrij",
+				"filters": "Filters"
+			}
+		},
+		"forceskip": {
+			"description": "Forceer het overslaan van het huidige nummer.",
+			"success": " Het nummer {{{title}}} is succesvol overgeslagen."
+		},
+		"forward": {
+			"description": "Spoel het huidige nummer door.",
+			"options": {
+				"seconds": "Het aantal seconden om door te spoelen"
+			},
+			"unseekable": "{{{emoji}}} Het huidige nummer kan niet doorgespoeld worden.",
+			"tooLong": "{{{emoji}}} Je kunt niet meer doorspoelen dan de lengte van het nummer.",
+			"success": " {{{emoji}}} Het nummer is succesvol doorgespoeld met `{{{time}}}`."
+		},
+		"grab": {
+			"description": "Pak het huidige nummer.",
+			"dm": "{{{emoji}}} Ik kan het nummer niet sturen omdat je je DM's hebt uitgeschakeld.",
+			"grabbed": " {{{emoji}}} Het nummer is succesvol gepakt."
+		},
+		"join": {
+			"description": "Roep de bot op naar jouw spraakkanaal.",
+			"no-perms": "{{{emoji}}} Ik heb de vereiste rechten niet om toe te treden tot jouw spraakkanaal! Ik heb toestemming nodig voor `Kanalen bekijken`, `Verbinden` en `Spreken`. [Voorbeeld rechten](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\n Als het probleem aanhoudt, verander dan de spraakkanaalregio naar `Europa`.",
+			"already-in": "{{{emoji}}} Ik zit al in een spraakkanaal!",
+			"joined": " Succesvol toegetreden tot het spraakkanaal {{{channel}}}"
+		},
+		"leave": {
+			"description": "Verlaat het spraakkanaal.",
+			"not-playing": "{{{emoji}}} Ik speel momenteel niets!",
+			"success": " {{{emoji}}} Succesvol het spraakkanaal verlaten."
+		},
+		"leavecleanup": {
+			"description": "Verwijdert alle nummers van gebruikers die niet in het spraakkanaal zitten.",
+			"removing": " Verwijder nummers van gebruikers die niet langer in de VC zitten. Even geduld a.u.b.",
+			"removed": " Succesvol `{{{count}}}` nummers verwijderd van gebruikers die niet langer in de VC zitten."
+		},
+		"loop": {
+			"description": "Zet het huidige nummer of de wachtrij in een lus.",
+			"options": {
+				"mode": "De lusmodus om in te stellen"
+			},
+			"specify": " Geef de modus op om in een lus te zetten. (nummer, wachtrij, uit) via de onderstaande knoppen.",
+			"buttons": {
+				"song": "Nummer",
+				"queue": "Wachtrij",
+				"off": "Uit"
+			},
+			"song": " {{{emoji}}} Het huidige nummer is succesvol in een lus gezet.",
+			"queue": " {{{emoji}}} De wachtrij is succesvol in een lus gezet.",
+			"off": " {{{emoji}}} Lus is succesvol uitgeschakeld.",
+			"song_already": " {{{emoji}}} Het huidige nummer staat al in een lus.",
+			"queue_already": " {{{emoji}}} De wachtrij staat al in een lus.",
+			"off_already": " {{{emoji}}} De lus is al uitgeschakeld.",
+			"invalid_mode": " {{{emoji}}} Ongeldige lusmodus opgegeven. Geef een geldige lusmodus op. (nummer, wachtrij, uit)"
+		},
+		"lyrics": {
+			"description": "Toon de songteksten van het huidige nummer of een nummer.",
+			"options": {
+				"song": "De naam van het nummer om naar te zoeken"
+			},
+			"noQuery": " Geef een nummer op om naar te zoeken.",
+			"noLyrics": " Ik kon geen songteksten vinden voor dit nummer.",
+			"page": "Pagina {{{page}}} van {{{pages}}}"
+		},
+		"move": {
+			"description": "Verplaats een nummer naar een specifieke positie in de wachtrij.",
+			"options": {
+				"song": "Het nummer dat verplaatst moet worden",
+				"position": "De positie waar het nummer naartoe moet worden verplaatst"
+			},
+			"invalidNumber": " Geef een geldig nummer op voor de positie.",
+			"invalidPosition": " Ongeldige positie opgegeven. Geef een geldige positie op.",
+			"success": " Verplaatst **[{{{title}}}]({{{uri}}})** van positie **{{{from}}}** naar **{{{to}}}**."
+		},
+		"nowplaying": {
+			"description": "Toon het huidige afgespeelde nummer.",
+			"nowplaying": " Nu aan het spelen: [{{{title}}}]({{{uri}}})",
+			"author": "Auteur",
+			"requester": "Aangevraagd door",
+			"duration": "Duur",
+			"progress": "Voortgang"
+		},
+		"pause": {
+			"description": "Pauzeer het huidige nummer.",
+			"alreadyPaused": " Het huidige nummer is al gepauzeerd.",
+			"paused": " Gepauzeerd [{{{title}}}]({{{uri}}})"
+		},
+		"play": {
+			"description": "Speel een nummer van Spotify, SoundCloud, Deezer, enz.",
+			"options": {
+				"query": "De zoekopdracht om naar te zoeken",
+				"source": "De bron om naar te zoeken"
+			},
+			"no-query": "Geef een nummer op om naar te zoeken.",
+			"no-results": " Geen resultaten gevonden voor `{{{query}}}`.",
+			"playlist-loaded": " `{{{count}}}` nummers geladen van de afspeellijst **[{{{name}}}]({{{url}}})**",
+			"footer": "Bedankt voor het gebruik van {{{bot}}}",
+			"added": " Toegevoegd **[{{{title}}}]({{{uri}}})** aan de wachtrij (aangevraagd door <@{{{requester}}}>) op positie `#{{{position}}}`",
+			"youtube-not-supported": " Ik moet je helaas meedelen dat YouTube niet wordt ondersteund in de MoE voor Discord TOS. We kunnen de API van YouTube niet gebruiken om naar muziek te luisteren. Onze excuses voor het eventuele ongemak dat dit voor je heeft veroorzaakt."
+		},
+		"playprevious": {
+			"description": "Speel het vorige nummer af.",
+			"noPreviousTrack": " {{{emoji}}} Er is geen vorig nummer om af te spelen.",
+			"success": " {{{emoji}}} Nu wordt het vorige nummer uit jouw wachtrij afgespeeld!"
+		},
+		"queue": {
+			"description": "Toon de wachtrij voor de huidige server.",
+			"options": {
+				"page": "Het paginanummer om te bekijken"
+			},
+			"queue": "Wachtrij voor {{{guild}}} ({{{songs}}} nummers)",
+			"nowPlaying": " Nu aan het spelen: [{{{title}}}]({{{uri}}}) `[{{{length}}}]`- (<@{{{requester}}}>)\n\n",
+			"upNext": " Hierna: {{{str}}}",
+			"noSongs": " Er zijn nog geen nummers in de wachtrij! Voeg er een toe met behulp van {{{cmd}}}",
+			"page": "Pagina {{{page}}} | {{{songs}}} nummer(s) | Totaalduur {{{duration}}}",
+			"notNumber": " {{{emoji}}} Het paginanummer moet een nummer zijn.",
+			"pageLimit": " {{{emoji}}} Het paginanummer moet kleiner zijn dan of gelijk aan {{{pages}}}.",
+			"clearQueue": "Wachtrij Wissen",
+			"noTracks": " Er zijn geen nummers in de wachtrij.",
+			"noDjRole": " Je hebt de DJ-rol nodig om deze knop te gebruiken.",
+			"clearedQueue": " {{{user}}} Heeft de wachtrij leeggemaakt."
+		},
+		"remove": {
+			"description": "Om een nummer uit de wachtrij te verwijderen.",
+			"options": {
+				"track": "Het nummer om te verwijderen.",
+				"number": "Het nummer of de titel van het nummer om te verwijderen.",
+				"dupes": "Verwijder alle duplicaten van het nummer."
+			},
+			"trackNotFound": " Er is geen nummer met dat nummer in de wachtrij",
+			"invalidNumber": " Geef een nummer tussen 1 en {{{length}}} op.",
+			"removed": " Verwijderd **[{{{title}}}]({{{uri}}})** uit de wachtrij.",
+			"noDupes": " Er zijn geen duplicaatnummers in de wachtrij.",
+			"removedDupes": " {{{length}}} duplicaatnummers verwijderd uit de wachtrij."
+		},
+		"replay": {
+			"description": "Speel het huidige nummer opnieuw af.",
+			"replaying": " Opnieuw aan het afspelen [{{{title}}}]({{{uri}}})"
+		},
+		"resume": {
+			"description": "Hervat het huidige nummer.",
+			"notPaused": " Het huidige nummer is niet gepauzeerd.",
+			"resumed": " Hervat [{{{title}}}]({{{uri}}})"
+		},
+		"rewind": {
+			"description": "Spoel het huidige nummer terug.",
+			"options": {
+				"time": "Het tijdstip waarop je het nummer wilt terugspoelen."
+			},
+			"notSeekable": " {{{emoji}}} Het huidige nummer kan niet teruggespoeld worden.",
+			"negativePosition": " {{{emoji}}} De positie moet tussen 0 en {{{length}}} liggen.",
+			"success": " {{{emoji}}} Het nummer is teruggespoeld naar {{{length}}}."
+		},
+		"search": {
+			"description": "Zoek een nummer van Spotify, SoundCloud of Deezer.",
+			"options": {
+				"query": "De zoekopdracht om naar te zoeken",
+				"source": "De bron om naar te zoeken"
+			},
+			"no-playlist": " {{{emoji}}} Afspeellijsten worden niet ondersteund! Gebruik in het zoekcommando alsjeblieft het {{{cmd}}} commando.",
+			"no-track": " {{{emoji}}} Nummers worden niet ondersteund! Gebruik in het zoekcommando alsjeblieft het {{{cmd}}} commando.",
+			"results": " Zoekresultaten voor `{{{query}}}`\n\n{{{results}}}",
+			"footer": "Selecteer alsjeblieft een nummer uit het selectiemenu hieronder.",
+			"placeholder": "Selecteer een nummer uit de lijst hieronder om het af te spelen.",
+			"footerTimeout": "Zoekresultaten zijn verlopen.",
+			"no-voice": " {{{emoji}}} Je moet in een spraakkanaal zitten om dit menu te gebruiken.",
+			"wrong-voice": " {{{emoji}}} Je moet in hetzelfde spraakkanaal als ik zitten om dit menu te gebruiken.",
+			"added": " {{{emoji}}} {{{count}}} nummer(s) aan de wachtrij toegevoegd."
+		},
+		"seek": {
+			"description": "Springt naar een bepaalde tijd in het huidige nummer.",
+			"options": {
+				"time": "De tijd waarnaar je het nummer wilt zoeken."
+			},
+			"invalidPosition": " De tijd moet tussen 0 en {{{length}}} liggen.",
+			"seeked": " Gesprongen naar `{{{time}}}` op `{{{position}}}`"
+		},
+		"shuffle": {
+			"description": "Schud de wachtrij door elkaar.",
+			"success": " De wachtrij van de server is succesvol gemixt (**{{{length}}}** nummers).",
+			"unshuffle": " De wachtrij van de server is succesvol ongemixt (**{{{length}}}** nummers)."
+		},
+		"skip": {
+			"description": "Sla het huidige nummer over.",
+			"nothing": " Er is niets meer in de wachtrij. Gebruik {{{queue}}} om de wachtrij van de server te zien.\nWil je autoplay proberen? Doe {{{autoplay}}}",
+			"paused": " De speler is gepauzeerd. Gebruik het hervat commando om de speler te hervatten.\nWil je hervatten? Doe {{{resume}}}",
+			"voteSkip": " {{{user}}} heeft gevraagd om het huidige nummer over te slaan.\n\n{{{voted}}}",
+			"skip": " Het nummer **{{{title}}}** wordt overgeslagen."
+		},
+		"skipto": {
+			"description": "Ga naar een specifiek nummer in de wachtrij.",
+			"options": {
+				"number": "Het nummer of de titel van het nummer om naartoe te springen."
+			},
+			"invalidNumber": " {{{emoji}}} Voer een nummer in tussen 1 en {{{length}}} in.",
+			"success": " {{{emoji}}} Gesprongen naar **[{{{title}}}]({{{uri}}})**."
+		},
+		"stop": {
+			"description": "Stop de speler en wis de wachtrij.",
+			"stopped": " {{{emoji}}} De speler is gestopt en de wachtrij is gewist."
+		},
+		"topsongs": {
+			"description": "Toont de topnummers die door de bot worden afgespeeld.",
+			"noTopSongs": " Er zijn geen topnummers in de database.",
+			"timesPlayed": "Aantal keren afgespeeld",
+			"selectSong": "Selecteer een nummer uit de onderstaande lijst om het af te spelen.",
+			"added": " **[{{{title}}}]({{{uri}}})** aan de wachtrij toegevoegd."
+		},
+		"volume": {
+			"description": "Verander het volume van de speler.",
+			"options": {
+				"volume": "Het volume dat je wilt instellen."
+			},
+			"invalidVolume": " {{{emoji}}} Voer een getal in tussen 0 en 100.",
+			"success": " {{{emoji}}} Het volume is ingesteld op **{{{volume}}}**."
+		},
+		"voteskip": {
+			"description": "Stem om het huidige nummer over te slaan."
+		},
+		"filters": {
+			"filters": " Alle filters toegepast op het huidige nummer:\n\n{{{filters}}}",
+			"pitchNaN": " {{{emoji}}} De toonhoogte moet een getal zijn tussen 1 en 5.",
+			"description": {
+				"8d": "Pas het 8D-filter toe op het huidige nummer.",
+				"bassboost": "Pas het basversterker-filter toe op het huidige nummer.",
+				"channelmix": "Pas het kanaalmix-filter toe op het huidige nummer.",
+				"electronic": "Pas het elektronische filter toe op het huidige nummer.",
+				"filters": "Krijg een lijst van filters die op het huidige nummer kunnen worden toegepast.",
+				"jazz": "Pas het jazz-filter toe op het huidige nummer.",
+				"karaoke": "Pas het karaoke-filter toe op het huidige nummer.",
+				"lowpass": "Pas het laagdoorlaatfilter toe op het huidige nummer.",
+				"nightcore": "Pas het nightcore-filter toe op het huidige nummer.",
+				"pitch": "Pas het toonhoogte-filter toe op het huidige nummer.",
+				"pop": "Pas het pop-filter toe op het huidige nummer.",
+				"radio": "Pas het radio-filter toe op het huidige nummer.",
+				"rock": "Pas het rock-filter toe op het huidige nummer.",
+				"rotation": "Pas het rotatiefilter toe op het huidige nummer.",
+				"soft": "Pas het zachte filter toe op het huidige nummer.",
+				"speed": "Pas het snelheidsfilter toe op het huidige nummer.",
+				"treblebass": "Pas het hoge-tonen-lage-tonen-filter toe op het huidige nummer.",
+				"tremolo": "Pas het tremolo-filter toe op het huidige nummer.",
+				"vaporwave": "Pas het vaporwave-filter toe op het huidige nummer.",
+				"vibrato": "Pas het vibrato-filter toe op het huidige nummer."
+			},
+			"enabled": " {{{emoji}}} {{{name}}} filter is ingeschakeld.",
+			"disabled": " {{{emoji}}} {{{name}}} filter is uitgeschakeld.",
+			"speed": " {{{emoji}}} Het snelheidsfilter is ingesteld op **{{{value}}}**.",
+			"options": {
+				"speed": "De snelheid die je wilt instellen.",
+				"pitch": "De toonhoogte om toe te passen."
+			}
+		},
+		"announce": {
+			"description": "Om de aankondiging van het startbericht van een nummer te configureren.",
+			"options": {
+				"set": "Stel het kanaal in waar het startbericht van een nummer naartoe wordt gestuurd.",
+				"channel": "Het kanaal dat je wilt instellen.",
+				"toggle": "Schakel de aankondiging van het startbericht van een nummer in of uit.",
+				"prunning": "Schakel het opruimen van het startbericht van een nummer in of uit.",
+				"reset": "Reset het kanaal waar het startbericht van een nummer naartoe wordt gestuurd."
+			},
+			"noChannel": " {{{emoji}}} Geef een geldig tekstkanaal op.",
+			"noTextChannel": " {{{emoji}}} Geef een geldig tekstkanaal op.",
+			"sameChannel": " {{{emoji}}} Het opgegeven kanaal staat al in de database.",
+			"setChannel": " {{{emoji}}} Het aankondigingskanaal is succesvol ingesteld op {{{channel}}}.",
+			"noChannelInDB": " {{{emoji}}} Het aankondigingskanaal is nog niet ingesteld in de database.",
+			"toggle": " {{{emoji}}} Aankondiging van het startbericht van een nummer is succesvol {{{status}}} gemaakt.",
+			"enabled": "ingeschakeld",
+			"disabled": "uitgeschakeld",
+			"reset": " {{{emoji}}} Het aankondigingskanaal is succesvol gereset."
+		},
+		"botchannel": {
+			"description": "Stel het botkanaal in om naar commando's te luisteren.",
+			"options": {
+				"add": "Voeg een kanaal toe aan de lijst van botkanalen",
+				"channel": "Het kanaal dat je wilt instellen.",
+				"remove": "Verwijder een kanaal uit de lijst van botkanalen",
+				"clear": "Maak de lijst van botkanalen leeg",
+				"info": "Krijg de lijst van botkanalen en informatie over het botkanaal"
+			},
+			"noChannel": " {{{emoji}}} Geef een geldig tekstkanaal op.",
+			"noTextChannel": " {{{emoji}}} Geef een geldig tekstkanaal op.",
+			"sameChannel": " {{{emoji}}} Het opgegeven kanaal staat al in de database.",
+			"maxChannel": " {{{emoji}}} Je kunt niet meer dan 5 kanalen toevoegen aan de lijst van botkanalen.",
+			"addedChannel": " {{{emoji}}} Het kanaal {{{channel}}} is succesvol toegevoegd aan de lijst van botkanalen.",
+			"noChannelInDB": " {{{emoji}}} Er zijn geen botkanalen in de database.",
+			"removedChannel": " {{{emoji}}} Het kanaal {{{channel}}} is succesvol verwijderd uit de lijst van botkanalen.",
+			"clearedChannel": " {{{emoji}}} De lijst van botkanalen is succesvol leeggemaakt.",
+			"info": ">>> **Kanaal:** {{{channel}}}\n**Moderator:** {{{moderator}}}\n**Toegevoegd op:** {{{addedAt}}}",
+			"title": "Botkanalen ({{count}})"
+		},
+		"clean": {
+			"description": "Maak mijn berichten in het kanaal schoon.",
+			"success": " {{{emoji}}} Succesvol **{{{count}}}** berichten opgeruimd."
+		},
+		"defaultvolume": {
+			"description": "Stel het standaardvolume in voor de server",
+			"options": {
+				"number": "Het nummer om het standaardvolume in te stellen"
+			},
+			"invalidNumber": " {{{emoji}}} Voer een getal in tussen 0 en 200.",
+			"success": " {{{emoji}}} Het standaardvolume is succesvol ingesteld op **{{{volume}}}**."
+		},
+		"disablecommands": {
+			"description": "Schakel commando's uit voor de server",
+			"options": {
+				"add": "Voeg een commando toe aan de lijst met uitgeschakelde commando's",
+				"command": "De naam van het commando",
+				"remove": "Verwijder een commando uit de lijst met uitgeschakelde commando's",
+				"list": "Bekijk de lijst met uitgeschakelde commando's",
+				"clear": "Wis de lijst met uitgeschakelde commando's"
+			},
+			"noCommand": " {{{emoji}}} Geef een commandonaam op om uit te schakelen/inschakelen.",
+			"commandNotExist": " {{{emoji}}} Dat commando bestaat niet in de bot.",
+			"commandAlreadyDisabled": " {{{emoji}}} Dat commando is al uitgeschakeld.",
+			"commandDisabled": " {{{emoji}}} Het commando **{{{command}}}** is succesvol uitgeschakeld.",
+			"noDisabledCommands": " {{{emoji}}} Dit commando is niet uitgeschakeld.",
+			"commandEnabled": " {{{emoji}}} Het commando **{{{command}}}** is succesvol ingeschakeld.",
+			"disabledCommands": "Uitgeschakelde Commando's",
+			"disabledCommandsForThisServer": "Uitgeschakelde commando's voor deze server",
+			"total": "Totaal: {{{total}}}",
+			"disabledCommandsCleared": " {{{emoji}}} De lijst met uitgeschakelde commando's is succesvol gewist."
+		},
+		"dj": {
+			"description": "Stel de DJ-rol in voor de server",
+			"options": {
+				"add": "Voeg een rol toe aan de DJ-rol lijst",
+				"role": "De rol die je wilt (toevoegen/verwijderen)",
+				"remove": "Verwijder een rol uit de DJ-rol lijst",
+				"list": "Toon de DJ-rol lijst",
+				"clear": "Wis de DJ-rol lijst",
+				"toggle": "Schakel de DJ-rol in/uit",
+				"info": "Bekijk de DJ-rol lijst en informatie over de DJ-rol"
+			},
+			"noRole": " {{{emoji}}} Geef een geldige rol op om (toe te voegen/verwijderen).",
+			"maxRoles": " {{{emoji}}} Je kunt niet meer dan 5 rollen aan de DJ-lijst toevoegen.",
+			"alreadyInList": " {{{emoji}}} De opgegeven rol staat al in de database.",
+			"addedRole": " {{{emoji}}} De rol {{{role}}} is succesvol aan de DJ-lijst toegevoegd.",
+			"noRolesSetup": " {{{emoji}}} Er zijn geen DJ-rollen ingesteld op deze server.",
+			"notInList": " {{{emoji}}} Deze rol staat niet in de DJ-lijst.",
+			"removedRole": " {{{emoji}}} De rol {{{role}}} is succesvol uit de DJ-lijst verwijderd.",
+			"list": ">>> **Rol:** {{{role}}}\n**Moderator:** {{{moderator}}}\n**Toegevoegd op:** {{{addedAt}}}",
+			"listTotal": " Totaal aantal DJ-rollen: {{{total}}}",
+			"clearedList": " {{{emoji}}} De DJ-lijst is succesvol gewist.",
+			"enabledToggle": " {{{emoji}}} De DJ-toggle modus is succesvol ingeschakeld.",
+			"disabledToggle": " {{{emoji}}} De DJ-toggle modus is succesvol uitgeschakeld.",
+			"info": {
+				"djRoles": "DJ Rol(len)",
+				"enabled": "Ingeschakeld",
+				"disabled": "Uitgeschakeld",
+				"djMode": "DJ Modus",
+				"djMembers": "DJ Lid/Leden",
+				"description": "DJ-rol informatie voor {{{guild}}}"
+			}
+		},
+		"fixvoice": {
+			"description": "Herstel de spraakverbinding als de bot geen muziek afspeelt.",
+			"joining": " Opnieuw lid worden van het spraakkanaal en de muziek hervatten.",
+			"failed": " Het wijzigen van de spraakregio is mislukt. Probeer het later opnieuw.",
+			"error": "{{{emoji}}} Op dit moment kon ik geen oplossing vinden. Misschien kun je om hulp vragen in de [ondersteuningsserver]({{{server}}}).",
+			"success": " {{{emoji}}} De spraakregio is succesvol gewijzigd naar **{{{region}}}**."
+		},
+		"forcejoin": {
+			"description": "Dwing de bot om lid te worden van het spraakkanaal.",
+			"already-in": "{{{emoji}}} Ik ben al lid van een spraakkanaal!",
+			"joined": " {{{emoji}}} Succesvol lid geworden van het spraakkanaal **{{{channel}}}**."
+		},
+		"languages": {
+			"description": "Stel de bot-taal in voor de server",
+			"options": {
+				"add": "Voeg een taal toe voor de server",
+				"language": "De taal die je wilt instellen",
+				"info": "Bekijk informatie over de talen",
+				"reset": "Stel de taal opnieuw in op de standaardtaal",
+				"set": "cmd.languages.options.set"
+			},
+			"success": " {{{emoji}}} De taal van de bot is succesvol ingesteld op {{{language}}} `({{{languageCode}}})`.",
+			"info": " De huidige taal in deze server is: **{{{language}}}** `({{{languageCode}}})`.",
+			"reset": " {{{emoji}}} De taal van de bot is succesvol opnieuw ingesteld op de standaardtaal.",
+			"translationProgress": "Vertaalvoortgang: {{{progress}}}",
+			"selectLanguage": "Selecteer de taal die je wilt instellen uit het onderstaande menu."
+		},
+		"noprefix": {
+			"description": "Schakel de 'geen prefix'-modus in of uit voor de gebruiker of server.",
+			"toggle": " Schakel de 'geen prefix'-modus in of uit voor de gebruiker of server.",
+			"buttons": {
+				"server": "Server",
+				"user": "Gebruiker"
+			},
+			"premium": " Je moet een premiumgebruiker zijn om dit commando te gebruiken.",
+			"disabledUser": " {{{emoji}}} De 'geen prefix'-modus is succesvol uitgeschakeld voor de gebruiker.",
+			"enabledUser": " {{{emoji}}} De 'geen prefix'-modus is succesvol ingeschakeld voor de gebruiker.",
+			"noPerm": " Je hebt niet de vereiste rechten om dit commando te gebruiken.",
+			"disabledServer": " {{{emoji}}} De 'geen prefix'-modus is succesvol uitgeschakeld voor de server.",
+			"enabledServer": " {{{emoji}}} De 'geen prefix'-modus is succesvol ingeschakeld voor de server."
+		},
+		"prefix": {
+			"description": "Stel het voorvoegsel voor de server in",
+			"options": {
+				"set": "Stel het voorvoegsel voor de server in",
+				"prefix": "Het voorvoegsel dat je wilt (instellen/verwijderen)",
+				"info": "Bekijk het voorvoegsel voor de server",
+				"clear": "Wis het voorvoegsel voor de server",
+				"remove": "Verwijder het voorvoegsel voor de server"
+			},
+			"info": ">>> **Voorvoegsel:** `{{{prefix}}}`\n**Moderator:** {{{moderator}}}\n**Toegevoegd op:** {{{timestamp}}}",
+			"noPrefix": " {{{emoji}}} Geef een voorvoegsel op om in te stellen.",
+			"noPrefixAdded": " {{{emoji}}} Er is geen voorvoegsel toegevoegd aan de server.",
+			"prefixLength": " {{{emoji}}} Het voorvoegsel mag niet langer zijn dan 5 tekens.",
+			"prefixLimit": " {{{emoji}}} Het voorvoegsel limiet is 4. Verwijder enkele voorvoegsels met `prefix remove`.",
+			"prefixCharacters": " {{{emoji}}} Het voorvoegsel mag geen van de volgende tekens bevatten `[]{}\\`",
+			"prefixExists": " {{{emoji}}} Het voorvoegsel `{{{prefix}}}` is al toegevoegd door {{{moderator}}}",
+			"prefixCleared": " {{{emoji}}} Alle voorvoegsels zijn succesvol gewist naar de standaardinstellingen.",
+			"prefixNotExists": " {{{emoji}}} Het voorvoegsel `{{{prefix}}}` is niet toegevoegd.",
+			"prefixRemoved": " {{{emoji}}} Het voorvoegsel `{{{prefix}}}` is succesvol verwijderd.",
+			"prefixAdded": " {{{emoji}}} Het voorvoegsel `{{{prefix}}}` is succesvol toegevoegd."
+		},
+		"profile": {
+			"description": "Toon je profiel of het profiel van iemand anders.",
+			"options": {
+				"set": "Stel de kleur, kleur of zichtbaarheid van je profiel in.",
+				"bio": "Stel je profielbiografie in.",
+				"color": "Stel de kleur van je profiel in.",
+				"visibility": "Stel de zichtbaarheid van je profiel in.",
+				"view": "Bekijk je profiel of het profiel van iemand anders.",
+				"user": "De gebruiker van wie je het profiel wilt bekijken."
+			},
+			"noBio": " {{{emoji}}} Je moet een biografie opgeven",
+			"bioLength": " {{{emoji}}} Je biografie mag niet langer zijn dan 50 tekens",
+			"bioSet": " {{{emoji}}} Je biografie is succesvol ingesteld op `{{{bio}}}`",
+			"noColor": " {{{emoji}}} Geef een kleur-hex-code op [Voorbeeld: #FF0000](https://g.co/kgs/q5nhF7)\n\nJe kunt ook de volgende kleurennamen gebruiken: {{{colors}}}",
+			"sameColor": " {{{emoji}}} Je kleur is al ingesteld op `{{{color}}}`",
+			"colorSet": " {{{emoji}}} Je kleur is succesvol ingesteld op `{{{color}}}`",
+			"sameVisibility": " {{{emoji}}} Je zichtbaarheid is al ingesteld op `{{{visibility}}}`",
+			"noVisibility": " {{{emoji}}} Geef een zichtbaarheid op (openbaar/privé)",
+			"visibilitySet": " {{{emoji}}} Je zichtbaarheid is succesvol ingesteld op `{{{visibility}}}`",
+			"privateProfile": " {{{emoji}}} Het profiel van deze gebruiker is privé"
+		},
+		"setting": {
+			"description": "Verander de serverinstellingen of bekijk informatie over de serverinstellingen",
+			"options": {
+				"reset": "Stel alle serverinstellingen opnieuw in op de standaardinstellingen",
+				"info": "Bekijk informatie over de serverinstellingen"
+			},
+			"noPermission": " {{{emoji}}} Je hebt geen toestemming om dit commando te gebruiken. Je moet de `manageGuild` permissie hebben.",
+			"isSure": " Weet je zeker dat je de serverinstellingen wilt resetten?\nDit zal alle instellingen herstellen naar de standaardwaarden\n\n**Als je zeker weet, druk dan op de knop hieronder**",
+			"buttons": {
+				"reset": "Resetten"
+			},
+			"fields": {
+				"247": "24/7",
+				"trackButton": "Track-knop",
+				"dj": "DJ",
+				"botChannel": "Bot-kanaal",
+				"disableCommand": "Uitgeschakeld commando",
+				"defaultVolume": "Standaardvolume",
+				"announce": "Aankondiging",
+				"prunning": "Prunning",
+				"noPrefix": "Geen voorvoegsel",
+				"prefix": "Voorvoegsel",
+				"djRole": "DJ-rol",
+				"setup": "Instellen",
+				"voteSkip": "Vote Skip",
+				"language": "Taal",
+				"trackButtonValue": "Modus: {{{mode}}}\nModerator: {{{moderator}}}\nToegevoegd: {{{added}}}",
+				"setupValue": "Moderator: {{{moderator}}}\nToegevoegd: {{{added}}}\n\n**Kanalen:**\n{{{channels}}}",
+				"djValue": "Modus: {{{mode}}}\nRollen: {{{roles}}}\nToegevoegd: {{{added}}}",
+				"defaultvolumeValue": "Volume: {{{volume}}}\nToegevoegd: {{{added}}}\nModerator: {{{moderator}}}",
+				"announceValue": "Modus: {{{mode}}}\nKanaal: {{{channel}}}\nToegevoegd: {{{added}}}\nModerator: {{{moderator}}}",
+				"prunningValue": "Modus: {{{mode}}}\nToegevoegd: {{{added}}}\nModerator: {{{moderator}}}",
+				"disableCommandValue": "Commando's: {{{commands}}}\nToegevoegd: {{{added}}}\nModerator: {{{moderator}}}",
+				"prefixValue": "Voorvoegsel: {{{prefix}}}\nToegevoegd: {{{added}}}\nModerator: {{{moderator}}}",
+				"voteSkipValue": "Modus: {{{mode}}}\nToegevoegd: {{{added}}}\nModerator: {{{moderator}}}",
+				"247Value": "Modus: {{{mode}}}\nToegevoegd: {{{added}}}\nModerator: {{{moderator}}}\nKanaal: {{{channel}}}",
+				"botChannelValue": "Kanaal: {{{channel}}}\nToegevoegd: {{{added}}}\nModerator: {{{moderator}}}",
+				"languageValue": "Taal: {{{language}}}",
+				"enabled": "Ingeschakeld",
+				"disabled": "Uitgeschakeld",
+				"none": "Geen"
+			},
+			"resetSuccess": " {{{emoji}}} De serverinstellingen zijn succesvol gereset naar de standaardinstellingen.",
+			"info": " Hier is de configuratie-informatie voor deze server",
+			"noSettings": " {{{emoji}}} Er zijn geen instellingen voor deze server."
+		},
+		"voteskipsetting": {
+			"description": "Configureer de voteskip-instellingen.",
+			"options": {
+				"set": "Stel de voteskip-modus in.",
+				"action": "De actie die je wilt instellen (inschakelen/uitschakelen)."
+			},
+			"success": " {{{emoji}}} De voteskip is succesvol {{{action}}}d.",
+			"isConfirm": " Wil je de voteskip inschakelen of uitschakelen?",
+			"canceled": " {{{emoji}}} De voteskip-instelling is geannuleerd.",
+			"alreadyEnabled": " De voteskip is al ingeschakeld.",
+			"alreadyDisabled": " De voteskip is al uitgeschakeld.",
+			"buttons": {
+				"enable": "Inschakelen",
+				"disable": "Uitschakelen",
+				"cancel": "Annuleren"
+			}
+		},
+		"add": {
+			"description": "Voeg een nummer toe aan een afspeellijst.",
+			"options": {
+				"playlist": "De afspeellijst waar je het nummer aan wilt toevoegen.",
+				"song": "Het nummer (naam/url) dat je aan de afspeellijst wilt toevoegen."
+			},
+			"playlistLength": " {{{emoji}}} De naam van de afspeellijst moet tussen de 3 en 50 tekens lang zijn.",
+			"noPlaylists": " {{{emoji}}} Ik kon geen afspeellijsten vinden in je account. Maak er eerst een aan.",
+			"noResults": " {{{emoji}}} Ik kon geen resultaten vinden voor `{{{song}}}`.",
+			"playlistFull": " {{{emoji}}} Je afspeellijst is vol. Verwijder enkele nummers voordat je meer toevoegt.",
+			"playlistAdded": " {{{emoji}}} **{{{count}}}** nummers zijn succesvol toegevoegd aan de afspeellijst **{{{playlist}}}**."
+		},
+		"addnowplaying": {
+			"description": "Voeg het huidige nummer toe aan een afspeellijst.",
+			"options": {
+				"playlist": "De afspeellijst waar je het nummer aan wilt toevoegen."
+			},
+			"noSong": " {{{emoji}}} Er wordt momenteel geen nummer afgespeeld.",
+			"songAlreadyInPlaylist": " {{{emoji}}} Dit nummer staat al in de afspeellijst.",
+			"success": " {{{emoji}}} **{{{song}}}** is toegevoegd aan **{{{playlist}}}**."
+		},
+		"addqueue": {
+			"description": "Voeg een afspeellijst toe aan de wachtrij.",
+			"options": {
+				"name": "De naam van de afspeellijst die je aan de wachtrij wilt toevoegen."
+			},
+			"noQueue": " {{{emoji}}} Er is geen wachtrij.",
+			"success": " {{{emoji}}} De **{{{queueLength}}}** nummers in de wachtrij zijn toegevoegd aan de afspeellijst **{{{playlistName}}}**."
+		},
+		"create": {
+			"description": "Maak een afspeellijst aan.",
+			"options": {
+				"playlist": "De naam van de afspeellijst die je wilt maken.",
+				"visibility": "De zichtbaarheid van de afspeellijst."
+			},
+			"playlist": " {{{emoji}}} Geef een naam op voor de afspeellijst.",
+			"visibility": " {{{emoji}}} De zichtbaarheid moet 'public' of 'private' zijn.",
+			"maxPlaylists": " {{{emoji}}} Je kunt maximaal 10 afspeellijsten maken.",
+			"playlistExists": " {{{emoji}}} Je hebt al een afspeellijst met de naam **{{{playlist}}}**.",
+			"success": " {{{emoji}}} De afspeellijst **{{{playlist}}}** is succesvol aangemaakt."
+		},
+		"delete": {
+			"description": "Verwijder een afspeellijst.",
+			"options": {
+				"playlist": "De naam van de afspeellijst die je wilt verwijderen."
+			},
+			"noPlaylists": " {{{emoji}}} Je hebt geen afspeellijst met de naam **{{{playlist}}}**.",
+			"buttons": {
+				"confirm": "Bevestigen",
+				"cancel": "Annuleren"
+			},
+			"confirm": " Weet je zeker dat je de afspeellijst **{{{playlist}}}** wilt verwijderen?",
+			"success": " {{{emoji}}} De afspeellijst **{{{playlist}}}** is succesvol verwijderd.",
+			"cancel": " {{{emoji}}} Het verwijderen van de afspeellijst **{{{playlist}}}** is geannuleerd."
+		},
+		"dupes": {
+			"description": "Verwijder alle dubbele nummers uit een afspeellijst.",
+			"options": {
+				"playlist": "De naam van de afspeellijst waaruit je de duplicaten wilt verwijderen."
+			},
+			"noDupes": " {{{emoji}}} Er zijn geen dubbele nummers in de afspeellijst **{{{playlist}}}**.",
+			"success": " {{{emoji}}} **{{{count}}}** duplicaatnummers zijn succesvol verwijderd uit de afspeellijst **{{{playlist}}}**."
+		},
+		"edit": {
+			"description": "Bewerk een afspeellijst.",
+			"options": {
+				"playlist": "De naam van de afspeellijst die je wilt bewerken.",
+				"old-name": "De oude naam van de afspeellijst.",
+				"new-name": "De nieuwe naam van de afspeellijst.",
+				"playlist-visibility": "Verander de zichtbaarheid van de afspeellijst.",
+				"visibility": "De zichtbaarheid van de afspeellijst."
+			},
+			"sameName": " {{{emoji}}} De nieuwe naam moet verschillend zijn van de oude naam.",
+			"successName": " {{{emoji}}} De afspeellijst **{{{oldName}}}** is succesvol hernoemd naar **{{{newName}}}**.",
+			"sameVisibility": " {{{emoji}}} De afspeellijst **{{{playlist}}}** is al **{{{visibility}}}**.",
+			"successVisibility": " {{{emoji}}} De zichtbaarheid van de afspeellijst **{{{playlist}}}** is succesvol gewijzigd naar **{{{visibility}}}**.",
+			"buttons": {
+				"playlist": "Afspeellijstnaam",
+				"visibility": "Afspeellijstzichtbaarheid",
+				"public": "Publiek",
+				"private": "Privé"
+			},
+			"selectOption": " Kies een optie om je afspeellijst te bewerken uit de knoppen hieronder.",
+			"oldName": " Voer de oude naam van de afspeellijst in.",
+			"newName": " Voer de nieuwe naam van de afspeellijst in.",
+			"cancelled": " {{{emoji}}} De wijziging van de afspeellijstnaam is geannuleerd.",
+			"playlist": " Voer de naam van de afspeellijst in.",
+			"selectVisibility": " Kies de zichtbaarheid van de afspeellijst uit de knoppen hieronder.",
+			"liked": " {{{emoji}}} Je kunt de afspeellijst met de naam Liked niet bewerken."
+		},
+		"import": {
+			"description": "Importeer een afspeellijst aan de hand van het afspeellijst-id.",
+			"options": {
+				"id": "Het id van de afspeellijst die je wilt importeren."
+			},
+			"noPlaylist": " {{{emoji}}} Ik kon geen afspeellijst vinden met het id **{{{id}}}**.",
+			"sameUser": " {{{emoji}}} Je kunt je eigen afspeellijst niet importeren.",
+			"privatePlaylist": " {{{emoji}}} Je kunt geen privé afspeellijst importeren.",
+			"success": " {{{emoji}}} Afspeellijst **{{{playlist}}}** succesvol geïmporteerd."
+		},
+		"list": {
+			"description": "Lijst alle afspeellijsten op.",
+			"tracks": "Nummer(s): {{{tracks}}}"
+		},
+		"load": {
+			"description": "Laad een afspeellijst in de wachtrij.",
+			"options": {
+				"song": "Laad een specifiek nummer uit een afspeellijst.",
+				"name": "De naam van de afspeellijst die je wilt laden.",
+				"track": "Het nummer of de titel van het nummer dat je wilt laden."
+			},
+			"noPlaylists": " {{{emoji}}} Je hebt geen afspeellijst met de naam **{{{playlist}}}**.",
+			"noTracks": " {{{emoji}}} Er zijn geen nummers in de afspeellijst **{{{playlist}}}**.",
+			"noTrackFound": " {{{emoji}}} Geen nummer gevonden met het nummer `{{{track}}}`.",
+			"trackLoaded": " {{{emoji}}} **{{{track}}}** geladen vanuit **{{{playlist}}}**.",
+			"privatePlaylist": " {{{emoji}}} Je kunt geen privé afspeellijst van een andere gebruiker laden.",
+			"playlistLoaded": " {{{emoji}}} **{{{count}}}** nummers geladen vanuit **{{{playlist}}}**."
+		},
+		"pl-remove": {
+			"description": "Verwijder een nummer uit een afspeellijst.",
+			"options": {
+				"playlist": "De naam van de afspeellijst waaruit je een nummer wilt verwijderen.",
+				"track": "Het nummer of de titel van het nummer dat je wilt verwijderen."
+			},
+			"notFound": " {{{emoji}}} Ik kon geen nummer vinden met dat nummer of die titel.",
+			"success": " {{{emoji}}} **{{{track}}}** succesvol verwijderd uit **{{{playlist}}}**."
+		},
+		"view": {
+			"description": "Bekijk een afspeellijst.",
+			"options": {
+				"playlist": "De naam van de afspeellijst die je wilt bekijken."
+			},
+			"footer": "Pagina {{{page}}} van {{{pages}}} | {{{tracks}}} nummers | {{{duration}}}",
+			"buttons": {
+				"previous": "Vorige",
+				"stop": "Stoppen",
+				"next": "Volgende"
+			}
+		},
+		"playradio": {
+			"description": "Speel een radiostation af.",
+			"options": {
+				"station": "De naam van het radiostation dat je wilt afspelen.",
+				"language": "cmd.playradio.options.language",
+				"country": "cmd.playradio.options.country"
+			},
+			"noStation": " {{{emoji}}} Ik kon geen radiostation vinden met die naam.",
+			"country": "**Land:** {{{country}}}",
+			"votes": "**Stemmen:** {{{votes}}}",
+			"codec": "**Codec:** {{{codec}}}",
+			"bitrate": "**Bitrate:** {{{bitrate}}}",
+			"tags": "**Tags:** {{{tags}}}",
+			"results": " Hier zijn de resultaten van je zoekopdracht:\n\n{{{results}}}",
+			"select": "Selecteer een station tussen 1 en 10 in het vervolgkeuzemenu hieronder.",
+			"added": " {{{emoji}}} [**{{{name}}}**]({{{homepage}}}) toegevoegd aan de wachtrij."
+		},
+		"setup": {
+			"description": "Configureer het kanaal voor verzoeknummers.",
+			"options": {
+				"create": "Maak het setup-kanaal aan",
+				"delete": "Verwijder het setup-kanaal",
+				"info": "Ontvang informatie over het setup-kanaal",
+				"change": "Wijzig het setup-kanaal",
+				"channel": "Het kanaal dat je wilt instellen."
+			},
+			"alreadySetup": " {{{emoji}}} Het setup-kanaal is al ingesteld op **{{{channel}}}**.",
+			"created": " {{{emoji}}} Het setup-kanaal **{{{channel}}}** is succesvol aangemaakt.\n*Je kunt dit kanaal hernoemen/verplaatsen als je dat wilt.\n\nLet op: Het verwijderen van de template-embed kan ervoor zorgen dat deze setup stopt met werken. (Gelieve deze niet te verwijderen.)*",
+			"notSetup": " {{{emoji}}} Het setup-kanaal is niet ingesteld.",
+			"deleted": " {{{emoji}}} Het setup-kanaal is succesvol verwijderd.",
+			"noChannel": " {{{emoji}}} Geef a.u.b. een geldig tekstkanaal op.",
+			"notTextChannel": " {{{emoji}}} Geef a.u.b. een geldig tekstkanaal op.",
+			"sameChannel": " {{{emoji}}} Het door jou opgegeven kanaal staat al in de database.",
+			"join": "**Sluit je aan bij een spraakkanaal en voeg nummers toe op naam/url.**",
+			"info": {
+				"title": "Informatie over het setup-kanaal",
+				"description": "Hier is de informatie over het setup-kanaal voor deze server",
+				"channel": "Kanaal",
+				"moderator": "Moderator",
+				"message": "Bericht",
+				"addedAt": "Toegevoegd op"
+			}
+		},
+		"buttonmode": {
+			"description": "Enable or disable button mode.",
+			"options": {
+				"boolean": "The boolean to set (true/false)"
+			}
+		}
+	},
+	"player": {
+		"embed": {
+			"247": " Iemand heeft me losgekoppeld van het spraakkanaal, maar ik ben hier nog steeds dankzij de **24/7 modus**!\n\nJe kunt dit uitschakelen door de **24/7 modus** uit te zetten met het {{{cmd}}} commando of door het {{{cmd2}}} commando te gebruiken!",
+			"nowPlaying": "Nu aan het spelen",
+			"nowPlayingDesc": " **[{{{songName}}}]({{{songUrl}}})** door [{{{songAuthor}}}]({{{songAuthorUrl}}}) - {{{requester}}}",
+			"footer": "Duur: {{{duration}}} | Wachtrij: {{{queue}}} | Volume: {{{volume}}}%",
+			"end": " Er heeft niemand geluisterd gedurende de afgelopen 1 minuut, ik verlaat nu het kanaal.\n\nJe kunt dit uitschakelen door de **24/7 modus** in te schakelen met het {{{cmd}}} commando!",
+			"endTitle": "Wachtrij Voltooid",
+			"endDesc": " Jouw muziekwachtrij is nu beëindigd. Je kunt opnieuw muziek toevoegen met {{{cmd}}}! Geniet je van muziek met mij? Overweeg om op mij te stemmen [Stem hier]({{{link}}})!",
+			"queue": "In de wachtrij gezette nummer(s)",
+			"trackLoop": "Nummer herhalen",
+			"queueLoop": "Wachtrij herhalen",
+			"volume": "Volume",
+			"autoplay": "Automatisch afspelen",
+			"duration": "Duur",
+			"upcoming": "Aankomende nummer(s)",
+			"queueStats": "Wachtrijstatistieken"
+		},
+		"error": "Track Fout",
+		"description": " [{{{title}}}]({{{uri}}}) is niet beschikbaar in jouw land vanwege leeftijdsbeperkingen!",
+		"buttons": {
+			"resume": "Hervatten",
+			"pause": "Pauzeren",
+			"previous": "Vorige",
+			"shuffle": "Schudden",
+			"skip": "Overslaan",
+			"stop": "Stoppen",
+			"voldown": "Volume Omlaag",
+			"volup": "Volume Omhoog",
+			"loop": "Herhalen",
+			"like": "Vind ik leuk"
+		},
+		"noDispatcher": " Er wordt momenteel niets afgespeeld..",
+		"nothingPlaying": " Er wordt momenteel niets afgespeeld.."
+	},
+	"events": {
+		"buttonHandle": {
+			"notInVoice": "Je moet deelnemen aan een spraak {{{channel}}} kanaal om deze knop te gebruiken!",
+			"noPrevious": "Er is geen vorig nummer in de wachtrij.",
+			"playingPrevious": "{{{user}}} speelt het vorige nummer af.",
+			"nothingToSkip": "Er is niets in de wachtrij om over te slaan.",
+			"alreadyVote": "{{{user}}} Er is al een stemming in deze server. Wacht tot deze is afgelopen of annuleer het.",
+			"voteSkip": "{{{user}}} heeft gevraagd om het huidige nummer over te slaan. Wil je het stemmen overslaan stoppen? Doe {{{cmd}}}",
+			"voteSkipLabel": "Stem om het huidige nummer over te slaan!",
+			"alreadyVoted": "{{{user}}} Je hebt al gestemd om het huidige nummer over te slaan.",
+			"voteSkip2": "{{{user}}} heeft gevraagd om het huidige nummer over te slaan.",
+			"voteSkipLabel2": "Stem om het huidige nummer over te slaan! ({{{count}}}/{{{n}}})",
+			"needVoice": "{{{user}}} Je moet deelnemen aan het spraak {{{channel}}} kanaal om deze knop te gebruiken!",
+			"voteSkipTrack": "{{{user}}} slaat het nummer over na {{{count}}} positieve stemmen!",
+			"notEnoughVote": " Niet genoeg stemmen om het huidige nummer over te slaan.",
+			"skipTrack": "{{{user}}} heeft het huidige nummer overgeslagen.",
+			"playTrack": "{{{user}}} heeft het huidige nummer {{{paused}}} afgespeeld.",
+			"paused": "Gepauzeerd",
+			"resumed": "Hervat",
+			"stopTrack": "{{{user}}} heeft het huidige nummer gestopt.",
+			"volMax": " Het volume staat al op het maximum.",
+			"volUp": "{{{user}}} heeft het volume verhoogd naar **{{{vol}}}**%.",
+			"volMin": " Het volume staat al op het minimum.",
+			"volDown": "{{{user}}} heeft het volume verlaagd naar **{{{vol}}}**%.",
+			"shuffleError": "{{{user}}} Er zijn niet genoeg nummers in de wachtrij om te schudden.",
+			"shuffleDisabled": "{{{user}}} Schudden uitgeschakeld.",
+			"shuffleEnabled": "{{{user}}} Schudden ingeschakeld.",
+			"loopSong": "{{{user}}} Herhaalt het huidige nummer.",
+			"loopQueue": "{{{user}}} Herhaalt de wachtrij.",
+			"loopDisabled": "{{{user}}} Herhalen uitgeschakeld.",
+			"noTrack": "{{{user}}} Er wordt momenteel niets afgespeeld.",
+			"liked": "{{{user}}} Vindt **{{{title}}}** leuk.",
+			"unliked": "{{{user}}} Vindt **{{{title}}}** niet meer leuk.",
+			"notSeekable": " Dit nummer kan niet worden gezocht.",
+			"isPaused": " Dit nummer is gepauzeerd.",
+			"rewindTrack": "{{{user}}} Heeft het huidige nummer teruggespoeld naar **{{{time}}}**.",
+			"forwardTrack": "{{{user}}} Heeft het huidige nummer vooruitgespoeld naar **{{{time}}}**.",
+			"autoplayDisabled": "{{{user}}} Heeft de automatische afspeelfunctie succesvol uitgeschakeld.",
+			"autoplayEnabled": "{{{user}}} Heeft de automatische afspeelfunctie succesvol ingeschakeld."
+		},
+		"int": {
+			"noSendMessages": " Hey! Ik heb geprobeerd een antwoord te sturen op jouw commando, maar ik heb geen toestemming om dit te doen. Vraag iemand van het personeel om mij de 'Berichten verzenden' Discord-toestemming te geven.\n\nServer: **{{{guildName}}}**\nCommando: **{{{commandName}}}**\nHulp nodig met toestemmingen? Kom naar de ondersteuningsserver: {{{supportServer}}}",
+			"noEmbedLinks": " {{{emoji}}} De bot heeft de 'Insluiten van koppelingen' Discord-toestemming nodig om correct te werken! Vraag iemand van het personeel om deze toestemming te geven.",
+			"noBotChannel": " Ik mag geen commando's beantwoorden in dit kanaal. Gebruik alsjeblieft {{{emoji}}} <#{{{botChannel}}}> voor bot commando's. Bedankt voor je medewerking.",
+			"deleteFooter": "• Dit bericht wordt over 5 seconden verwijderd",
+			"disabledCommand": " Dit commando is uitgeschakeld voor iedereen in deze server. Alleen DJ's kunnen dit commando gebruiken.",
+			"disabledCommandList": "Uitgeschakelde lijst",
+			"noBotPermissions": " {{{emoji}}} Ik heb niet de **{{{permissions}}}** toestemming(en) om dit commando uit te voeren.",
+			"noUserPermissions": " {{{emoji}}} Jij hebt niet de **{{{permissions}}}** toestemming(en) om dit commando uit te voeren.",
+			"voteLocks": [
+				" Je moet voor mij stemmen om dit commando te gebruiken. Je kunt [hier stemmen](Top.gg)!",
+				" Je moet voor mij stemmen om dit commando te gebruiken. Je kunt [hier stemmen](Top.gg) of\nJe kunt ook premium krijgen door [hier te doneren](link2)."
+			],
+			"buttons": {
+				"vote": "Stem",
+				"donate": "Doneren",
+				"invite": "Uitnodigen",
+				"support": "Ondersteuning"
+			},
+			"cooldown": " Wacht alsjeblieft nog **{{{timeLeft}}}** seconde(n) voordat je het **{{{command}}}** commando opnieuw gebruikt.",
+			"noDjRole": " {{{emoji}}} Je hebt de DJ rol nodig om dit commando te gebruiken.",
+			"noPremium": " Je hebt een premium bot nodig om dit commando te gebruiken. Je kunt premium krijgen door [hier te doneren](link).",
+			"voicePerm": " {{{emoji}}} Ik heb de vereiste toestemmingen niet om jouw spraakkanaal te betreden! Ik heb `Kanalen bekijken`, `Verbinden` en `Spreken` toestemmingen nodig. [Voorbeeld van toestemmingen](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\nAls het probleem aanhoudt, wijzig dan de regio van het spraakkanaal naar `Europa`.",
+			"voiceJoin": " {{{emoji}}} Je moet verbonden zijn met een spraakkanaal op deze server om dit commando te gebruiken!\n\nHoe kan ik lid worden van een spraakkanaal? Klik gewoon op een kanaal met een luidsprekerpictogram (bijvoorbeeld hier klikken:  {{{channel}}}) [Zie de officiële Discord handleiding](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord#h_9de92bc2-3bca-459f-8efd-e1e2739ca4f4)",
+			"voiceChannel": " {{{emoji}}} Je moet in het spraakkanaal **{{{channel}}}** zijn om dit commando te gebruiken.",
+			"noPlayer": " {{{emoji}}} Ik ben niet verbonden met een spraakkanaal. Gebruik alsjeblieft het {{{command}}} commando om me op te roepen.",
+			"noQueue": " {{{emoji}}} Er is geen wachtrij. Gebruik alsjeblieft het {{{command}}} commando om een nummer aan de wachtrij toe te voegen.",
+			"noSong": " {{{emoji}}} Er wordt momenteel geen nummer afgespeeld. Gebruik alsjeblieft het {{{command}}} commando om een nummer aan de wachtrij toe te voegen.",
+			"error": " {{{emoji}}} Er is een fout opgetreden bij het uitvoeren van het commando. Rapporteer deze fout aan de [Ondersteuningsserver]({{{link}}})"
+		}
+	},
+	"get_started": {
+		"embed_title": "Moe Bot | Aan de slag",
+		"embed_description": " Hey <@{{{user}}}>! Mijn prefix(en) is/zijn: `{{{prefixList}}}`\nBijvoorbeeld: `{{{prefix}}}help`, `{{{prefix}}}ping`",
+		"embed_description2": " Hey <@{{{user}}}>! Mijn prefix is: `geen prefix`, wat betekent dat je elk commando zonder prefix kunt gebruiken.\nBijvoorbeeld: `help`, `ping`"
+	},
+	"options": {
+		"title": "Opties voor {{{commandName}}}",
+		"no_description": "Geen beschrijving",
+		"options": "Opties",
+		"examples": "Voorbeeld(en)",
+		"long_des": "Dit is om tussen pagina's te navigeren",
+		"examples_button": "Voorbeelden",
+		"footer": "<Vereist> | [Optioneel] {{{long_des}}} Pagina {{{page}}} van {{{total_pages}}}",
+		"title2": "Voorbeelden voor {{{commandName}}}"
+	},
+	"Evaluate JavaScript code": "Evaluate JavaScript code",
+	"Generate a premium key": "Generate a premium key",
+	"Give a user premium.": "Give a user premium."
+}

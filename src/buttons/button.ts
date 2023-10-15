@@ -7,7 +7,7 @@ export interface Button {
     deferType: ButtonDeferType;
     requireGuild: boolean;
     requireEmbedAuthorTag: boolean;
-    execute(intr: ButtonInteraction, data: EventData): Promise<void>;
+    execute(intr: ButtonInteraction, data?: EventData): Promise<void>;
 }
 
 export enum ButtonDeferType {

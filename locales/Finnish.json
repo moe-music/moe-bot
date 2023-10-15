@@ -1,0 +1,957 @@
+{
+	"cmd": {
+		"247": {
+			"description": "Ota käyttöön tai poista käytöstä 24/7-tila.",
+			"enabled": " {{{emoji}}} 24/7-tila on otettu käyttöön.",
+			"disabled": " {{{emoji}}} 24/7-tila on poistettu käytöstä."
+		},
+		"ping": {
+			"description": "Näyttää bottin latenssin.",
+			"author": "Botti-latenssi",
+			"content": "**Shardi**: `{{{shardPing}}}ms`\n**API**: `{{{latency}}}ms`",
+			"footer": "• Saat lisätietoja tuki-palvelimen tila-kanavalta."
+		},
+		"invite": {
+			"description": "Kutsu botti palvelimellesi.",
+			"buttons": {
+				"invite": "Kutsu MoE",
+				"invite2": "Kutsu MoE2",
+				"invite3": "Kutsu MoE3",
+				"support": "Tuki"
+			},
+			"content": "Jos pidit käyttämisestäni, harkitse [minun kutsumistani]({{{invite}}}) palvelimellesi nyt. Ja älä myöskään unohda liittyä [tuki-palvelimeen]({{{support}}})."
+		},
+		"help": {
+			"description": "Näyttää luettelon komennoista tai tietoa tietyistä komennoista.",
+			"options": {
+				"command": "Komentonimi tai kategoria, josta haluat saada apua."
+			},
+			"title": " Komento",
+			"footer": "Sivu {{{page}}} / {{{pagesNum}}}",
+			"title2": "Apua - {{{cmd}}}",
+			"title3": "Apua",
+			"manContent": " Tässä on luettelo kaikista kategorioista\n{{{catagory}}}\n\n- Linkit:\n[Tuki-palvelin]({{{server}}}) | [Kutsu]({{{invite}}}) | [Äänestä]({{{vote}}}) | [Patreon]({{{patreon}}}) | [Verkkosivusto]({{{website}}}) | [Dokumentaatio]({{{docs}}})",
+			"footer2": "- Lisätietoja komennosta: {{{prefix}}}apua <komento> tai {{{prefix}}}apua <kategoria>",
+			"cooldown": "Jäähdytysaika",
+			"aliases": "Aliakset",
+			"category": "Kategoria",
+			"examples": "Esimerkit",
+			"userPerms": "Käyttäjän oikeudet",
+			"botPerms": "Botin oikeudet",
+			"requirements": "Edellytykset",
+			"subCommands": "Alakomennot",
+			"subSubCommands": "Ala-alakomennot",
+			"buttons": {
+				"previous": "Edellinen",
+				"stop": "Lopeta",
+				"next": "Seuraava",
+				"home": "Koti",
+				"config": "Asetukset",
+				"music": "Musiikki",
+				"filter": "Suodatin",
+				"general": "Yleinen",
+				"playlists": "Soittolistat"
+			},
+			"notFound": "`{{{cmd}}}` ei ole kelvollinen komento tai kategoria!",
+			"voice": {
+				"inVoice": "- Täytyy olla äänikanavalla",
+				"sameVoice": "- Täytyy olla samassa äänikanavassa",
+				"playing": "- Täytyy soittaa musiikkia tällä palvelimella"
+			},
+			"voteLock": "- Täytyy olla äänestänyt [täällä]({{{link}}}), jotta voit käyttää tätä komentoa",
+			"premiumCmd": "- Täytyy olla [premium]({{{link}}}), jotta voit käyttää tätä komentoa"
+		},
+		"premium": {
+			"description": "Näyttää käyttäjän tai palvelimen premium-tilan.",
+			"guildPremiumStatus": "Palvelimen premium-tila",
+			"userPremiumStatus": "Käyttäjän premium-tila",
+			"premium": "Premium",
+			"notPremium": "Ei Premium",
+			"guildPremiumExpires": "Palvelimen premium päättyy",
+			"userPremiumExpires": "Käyttäjän premium päättyy"
+		},
+		"redeem": {
+			"description": "Lunasta premium-koodi.",
+			"options": {
+				"code": "Lunastettava premium-koodi"
+			},
+			"noArg": "Anna premium-koodi lunastaaksesi sen.",
+			"invalidCode": "Virheellinen premium-koodi annettu.",
+			"confirmation": " Oletko varma, että haluat lunastaa premium-koodin `{{{code}}}`?",
+			"type": "Tyyppi",
+			"expiresAt": "Päättyy",
+			"buttons": {
+				"yes": "Kyllä",
+				"no": "Ei"
+			},
+			"alreadyPremium": "Olet jo premium-jäsen.",
+			"success": " Lunastit onnistuneesti premium-koodisi. Nyt voit käyttää premium-komentoja!",
+			"canceled": "Peruutettiin premium-koodin lunastus."
+		},
+		"stats": {
+			"description": "Näyttää botin tilastot."
+		},
+		"support": {
+			"description": "Tukipalvelimen linkki",
+			"content": " Jos tarvitset apua botin kanssa tai haluat vain hengailla meidän kanssamme, liity [tukipalvelimeen]({{{link}}}).",
+			"buttons": {
+				"support": "Tukipalvelin"
+			}
+		},
+		"vote": {
+			"description": "Botin äänestyslinkki",
+			"content": " Jos pidät botista, harkitse äänestämistä [top.gg:ssä]({{{link}}}).",
+			"buttons": {
+				"vote": "Äänestä"
+			}
+		},
+		"player": {
+			"description": "Näyttää soittimen tilan.",
+			"nowPlaying": "Nyt soi",
+			"noSong": "Tällä hetkellä ei soiteta kappaletta.",
+			"volume": "Äänenvoimakkuus",
+			"totalDuration": "Kokonaiskesto",
+			"loopMode": "Toistoläpikulku",
+			"filters": "Suodattimet",
+			"noFilters": "Ei suodattimia käytössä.",
+			"title": "Soitin: {{{status}}}",
+			"online": "Paikalla",
+			"offline": "Ei paikalla"
+		},
+		"autoplay": {
+			"description": "Ota käyttöön tai poista käytöstä automaattinen toistoläpikulku.",
+			"enabled": " Toistoläpikulku päällä - Automaattisesti lisätään samankaltaisia kappaleita jonoon.",
+			"disabled": " Toistoläpikulku pois päältä - Ei enää lisätä automaattisesti samankaltaisia kappaleita jonoon."
+		},
+		"clear": {
+			"description": "Tyhjennä jonosta tai suodattimista soittimesta.",
+			"options": {
+				"input": "Jonon tai suodattimien tyhjentämiseen liittyvä valinta"
+			},
+			"content": " Valitse jonon tai suodattimien tyhjentämiseksi. (jonot/suodattimet)",
+			"queue": {
+				"noSong": "Jonossa ei ole kappaleita, jotka voidaan tyhjentää.",
+				"success": " Jono tyhjennetty onnistuneesti."
+			},
+			"filters": {
+				"noFilter": "Ei suodattimia tyhjennettäväksi.",
+				"success": " Suodattimet tyhjennetty onnistuneesti."
+			},
+			"buttons": {
+				"queue": "Jono",
+				"filters": "Suodattimet"
+			}
+		},
+		"forceskip": {
+			"description": "Ohita nykyinen kappale väkisin.",
+			"success": " Väkisin ohitettiin kappale {{{title}}}."
+		},
+		"forward": {
+			"description": "Siirrä nykyinen kappale eteenpäin.",
+			"options": {
+				"seconds": "Sekuntien määrä, jonka verran eteenpäin siirretään"
+			},
+			"unseekable": "{{{emoji}}} Nykyistä kappaletta ei voi siirtää.",
+			"tooLong": "{{{emoji}}} Et voi siirtää kappaleen pituutta enempää.",
+			"success": " {{{emoji}}} Kappale siirretty onnistuneesti aikaan `{{{time}}}`."
+		},
+		"grab": {
+			"description": "Tallenna nykyinen kappale.",
+			"dm": "{{{emoji}}} En voi lähettää kappaletta, koska olet estänyt yksityisviestit.",
+			"grabbed": " {{{emoji}}} Kappale tallennettu onnistuneesti."
+		},
+		"join": {
+			"description": "Kutsu botti äänikanavallesi.",
+			"no-perms": "{{{emoji}}} Minulla ei ole tarvittavia oikeuksia liittyä äänikanavallesi! Tarvitsen `Näytä kanavat`, `Yhdistä` ja `Puhu` -oikeudet. [Oikeuksien esimerkki](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\n Jos ongelma jatkuu, vaihda äänikanavan alueeksi `Eurooppa`.",
+			"already-in": "{{{emoji}}} Olen jo äänikanavalla!",
+			"joined": " Liityttiin onnistuneesti äänikanavalle {{{channel}}}."
+		},
+		"leave": {
+			"description": "Poistu äänikanavalta.",
+			"not-playing": "{{{emoji}}} En soita mitään tällä hetkellä!",
+			"success": " {{{emoji}}} Poistuttiin äänikanavalta onnistuneesti."
+		},
+		"leavecleanup": {
+			"description": "Poista kaikki käyttäjien kappaleet, jotka eivät ole äänikanavalla.",
+			"removing": " Poistetaan kappaleita käyttäjiltä, jotka eivät ole enää äänikanavalla. Odota hetki.",
+			"removed": " Poistettiin onnistuneesti `{{{count}}}` kappaletta käyttäjiltä, jotka eivät ole enää äänikanavalla."
+		},
+		"loop": {
+			"description": "Toista nykyinen kappale tai lista uudestaan.",
+			"options": {
+				"mode": "Asetettava toiston tila"
+			},
+			"specify": " Määritä toiston tila. (kappale, lista, pois) alla olevista painikkeista.",
+			"buttons": {
+				"song": "Kappale",
+				"queue": "Lista",
+				"off": "Pois"
+			},
+			"song": " {{{emoji}}} Kappale toistetaan nyt uudestaan.",
+			"queue": " {{{emoji}}} Lista toistetaan nyt uudestaan.",
+			"off": " {{{emoji}}} Toisto on nyt poissa päältä.",
+			"song_already": " {{{emoji}}} Kappale on jo toistossa uudestaan.",
+			"queue_already": " {{{emoji}}} Lista on jo toistossa uudestaan.",
+			"off_already": " {{{emoji}}} Toisto on jo pois päältä.",
+			"invalid_mode": " {{{emoji}}} Virheellinen toiston tila. Anna kelvollinen toiston tila. (kappale, lista, pois)"
+		},
+		"lyrics": {
+			"description": "Näytä nykyisen kappaleen tai kappaleen nimen sanat.",
+			"options": {
+				"song": "Kappaleen nimi, jota etsitään"
+			},
+			"noQuery": " Anna kappaleen nimi, jota etsitään.",
+			"noLyrics": " En löytänyt sanoja tälle kappaleelle.",
+			"page": "Sivu {{{page}}} / {{{pages}}}"
+		},
+		"move": {
+			"description": "Siirrä kappale tiettyyn kohtaan listalla.",
+			"options": {
+				"song": "Siirrettävä kappale",
+				"position": "Kohta, johon kappale siirretään"
+			},
+			"invalidNumber": " Anna kelvollinen numero kohdalle.",
+			"invalidPosition": " Virheellinen kohta. Anna kelvollinen kohta.",
+			"success": " Siirrettiin **[{{{title}}}]({{{uri}}})** kohdasta **{{{from}}}** kohtaan **{{{to}}}**."
+		},
+		"nowplaying": {
+			"description": "Näytä tällä hetkellä soiva kappale.",
+			"nowplaying": " Nyt soi: [{{{title}}}]({{{uri}}})",
+			"author": "Tekijä",
+			"requester": "Pyytäjä",
+			"duration": "Kesto",
+			"progress": "Edistyminen"
+		},
+		"pause": {
+			"description": "Tauota nykyinen kappale.",
+			"alreadyPaused": " Nykyinen kappale on jo tauotettu.",
+			"paused": " Tauotettiin [{{{title}}}]({{{uri}}})"
+		},
+		"play": {
+			"description": "Toista kappale Spotifysta, SoundCloudista, Deezeristä jne...",
+			"options": {
+				"query": "Etsittävä kysely",
+				"source": "Etsintälähde"
+			},
+			"no-query": "Anna kappaleen nimi, jota etsitään.",
+			"no-results": " Tuloksia ei löytynyt hakusanalle `{{{query}}}`.",
+			"playlist-loaded": " Ladattiin `{{{count}}}` kappaletta soittolistalta **[{{{name}}}]({{{url}}})**",
+			"footer": "Kiitos, että käytät {{{bot}}}",
+			"added": " Lisätty **[{{{title}}}]({{{uri}}})** jonoon (pyytäjä <@{{{requester}}}>) jonossa sijalle `#{{{position}}}`",
+			"youtube-not-supported": " Valitettavasti YouTube ei ole tuettu MoE for Discord TOS:issa. Emme voi käyttää YouTuben API:a musiikin kuuntelemiseen. Pahoittelemme mahdollisesti aiheutunutta haittaa."
+		},
+		"playprevious": {
+			"description": "Toista edellinen kappale.",
+			"noPreviousTrack": " {{{emoji}}} Edellistä kappaletta ei ole toistettavaksi.",
+			"success": " {{{emoji}}} Nyt soitetaan edellistä kappaletta jonossasi!"
+		},
+		"queue": {
+			"description": "Näyttää nykyisen palvelimen jonon.",
+			"options": {
+				"page": "Sivun numero näytettäväksi"
+			},
+			"queue": "Jono palvelimelle {{{guild}}} ({{{songs}}} kappaletta)",
+			"nowPlaying": " Nyt soi: [{{{title}}}]({{{uri}}}) `[{{{length}}}]`- (<@{{{requester}}}>)\n\n",
+			"upNext": " Seuraavaksi: {{{str}}}",
+			"noSongs": " Jonossa ei ole vielä kappaleita! Lisää yksi käyttäen komentoa {{{cmd}}}",
+			"page": "Sivu {{{page}}} | {{{songs}}} kappaletta | {{{duration}}} kokonaiskesto",
+			"notNumber": " {{{emoji}}} Sivunumeron on oltava numero.",
+			"pageLimit": " {{{emoji}}} Sivunumeron on oltava pienempi tai yhtä suuri kuin {{{pages}}}.",
+			"clearQueue": "Tyhjennä jono",
+			"noTracks": " Jonossa ei ole kappaleita.",
+			"noDjRole": " Sinun on oltava DJ-roolissa käyttääksesi tätä painiketta.",
+			"clearedQueue": " {{{user}}} tyhjensi jonon."
+		},
+		"remove": {
+			"description": "Poista kappale jonosta.",
+			"options": {
+				"track": "Poistettava kappale.",
+				"number": "Kappaleen numero tai otsikko poistettavaksi.",
+				"dupes": "Poista kaikki kappaleen kaksoiskappaleet."
+			},
+			"trackNotFound": " Jonossa ei ole kappaletta tuolla numerolla.",
+			"invalidNumber": " Anna numero välillä 1 ja {{{length}}}.",
+			"removed": " Poistettiin **[{{{title}}}]({{{uri}}})** jonosta.",
+			"noDupes": " Jonossa ei ole kaksoiskappaleita.",
+			"removedDupes": " Poistettiin **{{{length}}}** kaksoiskappaletta jonosta."
+		},
+		"replay": {
+			"description": "Toista nykyinen kappale uudelleen.",
+			"replaying": " Toistetaan uudelleen [{{{title}}}]({{{uri}}})"
+		},
+		"resume": {
+			"description": "Jatka nykyisen kappaleen toistamista.",
+			"notPaused": " Nykyinen kappale ei ole tauolla.",
+			"resumed": " Jatkettiin [{{{title}}}]({{{uri}}}) toistamista."
+		},
+		"rewind": {
+			"description": "Kelaa nykyinen kappale taaksepäin.",
+			"options": {
+				"time": "Aika, johon haluat kelata kappaleen."
+			},
+			"notSeekable": " {{{emoji}}} Nykyinen kappale ei ole kelattavissa.",
+			"negativePosition": " {{{emoji}}} Aseman on oltava välillä 0 ja {{{length}}}.",
+			"success": " {{{emoji}}} Kelaus palautettiin ajankohtaan {{{length}}}."
+		},
+		"search": {
+			"description": "Hae kappaletta Spotifysta, Soundcloudista tai Deezeristä.",
+			"options": {
+				"query": "Hakulauseke",
+				"source": "Hakulähde"
+			},
+			"no-playlist": " {{{emoji}}} Soittolistat eivät ole tuettuja! Hae komennolla {{{cmd}}}",
+			"no-track": " {{{emoji}}} Kappaleet eivät ole tuettuja! Hae komennolla {{{cmd}}}",
+			"results": " Haku tulokset `{{{query}}}`\n\n{{{results}}}",
+			"footer": "Valitse kappale valikosta alla.",
+			"placeholder": "Valitse kappale alla olevasta listasta toistaaksesi sen.",
+			"footerTimeout": "Hakutulokset aikakatkaistiin.",
+			"no-voice": " {{{emoji}}} Sinun on oltava äänikanavassa käyttääksesi tätä valikkoa.",
+			"wrong-voice": " {{{emoji}}} Sinun on oltava samassa äänikanavassa kuin minä käyttääksesi tätä valikkoa.",
+			"added": " {{{emoji}}} Lisätty {{{count}}} kappaletta jonoon."
+		},
+		"seek": {
+			"description": "Hyppää annettuun kohtaan nykyisessä kappaleessa.",
+			"options": {
+				"time": "Aika, johon haluat hypätä kappaleessa."
+			},
+			"invalidPosition": " Ajan on oltava välillä 0 ja {{{length}}}.",
+			"seeked": " Hyppäsi `{{{position}}}` kohtaan `{{{time}}}`"
+		},
+		"shuffle": {
+			"description": "Sekoita jono.",
+			"success": " Palvelimen jono on sekoitettu onnistuneesti (**{{{length}}}** kappaletta).",
+			"unshuffle": " Palvelimen jono on palautettu alkuperäiseen järjestykseen (**{{{length}}}** kappaletta)."
+		},
+		"skip": {
+			"description": "Ohita nykyinen kappale.",
+			"nothing": " Jonossa ei ole mitään seuraavana. Käytä {{{queue}}} nähdäksesi palvelimen jonon.\nHaluatko kokeilla autoplayta? Käytä komentoa {{{autoplay}}}",
+			"paused": " Toistin on pysäytetty. Jatkaaksesi käytä jatkakomennot.\nHaluatko jatkaa? Käytä komentoa {{{resume}}}",
+			"voteSkip": " {{{user}}} pyysi ohittamaan nykyisen kappaleen.\n\n{{{voted}}}",
+			"skip": " Ohitetaan kappale **{{{title}}}**."
+		},
+		"skipto": {
+			"description": "Hyppää tiettyyn kappaleeseen jonossa.",
+			"options": {
+				"number": "Kappaleen numero tai otsikko, johon haluat hypätä."
+			},
+			"invalidNumber": " {{{emoji}}} Anna kappaleen numero välillä 1 ja {{{length}}}.",
+			"success": " {{{emoji}}} Hypätty kohtaan **[{{{title}}}]({{{uri}}})**."
+		},
+		"stop": {
+			"description": "Pysäytä toistin ja tyhjennä jono.",
+			"stopped": " {{{emoji}}} Pysäytettiin toistin ja tyhjennettiin jono."
+		},
+		"topsongs": {
+			"description": "Näyttää botin eniten soitettuja kappaleita.",
+			"noTopSongs": " Tietokannassa ei ole eniten soitettuja kappaleita.",
+			"timesPlayed": "Kertaa soitettu",
+			"selectSong": "Valitse kappale listalta toistaaksesi sen.",
+			"added": " Lisätty **[{{{title}}}]({{{uri}}})** jonoon."
+		},
+		"volume": {
+			"description": "Muuta toistimen äänenvoimakkuutta.",
+			"options": {
+				"volume": "Äänenvoimakkuus, jonka haluat asettaa."
+			},
+			"invalidVolume": " {{{emoji}}} Anna numero välillä 0 ja 100.",
+			"success": " {{{emoji}}} Asetettu äänenvoimakkuus **{{{volume}}}**."
+		},
+		"voteskip": {
+			"description": "Äänestä nykyisen kappaleen ohittamista."
+		},
+		"filters": {
+			"filters": " Kaikki nykyiselle soitettavalle kappaleelle sovelletut suodattimet:\n\n{{{filters}}}",
+			"pitchNaN": " {{{emoji}}} Sävelkorkeuden on oltava numero välillä 1 ja 5.",
+			"description": {
+				"8d": "Sovella 8D-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"bassboost": "Sovella bassoboost-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"channelmix": "Sovella kanavasekoitus-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"electronic": "Sovella elektroninen-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"filters": "Saat lista suodattimista, jotka voidaan soveltaa nykyiseen soitettavaan kappaleeseen.",
+				"jazz": "Sovella jazz-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"karaoke": "Sovella karaoke-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"lowpass": "Sovella matalapassisuodatinta nykyiseen soitettavaan kappaleeseen.",
+				"nightcore": "Sovella nightcore-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"pitch": "Sovella sävelkorkeuden-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"pop": "Sovella pop-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"radio": "Sovella radio-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"rock": "Sovella rock-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"rotation": "Sovella kiertosuodatinta nykyiseen soitettavaan kappaleeseen.",
+				"soft": "Sovella pehmeä-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"speed": "Sovella nopeus-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"treblebass": "Sovella diskantin- ja basson-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"tremolo": "Sovella tremolo-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"vaporwave": "Sovella vaporwave-suodatinta nykyiseen soitettavaan kappaleeseen.",
+				"vibrato": "Sovella vibrato-suodatinta nykyiseen soitettavaan kappaleeseen."
+			},
+			"enabled": " {{{emoji}}} {{{name}}} suodatin on otettu käyttöön.",
+			"disabled": " {{{emoji}}} {{{name}}} suodatin on poistettu käytöstä.",
+			"speed": " {{{emoji}}} Nopeus-suodatin on asetettu arvoon **{{{value}}}**.",
+			"options": {
+				"speed": "Nopeus, jonka haluat asettaa.",
+				"pitch": "Sävelkorkeus, jonka haluat soveltaa."
+			}
+		},
+		"announce": {
+			"description": "Määritä kappaleen aloitusviestin ilmoitusten asetukset.",
+			"options": {
+				"set": "Aseta kanava, johon kappaleen aloitusviesti lähetetään.",
+				"channel": "Kanava, jonka haluat asettaa.",
+				"toggle": "Kytke kappaleen aloitusviestin ilmoitukset päälle tai pois päältä.",
+				"prunning": "Kytke kappaleen aloitusviestin siivous päälle tai pois päältä.",
+				"reset": "Nollaa kanava, johon kappaleen aloitusviesti lähetetään."
+			},
+			"noChannel": " {{{emoji}}} Anna kelvollinen tekstikanava.",
+			"noTextChannel": " {{{emoji}}} Anna kelvollinen tekstikanava.",
+			"sameChannel": " {{{emoji}}} Antamasi kanava on jo tietokannassa.",
+			"setChannel": " {{{emoji}}} Kappaleen aloitusviestin kanava on asetettu onnistuneesti kohteeseen {{{channel}}}.",
+			"noChannelInDB": " {{{emoji}}} Kappaleen aloitusviestin kanavaa ei ole määritetty tietokantaan.",
+			"toggle": " {{{emoji}}} Kappaleen aloitusviestin ilmoitukset onnistuneesti {{{status}}}.",
+			"enabled": "päällä",
+			"disabled": "pois päältä",
+			"reset": " {{{emoji}}} Kappaleen aloitusviestin kanava on nollattu onnistuneesti."
+		},
+		"botchannel": {
+			"description": "Määritä botin kanava komentojen kuuntelemiseen.",
+			"options": {
+				"add": "Lisää kanava botin kanavaluetteloon.",
+				"channel": "Kanava, jonka haluat asettaa.",
+				"remove": "Poista kanava botin kanavaluettelosta.",
+				"clear": "Tyhjennä botin kanavaluettelo.",
+				"info": "Hae botin kanavaluettelo ja tietoja botin kanavasta."
+			},
+			"noChannel": " {{{emoji}}} Anna kelvollinen tekstikanava.",
+			"noTextChannel": " {{{emoji}}} Anna kelvollinen tekstikanava.",
+			"sameChannel": " {{{emoji}}} Antamasi kanava on jo tietokannassa.",
+			"maxChannel": " {{{emoji}}} Et voi lisätä enempää kuin 5 kanavaa botin kanavaluetteloon.",
+			"addedChannel": " {{{emoji}}} Kanava {{{channel}}} lisätty onnistuneesti botin kanavaluetteloon.",
+			"noChannelInDB": " {{{emoji}}} Tietokannassa ei ole botin kanavia.",
+			"removedChannel": " {{{emoji}}} Kanava {{{channel}}} poistettu onnistuneesti botin kanavaluettelosta.",
+			"clearedChannel": " {{{emoji}}} Botin kanavaluettelo tyhjennetty onnistuneesti.",
+			"info": ">>> **Kanava:** {{{channel}}}\n**Valvoja:** {{{moderator}}}\n**Lisätty:** {{{addedAt}}}",
+			"title": "Botin kanavat ({{count}})"
+		},
+		"clean": {
+			"description": "Puhdista viestini kanavalla.",
+			"success": " {{{emoji}}} Viestit puhdistettu onnistuneesti: **{{{count}}}** viestiä."
+		},
+		"defaultvolume": {
+			"description": "Aseta palvelimen oletusäänenvoimakkuus",
+			"options": {
+				"number": "Numero, johon oletusäänenvoimakkuus asetetaan"
+			},
+			"invalidNumber": " {{{emoji}}} Anna numero välillä 0 ja 200.",
+			"success": " {{{emoji}}} Oletusäänenvoimakkuus asetettu onnistuneesti: **{{{volume}}}**."
+		},
+		"disablecommands": {
+			"description": "Poista komennot käytöstä palvelimella",
+			"options": {
+				"add": "Lisää komento käytöstä poistettujen komentojen listalle",
+				"command": "Komentonimi",
+				"remove": "Poista komento käytöstä poistettujen komentojen listalta",
+				"list": "Näytä käytöstä poistetut komennot",
+				"clear": "Tyhjennä käytöstä poistettujen komennot -lista"
+			},
+			"noCommand": " {{{emoji}}} Anna komennon nimi poistaaksesi tai ottaaksesi sen käyttöön.",
+			"commandNotExist": " {{{emoji}}} Tämä komento ei ole käytettävissä bottiin.",
+			"commandAlreadyDisabled": " {{{emoji}}} Tämä komento on jo poistettu käytöstä.",
+			"commandDisabled": " {{{emoji}}} Komento **{{{command}}}** poistettu käytöstä onnistuneesti.",
+			"noDisabledCommands": " {{{emoji}}} Tämä komento ei ole poistettu käytöstä.",
+			"commandEnabled": " {{{emoji}}} Komento **{{{command}}}** otettu käyttöön onnistuneesti.",
+			"disabledCommands": "Poistetut Komennot",
+			"disabledCommandsForThisServer": "Poistetut komennot tälle palvelimelle",
+			"total": "Yhteensä: {{{total}}}",
+			"disabledCommandsCleared": " {{{emoji}}} Käytöstä poistettujen komennot -lista tyhjennetty onnistuneesti."
+		},
+		"dj": {
+			"description": "Aseta DJ-rooli palvelimelle",
+			"options": {
+				"add": "Lisää rooli DJ-roolilistalle",
+				"role": "Rooli, jonka haluat (lisätä/poistaa)",
+				"remove": "Poista rooli DJ-roolilistalta",
+				"list": "Näytä DJ-roolilista",
+				"clear": "Tyhjennä DJ-roolilista",
+				"toggle": "Vaihda DJ-rooli",
+				"info": "Näytä DJ-roolilista ja tietoja DJ-roolista"
+			},
+			"noRole": " {{{emoji}}} Anna kelvollinen rooli (lisää/poista) -toimintoon.",
+			"maxRoles": " {{{emoji}}} Et voi lisätä enempää kuin 5 roolia DJ-listalle.",
+			"alreadyInList": " {{{emoji}}} Antamasi rooli on jo tietokannassa.",
+			"addedRole": " {{{emoji}}} Rooli {{{role}}} lisätty onnistuneesti DJ-listalle.",
+			"noRolesSetup": " {{{emoji}}} Tälle palvelimelle ei ole asetettu DJ-rooleja.",
+			"notInList": " {{{emoji}}} Tätä roolia ei ole DJ-listalla.",
+			"removedRole": " {{{emoji}}} Rooli {{{role}}} poistettu onnistuneesti DJ-listalta.",
+			"list": ">>> **Rooli:** {{{role}}}\n**Valvoja:** {{{moderator}}}\n**Lisätty:** {{{addedAt}}}",
+			"listTotal": " DJ-rooleja yhteensä: {{{total}}}",
+			"clearedList": " {{{emoji}}} DJ-roolilista tyhjennetty onnistuneesti.",
+			"enabledToggle": " {{{emoji}}} DJ-vaihtotilan käyttöönotto onnistuneesti.",
+			"disabledToggle": " {{{emoji}}} DJ-vaihtotilan poistaminen käytöstä onnistuneesti.",
+			"info": {
+				"djRoles": "DJ-Rooli(t)",
+				"enabled": "Käytössä",
+				"disabled": "Ei käytössä",
+				"djMode": "DJ-tila",
+				"djMembers": "DJ-Jäsen(et)",
+				"description": "DJ-roolin tiedot palvelimelle {{{guild}}}"
+			}
+		},
+		"fixvoice": {
+			"description": "Korjaa ääniyhteys, jos botti ei soita musiikkia.",
+			"joining": " Liitytään uudelleen äänikanavalle ja jatketaan musiikin toistoa.",
+			"failed": " Äänialueen vaihto epäonnistui. Yritä myöhemmin uudelleen.",
+			"error": "{{{emoji}}} En löytänyt ratkaisua tällä hetkellä. Kysy apua [tukipalvelimesta]({{{server}}})).",
+			"success": " {{{emoji}}} Äänialue vaihdettu onnistuneesti: **{{{region}}}**."
+		},
+		"forcejoin": {
+			"description": "Pakota botti liittymään äänikanavalle.",
+			"already-in": "{{{emoji}}} Olen jo äänikanavalla!",
+			"joined": " {{{emoji}}} Botti liittyi onnistuneesti äänikanavalle **{{{channel}}}**."
+		},
+		"languages": {
+			"description": "Aseta botin kieli palvelimelle",
+			"options": {
+				"add": "Lisää kieli palvelimelle",
+				"language": "Haluttu kieli",
+				"info": "Näytä tietoja kielistä",
+				"reset": "Palauta kieli oletuskieleksi",
+				"set": "cmd.languages.options.set"
+			},
+			"success": " {{{emoji}}} Botin kieli asetettu onnistuneesti: {{{language}}} `({{{languageCode}}})`.",
+			"info": " Tämän palvelimen nykyinen kieli on: **{{{language}}}** `({{{languageCode}}})`.",
+			"reset": " {{{emoji}}} Botin kieli palautettu onnistuneesti oletuskieleksi.",
+			"translationProgress": "Käännöksen edistyminen: {{{progress}}}",
+			"selectLanguage": "Valitse kieli alla olevasta valikosta."
+		},
+		"noprefix": {
+			"description": "Käytä tämä komento poistaaksesi etuliitteen käytön käyttäjältä tai palvelimelta.",
+			"toggle": " Käytä tätä komentoa kytkeäksesi etuliitteen pois päältä käyttäjälle tai palvelimelle.",
+			"buttons": {
+				"server": "Palvelin",
+				"user": "Käyttäjä"
+			},
+			"premium": " Sinun tulee olla premium-käyttäjä käyttääksesi tätä komentoa.",
+			"disabledUser": " {{{emoji}}} Etuliitteen poisto käyttäjältä onnistui.",
+			"enabledUser": " {{{emoji}}} Etuliitteen poisto käyttäjältä kytketty päälle onnistuneesti.",
+			"noPerm": " Sinulla ei ole tarvittavia oikeuksia käyttääksesi tätä komentoa.",
+			"disabledServer": " {{{emoji}}} Etuliitteen poisto palvelimelta onnistui.",
+			"enabledServer": " {{{emoji}}} Etuliitteen poisto palvelimelta kytketty päälle onnistuneesti."
+		},
+		"prefix": {
+			"description": "Aseta etuliite palvelimelle",
+			"options": {
+				"set": "Aseta etuliite palvelimelle",
+				"prefix": "Etuliite, jonka haluat asettaa/poistaa",
+				"info": "Näytä etuliite palvelimelle",
+				"clear": "Tyhjennä etuliite palvelimelta",
+				"remove": "Poista etuliite palvelimelta"
+			},
+			"info": ">>> **Etuliite:** `{{{prefix}}}`\n**Moderator:** {{{moderator}}}\n**Lisätty:** {{{timestamp}}}",
+			"noPrefix": " {{{emoji}}} Ole hyvä ja anna etuliite asetettavaksi.",
+			"noPrefixAdded": " {{{emoji}}} Palvelimelle ei ole lisätty etuliitettä.",
+			"prefixLength": " {{{emoji}}} Etuliitteen tulee olla enintään 5 merkkiä pitkä.",
+			"prefixLimit": " {{{emoji}}} Etuliitteiden enimmäismäärä on 4. Poista joitain etuliitteitä komennolla `prefix remove`.",
+			"prefixCharacters": " {{{emoji}}} Etuliitteessä ei saa olla merkkejä `[]{}\\`",
+			"prefixExists": " {{{emoji}}} Etuliite `{{{prefix}}}` on jo lisätty käyttäjän {{{moderator}}} toimesta.",
+			"prefixCleared": " {{{emoji}}} Kaikki etuliitteet on nyt tyhjennetty oletusarvoon.",
+			"prefixNotExists": " {{{emoji}}} Etuliitettä `{{{prefix}}}` ei ole lisätty.",
+			"prefixRemoved": " {{{emoji}}} Etuliite `{{{prefix}}}` onnistuneesti poistettu.",
+			"prefixAdded": " {{{emoji}}} Etuliite `{{{prefix}}}` onnistuneesti lisätty."
+		},
+		"profile": {
+			"description": "Näytä oma tai jonkun muun profiili.",
+			"options": {
+				"set": "Aseta profiilisi väri, väri tai näkyvyys.",
+				"bio": "Aseta profiilisi kuvaus.",
+				"color": "Aseta profiilisi väri.",
+				"visibility": "Aseta profiilisi näkyvyys.",
+				"view": "Näytä oma tai jonkun muun profiili.",
+				"user": "Käyttäjä, jonka profiilin haluat nähdä."
+			},
+			"noBio": " {{{emoji}}} Sinun tulee antaa kuvaus.",
+			"bioLength": " {{{emoji}}} Kuvaus saa olla enintään 50 merkkiä pitkä.",
+			"bioSet": " {{{emoji}}} Kuvaus asetettu onnistuneesti: `{{{bio}}}`",
+			"noColor": " {{{emoji}}} Ole hyvä ja anna väri heksakoodina [Esimerkiksi: #FF0000](https://g.co/kgs/q5nhF7)\n\nVoit myös käyttää seuraavia väritunnisteita: {{{colors}}}",
+			"sameColor": " {{{emoji}}} Väri on jo asetettu: `{{{color}}}`",
+			"colorSet": " {{{emoji}}} Väri asetettu onnistuneesti: `{{{color}}}`",
+			"sameVisibility": " {{{emoji}}} Näkyvyys on jo asetettu: `{{{visibility}}}`",
+			"noVisibility": " {{{emoji}}} Ole hyvä ja anna näkyvyys (public/private).",
+			"visibilitySet": " {{{emoji}}} Näkyvyys asetettu onnistuneesti: `{{{visibility}}}`",
+			"privateProfile": " {{{emoji}}} Tämän käyttäjän profiili on yksityinen"
+		},
+		"setting": {
+			"description": "Muuta palvelimen asetuksia tai hae tietoja asetuksista",
+			"options": {
+				"reset": "Palauta kaikki palvelimen asetukset oletusarvoihin",
+				"info": "Hae palvelimen asetustietoja"
+			},
+			"noPermission": " {{{emoji}}} Sinulla ei ole `manageGuild`-oikeutta käyttääksesi tätä komentoa.",
+			"isSure": " Oletko varma, että haluat palauttaa palvelimen asetukset?\nTämä palauttaa kaikki asetukset oletusarvoihin.\n\n**Jos olet varma, paina alla olevaa painiketta**",
+			"buttons": {
+				"reset": "Palauta"
+			},
+			"fields": {
+				"247": "24/7",
+				"trackButton": "Seuraa-painike",
+				"dj": "DJ",
+				"botChannel": "Bottikanava",
+				"disableCommand": "Komento pois käytöstä",
+				"defaultVolume": "Oletusäänenvoimakkuus",
+				"announce": "Ilmoitukset",
+				"prunning": "Prunning",
+				"noPrefix": "Ei etuliitettä",
+				"prefix": "Etuliite",
+				"djRole": "DJ-rooli",
+				"setup": "Asetus",
+				"voteSkip": "Äänestys ohitukselle",
+				"language": "Kieli",
+				"trackButtonValue": "Tila: {{{mode}}}\nModerator: {{{moderator}}}\nLisätty: {{{added}}}",
+				"setupValue": "Moderator: {{{moderator}}}\nLisätty: {{{added}}}\n\n**Kanavat:**\n{{{channels}}}",
+				"djValue": "Tila: {{{mode}}}\nRoolit: {{{roles}}}\nLisätty: {{{added}}}",
+				"defaultvolumeValue": "Äänenvoimakkuus: {{{volume}}}\nLisätty: {{{added}}}\nModerator: {{{moderator}}}",
+				"announceValue": "Tila: {{{mode}}}\nKanava: {{{channel}}}\nLisätty: {{{added}}}\nModerator: {{{moderator}}}",
+				"prunningValue": "Tila: {{{mode}}}\nLisätty: {{{added}}}\nModerator: {{{moderator}}}",
+				"disableCommandValue": "Komennot: {{{commands}}}\nLisätty: {{{added}}}\nModerator: {{{moderator}}}",
+				"prefixValue": "Etuliite: {{{prefix}}}\nLisätty: {{{added}}}\nModerator: {{{moderator}}}",
+				"voteSkipValue": "Tila: {{{mode}}}\nLisätty: {{{added}}}\nModerator: {{{moderator}}}",
+				"247Value": "Tila: {{{mode}}}\nLisätty: {{{added}}}\nModerator: {{{moderator}}}\nKanava: {{{channel}}}",
+				"botChannelValue": "Kanava: {{{channel}}}\nLisätty: {{{added}}}\nModerator: {{{moderator}}}",
+				"languageValue": "Kieli: {{{language}}}",
+				"enabled": "Käytössä",
+				"disabled": "Ei käytössä",
+				"none": "Ei mitään"
+			},
+			"resetSuccess": " {{{emoji}}} Palvelimen asetukset palautettu onnistuneesti oletusarvoihin.",
+			"info": " Tässä ovat tämän palvelimen asetustiedot",
+			"noSettings": " {{{emoji}}} Tälle palvelimelle ei ole asetuksia."
+		},
+		"voteskipsetting": {
+			"description": "Määritä äänestysohituksen asetukset.",
+			"options": {
+				"set": "Määritä äänestysohituksen tila.",
+				"action": "Toiminto, jonka haluat asettaa (enable/disable)."
+			},
+			"success": " {{{emoji}}} Äänestysohitus {{{action}}} onnistuneesti.",
+			"isConfirm": " Haluatko ottaa äänestysohituksen käyttöön vai poistaa sen käytöstä?",
+			"canceled": " {{{emoji}}} Äänestysohituksen asetusten muutos peruutettu.",
+			"alreadyEnabled": " Äänestysohitus on jo käytössä.",
+			"alreadyDisabled": " Äänestysohitus on jo poistettu käytöstä.",
+			"buttons": {
+				"enable": "Ota käyttöön",
+				"disable": "Poista käytöstä",
+				"cancel": "Peruuta"
+			}
+		},
+		"add": {
+			"description": "Lisää kappale soittolistalle.",
+			"options": {
+				"playlist": "Soittolista, jolle haluat lisätä kappaleen.",
+				"song": "Kappale (nimi/url), jonka haluat lisätä soittolistalle."
+			},
+			"playlistLength": " {{{emoji}}} Soittolistan nimen tulee olla 3–50 merkkiä pitkä.",
+			"noPlaylists": " {{{emoji}}} En löytänyt yhtään soittolistaa käyttäjätililtäsi, luo ensin uusi soittolista.",
+			"noResults": " {{{emoji}}} En löytänyt tuloksia hakemalle kappaleelle `{{{song}}}`.",
+			"playlistFull": " {{{emoji}}} Soittolistasi on täynnä, poista joitakin kappaleita ennen uusien lisäämistä.",
+			"playlistAdded": " {{{emoji}}} Lisätty onnistuneesti **{{{count}}}** kappaletta soittolistalle **{{{playlist}}}**."
+		},
+		"addnowplaying": {
+			"description": "Lisää nykyinen kappale soittolistalle.",
+			"options": {
+				"playlist": "Soittolista, jolle haluat lisätä nykyisen kappaleen."
+			},
+			"noSong": " {{{emoji}}} Ei kappaleita soitettavana.",
+			"songAlreadyInPlaylist": " {{{emoji}}} Tämä kappale on jo soittolistalla.",
+			"success": " {{{emoji}}} Lisätty kappale **{{{song}}}** soittolistaan **{{{playlist}}}**."
+		},
+		"addqueue": {
+			"description": "Lisää soittolista jonoon.",
+			"options": {
+				"name": "Soittolistan nimi, jonka haluat lisätä jonoon."
+			},
+			"noQueue": " {{{emoji}}} Ei jonossa olevia kappaleita.",
+			"success": " {{{emoji}}} Lisätty **{{{queueLength}}}** kappaletta jonossa olevasta soittolistasta **{{{playlistName}}}**."
+		},
+		"create": {
+			"description": "Luo soittolista.",
+			"options": {
+				"playlist": "Soittolistan nimi, jonka haluat luoda.",
+				"visibility": "Soittolistan näkyvyys."
+			},
+			"playlist": " {{{emoji}}} Anna soittolistalle nimi.",
+			"visibility": " {{{emoji}}} Näkyvyyden tulee olla joko `public` (julkinen) tai `private` (yksityinen).",
+			"maxPlaylists": " {{{emoji}}} Voit luoda enintään 10 soittolistaa.",
+			"playlistExists": " {{{emoji}}} Sinulla on jo soittolista nimeltä **{{{playlist}}}**.",
+			"success": " {{{emoji}}} Soittolista **{{{playlist}}}** luotu onnistuneesti."
+		},
+		"delete": {
+			"description": "Poista soittolista.",
+			"options": {
+				"playlist": "Soittolistan nimi, jonka haluat poistaa."
+			},
+			"noPlaylists": " {{{emoji}}} Sinulla ei ole soittolistaa nimeltä **{{{playlist}}}**.",
+			"buttons": {
+				"confirm": "Vahvista",
+				"cancel": "Peruuta"
+			},
+			"confirm": " Oletko varma, että haluat poistaa soittolistan **{{{playlist}}}**?",
+			"success": " {{{emoji}}} Soittolista **{{{playlist}}}** poistettu onnistuneesti.",
+			"cancel": " {{{emoji}}} Soittolistan **{{{playlist}}}** poisto peruutettu."
+		},
+		"dupes": {
+			"description": "Poista kaikki tuplakappaleet soittolistalta.",
+			"options": {
+				"playlist": "Soittolistan nimi, jonka tuplakappaleet haluat poistaa."
+			},
+			"noDupes": " {{{emoji}}} Soittolistalla **{{{playlist}}}** ei ole tuplakappaleita.",
+			"success": " {{{emoji}}} Poistettu onnistuneesti **{{{count}}}** tuplakappaletta soittolistalta **{{{playlist}}}**."
+		},
+		"edit": {
+			"description": "Muokkaa soittolistaa.",
+			"options": {
+				"playlist": "Soittolistan nimi, jonka haluat muokata.",
+				"old-name": "Vanha soittolistan nimi.",
+				"new-name": "Uusi soittolistan nimi.",
+				"playlist-visibility": "Muuta soittolistan näkyvyyttä.",
+				"visibility": "Soittolistan näkyvyys."
+			},
+			"sameName": " {{{emoji}}} Uuden nimen tulee olla eri kuin vanha nimi.",
+			"successName": " {{{emoji}}} Soittolistan **{{{oldName}}}** nimi muutettu onnistuneesti **{{{newName}}}**.",
+			"sameVisibility": " {{{emoji}}} Soittolistan **{{{playlist}}}** näkyvyys on jo **{{{visibility}}}**.",
+			"successVisibility": " {{{emoji}}} Soittolistan **{{{playlist}}}** näkyvyys muutettu onnistuneesti **{{{visibility}}}**.",
+			"buttons": {
+				"playlist": "Soittolistan nimi",
+				"visibility": "Soittolistan näkyvyys",
+				"public": "Julkinen",
+				"private": "Yksityinen"
+			},
+			"selectOption": " Valitse muokattava toiminto alla olevista painikkeista.",
+			"oldName": " Anna vanha soittolistan nimi.",
+			"newName": " Anna uusi soittolistan nimi.",
+			"cancelled": " {{{emoji}}} Soittolistan nimen muutos peruttu.",
+			"playlist": " Anna soittolistan nimi.",
+			"selectVisibility": " Valitse soittolistan näkyvyys alla olevista painikkeista.",
+			"liked": " {{{emoji}}} Et voi muokata tykättyjä kappaleita."
+		},
+		"import": {
+			"description": "Tuo soittolista soittolistan tunnisteella.",
+			"options": {
+				"id": "Soittolistan tunniste, jonka haluat tuoda."
+			},
+			"noPlaylist": " {{{emoji}}} En löytänyt soittolistaa tunnisteella **{{{id}}}**.",
+			"sameUser": " {{{emoji}}} Et voi tuoda omaa soittolistaa.",
+			"privatePlaylist": " {{{emoji}}} Et voi tuoda yksityistä soittolistaa.",
+			"success": " {{{emoji}}} Soittolista **{{{playlist}}}** tuotu onnistuneesti."
+		},
+		"list": {
+			"description": "Listaa kaikki soittolistasi.",
+			"tracks": "Kappale(et): {{{tracks}}}"
+		},
+		"load": {
+			"description": "Lataa soittolista jonoon.",
+			"options": {
+				"song": "Lataa tietty kappale soittolistalta.",
+				"name": "Soittolistan nimi, jonka haluat ladata.",
+				"track": "Kappaleen numero tai nimi, jonka haluat ladata."
+			},
+			"noPlaylists": " {{{emoji}}} Sinulla ei ole soittolistaa nimeltä **{{{playlist}}}**.",
+			"noTracks": " {{{emoji}}} Soittolistalla **{{{playlist}}}** ei ole kappaleita.",
+			"noTrackFound": " {{{emoji}}} Kappaletta numerolla tai nimellä `{{{track}}}` ei löytynyt.",
+			"trackLoaded": " {{{emoji}}} Kappale **{{{track}}}** ladattu soittolistalta **{{{playlist}}}**.",
+			"privatePlaylist": " {{{emoji}}} Et voi ladata toisen käyttäjän yksityistä soittolistaa.",
+			"playlistLoaded": " {{{emoji}}} Ladattu **{{{count}}}** kappaletta soittolistalta **{{{playlist}}}**."
+		},
+		"pl-remove": {
+			"description": "Poista kappale soittolistalta.",
+			"options": {
+				"playlist": "Soittolistan nimi, jonka kappaleen haluat poistaa.",
+				"track": "Kappaleen numero tai nimi, jonka haluat poistaa."
+			},
+			"notFound": " {{{emoji}}} Kappaletta numerolla tai nimellä ei löytynyt.",
+			"success": " {{{emoji}}} Kappale **{{{track}}}** poistettu onnistuneesti soittolistalta **{{{playlist}}}**."
+		},
+		"view": {
+			"description": "Näytä soittolista.",
+			"options": {
+				"playlist": "Soittolistan nimi, jonka haluat nähdä."
+			},
+			"footer": "Sivu {{{page}}} / {{{pages}}} | Kappaleita: {{{tracks}}} | Kesto: {{{duration}}}",
+			"buttons": {
+				"previous": "Edellinen",
+				"stop": "Pysäytä",
+				"next": "Seuraava"
+			}
+		},
+		"playradio": {
+			"description": "Toista radiokanava.",
+			"options": {
+				"station": "Radiokanavan nimi, jonka haluat kuunnella.",
+				"language": "cmd.playradio.options.language",
+				"country": "cmd.playradio.options.country"
+			},
+			"noStation": " {{{emoji}}} En löytänyt radiokanavaa tuolla nimellä.",
+			"country": "**Maa:** {{{country}}}",
+			"votes": "**Äänet:** {{{votes}}}",
+			"codec": "**Codec:** {{{codec}}}",
+			"bitrate": "**Bitrate:** {{{bitrate}}}",
+			"tags": "**Tunnisteet:** {{{tags}}}",
+			"results": " Tässä ovat hakutuloksesi:\n\n{{{results}}}",
+			"select": "Valitse kanava 1:n ja 10:n väliltä pudotusvalikosta.",
+			"added": " {{{emoji}}} Lisätty [**{{{name}}}**]({{{homepage}}}) jonoon."
+		},
+		"setup": {
+			"description": "Aseta kappalepyyntökanava.",
+			"options": {
+				"create": "Luo asetuskategoria",
+				"delete": "Poista asetuskategoria",
+				"info": "Hae asetuskategorian tiedot",
+				"change": "Muuta asetuskategoriaa",
+				"channel": "Kanava, jonka haluat asettaa."
+			},
+			"alreadySetup": " {{{emoji}}} Asetuskategoria on jo asetettu **{{{channel}}}**.",
+			"created": " {{{emoji}}} Asetuskategoria **{{{channel}}}** luotiin onnistuneesti.\n*Voit nimetä tai siirtää tämän kategorian halutessasi.\n\nHuomio: Tämän asetuksen toiminta voi lakata, jos poistat siellä olevan mallin upotuksen. (Älä poista sitä, ole kiltti.)*",
+			"notSetup": " {{{emoji}}} Asetuskategoriaa ei ole asetettu.",
+			"deleted": " {{{emoji}}} Asetuskategoria poistettiin onnistuneesti.",
+			"noChannel": " {{{emoji}}} Anna kelvollinen tekstikanava.",
+			"notTextChannel": " {{{emoji}}} Anna kelvollinen tekstikanava.",
+			"sameChannel": " {{{emoji}}} Antamasi kanava on jo tietokannassa.",
+			"join": "**Liity äänikanavaan ja lisää kappaleita nimellä/url-osoitteella.**",
+			"info": {
+				"title": "Asetuskategorian tiedot",
+				"description": "Tässä ovat asetuskategorian tiedot tälle palvelimelle",
+				"channel": "Kanava",
+				"moderator": "Moderaattori",
+				"message": "Viesti",
+				"addedAt": "Lisätty"
+			}
+		},
+		"buttonmode": {
+			"description": "Enable or disable button mode.",
+			"options": {
+				"boolean": "The boolean to set (true/false)"
+			}
+		}
+	},
+	"player": {
+		"embed": {
+			"247": " Joku katkaisi minut puhekanavasta, mutta olen yhä täällä **24/7 -tilan** ansiosta!\n\nVoit poistaa tämän käytöstä komennolla {{{cmd}}} tai komennolla {{{cmd2}}}!",
+			"nowPlaying": "Nyt soi",
+			"nowPlayingDesc": " **[{{{songName}}}]({{{songUrl}}})** Esittäjä: [{{{songAuthor}}}]({{{songAuthorUrl}}}) - Pyytäjä: {{{requester}}}",
+			"footer": "Kesto: {{{duration}}} | Jonossa: {{{queue}}} | Äänenvoimakkuus: {{{volume}}}%",
+			"end": " Kukaan ei ole kuunnellut kanavalla viimeiseen minuuttiin, joten poistun kanavalta.\n\nVoit poistaa tämän käytöstä aktivoimalla **24/7 -tilan** komennolla {{{cmd}}}!",
+			"endTitle": "Jonon päätös",
+			"endDesc": " Musiikkijonosi on nyt päättynyt. Voit lisätä musiikkia uudelleen komennolla {{{cmd}}}! Nautitko musiikista kanssani? Harkitse äänestämistä minulle: [Äänestä tästä]({{{link}}})!",
+			"queue": "Jonossa oleva raita(t)",
+			"trackLoop": "Raita-silmukka",
+			"queueLoop": "Jonon silmukka",
+			"volume": "Äänenvoimakkuus",
+			"autoplay": "Automaattitoisto",
+			"duration": "Kesto",
+			"upcoming": "Tulevat raidat",
+			"queueStats": "Jonon tilastot"
+		},
+		"error": "Kappaletta ei löydy",
+		"description": " [{{{title}}}]({{{uri}}}) ei ole saatavilla maassasi, koska se on ikärajoitettu!",
+		"buttons": {
+			"resume": "Jatka",
+			"pause": "Tauko",
+			"previous": "Edellinen",
+			"shuffle": "Satunnaistoisto",
+			"skip": "Ohita",
+			"stop": "Pysäytä",
+			"voldown": "Vähennä äänenvoimakkuutta",
+			"volup": "Lisää äänenvoimakkuutta",
+			"loop": "Toistosilmukka",
+			"like": "Tykkää"
+		},
+		"noDispatcher": " Tällä hetkellä ei ole mitään soitettavaa..",
+		"nothingPlaying": " Tällä hetkellä ei ole mitään soitettavaa.."
+	},
+	"events": {
+		"buttonHandle": {
+			"notInVoice": "Sinun täytyy liittyä puhekanavalle käyttääksesi tätä painiketta!",
+			"noPrevious": "Jonossa ei ole edellistä kappaletta.",
+			"playingPrevious": "{{{user}}} soittaa edellistä kappaletta.",
+			"nothingToSkip": "Jonossa ei ole mitään ohitettavaa.",
+			"alreadyVote": "{{{user}}} Tässä palvelimessa on jo äänestys käynnissä. Odota sen päättymistä tai peruuta se.",
+			"voteSkip": "{{{user}}} pyysi ohittamaan nykyisen kappaleen. Haluatko lopettaa äänestyksen? Tee {{{cmd}}}",
+			"voteSkipLabel": "Äänestä nykyisen kappaleen ohittamista!",
+			"alreadyVoted": "{{{user}}} Olet jo äänestänyt nykyisen kappaleen ohittamisen puolesta.",
+			"voteSkip2": "{{{user}}} pyysi ohittamaan nykyisen kappaleen.",
+			"voteSkipLabel2": "Äänestä nykyisen kappaleen ohittamista! ({{{count}}}/{{{n}}})",
+			"needVoice": "{{{user}}} Sinun täytyy liittyä ääni{{{channel}}}-kanavalle käyttääksesi tätä painiketta!",
+			"voteSkipTrack": "{{{user}}} ohittaa kappaleen, kun on saatu {{{count}}} positiivista ääntä!",
+			"notEnoughVote": " Ei tarpeeksi ääniä nykyisen kappaleen ohittamiseksi.",
+			"skipTrack": "{{{user}}} ohitti nykyisen kappaleen.",
+			"playTrack": "{{{user}}} {{{paused}}} nykyisen kappaleen.",
+			"paused": "Tauolla",
+			"resumed": "Jatkettu",
+			"stopTrack": "{{{user}}} pysäytti nykyisen kappaleen.",
+			"volMax": " Äänenvoimakkuus on jo maksimissaan.",
+			"volUp": "{{{user}}} nosti äänenvoimakkuuden **{{{vol}}}**%:iin.",
+			"volMin": " Äänenvoimakkuus on jo minimissään.",
+			"volDown": "{{{user}}} laski äänenvoimakkuuden **{{{vol}}}**%:iin.",
+			"shuffleError": "{{{user}}} Jonossa ei ole tarpeeksi kappaleita satunnaistoistoa varten.",
+			"shuffleDisabled": "{{{user}}} Satunnaistoisto pois päältä.",
+			"shuffleEnabled": "{{{user}}} Satunnaistoisto päällä.",
+			"loopSong": "{{{user}}} Toistetaan nykyistä kappaletta uudelleen.",
+			"loopQueue": "{{{user}}} Toistetaan jonoa uudelleen.",
+			"loopDisabled": "{{{user}}} Toistosilmukka pois päältä.",
+			"noTrack": "{{{user}}} Tällä hetkellä ei soiteta mitään.",
+			"liked": "{{{user}}} Tykkäsi kappaleesta **{{{title}}}**.",
+			"unliked": "{{{user}}} Peruutti tykkäämisen kappaleesta **{{{title}}}**.",
+			"notSeekable": " Tätä kappaletta ei voi kelata.",
+			"isPaused": " Tämä kappale on pysäytetty.",
+			"rewindTrack": "{{{user}}} Kelausi nykyisen kappaleen **{{{time}}}** taaksepäin.",
+			"forwardTrack": "{{{user}}} Kelasi nykyisen kappaleen **{{{time}}}** eteenpäin.",
+			"autoplayDisabled": "{{{user}}} Automaattitoisto poistettiin onnistuneesti.",
+			"autoplayEnabled": "{{{user}}} Automaattitoisto otettiin käyttöön onnistuneesti."
+		},
+		"int": {
+			"noSendMessages": " Hei! Yritin lähettää vastauksen komentoosi, mutta minulla ei ole lupaa tehdä niin. Pyydä ylläpitäjiä antamaan minulle lupa lähettää viestejä Discordissa.\n\nPalvelin: **{{{guildName}}}**\nKomento: **{{{commandName}}}**\nTarvitsetko apua lupien kanssa? Liity tukipalvelimeen: {{{supportServer}}}",
+			"noEmbedLinks": " {{{emoji}}} Botin täytyy saada lupa käyttää upotettuja linkkejä toimiakseen oikein! Pyydä ylläpitäjiä antamaan minulle tämä lupa.",
+			"noBotChannel": " En saa vastata komentoihin tässä kanavassa. Käytä {{{emoji}}} <#{{{botChannel}}}> bot-komentoja varten. Kiitos yhteistyöstäsi.",
+			"deleteFooter": "• Tämä viesti poistetaan 5 sekunnin kuluttua",
+			"disabledCommand": " Tämä komento on poistettu käytöstä tällä palvelimella kaikilta käyttäjiltä. Vain DJ:t voivat käyttää tätä komentoa.",
+			"disabledCommandList": "Poistetut komennot",
+			"noBotPermissions": " {{{emoji}}} Minulla ei ole tarvittavaa lupaa suorittaa tätä komentoa: **{{{permissions}}}**.",
+			"noUserPermissions": " {{{emoji}}} Sinulla ei ole tarvittavaa lupaa suorittaa tätä komentoa: **{{{permissions}}}**.",
+			"voteLocks": [
+				" Sinun täytyy äänestää minua käyttääksesi tätä komentoa. Voit äänestää [Top.gg]({{{link}}})",
+				" Sinun täytyy äänestää minua käyttääksesi tätä komentoa. Voit äänestää [Top.gg]({{{link}}}) tai\nVoit myös saada premium-tuen lahjoittamalla [täällä]({{{link2}}})"
+			],
+			"buttons": {
+				"vote": "Äänestä",
+				"donate": "Lahjoita",
+				"invite": "Kutsu",
+				"support": "Tuki"
+			},
+			"cooldown": " Odota **{{{timeLeft}}}** sekuntia ennen kuin käytät komentoa **{{{command}}}** uudelleen.",
+			"noDjRole": " {{{emoji}}} Sinun täytyy olla DJ-roolissa käyttääksesi tätä komentoa.",
+			"noPremium": " Tarvitset botin premium-tuen käyttääksesi tätä komentoa. Voit saada premium-tuen lahjoittamalla [täällä]({{{link}}})",
+			"voicePerm": " {{{emoji}}} Minulla ei ole tarvittavia oikeuksia liittyä äänikanavalle! Tarvitsen oikeudet `Näytä kanavat`, `Liity`, ja `Puhu`. [Oikeus-esimerkki](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\nJos ongelma jatkuu, vaihda äänikanavan sijaintiin `Eurooppa`.",
+			"voiceJoin": " {{{emoji}}} Sinun täytyy olla yhdistettynä äänikanavalle tällä palvelimella käyttääksesi tätä komentoa!\n\nMiten liityn äänikanavalle? Klikkaa kanavaa, jossa on kaiutin-ikoni (esimerkiksi täällä:  {{{channel}}}) [Katso virallinen Discord-opas](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord#h_9de92bc2-3bca-459f-8efd-e1e2739ca4f4)",
+			"voiceChannel": " {{{emoji}}} Sinun täytyy olla **{{{channel}}}** äänikanavalla käyttääksesi tätä komentoa.",
+			"noPlayer": " {{{emoji}}} En ole yhdistettynä mihinkään äänikanavalle. Käytä komentoa {{{command}}} kutsuaksesi minut.",
+			"noQueue": " {{{emoji}}} Ei ole jonossa. Käytä komentoa {{{command}}} lisätäksesi kappale jonoon.",
+			"noSong": " {{{emoji}}} Ei ole kappaleita soitettavana. Käytä komentoa {{{command}}} lisätäksesi kappale jonoon.",
+			"error": " {{{emoji}}} Virhe tapahtui komentoa suorittaessa. Ilmoita tästä virheestä [Tukipalvelimelle]({{{link}}})"
+		}
+	},
+	"get_started": {
+		"embed_title": "Moe Bot | Aloitus",
+		"embed_description": " Hei <@{{{user}}}>! Etuliitteitäni ovat: `{{{prefixList}}}`\nEsimerkiksi: `{{{prefix}}}help`, `{{{prefix}}}ping`",
+		"embed_description2": " Hei <@{{{user}}}>! Etuliitteeni on: `ei etuliitettä`, mikä tarkoittaa, että voit käyttää komentoja ilman etuliitettä.\nEsimerkiksi: `help`, `ping`"
+	},
+	"options": {
+		"title": "Vaihtoehdot komennolle {{{commandName}}}",
+		"no_description": "Ei kuvausta",
+		"options": "Vaihtoehdot",
+		"examples": "Esimerkkejä",
+		"long_des": "Tämä on sivujen välillä navigoimista varten",
+		"examples_button": "Esimerkit",
+		"footer": "<Pakollinen> | [Valinnainen] {{{long_des}}} Sivu {{{page}}} / {{{total_pages}}}",
+		"title2": "Esimerkit komennolle {{{commandName}}}"
+	},
+	"Evaluate JavaScript code": "Evaluate JavaScript code",
+	"Generate a premium key": "Generate a premium key",
+	"Give a user premium.": "Give a user premium."
+}

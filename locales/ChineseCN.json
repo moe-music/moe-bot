@@ -1,0 +1,981 @@
+{
+	"cmd": {
+		"247": {
+			"description": "启用或禁用 24/7 模式。",
+			"enabled": " {{{emoji}}} 已启用 24/7 模式。",
+			"disabled": " {{{emoji}}} 已禁用 24/7 模式。"
+		},
+		"ping": {
+			"description": "显示机器人的延迟。",
+			"author": "机器人延迟",
+			"content": "**分片**: `{{{shardPing}}}ms`\n**API**: `{{{latency}}}ms`",
+			"footer": "• 获取更多信息，请查看支持服务器的状态频道"
+		},
+		"invite": {
+			"description": "邀请机器人加入您的服务器。",
+			"buttons": {
+				"invite": "邀请 MoE",
+				"invite2": "邀请 MoE2",
+				"invite3": "邀请 MoE3",
+				"support": "支持"
+			},
+			"content": "如果您喜欢我的使用，请立即 [邀请我]({{{invite}}}) 加入您的服务器。也请不要忘记加入 [支持服务器]({{{support}}})。"
+		},
+		"help": {
+			"description": "显示命令列表或有关特定命令的信息",
+			"options": {
+				"command": "要获取帮助的命令名称或类别"
+			},
+			"title": " 命令",
+			"footer": "第 {{{page}}} 页，共 {{{pagesNum}}} 页",
+			"title2": "帮助 - {{{cmd}}}",
+			"title3": "帮助",
+			"manContent": " 这里是所有类别的列表\n{{{catagory}}}\n\n- 链接:\n[支持服务器]({{{server}}}) | [邀请]({{{invite}}}) | [投票]({{{vote}}}) | [Patreon]({{{patreon}}}) | [网站]({{{website}}}) | [文档]({{{docs}}})",
+			"footer2": "- 要获取有关命令的更多信息，请使用 {{{prefix}}}help <command> 或 {{{prefix}}}help <category>",
+			"cooldown": "冷却时间",
+			"aliases": "别名",
+			"category": "类别",
+			"examples": "示例",
+			"userPerms": "用户权限",
+			"botPerms": "机器人权限",
+			"requirements": "要求",
+			"subCommands": "子命令",
+			"subSubCommands": "子子命令",
+			"buttons": {
+				"previous": "上一页",
+				"stop": "停止",
+				"next": "下一页",
+				"home": "主页",
+				"config": "配置",
+				"music": "音乐",
+				"filter": "过滤器",
+				"general": "常规",
+				"playlists": "播放列表"
+			},
+			"notFound": "`{{{cmd}}}` 不是有效的命令或类别！",
+			"voice": {
+				"inVoice": "- 必须在语音频道中",
+				"sameVoice": "- 必须在相同的语音频道中",
+				"playing": "- 必须在此服务器中播放音乐"
+			},
+			"voteLock": "- 必须 [投票]({{{link}}}) 后才能使用此命令",
+			"premiumCmd": "- 必须拥有 [高级会员]({{{link}}}) 来使用此命令"
+		},
+		"premium": {
+			"description": "显示用户或服务器的高级会员状态。",
+			"guildPremiumStatus": "服务器高级会员状态",
+			"userPremiumStatus": "用户高级会员状态",
+			"premium": "高级会员",
+			"notPremium": "非高级会员",
+			"guildPremiumExpires": "服务器高级到期时间",
+			"userPremiumExpires": "用户高级到期时间"
+		},
+		"redeem": {
+			"description": "兑换高级代码。",
+			"options": {
+				"code": "要兑换的高级代码"
+			},
+			"noArg": "请提供要兑换的高级代码。",
+			"invalidCode": "提供的高级代码无效。",
+			"confirmation": " 您确定要兑换高级代码 `{{{code}}}` 吗？",
+			"type": "类型",
+			"expiresAt": "到期时间",
+			"buttons": {
+				"yes": "是",
+				"no": "否"
+			},
+			"alreadyPremium": "您已经是高级会员。",
+			"success": " 成功兑换您的高级代码。现在您可以使用高级命令！",
+			"canceled": "取消了高级代码的兑换。"
+		},
+		"stats": {
+			"description": "显示机器人统计信息。"
+		},
+		"support": {
+			"description": "支持服务器链接",
+			"content": " 如果您需要机器人的帮助，或者只是想与我们一起聊天，请加入[支持服务器]({{{link}}})。",
+			"buttons": {
+				"support": "支持服务器"
+			}
+		},
+		"vote": {
+			"description": "机器人投票链接",
+			"content": " 如果您喜欢这个机器人，请考虑在 [top.gg]({{{link}}}) 上为它投票。",
+			"buttons": {
+				"vote": "投票"
+			}
+		},
+		"player": {
+			"description": "显示播放器状态。",
+			"nowPlaying": "正在播放",
+			"noSong": "当前没有播放任何歌曲。",
+			"volume": "音量",
+			"totalDuration": "总时长",
+			"loopMode": "循环模式",
+			"filters": "过滤器",
+			"noFilters": "当前没有应用任何过滤器。",
+			"title": "播放器状态：{{{status}}}",
+			"online": "在线",
+			"offline": "离线"
+		},
+		"autoplay": {
+			"description": "启用或禁用自动播放模式。",
+			"enabled": " 成功切换自动播放模式为 `启用`\n机器人现在将自动将类似的歌曲添加到队列中。",
+			"disabled": " 成功切换自动播放模式为 `禁用`\n机器人将不再自动将类似的歌曲添加到队列中。"
+		},
+		"clear": {
+			"description": "清空播放器的队列或过滤器。",
+			"options": {
+				"input": "要清空的队列或过滤器"
+			},
+			"content": " 请选择要清空的队列或过滤器。（queue/filters）",
+			"queue": {
+				"noSong": "队列中没有要清除的歌曲。",
+				"success": " 成功清空队列。"
+			},
+			"filters": {
+				"noFilter": "没有要清除的过滤器。",
+				"success": " 成功清空过滤器。"
+			},
+			"buttons": {
+				"queue": "队列",
+				"filters": "过滤器"
+			}
+		},
+		"forceskip": {
+			"description": "强制跳过当前歌曲。",
+			"success": " 成功强制跳过了歌曲《{{{title}}}》。"
+		},
+		"forward": {
+			"description": "快进当前歌曲。",
+			"options": {
+				"seconds": "要快进的秒数"
+			},
+			"unseekable": "{{{emoji}}} 当前歌曲无法快进。",
+			"tooLong": "{{{emoji}}} 无法快进超过歌曲长度的时间。",
+			"success": " {{{emoji}}} 成功将歌曲快进 `{{{time}}}`。"
+		},
+		"grab": {
+			"description": "抓取当前歌曲。",
+			"dm": "{{{emoji}}} 由于您禁用了私信，我无法将歌曲发送给您。",
+			"grabbed": " {{{emoji}}} 成功抓取了这首歌曲。"
+		},
+		"join": {
+			"description": "将机器人召唤到您的语音频道。",
+			"no-perms": "{{{emoji}}} 我没有足够的权限加入您的语音频道！我需要 `查看频道`，`连接` 和 `说话` 权限。[权限示例](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\n 如果问题仍然存在，请将语音频道区域更改为 `欧洲`",
+			"already-in": "{{{emoji}}} 我已经在一个语音频道中了！",
+			"joined": " 成功加入了语音频道 {{{channel}}}"
+		},
+		"leave": {
+			"description": "离开语音频道。",
+			"not-playing": "{{{emoji}}} 我当前没有播放任何内容！",
+			"success": " {{{emoji}}} 成功离开了语音频道。"
+		},
+		"leavecleanup": {
+			"description": "从不在语音频道中的用户中删除所有歌曲。",
+			"removing": " 正在从不再在语音频道中的用户中删除歌曲，请稍候",
+			"removed": " 成功从不再在语音频道中的用户中删除了 `{{{count}}}` 首歌曲。"
+		},
+		"loop": {
+			"description": "循环当前歌曲或队列。",
+			"options": {
+				"mode": "要设置的循环模式"
+			},
+			"specify": " 请指定要循环的模式。（song, queue, off）从下面的按钮中选择。",
+			"buttons": {
+				"song": "歌曲",
+				"queue": "队列",
+				"off": "关闭"
+			},
+			"song": " {{{emoji}}} 成功循环当前歌曲。",
+			"queue": " {{{emoji}}} 成功循环队列。",
+			"off": " {{{emoji}}} 成功禁用循环。",
+			"song_already": " {{{emoji}}} 当前歌曲已经循环。",
+			"queue_already": " {{{emoji}}} 队列已经循环。",
+			"off_already": " {{{emoji}}} 循环已经被禁用。",
+			"invalid_mode": " {{{emoji}}} 提供了无效的循环模式，请提供有效的循环模式。（song, queue, off）"
+		},
+		"lyrics": {
+			"description": "显示当前歌曲或指定歌曲的歌词。",
+			"options": {
+				"song": "要搜索的歌曲名称"
+			},
+			"noQuery": " 请提供要搜索的歌曲名称。",
+			"noLyrics": " 我找不到这首歌曲的歌词。",
+			"page": "第 {{{page}}} 页（共 {{{pages}}} 页）"
+		},
+		"move": {
+			"description": "将歌曲移动到队列中的特定位置。",
+			"options": {
+				"song": "要移动的歌曲",
+				"position": "要将歌曲移动到的位置"
+			},
+			"invalidNumber": " 请提供有效的位置编号。",
+			"invalidPosition": " 提供了无效的位置，请提供有效的位置。",
+			"success": " 将 **[{{{title}}}]({{{uri}}})** 从位置 **{{{from}}}** 移动到 **{{{to}}}**。"
+		},
+		"nowplaying": {
+			"description": "显示当前播放的歌曲。",
+			"nowplaying": " 正在播放：[{{{title}}}]({{{uri}}})",
+			"author": "作者",
+			"requester": "请求者",
+			"duration": "时长",
+			"progress": "进度"
+		},
+		"pause": {
+			"description": "暂停当前歌曲。",
+			"alreadyPaused": " 当前歌曲已暂停。",
+			"paused": " 已暂停 [{{{title}}}]({{{uri}}})"
+		},
+		"play": {
+			"description": "播放来自Spotify、SoundCloud、Deezer等的歌曲...",
+			"options": {
+				"query": "搜索关键词",
+				"source": "搜索来源"
+			},
+			"no-query": "请提供要搜索的歌曲名称。",
+			"no-results": " 未找到与 `{{{query}}}` 相关的结果。",
+			"playlist-loaded": " 已从播放列表 **[{{{name}}}]({{{url}}})** 加载 `{{{count}}}` 首歌曲",
+			"footer": "感谢使用 {{{bot}}}",
+			"added": " 已将 **[{{{title}}}]({{{uri}}})** 添加到队列中（由 <@{{{requester}}}> 请求），队列位置 `#{{{position}}}`",
+			"youtube-not-supported": " 我很抱歉地通知您，由于MoE for Discord TOS的限制，我们无法使用YouTube的API来播放音乐。我们为此给您带来的任何不便表示歉意。"
+		},
+		"playprevious": {
+			"description": "播放上一首歌曲。",
+			"noPreviousTrack": " {{{emoji}}} 没有上一首歌曲可以播放。",
+			"success": " {{{emoji}}} 现在播放你的队列中的上一首歌曲！"
+		},
+		"queue": {
+			"description": "显示当前服务器的队列。",
+			"options": {
+				"page": "要查看的页码"
+			},
+			"queue": "{{{guild}}} 队列（{{{songs}}} 首歌曲）",
+			"nowPlaying": " 正在播放：[{{{title}}}]({{{uri}}}) `[{{{length}}}]` - (<@{{{requester}}}>)\n\n",
+			"upNext": " 即将播放：{{{str}}}",
+			"noSongs": " 队列中还没有歌曲！使用 {{{cmd}}} 添加一首。",
+			"page": "第 {{{page}}} 页 | {{{songs}}} 首歌曲 | 总时长 {{{duration}}}",
+			"notNumber": " {{{emoji}}} 页码必须为数字。",
+			"pageLimit": " {{{emoji}}} 页码必须小于或等于 {{{pages}}}。",
+			"clearQueue": "清空队列",
+			"noTracks": " 队列中没有歌曲。",
+			"noDjRole": " 您需要DJ角色才能使用此按钮。",
+			"clearedQueue": " {{{user}}} 清空了队列。"
+		},
+		"remove": {
+			"description": "从队列中移除一首歌曲。",
+			"options": {
+				"track": "要移除的歌曲",
+				"number": "要移除的歌曲编号或标题",
+				"dupes": "移除所有重复的歌曲"
+			},
+			"trackNotFound": " 队列中没有该编号的歌曲",
+			"invalidNumber": " 请输入1到{{{length}}}之间的编号。",
+			"removed": " 已从队列中移除 **[{{{title}}}]({{{uri}}})**。",
+			"noDupes": " 队列中没有重复的歌曲。",
+			"removedDupes": " 已从队列中移除 **{{{length}}}** 首重复歌曲。"
+		},
+		"replay": {
+			"description": "重新播放当前歌曲。",
+			"replaying": " 重新播放 [{{{title}}}]({{{uri}}})"
+		},
+		"resume": {
+			"description": "恢复当前歌曲。",
+			"notPaused": " 当前歌曲没有暂停。",
+			"resumed": " 恢复播放 [{{{title}}}]({{{uri}}})"
+		},
+		"rewind": {
+			"description": "倒带当前歌曲。",
+			"options": {
+				"time": "要倒带的时间点"
+			},
+			"notSeekable": " {{{emoji}}} 当前歌曲不支持倒带。",
+			"negativePosition": " {{{emoji}}} 位置必须在0和{{{length}}}之间。",
+			"success": " {{{emoji}}} 已将歌曲倒带至 {{{length}}}。"
+		},
+		"search": {
+			"description": "从Spotify、SoundCloud或Deezer搜索一首歌曲",
+			"options": {
+				"query": "搜索关键词",
+				"source": "搜索来源"
+			},
+			"no-playlist": " {{{emoji}}} 不支持播放列表！在搜索命令中请使用 {{{cmd}}} 命令。",
+			"no-track": " {{{emoji}}} 不支持单曲！在搜索命令中请使用 {{{cmd}}} 命令。",
+			"results": " “{{{query}}}” 的搜索结果\n\n{{{results}}}",
+			"footer": "请从下方的选择菜单中选择一首歌曲。",
+			"placeholder": "从下方列表中选择一首歌曲播放。",
+			"footerTimeout": "搜索结果超时。",
+			"no-voice": " {{{emoji}}} 您必须在语音频道中使用此菜单。",
+			"wrong-voice": " {{{emoji}}} 您必须与我在同一个语音频道中使用此菜单。",
+			"added": " {{{emoji}}} 将 {{{count}}} 首歌曲添加到队列中。"
+		},
+		"seek": {
+			"description": "在当前歌曲中跳转到指定时间。",
+			"options": {
+				"time": "要跳转的时间点"
+			},
+			"invalidPosition": " 时间必须在0和{{{length}}}之间。",
+			"seeked": " 已跳转至 `{{{position}}}` 到 `{{{time}}}`"
+		},
+		"shuffle": {
+			"description": "打乱队列。",
+			"success": " 服务器队列已成功打乱（共有 **{{{length}}}** 首歌曲）。",
+			"unshuffle": " 服务器队列已成功取消打乱（共有 **{{{length}}}** 首歌曲）。",
+			"skip": {
+				"description": "跳过当前歌曲。",
+				"nothing": " 队列中没有下一首歌曲。使用 {{{queue}}} 查看服务器队列。\n想要尝试自动播放吗？请使用 {{{autoplay}}}。",
+				"paused": " 播放器已暂停。使用恢复命令恢复播放器。\n想要恢复吗？请使用 {{{resume}}}。",
+				"voteSkip": " {{{user}}} 请求跳过当前歌曲。\n\n{{{voted}}}",
+				"skip": " 跳过 **{{{title}}}** 歌曲。"
+			},
+			"skipto": {
+				"description": "跳转至队列中的特定歌曲。",
+				"options": {
+					"number": "要跳转到的歌曲编号或标题"
+				},
+				"invalidNumber": " {{{emoji}}} 请输入1到{{{length}}}之间的歌曲编号。",
+				"success": " {{{emoji}}} 已跳转至 **[{{{title}}}]({{{uri}}})**。"
+			},
+			"stop": {
+				"description": "停止播放器并清空队列。",
+				"stopped": " {{{emoji}}} 已停止播放器并清空队列。"
+			},
+			"topsongs": {
+				"description": "显示机器人播放的热门歌曲。",
+				"noTopSongs": " 数据库中没有热门歌曲。",
+				"timesPlayed": "播放次数",
+				"selectSong": "从下方列表中选择一首歌曲播放。",
+				"added": " 将 **[{{{title}}}]({{{uri}}})** 添加到队列中。"
+			},
+			"volume": {
+				"description": "调整播放器的音量。",
+				"options": {
+					"volume": "要设置的音量"
+				},
+				"invalidVolume": " {{{emoji}}} 请输入0到100之间的数字。",
+				"success": " {{{emoji}}} 已将音量设置为 **{{{volume}}}**。"
+			},
+			"voteskip": {
+				"description": "投票跳过当前歌曲。"
+			}
+		},
+		"filters": {
+			"filters": " 当前播放歌曲应用的所有过滤器:\n\n{{{filters}}}",
+			"pitchNaN": " {{{emoji}}} 音调必须是1到5之间的数字。",
+			"description": {
+				"8d": "将8D过滤器应用于当前播放的歌曲。",
+				"bassboost": "将低音增强过滤器应用于当前播放的歌曲。",
+				"channelmix": "将声道混合过滤器应用于当前播放的歌曲。",
+				"electronic": "将电子音效过滤器应用于当前播放的歌曲。",
+				"filters": "获取当前播放歌曲可应用的过滤器列表。",
+				"jazz": "将爵士音效过滤器应用于当前播放的歌曲。",
+				"karaoke": "将卡拉OK过滤器应用于当前播放的歌曲。",
+				"lowpass": "将低通滤波器应用于当前播放的歌曲。",
+				"nightcore": "将Nightcore过滤器应用于当前播放的歌曲。",
+				"pitch": "将音高过滤器应用于当前播放的歌曲。",
+				"pop": "将流行音效过滤器应用于当前播放的歌曲。",
+				"radio": "将广播音效过滤器应用于当前播放的歌曲。",
+				"rock": "将摇滚音效过滤器应用于当前播放的歌曲。",
+				"rotation": "将旋转过滤器应用于当前播放的歌曲。",
+				"soft": "将柔和音效过滤器应用于当前播放的歌曲。",
+				"speed": "将速度过滤器应用于当前播放的歌曲。",
+				"treblebass": "将高低音效过滤器应用于当前播放的歌曲。",
+				"tremolo": "将颤音过滤器应用于当前播放的歌曲。",
+				"vaporwave": "将Vaporwave过滤器应用于当前播放的歌曲。",
+				"vibrato": "将颤音音效过滤器应用于当前播放的歌曲。"
+			},
+			"enabled": " {{{emoji}}} 已启用{{{name}}}过滤器。",
+			"disabled": " {{{emoji}}} 已禁用{{{name}}}过滤器。",
+			"speed": " {{{emoji}}} 速度过滤器已设置为 **{{{value}}}**。",
+			"options": {
+				"speed": "您要设置的速度。",
+				"pitch": "要应用的音调。"
+			}
+		},
+		"announce": {
+			"description": "配置开始播放音轨消息的设置。",
+			"options": {
+				"set": "设置音轨开始消息发送的频道。",
+				"channel": "要设置的频道。",
+				"toggle": "切换开始播放音轨消息的通告。",
+				"prunning": "切换开始播放音轨消息的修剪。",
+				"reset": "重置音轨开始消息发送的频道。"
+			},
+			"noChannel": " {{{emoji}}} 请提供一个有效的文本频道。",
+			"noTextChannel": " {{{emoji}}} 请提供一个有效的文本频道。",
+			"sameChannel": " {{{emoji}}} 您提供的频道已存在于数据库中。",
+			"setChannel": " {{{emoji}}} 已成功设置音轨开始消息发送频道为 {{{channel}}}。",
+			"noChannelInDB": " {{{emoji}}} 尚未设置音轨开始消息发送的频道。",
+			"toggle": " {{{emoji}}} 已成功{{{status}}}开始播放音轨消息。",
+			"enabled": "启用",
+			"disabled": "禁用",
+			"reset": " {{{emoji}}} 已成功重置音轨开始消息发送频道。"
+		},
+		"botchannel": {
+			"description": "设置用于监听命令的机器人频道。",
+			"options": {
+				"add": "将频道添加到机器人频道列表。",
+				"channel": "要设置的频道。",
+				"remove": "从机器人频道列表中移除频道。",
+				"clear": "清除机器人频道列表。",
+				"info": "获取机器人频道列表以及有关机器人频道的信息。"
+			},
+			"noChannel": " {{{emoji}}} 请提供一个有效的文本频道。",
+			"noTextChannel": " {{{emoji}}} 请提供一个有效的文本频道。",
+			"sameChannel": " {{{emoji}}} 您提供的频道已存在于数据库中。",
+			"maxChannel": " {{{emoji}}} 您不能添加超过5个频道到机器人频道列表。",
+			"addedChannel": " {{{emoji}}} 成功将频道 {{{channel}}} 添加到机器人频道列表。",
+			"noChannelInDB": " {{{emoji}}} 数据库中没有机器人频道。",
+			"removedChannel": " {{{emoji}}} 成功将频道 {{{channel}}} 从机器人频道列表中移除。",
+			"clearedChannel": " {{{emoji}}} 成功清除机器人频道列表。",
+			"info": ">>> **频道:** {{{channel}}}\n**管理员:** {{{moderator}}}\n**添加时间:** {{{addedAt}}}",
+			"title": "机器人频道（{{count}}）"
+		},
+		"clean": {
+			"description": "清除频道中我的消息。",
+			"success": " {{{emoji}}} 成功清除 **{{{count}}}** 条消息。"
+		},
+		"defaultvolume": {
+			"description": "设置服务器的默认音量。",
+			"options": {
+				"number": "要设置的默认音量值。"
+			},
+			"invalidNumber": " {{{emoji}}} 请输入0到200之间的数字。",
+			"success": " {{{emoji}}} 成功将默认音量设置为 **{{{volume}}}**。"
+		},
+		"disablecommands": {
+			"description": "为服务器禁用命令。",
+			"options": {
+				"add": "将命令添加到禁用命令列表。",
+				"command": "命令名称。",
+				"remove": "从禁用命令列表中移除命令。",
+				"list": "获取禁用命令列表。",
+				"clear": "清除禁用命令列表。"
+			},
+			"noCommand": " {{{emoji}}} 请提供要禁用/启用的命令名称。",
+			"commandNotExist": " {{{emoji}}} 该命令在机器人中不存在。",
+			"commandAlreadyDisabled": " {{{emoji}}} 该命令已经被禁用。",
+			"commandDisabled": " {{{emoji}}} 成功禁用 **{{{command}}}** 命令。",
+			"noDisabledCommands": " {{{emoji}}} 此命令未被禁用。",
+			"commandEnabled": " {{{emoji}}} 成功启用 **{{{command}}}** 命令。",
+			"disabledCommands": "已禁用命令",
+			"disabledCommandsForThisServer": "此服务器的已禁用命令",
+			"total": "总计: {{{total}}}",
+			"disabledCommandsCleared": " {{{emoji}}} 成功清除已禁用命令列表。"
+		},
+		"dj": {
+			"description": "设置服务器的DJ角色。",
+			"options": {
+				"add": "将角色添加到DJ角色列表。",
+				"role": "要添加/移除的角色。",
+				"remove": "从DJ角色列表中移除角色。",
+				"list": "获取DJ角色列表。",
+				"clear": "清除DJ角色列表。",
+				"toggle": "切换DJ角色。",
+				"info": "获取DJ角色列表以及有关DJ角色的信息。"
+			},
+			"noRole": " {{{emoji}}} 请提供一个有效的角色以进行添加/移除操作。",
+			"maxRoles": " {{{emoji}}} 您不能将超过5个角色添加到DJ列表。",
+			"alreadyInList": " {{{emoji}}} 您提供的角色已存在于数据库中。",
+			"addedRole": " {{{emoji}}} 成功将角色 {{{role}}} 添加到DJ列表。",
+			"noRolesSetup": " {{{emoji}}} 此服务器尚未设置DJ角色。",
+			"notInList": " {{{emoji}}} 此角色不在DJ列表中。",
+			"removedRole": " {{{emoji}}} 成功将角色 {{{role}}} 从DJ列表中移除。",
+			"list": ">>> **角色:** {{{role}}}\n**管理员:** {{{moderator}}}\n**添加时间:** {{{addedAt}}}",
+			"listTotal": " DJ角色总数: {{{total}}}",
+			"clearedList": " {{{emoji}}} 成功清除DJ列表。",
+			"enabledToggle": " {{{emoji}}} 成功启用DJ切换模式。",
+			"disabledToggle": " {{{emoji}}} 成功禁用DJ切换模式。",
+			"info": {
+				"djRoles": "DJ角色",
+				"enabled": "已启用",
+				"disabled": "已禁用",
+				"djMode": "DJ模式",
+				"djMembers": "DJ成员",
+				"description": "{{{guild}}}的DJ角色信息"
+			}
+		},
+		"fixvoice": {
+			"description": "修复机器人无法播放音乐的语音连接问题。",
+			"joining": " 重新加入语音频道并恢复音乐播放。",
+			"failed": " 无法更改语音区域，请稍后重试。",
+			"error": "{{{emoji}}} 目前无法找到任何修复方法。您可以在[支持服务器]({{{server}}})寻求帮助。",
+			"success": " {{{emoji}}} 成功将语音区域更改为 **{{{region}}}**。"
+		},
+		"forcejoin": {
+			"description": "强制机器人加入语音频道。",
+			"already-in": "{{{emoji}}} 我已经在一个语音频道中！",
+			"joined": " {{{emoji}}} 成功加入语音频道 **{{{channel}}}**。"
+		},
+		"languages": {
+			"description": "设置服务器的机器人语言",
+			"options": {
+				"add": "为服务器添加语言",
+				"language": "您想设置的语言",
+				"info": "获取有关语言的信息",
+				"reset": "将语言重置为默认语言",
+				"set": "cmd.languages.options.set"
+			},
+			"success": " {{{emoji}}} 成功将机器人的语言设置为 {{{language}}} `({{{languageCode}}})`。",
+			"info": " 此服务器当前的语言为：**{{{language}}}** `({{{languageCode}}})`。",
+			"reset": " {{{emoji}}} 成功将机器人的语言重置为默认语言。",
+			"translationProgress": "翻译进度：{{{progress}}}",
+			"selectLanguage": "请选择您想要设置的语言。"
+		},
+		"noprefix": {
+			"description": "切换用户或服务器的无前缀模式。",
+			"toggle": " 切换用户或服务器的无前缀模式。",
+			"buttons": {
+				"server": "服务器",
+				"user": "用户"
+			},
+			"premium": " 您需要成为高级用户才能使用此命令。",
+			"disabledUser": " {{{emoji}}} 成功为用户禁用无前缀模式。",
+			"enabledUser": " {{{emoji}}} 成功为用户启用无前缀模式。",
+			"noPerm": " 您没有所需的权限来使用此命令。",
+			"disabledServer": " {{{emoji}}} 成功为服务器禁用无前缀模式。",
+			"enabledServer": " {{{emoji}}} 成功为服务器启用无前缀模式。"
+		},
+		"prefix": {
+			"description": "为服务器设置前缀",
+			"options": {
+				"set": "为服务器设置前缀",
+				"prefix": "要设置/移除的前缀",
+				"info": "获取服务器的前缀",
+				"clear": "清除服务器的前缀",
+				"remove": "移除服务器的前缀"
+			},
+			"info": ">>> **前缀：** `{{{prefix}}}`\n**管理员：** {{{moderator}}}\n**添加时间：** {{{timestamp}}}",
+			"noPrefix": " {{{emoji}}} 请输入要设置的前缀。",
+			"noPrefixAdded": " {{{emoji}}} 服务器上尚未添加前缀。",
+			"prefixLength": " {{{emoji}}} 前缀长度不能超过5个字符。",
+			"prefixLimit": " {{{emoji}}} 前缀数量不能超过4个，请使用 `prefix remove` 命令移除一些前缀。",
+			"prefixCharacters": " {{{emoji}}} 前缀不能包含以下字符：`[]{}\\`",
+			"prefixExists": " {{{emoji}}} 前缀 `{{{prefix}}}` 已由 {{{moderator}}} 添加。",
+			"prefixCleared": " {{{emoji}}} 成功将所有前缀重置为默认。",
+			"prefixNotExists": " {{{emoji}}} 未添加前缀 `{{{prefix}}}`。",
+			"prefixRemoved": " {{{emoji}}} 成功移除前缀 `{{{prefix}}}`。",
+			"prefixAdded": " {{{emoji}}} 成功添加前缀 `{{{prefix}}}`。"
+		},
+		"profile": {
+			"description": "显示您的个人资料或其他人的个人资料。",
+			"options": {
+				"set": "设置您的个人资料颜色、颜色或可见性。",
+				"bio": "设置您的个人资料简介。",
+				"color": "设置您的个人资料颜色。",
+				"visibility": "设置您的个人资料可见性。",
+				"view": "查看您的个人资料或其他人的个人资料。",
+				"user": "您想查看其个人资料的用户。"
+			},
+			"noBio": " {{{emoji}}} 您需要提供个人资料简介。",
+			"bioLength": " {{{emoji}}} 个人资料简介不能超过50个字符。",
+			"bioSet": " {{{emoji}}} 成功将您的个人资料简介设置为 `{{{bio}}}`。",
+			"noColor": " {{{emoji}}} 请提供颜色十六进制代码 [示例：#FF0000](https://g.co/kgs/q5nhF7)\n\n您还可以使用以下颜色名称：{{{colors}}}。",
+			"sameColor": " {{{emoji}}} 您的颜色已设置为 `{{{color}}}`。",
+			"colorSet": " {{{emoji}}} 成功将您的颜色设置为 `{{{color}}}`。",
+			"sameVisibility": " {{{emoji}}} 您的可见性已设置为 `{{{visibility}}}`。",
+			"noVisibility": " {{{emoji}}} 请提供可见性（公开/私有）。",
+			"visibilitySet": " {{{emoji}}} 成功将您的可见性设置为 `{{{visibility}}}`。",
+			"privateProfile": " {{{emoji}}} 此用户的个人资料是私密的。"
+		},
+		"setting": {
+			"description": "更改服务器设置或获取服务器设置信息",
+			"options": {
+				"reset": "重置所有服务器设置为默认设置",
+				"info": "获取服务器设置信息"
+			},
+			"noPermission": " {{{emoji}}} 你没有`manageGuild`权限来使用该命令。",
+			"isSure": " 你确定要重置服务器设置吗？\n这将重置所有设置为默认值。\n\n**如果确定，请点击下方按钮**",
+			"buttons": {
+				"reset": "重置"
+			},
+			"fields": {
+				"247": "24/7",
+				"trackButton": "轨道按钮",
+				"dj": "DJ",
+				"botChannel": "机器人频道",
+				"disableCommand": "禁用命令",
+				"defaultVolume": "默认音量",
+				"announce": "公告",
+				"prunning": "修剪",
+				"noPrefix": "无前缀",
+				"prefix": "前缀",
+				"djRole": "DJ 角色",
+				"setup": "设置",
+				"voteSkip": "投票跳过",
+				"language": "语言",
+				"trackButtonValue": "模式: {{{mode}}}\n管理员: {{{moderator}}}\n添加时间: {{{added}}}",
+				"setupValue": "管理员: {{{moderator}}}\n添加时间: {{{added}}}\n\n**频道:**\n{{{channels}}}",
+				"djValue": "模式: {{{mode}}}\n角色: {{{roles}}}\n添加时间: {{{added}}}",
+				"defaultvolumeValue": "音量: {{{volume}}}\n添加时间: {{{added}}}\n管理员: {{{moderator}}}",
+				"announceValue": "模式: {{{mode}}}\n频道: {{{channel}}}\n添加时间: {{{added}}}\n管理员: {{{moderator}}}",
+				"prunningValue": "模式: {{{mode}}}\n添加时间: {{{added}}}\n管理员: {{{moderator}}}",
+				"disableCommandValue": "命令: {{{commands}}}\n添加时间: {{{added}}}\n管理员: {{{moderator}}}",
+				"prefixValue": "前缀: {{{prefix}}}\n添加时间: {{{added}}}\n管理员: {{{moderator}}}",
+				"voteSkipValue": "模式: {{{mode}}}\n添加时间: {{{added}}}\n管理员: {{{moderator}}}",
+				"247Value": "模式: {{{mode}}}\n添加时间: {{{added}}}\n管理员: {{{moderator}}}\n频道: {{{channel}}}",
+				"botChannelValue": "频道: {{{channel}}}\n添加时间: {{{added}}}\n管理员: {{{moderator}}}",
+				"languageValue": "语言: {{{language}}}",
+				"enabled": "启用",
+				"disabled": "禁用",
+				"none": "无"
+			},
+			"resetSuccess": " {{{emoji}}} 成功将服务器设置重置为默认设置。",
+			"info": " 这是该服务器的配置信息",
+			"noSettings": " {{{emoji}}} 该服务器没有任何设置。"
+		},
+		"voteskipsetting": {
+			"description": "配置投票跳过设置。",
+			"options": {
+				"set": "设置投票跳过模式。",
+				"action": "您要设置的操作（启用/禁用）。"
+			},
+			"success": " {{{emoji}}} 成功{{{action}}}投票跳过。",
+			"isConfirm": " 您想启用还是禁用投票跳过？",
+			"canceled": " {{{emoji}}} 投票跳过设置已取消。",
+			"alreadyEnabled": " 投票跳过已经启用。",
+			"alreadyDisabled": " 投票跳过已经禁用。",
+			"buttons": {
+				"enable": "启用",
+				"disable": "禁用",
+				"cancel": "取消"
+			}
+		},
+		"add": {
+			"description": "向播放列表添加歌曲。",
+			"options": {
+				"playlist": "您要将歌曲添加到的播放列表。",
+				"song": "您要添加到播放列表的歌曲（名称/链接）。"
+			},
+			"playlistLength": " {{{emoji}}} 播放列表名称必须介于 3 到 50 个字符之间。",
+			"noPlaylists": " {{{emoji}}} 我在您的账户中找不到任何播放列表，请先创建一个。",
+			"noResults": " {{{emoji}}} 我找不到与`{{{song}}}`相关的结果。",
+			"playlistFull": " {{{emoji}}} 您的播放列表已满，请先删除一些歌曲再添加更多。",
+			"playlistAdded": " {{{emoji}}} 成功将 **{{{count}}}** 首歌曲添加到播放列表 **{{{playlist}}}**。"
+		},
+		"addnowplaying": {
+			"description": "将当前歌曲添加到播放列表。",
+			"options": {
+				"playlist": "您要将歌曲添加到的播放列表。"
+			},
+			"noSong": " {{{emoji}}} 没有正在播放的歌曲。",
+			"songAlreadyInPlaylist": " {{{emoji}}} 此歌曲已经在播放列表中。",
+			"success": " {{{emoji}}} 已将 **{{{song}}}** 添加到 **{{{playlist}}}**。"
+		},
+		"addqueue": {
+			"description": "将播放列表添加到队列。",
+			"options": {
+				"name": "您要添加到队列的播放列表的名称。"
+			},
+			"noQueue": " {{{emoji}}} 没有队列。",
+			"success": " {{{emoji}}} 已将队列中的 **{{{queueLength}}}** 首歌曲添加到播放列表 **{{{playlistName}}}**。"
+		},
+		"create": {
+			"description": "创建一个播放列表。",
+			"options": {
+				"playlist": "您要创建的播放列表的名称。",
+				"visibility": "播放列表的可见性。"
+			},
+			"playlist": " {{{emoji}}} 请提供一个播放列表名称。",
+			"visibility": " {{{emoji}}} 可见性必须是`public`或`private`。",
+			"maxPlaylists": " {{{emoji}}} 您最多可以创建 10 个播放列表。",
+			"playlistExists": " {{{emoji}}} 您已经有一个名为 **{{{playlist}}}** 的播放列表。",
+			"success": " {{{emoji}}} 成功创建播放列表 **{{{playlist}}}**。"
+		},
+		"delete": {
+			"description": "删除一个播放列表。",
+			"options": {
+				"playlist": "要删除的播放列表的名称。"
+			},
+			"noPlaylists": " {{{emoji}}} 你没有名为 **{{{playlist}}}** 的播放列表。",
+			"buttons": {
+				"confirm": "确认",
+				"cancel": "取消"
+			},
+			"confirm": " 你确定要删除播放列表 **{{{playlist}}}** 吗？",
+			"success": " {{{emoji}}} 成功删除播放列表 **{{{playlist}}}**。",
+			"cancel": " {{{emoji}}} 取消删除播放列表 **{{{playlist}}}**。"
+		},
+		"dupes": {
+			"description": "从播放列表中删除所有重复的歌曲。",
+			"options": {
+				"playlist": "要从中删除重复歌曲的播放列表的名称。"
+			},
+			"noDupes": " {{{emoji}}} 播放列表 **{{{playlist}}}** 中没有重复的歌曲。",
+			"success": " {{{emoji}}} 成功从播放列表 **{{{playlist}}}** 中删除 **{{{count}}}** 首重复歌曲。"
+		},
+		"edit": {
+			"description": "编辑一个播放列表。",
+			"options": {
+				"playlist": "要编辑的播放列表的名称。",
+				"old-name": "旧的播放列表名称。",
+				"new-name": "新的播放列表名称。",
+				"playlist-visibility": "更改播放列表的可见性。",
+				"visibility": "播放列表的可见性。"
+			},
+			"sameName": " {{{emoji}}} 新的播放列表名称必须与旧的播放列表名称不同。",
+			"successName": " {{{emoji}}} 成功将播放列表 **{{{oldName}}}** 重命名为 **{{{newName}}}**。",
+			"sameVisibility": " {{{emoji}}} 播放列表 **{{{playlist}}}** 已经是 **{{{visibility}}}**。",
+			"successVisibility": " {{{emoji}}} 成功将播放列表 **{{{playlist}}}** 的可见性更改为 **{{{visibility}}}**。",
+			"buttons": {
+				"playlist": "播放列表名称",
+				"visibility": "播放列表可见性",
+				"public": "公开",
+				"private": "私人"
+			},
+			"selectOption": " 请从下面的按钮中选择一个选项来编辑您的播放列表。",
+			"oldName": " 输入旧的播放列表名称。",
+			"newName": " 输入新的播放列表名称。",
+			"cancelled": " {{{emoji}}} 取消播放列表名称更改。",
+			"playlist": " 输入播放列表名称。",
+			"selectVisibility": " 请从下面的按钮中选择播放列表的可见性。",
+			"liked": " {{{emoji}}} 你不能编辑喜欢的播放列表。"
+		},
+		"import": {
+			"description": "从播放列表 ID 导入一个播放列表。",
+			"options": {
+				"id": "要导入的播放列表的 ID。"
+			},
+			"noPlaylist": " {{{emoji}}} 我找不到 ID 为 **{{{id}}}** 的任何播放列表。",
+			"sameUser": " {{{emoji}}} 你不能导入自己的播放列表。",
+			"privatePlaylist": " {{{emoji}}} 你不能导入私人播放列表。",
+			"success": " {{{emoji}}} 成功导入播放列表 **{{{playlist}}}**。"
+		},
+		"list": {
+			"description": "列出所有你的播放列表。",
+			"tracks": "歌曲：{{{tracks}}}"
+		},
+		"load": {
+			"description": "将一个播放列表加载到队列。",
+			"options": {
+				"song": "从播放列表加载特定歌曲。",
+				"name": "要加载的播放列表的名称。",
+				"track": "要加载的歌曲编号或歌曲标题。"
+			},
+			"noPlaylists": " {{{emoji}}} 你没有名为 **{{{playlist}}}** 的播放列表。",
+			"noTracks": " {{{emoji}}} 播放列表 **{{{playlist}}}** 中没有歌曲。",
+			"noTrackFound": " {{{emoji}}} 没有找到编号或标题为 `{{{track}}}` 的歌曲。",
+			"trackLoaded": " {{{emoji}}} 从 **{{{playlist}}}** 中加载了 **{{{track}}}**。",
+			"privatePlaylist": " {{{emoji}}} 你不能从其他用户的私人播放列表中加载歌曲。",
+			"playlistLoaded": " {{{emoji}}} 从 **{{{playlist}}}** 中加载了 **{{{count}}}** 首歌曲。"
+		},
+		"pl-remove": {
+			"description": "从播放列表中删除一首歌曲。",
+			"options": {
+				"playlist": "要从中删除歌曲的播放列表的名称。",
+				"track": "要删除的歌曲编号或歌曲标题。"
+			},
+			"notFound": " {{{emoji}}} 找不到编号或标题为该歌曲的歌曲。",
+			"success": " {{{emoji}}} 成功从 **{{{playlist}}}** 中删除了 **{{{track}}}**。"
+		},
+		"view": {
+			"description": "查看一个播放列表。",
+			"options": {
+				"playlist": "要查看的播放列表的名称。"
+			},
+			"footer": "第 {{{page}}} 页，共 {{{pages}}} 页 | {{{tracks}}} 首歌曲 | {{{duration}}}",
+			"buttons": {
+				"previous": "上一页",
+				"stop": "停止",
+				"next": "下一页"
+			}
+		},
+		"playradio": {
+			"description": "播放收音机电台。",
+			"options": {
+				"station": "您想播放的收音机电台的名称。",
+				"language": "您想要的语言。",
+				"country": "您想要的国家。"
+			},
+			"noStation": " {{{emoji}}} 我找不到该名称的收音机电台。",
+			"country": "**国家：** {{{country}}}",
+			"votes": "**投票数：** {{{votes}}}",
+			"codec": "**编解码器：** {{{codec}}}",
+			"bitrate": "**比特率：** {{{bitrate}}}",
+			"tags": "**标签：** {{{tags}}}",
+			"results": " 这是您搜索的结果：\n\n{{{results}}}",
+			"select": "在下面的下拉菜单中选择1至10之间的电台。",
+			"added": " {{{emoji}}} 已将 [**{{{name}}}**]({{{homepage}}}) 添加到队列。"
+		},
+		"setup": {
+			"description": "设置歌曲请求频道。",
+			"options": {
+				"create": "创建设置频道",
+				"delete": "删除设置频道",
+				"info": "获取设置频道信息",
+				"change": "更改设置频道",
+				"channel": "您想要设置的频道。"
+			},
+			"alreadySetup": " {{{emoji}}} 设置频道已设置为 **{{{channel}}}**。",
+			"created": " {{{emoji}}} 成功创建了设置频道 **{{{channel}}}**。\n*您可以根据需要重新命名/移动此频道。\n\n注意：删除其中的模板嵌入可能会导致此设置停止工作。（请不要删除它。）*",
+			"notSetup": " {{{emoji}}} 未设置设置频道。",
+			"deleted": " {{{emoji}}} 成功删除了设置频道。",
+			"noChannel": " {{{emoji}}} 请提供有效的文本频道。",
+			"notTextChannel": " {{{emoji}}} 请提供有效的文本频道。",
+			"sameChannel": " {{{emoji}}} 您提供的频道已经存在于数据库中。",
+			"join": "**加入语音频道并通过名称/网址排队播放歌曲。**",
+			"info": {
+				"title": "设置频道信息",
+				"description": "这是此服务器的设置频道信息",
+				"channel": "频道",
+				"moderator": "管理员",
+				"message": "消息",
+				"addedAt": "添加于"
+			}
+		},
+		"skipto": {
+			"description": "Skip to a specific song in the queue.",
+			"options": {
+				"number": "The track number or track title to skip to."
+			}
+		},
+		"stop": {
+			"description": "Stop the player and clear the queue."
+		},
+		"volume": {
+			"description": "Change the volume of the player.",
+			"options": {
+				"volume": "The volume you want to set."
+			}
+		},
+		"voteskip": {
+			"description": "Vote to skip the current song."
+		},
+		"skip": {
+			"description": "Skip the current song."
+		},
+		"topsongs": {
+			"description": "Shows the top songs played by the bot."
+		},
+		"buttonmode": {
+			"description": "Enable or disable button mode.",
+			"options": {
+				"boolean": "The boolean to set (true/false)"
+			}
+		}
+	},
+	"player": {
+		"embed": {
+			"247": " 有人将我从语音频道断开连接，但由于**24/7 模式**，我还在这里！\n\n你可以通过使用{{{cmd}}}命令或{{{cmd2}}}命令来禁用**24/7 模式**！",
+			"nowPlaying": "正在播放",
+			"nowPlayingDesc": " **[{{{songName}}}]({{{songUrl}}})** - 作者：[{{{songAuthor}}}]({{{songAuthorUrl}}}) - 点歌人：{{{requester}}}",
+			"footer": "时长：{{{duration}}} | 队列：{{{queue}}} | 音量：{{{volume}}}%",
+			"end": " 过去 1 分钟没有人在听，正在离开频道。\n\n你可以使用{{{cmd}}}命令启用**24/7 模式**！",
+			"endTitle": "队列已结束",
+			"endDesc": " 你的音乐队列已经结束。你可以使用{{{cmd}}}命令再次添加音乐！喜欢和我一起听音乐吗？考虑[为我投票]({{{link}}})吧！",
+			"queue": "已排队音轨",
+			"trackLoop": "音轨循环",
+			"queueLoop": "队列循环",
+			"volume": "音量",
+			"autoplay": "自动播放",
+			"duration": "时长",
+			"upcoming": "即将播放的音轨",
+			"queueStats": "队列统计"
+		},
+		"error": "音轨错误",
+		"description": " [{{{title}}}]({{{uri}}}) 由于年龄限制，在你的国家不可用！",
+		"buttons": {
+			"resume": "继续",
+			"pause": "暂停",
+			"previous": "上一首",
+			"shuffle": "随机播放",
+			"skip": "跳过",
+			"stop": "停止",
+			"voldown": "音量减少",
+			"volup": "音量增加",
+			"loop": "循环",
+			"like": "喜欢"
+		},
+		"noDispatcher": " 目前没有正在播放的音乐。",
+		"nothingPlaying": " 目前没有正在播放的音乐。"
+	},
+	"events": {
+		"buttonHandle": {
+			"notInVoice": "你需要加入语音频道{{{channel}}}才能使用该按钮！",
+			"noPrevious": "队列中没有上一首歌曲。",
+			"playingPrevious": "{{{user}}}正在播放上一首音乐。",
+			"nothingToSkip": "队列中没有可以跳过的音乐。",
+			"alreadyVote": "{{{user}}} 服务器中已经有一个投票。请等待投票结束或取消它。",
+			"voteSkip": "{{{user}}} 请求跳过当前音乐。想要停止投票跳过吗？执行{{{cmd}}}命令。",
+			"voteSkipLabel": "投票跳过当前音乐！",
+			"alreadyVoted": "{{{user}}} 你已经投票跳过当前音乐了。",
+			"voteSkip2": "{{{user}}} 请求跳过当前音乐。",
+			"voteSkipLabel2": "投票跳过当前音乐！ ({{{count}}}/{{{n}}})",
+			"needVoice": "{{{user}}} 你需要加入语音频道{{{channel}}}才能使用该按钮！",
+			"voteSkipTrack": "{{{user}}} 正在等待{{{count}}}个赞成票后跳过音乐！",
+			"notEnoughVote": " 没有足够的票数跳过当前音乐。",
+			"skipTrack": "{{{user}}} 跳过了当前音乐。",
+			"playTrack": "{{{user}}} {{{paused}}} 当前音乐。",
+			"paused": "已暂停",
+			"resumed": "已继续",
+			"stopTrack": "{{{user}}} 停止了当前音乐。",
+			"volMax": " 音量已经达到最大值。",
+			"volUp": "{{{user}}} 将音量增加至 **{{{vol}}}**%。",
+			"volMin": " 音量已经达到最小值。",
+			"volDown": "{{{user}}} 将音量减少至 **{{{vol}}}**%。",
+			"shuffleError": "{{{user}}} 队列中歌曲数量不足，无法随机播放。",
+			"shuffleDisabled": "{{{user}}} 已禁用随机播放。",
+			"shuffleEnabled": "{{{user}}} 已启用随机播放。",
+			"loopSong": "{{{user}}} 正在循环当前歌曲。",
+			"loopQueue": "{{{user}}} 正在循环队列。",
+			"loopDisabled": "{{{user}}} 已禁用循环。",
+			"noTrack": "{{{user}}} 目前没有正在播放的音乐。",
+			"liked": "{{{user}}} 喜欢了 **{{{title}}}**。",
+			"unliked": "{{{user}}} 取消喜欢了 **{{{title}}}**。",
+			"notSeekable": " 这首歌不支持跳转。",
+			"isPaused": " 这首歌已暂停。",
+			"rewindTrack": "{{{user}}} 回退当前音轨至 **{{{time}}}**。",
+			"forwardTrack": "{{{user}}} 前进当前音轨至 **{{{time}}}**。",
+			"autoplayDisabled": "{{{user}}} 成功禁用自动播放。",
+			"autoplayEnabled": "{{{user}}} 成功启用自动播放。"
+		},
+		"int": {
+			"noSendMessages": " 嘿！我试图回复你的命令，但是我没有发送消息的权限。请让管理人员授予我“发送消息”的 Discord 权限。\n\n服务器：**{{{guildName}}}**\n命令：**{{{commandName}}}**\n需要关于权限的帮助吗？加入支持服务器：{{{supportServer}}}",
+			"noEmbedLinks": " {{{emoji}}} 机器人需要“嵌入链接” Discord 权限才能正常工作！请让管理人员授予我该权限。",
+			"noBotChannel": " 我不允许在该频道回答命令。请在 {{{emoji}}} <#{{{botChannel}}}> 使用机器人命令。感谢您的合作。",
+			"deleteFooter": "• 本消息将在5秒后删除",
+			"disabledCommand": " 此命令在该服务器上对所有人禁用。只有 DJ 可以使用此命令。",
+			"disabledCommandList": "已禁用命令列表",
+			"noBotPermissions": " {{{emoji}}} 我没有执行此命令所需的 **{{{permissions}}}** 权限。",
+			"noUserPermissions": " {{{emoji}}} 你没有执行此命令所需的 **{{{permissions}}}** 权限。",
+			"voteLocks": [
+				" 你需要为我投票才能使用此命令。你可以在 [Top.gg]({{{link}}}) 上为我投票。",
+				" 你需要为我投票才能使用此命令。你可以在 [Top.gg]({{{link}}}) 上为我投票，或者\n你还可以通过捐赠[在这里]({{{link2}}})获得高级版。"
+			],
+			"buttons": {
+				"vote": "投票",
+				"donate": "捐赠",
+				"invite": "邀请",
+				"support": "支持"
+			},
+			"cooldown": " 在重新使用 **{{{command}}}** 命令前，请等待 **{{{timeLeft}}}** 秒。",
+			"noDjRole": " {{{emoji}}} 你需要 DJ 角色才能使用此命令。",
+			"noPremium": " 你需要机器人高级版才能使用此命令。你可以在[这里]({{{link}}})进行捐赠，获取高级版。",
+			"voicePerm": " {{{emoji}}} 我没有加入你的语音频道所需的权限！我需要 `查看频道`、`连接` 和 `发言` 权限。[权限示例](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\n如果问题仍然存在，请将语音频道区域更改为 `欧洲`。",
+			"voiceJoin": " {{{emoji}}} 你必须连接到该服务器的语音频道才能使用此命令！\n\n如何加入语音频道？只需点击带有扬声器图标的频道（例如，点击这里：{{{channel}}}）[查看官方 Discord 指南](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord#h_9de92bc2-3bca-459f-8efd-e1e2739ca4f4)",
+			"voiceChannel": " {{{emoji}}} 你必须在 **{{{channel}}}** 语音频道中使用此命令。",
+			"noPlayer": " {{{emoji}}} 我尚未连接到任何语音频道。请使用{{{command}}}命令召唤我。",
+			"noQueue": " {{{emoji}}} 没有队列。请使用{{{command}}}命令将歌曲添加到队列中。",
+			"noSong": " {{{emoji}}} 没有正在播放的歌曲。请使用{{{command}}}命令将歌曲添加到队列中。",
+			"error": " {{{emoji}}} 在执行命令时发生错误。请将此错误报告给[支持服务器]({{{link}}})"
+		}
+	},
+	"get_started": {
+		"embed_title": "萌机器人 | 入门指南",
+		"embed_description": " 嘿，<@{{{user}}}>！我的前缀是：`{{{prefixList}}}`\n例如：`{{{prefix}}}help`，`{{{prefix}}}ping`",
+		"embed_description2": " 嘿，<@{{{user}}}>！我的前缀是：`无前缀`，这意味着你可以直接使用任何命令，不需要前缀。\n例如：`help`，`ping`"
+	},
+	"options": {
+		"title": "{{{commandName}}} 的选项",
+		"no_description": "无描述",
+		"options": "选项",
+		"examples": "示例",
+		"long_des": "用于在页面之间导航",
+		"examples_button": "示例",
+		"footer": "<必填> | [可选] {{{long_des}}} 第 {{{page}}} 页，共 {{{total_pages}}} 页",
+		"title2": "{{{commandName}}} 的示例"
+	},
+	"Evaluate JavaScript code": "Evaluate JavaScript code",
+	"Generate a premium key": "Generate a premium key",
+	"Give a user premium.": "Give a user premium."
+}

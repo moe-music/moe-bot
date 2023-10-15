@@ -15,6 +15,7 @@ import {
 } from 'discord.js';
 import { createRequire } from 'node:module';
 
+import { initI18n } from './I18n.js';
 import { InteractionHandler, MessageHandler } from '../events/index.js';
 import { MoeClient } from '../extensions/moe-client.js';
 import { JobService, Logger } from '../services/index.js';
@@ -40,6 +41,7 @@ export class Bot {
     public async start(): Promise<void> {
         this.registerListeners();
         await this.login(this.token);
+         initI18n();
     }
 
     private registerListeners(): void {

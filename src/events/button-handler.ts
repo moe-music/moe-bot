@@ -70,14 +70,9 @@ export class ButtonHandler implements BaseEvent {
         }
 
         // Get data from database
-        let data = await this.eventDataService.create({
-            user: intr.user,
-            channel: intr.channel,
-            guild: intr.guild,
-        });
 
         // Execute the button
-        await button.execute(intr, data);
+        await button.execute(intr);
     }
 
     private findButton(id: string): Button {

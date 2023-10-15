@@ -4,6 +4,7 @@ import { ApplicationCommandType, PermissionsString } from 'discord.js';
 import { RateLimiter } from 'discord.js-rate-limiter';
 
 import { Context } from './index.js';
+import { EventData } from '../models/internal-models.js';
 
 export interface BaseCommand {
     name: string;
@@ -39,7 +40,7 @@ export interface BaseCommand {
         name?: string;
         type?: ApplicationCommandType;
     };
-    execute(ctx: Context): Promise<void>;
+    execute(ctx: Context, data?: EventData): Promise<void>;
 }
 
 export enum CommandDeferType {

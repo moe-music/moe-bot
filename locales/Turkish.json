@@ -1,0 +1,957 @@
+{
+	"cmd": {
+		"247": {
+			"description": "24/7 modunu etkinleştirin veya devre dışı bırakın.",
+			"enabled": " {{{emoji}}} 24/7 modu etkinleştirildi.",
+			"disabled": " {{{emoji}}} 24/7 modu devre dışı bırakıldı."
+		},
+		"ping": {
+			"description": "Bot gecikmesini gösterir.",
+			"author": "Bot Gecikmesi",
+			"content": "**Shard**: `{{{shardPing}}}ms`\n**API**: `{{{latency}}}ms`",
+			"footer": "• Daha fazla bilgiyi destek sunucusunun durum kanalından alabilirsiniz."
+		},
+		"invite": {
+			"description": "Botu sunucunuza davet edin.",
+			"buttons": {
+				"invite": "MoE'yi Davet Et",
+				"invite2": "MoE2'yi Davet Et",
+				"invite3": "MoE3'ü Davet Et",
+				"support": "Destek Sunucusu"
+			},
+			"content": "Beni kullanmaktan keyif aldıysanız, hemen [beni davet edin]({{{invite}}}) ve ayrıca [destek sunucusuna]({{{support}}}) katılmayı unutmayın."
+		},
+		"help": {
+			"description": "Komut listesini gösterir veya belirli bir komut hakkında bilgi verir.",
+			"options": {
+				"command": "Yardım almak istediğiniz komut adı veya kategorisi"
+			},
+			"title": " Komut",
+			"footer": "Sayfa {{{page}}} / {{{pagesNum}}}",
+			"title2": "Yardım - {{{cmd}}}",
+			"title3": "Yardım",
+			"manContent": " İşte tüm kategorilerin bir listesi\n{{{catagory}}}\n\n- Bağlantılar:\n[Destek Sunucusu]({{{server}}}) | [Davet]({{{invite}}}) | [Oy]({{{vote}}}) | [Patreon]({{{patreon}}}) | [Web Sitesi]({{{website}}}) | [Belgeler]({{{docs}}})",
+			"footer2": "- Bir komut hakkında daha fazla bilgi için: {{{prefix}}}help <komut> veya {{{prefix}}}help <kategorisi>",
+			"cooldown": "Soğuma Süresi",
+			"aliases": "Takma Adlar",
+			"category": "Kategori",
+			"examples": "Örnek(ler)",
+			"userPerms": "Kullanıcı İzin(ler)i",
+			"botPerms": "Bot İzin(ler)i",
+			"requirements": "Gereklilik(ler)",
+			"subCommands": "Alt Komut(lar)",
+			"subSubCommands": "Alt Alt Komut(lar)",
+			"buttons": {
+				"previous": "Önceki",
+				"stop": "Durdur",
+				"next": "Sonraki",
+				"home": "Ana Sayfa",
+				"config": "Yapılandırma",
+				"music": "Müzik",
+				"filter": "Filtre",
+				"general": "Genel",
+				"playlists": "Oynatma Listeleri"
+			},
+			"notFound": "`{{{cmd}}}` geçerli bir komut veya kategori değil!",
+			"voice": {
+				"inVoice": "- Bir ses kanalında olmalısınız",
+				"sameVoice": "- Aynı ses kanalında olmalısınız",
+				"playing": "- Bu sunucuda müzik çalıyor olmalısınız"
+			},
+			"voteLock": "- Bu komutu kullanmak için [oy kullanmış]({{{link}}}) olmalısınız",
+			"premiumCmd": "- Bu komutu kullanmak için [premium]({{{link}}}) sahibi olmalısınız"
+		},
+		"premium": {
+			"description": "Kullanıcı veya sunucu premium durumunu gösterir.",
+			"guildPremiumStatus": "Sunucu Premium Durumu",
+			"userPremiumStatus": "Kullanıcı Premium Durumu",
+			"premium": "Premium",
+			"notPremium": "Premium Değil",
+			"guildPremiumExpires": "Sunucu Premium Bitiş Tarihi",
+			"userPremiumExpires": "Kullanıcı Premium Bitiş Tarihi"
+		},
+		"redeem": {
+			"description": "Bir premium kodunu kullanın.",
+			"options": {
+				"code": "Kullanılacak premium kodu"
+			},
+			"noArg": "Lütfen kullanılacak bir premium kodu sağlayın.",
+			"invalidCode": "Geçersiz premium kodu sağlandı.",
+			"confirmation": " `{{{code}}}` premium kodunu kullanmak istediğinizden emin misiniz?",
+			"type": "Tür",
+			"expiresAt": "Bitiş Tarihi",
+			"buttons": {
+				"yes": "Evet",
+				"no": "Hayır"
+			},
+			"alreadyPremium": "Zaten bir premium üyesisiniz.",
+			"success": " Premium kodunuzu başarıyla kullandınız. Artık premium komutlarını kullanabilirsiniz!",
+			"canceled": "Premium kodu kullanımı iptal edildi."
+		},
+		"stats": {
+			"description": "Bot istatistiklerini gösterir."
+		},
+		"support": {
+			"description": "Destek sunucusu bağlantısı",
+			"content": " Botla ilgili yardıma ihtiyacınız varsa veya sadece bizimle takılmak istiyorsanız, [destek sunucusuna]({{{link}}}) katılın.",
+			"buttons": {
+				"support": "Destek Sunucusu"
+			}
+		},
+		"vote": {
+			"description": "Bot oy bağlantısı",
+			"content": " Botu beğendiyseniz, lütfen ona [top.gg]({{{link}}}) üzerinden oy vermeyi düşünün.",
+			"buttons": {
+				"vote": "Oy Ver"
+			}
+		},
+		"player": {
+			"description": "Oynatıcı durumunu gösterir.",
+			"nowPlaying": "Şimdi Çalıyor",
+			"noSong": "Şu anda herhangi bir şarkı çalmıyor.",
+			"volume": "Ses Düzeyi",
+			"totalDuration": "Toplam Süre",
+			"loopMode": "Tekrar Modu",
+			"filters": "Filtreler",
+			"noFilters": "Şu anda herhangi bir filtre uygulanmıyor.",
+			"title": "Oynatıcı: {{{status}}}",
+			"online": "Çevrimiçi",
+			"offline": "Çevrimdışı"
+		},
+		"autoplay": {
+			"description": "Otomatik oynatma modunu etkinleştirin veya devre dışı bırakın.",
+			"enabled": " Otomatik oynatma modu `Etkin` olarak değiştirildi.\nBot artık kuyruğa otomatik olarak benzer şarkılar ekleyecek.",
+			"disabled": " Otomatik oynatma modu `Devre Dışı` olarak değiştirildi.\nBot artık kuyruğa otomatik olarak benzer şarkılar eklemeyecek."
+		},
+		"clear": {
+			"description": "Oynatıcıdan kuyruğu veya filtreleri temizleyin.",
+			"options": {
+				"input": "Temizlenecek kuyruk veya filtre"
+			},
+			"content": " Lütfen temizlemek için bir kuyruk veya filtre seçin. (kuyruk/filtreler)",
+			"queue": {
+				"noSong": "Kuyrukta temizlenecek şarkı yok.",
+				"success": " Kuyruk başarıyla temizlendi."
+			},
+			"filters": {
+				"noFilter": "Temizlenecek filtre yok.",
+				"success": " Filtreler başarıyla temizlendi."
+			},
+			"buttons": {
+				"queue": "Kuyruk",
+				"filters": "Filtreler"
+			}
+		},
+		"forceskip": {
+			"description": "Geçerli şarkıyı zorla atla.",
+			"success": " {{{title}}} şarkısı zorla atlandı."
+		},
+		"forward": {
+			"description": "Geçerli şarkıyı ileri al.",
+			"options": {
+				"seconds": "İlerletmek için saniye miktarı"
+			},
+			"unseekable": "{{{emoji}}} Geçerli şarkı ileri veya geri alınamaz.",
+			"tooLong": "{{{emoji}}} Şarkı süresinden daha fazla ileri alamazsın.",
+			"success": " {{{emoji}}} Şarkı başarıyla `{{{time}}}` kadar ileri alındı."
+		},
+		"grab": {
+			"description": "Geçerli şarkıyı al.",
+			"dm": "{{{emoji}}} Şarkıyı gönderemem çünkü DM'lerin devre dışı.",
+			"grabbed": " {{{emoji}}} Şarkı başarıyla alındı."
+		},
+		"join": {
+			"description": "Botu ses kanalına çağır.",
+			"no-perms": "{{{emoji}}} Ses kanalına katılmak için gereken izinlere sahip değilim! `Kanalları Görüntüle`, `Bağlan` ve `Konuşma` izni gerekiyor. [İzin Örneği](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\n Sorun devam ederse ses kanalı bölgesini `Europe` olarak değiştirin.",
+			"already-in": "{{{emoji}}} Zaten bir ses kanalındayım!",
+			"joined": " Ses kanalına başarıyla katıldı: {{{channel}}}"
+		},
+		"leave": {
+			"description": "Ses kanalından ayrıl.",
+			"not-playing": "{{{emoji}}} Şu anda herhangi bir şey çalmıyorum!",
+			"success": " {{{emoji}}} Ses kanalından başarıyla ayrıldı."
+		},
+		"leavecleanup": {
+			"description": "Ses kanalında olmayan kullanıcıların tüm şarkılarını kaldır.",
+			"removing": " Ses kanalında olmayan kullanıcıların şarkıları kaldırılıyor. Lütfen bekleyin.",
+			"removed": " Ses kanalında olmayan kullanıcılardan `{{{count}}}` şarkı başarıyla kaldırıldı."
+		},
+		"loop": {
+			"description": "Geçerli şarkıyı veya sırayı döngüye al.",
+			"options": {
+				"mode": "Döngü modunu belirle"
+			},
+			"specify": " Lütfen döngü modunu belirtin. (şarkı, sıra, kapalı) aşağıdaki düğmelerden seçin.",
+			"buttons": {
+				"song": "Şarkı",
+				"queue": "Sıra",
+				"off": "Kapalı"
+			},
+			"song": " {{{emoji}}} Geçerli şarkı başarıyla döngüye alındı.",
+			"queue": " {{{emoji}}} Sıra başarıyla döngüye alındı.",
+			"off": " {{{emoji}}} Döngü başarıyla devre dışı bırakıldı.",
+			"song_already": " {{{emoji}}} Geçerli şarkı zaten döngüde.",
+			"queue_already": " {{{emoji}}} Sıra zaten döngüde.",
+			"off_already": " {{{emoji}}} Döngü zaten devre dışı.",
+			"invalid_mode": " {{{emoji}}} Geçersiz döngü modu sağlandı. Lütfen geçerli bir döngü modu belirtin. (şarkı, sıra, kapalı)"
+		},
+		"lyrics": {
+			"description": "Geçerli şarkının veya bir şarkı adının sözlerini göster.",
+			"options": {
+				"song": "Aramak için şarkı adı"
+			},
+			"noQuery": " Lütfen aramak için bir şarkı adı girin.",
+			"noLyrics": " Bu şarkı için hiçbir söz bulamadım.",
+			"page": "Sayfa {{{page}}} / {{{pages}}}"
+		},
+		"move": {
+			"description": "Bir şarkıyı sıradaki belirli bir pozisyona taşı.",
+			"options": {
+				"song": "Taşınacak şarkı",
+				"position": "Şarkıyı taşımak için pozisyon"
+			},
+			"invalidNumber": " Lütfen pozisyon için geçerli bir sayı girin.",
+			"invalidPosition": " Geçersiz pozisyon sağlandı. Lütfen geçerli bir pozisyon belirtin.",
+			"success": " **[{{{title}}}]({{{uri}}})** şarkısı pozisyon **{{{from}}}** dan **{{{to}}}** a taşındı."
+		},
+		"nowplaying": {
+			"description": "Şu anda çalınan şarkıyı göster.",
+			"nowplaying": " Şimdi çalıyor: [{{{title}}}]({{{uri}}})",
+			"author": "Sanatçı",
+			"requester": "Talep eden",
+			"duration": "Süre",
+			"progress": "İlerleme"
+		},
+		"pause": {
+			"description": "Geçerli şarkıyı duraklat.",
+			"alreadyPaused": " Geçerli şarkı zaten duraklatıldı.",
+			"paused": " Duraklatıldı [{{{title}}}]({{{uri}}})"
+		},
+		"play": {
+			"description": "Spotify, soundcloud, deezer vb. kaynaklardan bir şarkı çal.",
+			"options": {
+				"query": "Aramak için sorgu",
+				"source": "Aramak için kaynak"
+			},
+			"no-query": "Lütfen aramak için bir şarkı adı girin.",
+			"no-results": " `{{{query}}}` için sonuç bulunamadı.",
+			"playlist-loaded": " **[{{{name}}}]({{{url}}})** adlı çalma listesinden `{{{count}}}` parça yüklendi",
+			"footer": "{{{bot}}} kullanmak için teşekkürler",
+			"added": " **[{{{title}}}]({{{uri}}})** şarkısı kuyruğa eklendi (talep eden <@{{{requester}}}>) kuyruk pozisyonu: `#{{{position}}}`",
+			"youtube-not-supported": " Üzgünüm, YouTube'u MoE'de desteklemediğimizi bildirmekten memnuniyet duyuyorum. YouTube'un API'sini müzik dinlemek için kullanamıyoruz. Bu size neden olduğu herhangi bir rahatsızlıktan dolayı özür dileriz."
+		},
+		"playprevious": {
+			"description": "Önceki şarkıyı çal.",
+			"noPreviousTrack": " {{{emoji}}} Çalınacak önceki bir şarkı yok.",
+			"success": " {{{emoji}}} Şu anki sıradaki şarkıyı tekrar çalınıyor!"
+		},
+		"queue": {
+			"description": "Geçerli sunucudaki kuyruğu göster.",
+			"options": {
+				"page": "Görüntülemek için sayfa numarası"
+			},
+			"queue": "{{{guild}}} için Kuyruk ({{{songs}}} şarkı)",
+			"nowPlaying": " Şimdi çalıyor: [{{{title}}}]({{{uri}}}) `[{{{length}}}]`- (<@{{{requester}}}>)\n\n",
+			"upNext": " Sıradaki: {{{str}}}",
+			"noSongs": " Henüz kuyrukta şarkı yok! Bir şarkı eklemek için {{{cmd}}} kullanın",
+			"page": "Sayfa {{{page}}} | {{{songs}}} şarkı | Toplam süre: {{{duration}}}",
+			"notNumber": " {{{emoji}}} Sayfa numarası bir sayı olmalıdır.",
+			"pageLimit": " {{{emoji}}} Sayfa numarası {{{pages}}} veya daha az olmalıdır.",
+			"clearQueue": "Kuyruğu Temizle",
+			"noTracks": " Kuyrukta şarkı yok.",
+			"noDjRole": " Bu düğmeyi kullanmak için DJ rolüne ihtiyacınız var.",
+			"clearedQueue": " {{{user}}} Kuyruğu temizledi."
+		},
+		"remove": {
+			"description": "Kuyruktan bir şarkıyı kaldırmak için.",
+			"options": {
+				"track": "Kaldırmak için şarkı",
+				"number": "Kaldırmak için şarkı numarası veya başlığı",
+				"dupes": "Şarkının tüm kopyalarını kaldır"
+			},
+			"trackNotFound": " Kuyrukta böyle bir şarkı yok",
+			"invalidNumber": " Lütfen 1 ile {{{length}}} arasında geçerli bir sayı girin.",
+			"removed": " **[{{{title}}}]({{{uri}}})** şarkısı kuyruktan kaldırıldı.",
+			"noDupes": " Kuyrukta tekrarlayan şarkı yok.",
+			"removedDupes": " **{{{length}}}** tekrarlayan şarkı kuyruktan kaldırıldı."
+		},
+		"replay": {
+			"description": "Geçerli şarkıyı tekrar çal.",
+			"replaying": " Tekrar çalınıyor [{{{title}}}]({{{uri}}})"
+		},
+		"resume": {
+			"description": "Geçerli şarkıyı devam ettir.",
+			"notPaused": " Geçerli şarkı duraklatılmamış.",
+			"resumed": " Devam ediyor [{{{title}}}]({{{uri}}})"
+		},
+		"rewind": {
+			"description": "Geçerli şarkıyı geri al.",
+			"options": {
+				"time": "Şarkıyı geri almak için zaman"
+			},
+			"notSeekable": " {{{emoji}}} Geçerli şarkı geri alınabilir değil.",
+			"negativePosition": " {{{emoji}}} Pozisyon 0 ile {{{length}}} arasında olmalıdır.",
+			"success": " {{{emoji}}} Şarkı başarıyla {{{length}}} kadar geri alındı."
+		},
+		"search": {
+			"description": "Spotify, soundcloud veya deezer'dan şarkı ara",
+			"options": {
+				"query": "Aramak için sorgu",
+				"source": "Aramak için kaynak"
+			},
+			"no-playlist": " {{{emoji}}} Çalma listeleri desteklenmiyor! Lütfen arama komutunda {{{cmd}}} komutunu kullanın.",
+			"no-track": " {{{emoji}}} Şarkılar desteklenmiyor! Lütfen arama komutunda {{{cmd}}} komutunu kullanın.",
+			"results": " `{{{query}}}` için arama sonuçları\n\n{{{results}}}",
+			"footer": "Lütfen aşağıdaki seçim menüsünden bir şarkı seçin.",
+			"placeholder": "Çalmak için listeden bir şarkı seçin.",
+			"footerTimeout": "Arama sonuçları zaman aşımına uğradı.",
+			"no-voice": " {{{emoji}}} Bu menüyü kullanmak için bir ses kanalında olmalısınız.",
+			"wrong-voice": " {{{emoji}}} Bu menüyü kullanmak için benimle aynı ses kanalında olmalısınız.",
+			"added": " {{{emoji}}} Sıraya {{{count}}} şarkı ekledi."
+		},
+		"seek": {
+			"description": "Mevcut şarkıda belirtilen bir zaman dilimine git",
+			"options": {
+				"time": "Şarkıda ilerlemek istediğiniz zaman"
+			},
+			"invalidPosition": " Zaman, 0 ile {{{length}}} arasında olmalıdır.",
+			"seeked": " `{{{position}}}` noktasına `{{{time}}}` ilerlendi"
+		},
+		"shuffle": {
+			"description": "Sırayı karıştır",
+			"success": " Sunucu sırası başarıyla karıştırıldı (**{{{length}}}** şarkı).",
+			"unshuffle": " Sunucu sırası başarıyla karıştırılmasını kaldırıldı (**{{{length}}}** şarkı)."
+		},
+		"skip": {
+			"description": "Mevcut şarkıyı atla",
+			"nothing": " Sırada başka bir şarkı yok. Sunucunun sırasını görmek için {{{queue}}} komutunu kullanın.\nOtomatik oynatmayı denemek istiyor musunuz? {{{autoplay}}} komutunu deneyin.",
+			"paused": " Oynatıcı duraklatıldı. Oynatıcıyı devam ettirmek için devam komutunu kullanın.\nDevam etmek istiyor musunuz? {{{resume}}} komutunu deneyin.",
+			"voteSkip": " {{{user}}} mevcut şarkıyı atlamak istedi.\n\n{{{voted}}}",
+			"skip": " **{{{title}}}** şarkısı atlanıyor."
+		},
+		"skipto": {
+			"description": "Sırada belirli bir şarkıya atla",
+			"options": {
+				"number": "Atlanacak şarkı numarası veya başlık"
+			},
+			"invalidNumber": " {{{emoji}}} Lütfen 1 ile {{{length}}} arasında bir şarkı numarası girin.",
+			"success": " {{{emoji}}} **[{{{title}}}]({{{uri}}})** şarkısına atlandı."
+		},
+		"stop": {
+			"description": "Oynatıcıyı durdur ve sırayı temizle",
+			"stopped": " {{{emoji}}} Oynatıcı durduruldu ve sıra temizlendi."
+		},
+		"topsongs": {
+			"description": "Bot tarafından en çok çalınan şarkıları göster",
+			"noTopSongs": " Veritabanında en çok çalınan şarkı yok.",
+			"timesPlayed": "Kez Çalındı",
+			"selectSong": "Çalmak için listeden bir şarkı seçin.",
+			"added": " **[{{{title}}}]({{{uri}}})** sıraya eklendi."
+		},
+		"volume": {
+			"description": "Oynatıcının ses düzeyini değiştir",
+			"options": {
+				"volume": "Ayarlamak istediğiniz ses düzeyi"
+			},
+			"invalidVolume": " {{{emoji}}} Lütfen 0 ile 100 arasında bir sayı girin.",
+			"success": " {{{emoji}}} Ses düzeyi **{{{volume}}}** olarak ayarlandı."
+		},
+		"voteskip": {
+			"description": "Mevcut şarkıyı atlamak için oy verin."
+		},
+		"filters": {
+			"filters": " Mevcut çalan şarkıya uygulanan tüm filtreler:\n\n{{{filters}}}",
+			"pitchNaN": " {{{emoji}}} Pitch değeri 1 ile 5 arasında bir sayı olmalıdır.",
+			"description": {
+				"8d": "Mevcut çalan şarkıya 8D filtresini uygulayın.",
+				"bassboost": "Mevcut çalan şarkıya bassboost filtresini uygulayın.",
+				"channelmix": "Mevcut çalan şarkıya channelmix filtresini uygulayın.",
+				"electronic": "Mevcut çalan şarkıya electronic filtresini uygulayın.",
+				"filters": "Mevcut çalan şarkıya uygulanabilecek filtrelerin listesini alın.",
+				"jazz": "Mevcut çalan şarkıya jazz filtresini uygulayın.",
+				"karaoke": "Mevcut çalan şarkıya karaoke filtresini uygulayın.",
+				"lowpass": "Mevcut çalan şarkıya lowpass filtresini uygulayın.",
+				"nightcore": "Mevcut çalan şarkıya nightcore filtresini uygulayın.",
+				"pitch": "Mevcut çalan şarkıya pitch filtresini uygulayın.",
+				"pop": "Mevcut çalan şarkıya pop filtresini uygulayın.",
+				"radio": "Mevcut çalan şarkıya radio filtresini uygulayın.",
+				"rock": "Mevcut çalan şarkıya rock filtresini uygulayın.",
+				"rotation": "Mevcut çalan şarkıya rotation filtresini uygulayın.",
+				"soft": "Mevcut çalan şarkıya soft filtresini uygulayın.",
+				"speed": "Mevcut çalan şarkıya speed filtresini uygulayın.",
+				"treblebass": "Mevcut çalan şarkıya treblebass filtresini uygulayın.",
+				"tremolo": "Mevcut çalan şarkıya tremolo filtresini uygulayın.",
+				"vaporwave": "Mevcut çalan şarkıya vaporwave filtresini uygulayın.",
+				"vibrato": "Mevcut çalan şarkıya vibrato filtresini uygulayın."
+			},
+			"enabled": " {{{emoji}}} {{{name}}} filtresi etkinleştirildi.",
+			"disabled": " {{{emoji}}} {{{name}}} filtresi devre dışı bırakıldı.",
+			"speed": " {{{emoji}}} Hız filtresi **{{{value}}}** olarak ayarlandı.",
+			"options": {
+				"speed": "Ayarlamak istediğiniz hız değeri.",
+				"pitch": "Uygulanacak pitch değeri."
+			}
+		},
+		"announce": {
+			"description": "Şarkı başlama mesajının duyurulmasını yapılandır",
+			"options": {
+				"set": "Şarkı başlama mesajının gönderileceği kanalı ayarlayın.",
+				"channel": "Ayarlamak istediğiniz kanal.",
+				"toggle": "Şarkı başlama mesajının duyurulmasını aç/kapatın.",
+				"prunning": "Şarkı başlama mesajının temizlenmesini aç/kapatın.",
+				"reset": "Şarkı başlama mesajının gönderileceği kanalı sıfırlayın."
+			},
+			"noChannel": " {{{emoji}}} Lütfen geçerli bir metin kanalı sağlayın.",
+			"noTextChannel": " {{{emoji}}} Lütfen geçerli bir metin kanalı sağlayın.",
+			"sameChannel": " {{{emoji}}} Sağladığınız kanal zaten veritabanında bulunmaktadır.",
+			"setChannel": " {{{emoji}}} Başlama mesajı kanalı başarıyla {{{channel}}} olarak ayarlandı.",
+			"noChannelInDB": " {{{emoji}}} Başlama mesajı kanalı veritabanına henüz kurulmamış.",
+			"toggle": " {{{emoji}}} Şarkı başlama mesajı duyurulması başarıyla {{{status}}}.",
+			"enabled": "etkinleştirildi",
+			"disabled": "devre dışı bırakıldı",
+			"reset": " {{{emoji}}} Başlama mesajı kanalı başarıyla sıfırlandı."
+		},
+		"botchannel": {
+			"description": "Komutları dinlemek için bot kanalını ayarlayın",
+			"options": {
+				"add": "Bot kanal listesine bir kanal ekleyin",
+				"channel": "Ayarlamak istediğiniz kanal.",
+				"remove": "Bot kanal listesinden bir kanal çıkarın",
+				"clear": "Bot kanal listesini temizleyin",
+				"info": "Bot kanal listesini ve bot kanalı hakkında bilgi alın"
+			},
+			"noChannel": " {{{emoji}}} Lütfen geçerli bir metin kanalı sağlayın.",
+			"noTextChannel": " {{{emoji}}} Lütfen geçerli bir metin kanalı sağlayın.",
+			"sameChannel": " {{{emoji}}} Sağladığınız kanal zaten veritabanında bulunmaktadır.",
+			"maxChannel": " {{{emoji}}} Bot kanal listesine 5'ten fazla kanal ekleyemezsiniz.",
+			"addedChannel": " {{{emoji}}} Kanal {{{channel}}} başarıyla bot kanal listesine eklendi.",
+			"noChannelInDB": " {{{emoji}}} Veritabanında bot kanalı bulunmamaktadır.",
+			"removedChannel": " {{{emoji}}} Kanal {{{channel}}} başarıyla bot kanal listesinden çıkarıldı.",
+			"clearedChannel": " {{{emoji}}} Bot kanal listesi başarıyla temizlendi.",
+			"info": ">>> **Kanal:** {{{channel}}}\n**Moderatör:** {{{moderator}}}\n**Eklenme tarihi:** {{{addedAt}}}",
+			"title": "Bot kanalları ({{count}})"
+		},
+		"clean": {
+			"description": "Kanalda kendi mesajlarımı temizleyin.",
+			"success": " {{{emoji}}} **{{{count}}}** mesaj başarıyla temizlendi."
+		},
+		"defaultvolume": {
+			"description": "Sunucu için varsayılan ses düzeyini ayarlayın",
+			"options": {
+				"number": "Varsayılan ses düzeyini ayarlamak için sayı"
+			},
+			"invalidNumber": " {{{emoji}}} Lütfen 0 ile 200 arasında bir sayı girin.",
+			"success": " {{{emoji}}} Varsayılan ses düzeyi **{{{volume}}}** olarak ayarlandı."
+		},
+		"disablecommands": {
+			"description": "Sunucu için komutları devre dışı bırak",
+			"options": {
+				"add": "Bir komutu devre dışı bırakılmış komutlar listesine ekle",
+				"command": "Komut adı",
+				"remove": "Bir komutu devre dışı bırakılmış komutlar listesinden kaldır",
+				"list": "Devre dışı bırakılmış komutlar listesini al",
+				"clear": "Devre dışı bırakılmış komutlar listesini temizle"
+			},
+			"noCommand": " {{{emoji}}} Lütfen devre dışı bırakmak/etkinleştirmek için bir komut adı belirtin.",
+			"commandNotExist": " {{{emoji}}} Bu komut botta mevcut değil",
+			"commandAlreadyDisabled": " {{{emoji}}} Bu komut zaten devre dışı bırakılmış.",
+			"commandDisabled": " {{{emoji}}} **{{{command}}}** komutu başarıyla devre dışı bırakıldı.",
+			"noDisabledCommands": " {{{emoji}}} Bu komut devre dışı bırakılmamış.",
+			"commandEnabled": " {{{emoji}}} **{{{command}}}** komutu başarıyla etkinleştirildi.",
+			"disabledCommands": "Devre Dışı Bırakılan Komutlar",
+			"disabledCommandsForThisServer": "Bu sunucu için devre dışı bırakılan komutlar",
+			"total": "Toplam: {{{total}}}",
+			"disabledCommandsCleared": " {{{emoji}}} Devre dışı bırakılan komutlar listesi başarıyla temizlendi."
+		},
+		"dj": {
+			"description": "Sunucu için DJ rolünü ayarla",
+			"options": {
+				"add": "DJ rol listesine bir rol ekle",
+				"role": "Eklemek/çıkarmak istediğiniz rol",
+				"remove": "DJ rol listesinden bir rol çıkar",
+				"list": "DJ rol listesini göster",
+				"clear": "DJ rol listesini temizle",
+				"toggle": "DJ rolünü aç/kapat",
+				"info": "DJ rol listesi ve DJ rolü hakkında bilgi al"
+			},
+			"noRole": " {{{emoji}}} Lütfen eklemek/çıkarmak için geçerli bir rol belirtin.",
+			"maxRoles": " {{{emoji}}} DJ listesine 5'ten fazla rol ekleyemezsiniz.",
+			"alreadyInList": " {{{emoji}}} Sağladığınız rol zaten veritabanında mevcut.",
+			"addedRole": " {{{emoji}}} **{{{role}}}** rolü başarıyla DJ listesine eklendi.",
+			"noRolesSetup": " {{{emoji}}} Bu sunucuda ayarlanmış DJ rolleri yok.",
+			"notInList": " {{{emoji}}} Bu rol DJ listesinde değil.",
+			"removedRole": " {{{emoji}}} **{{{role}}}** rolü başarıyla DJ listesinden çıkarıldı.",
+			"list": ">>> **Rol:** {{{role}}}\n**Moderatör:** {{{moderator}}}\n**Eklenme tarihi:** {{{addedAt}}}",
+			"listTotal": " Toplam DJ rolleri: {{{total}}}",
+			"clearedList": " {{{emoji}}} DJ listesi başarıyla temizlendi.",
+			"enabledToggle": " {{{emoji}}} DJ Geçiş modu başarıyla etkinleştirildi.",
+			"disabledToggle": " {{{emoji}}} DJ Geçiş modu başarıyla devre dışı bırakıldı.",
+			"info": {
+				"djRoles": "DJ Rol(ler)i",
+				"enabled": "Açık",
+				"disabled": "Kapalı",
+				"djMode": "DJ Modu",
+				"djMembers": "DJ Üye(ler)i",
+				"description": "DJ rol bilgileri: {{{guild}}}"
+			}
+		},
+		"fixvoice": {
+			"description": "Bot müzik çalmıyorsa ses bağlantısını düzelt",
+			"joining": " Ses kanalına tekrar katılıyor ve müziği devam ettiriyor.",
+			"failed": " Ses bölgesini değiştirmek başarısız. Lütfen daha sonra tekrar deneyin.",
+			"error": "{{{emoji}}} Şu anda düzeltecek bir şey bulamadım. Belki [destek sunucusunda]({{{server}}}) yardım isteyebilirsiniz.",
+			"success": " {{{emoji}}} Ses bölgesi başarıyla **{{{region}}}** olarak değiştirildi."
+		},
+		"forcejoin": {
+			"description": "Botu ses kanalına katılmaya zorla",
+			"already-in": "{{{emoji}}} Zaten bir ses kanalında bulunuyorum!",
+			"joined": " {{{emoji}}} **{{{channel}}}** ses kanalına başarıyla katıldı."
+		},
+		"languages": {
+			"description": "Sunucu için bot dilini ayarla",
+			"options": {
+				"add": "Sunucu için bir dil ekle",
+				"language": "Ayarlamak istediğiniz dil",
+				"info": "Dil hakkında bilgi al",
+				"reset": "Dili varsayılan dile sıfırla",
+				"set": "cmd.languages.options.set"
+			},
+			"success": " {{{emoji}}} Botun dili başarıyla **{{{language}}}** olarak ayarlandı (`{{{languageCode}}}`).",
+			"info": " Bu sunucudaki geçerli dil: **{{{language}}}** (`{{{languageCode}}}`).",
+			"reset": " {{{emoji}}} Botun dili başarıyla varsayılana sıfırlandı.",
+			"translationProgress": "Çeviri ilerlemesi: {{{progress}}}",
+			"selectLanguage": "Lütfen aşağıdaki menüden ayarlamak istediğiniz dili seçin."
+		},
+		"noprefix": {
+			"description": "Kullanıcı veya sunucu için ön ek yoklamasını açıp/kapatır",
+			"toggle": " Kullanıcı veya sunucu için ön ek yoklamasını açıp/kapatır.",
+			"buttons": {
+				"server": "Sunucu",
+				"user": "Kullanıcı"
+			},
+			"premium": " Bu komutu kullanmak için premium bir kullanıcı olmanız gerekmektedir.",
+			"disabledUser": " {{{emoji}}} Kullanıcı için ön ek yoklaması başarıyla kapatıldı.",
+			"enabledUser": " {{{emoji}}} Kullanıcı için ön ek yoklaması başarıyla açıldı.",
+			"noPerm": " Bu komutu kullanmak için gereken izinlere sahip değilsiniz.",
+			"disabledServer": " {{{emoji}}} Sunucu için ön ek yoklaması başarıyla kapatıldı.",
+			"enabledServer": " {{{emoji}}} Sunucu için ön ek yoklaması başarıyla açıldı."
+		},
+		"prefix": {
+			"description": "Sunucu için ön ek ayarla",
+			"options": {
+				"set": "Sunucu için ön ek ayarla",
+				"prefix": "Ayarlamak/çıkarmak istediğiniz ön ek",
+				"info": "Sunucudaki ön ekleri al",
+				"clear": "Sunucudaki ön ekleri temizle",
+				"remove": "Sunucudaki ön eki kaldır"
+			},
+			"info": ">>> **Ön Ek:** `{{{prefix}}}`\n**Moderatör:** {{{moderator}}}\n**Eklendiği tarih:** {{{timestamp}}}",
+			"noPrefix": " {{{emoji}}} Lütfen ayarlamak için bir ön ek belirtin.",
+			"noPrefixAdded": " {{{emoji}}} Bu sunucuya eklenmiş bir ön ek yok.",
+			"prefixLength": " {{{emoji}}} Ön ek 5 karakterden uzun olamaz.",
+			"prefixLimit": " {{{emoji}}} Ön ek sınırı 4'tür, lütfen `prefix remove` ile bazı ön ekleri kaldırın",
+			"prefixCharacters": " {{{emoji}}} Ön ek aşağıdaki karakterlerden hiçbirini içeremez: `[]{}\\`",
+			"prefixExists": " {{{emoji}}} `{{{prefix}}}` ön eki zaten {{{moderator}}} tarafından eklenmiş.",
+			"prefixCleared": " {{{emoji}}} Tüm ön ekler başarıyla varsayılana sıfırlandı.",
+			"prefixNotExists": " {{{emoji}}} `{{{prefix}}}` ön eki eklenmemiş.",
+			"prefixRemoved": " {{{emoji}}} `{{{prefix}}}` ön eki başarıyla kaldırıldı.",
+			"prefixAdded": " {{{emoji}}} `{{{prefix}}}` ön eki başarıyla eklendi."
+		},
+		"profile": {
+			"description": "Profilinizi veya başkasının profilini göster",
+			"options": {
+				"set": "Profil renginizi, rengi veya görünürlüğünüzü ayarlayın",
+				"bio": "Profil biyografinizi ayarlayın",
+				"color": "Profil renginizi ayarlayın",
+				"visibility": "Profil görünürlüğünüzü ayarlayın",
+				"view": "Profilinizi veya başkasının profilini görüntüleyin",
+				"user": "Profilini görüntülemek istediğiniz kullanıcı"
+			},
+			"noBio": " {{{emoji}}} Lütfen bir biyografi belirtin",
+			"bioLength": " {{{emoji}}} Biyografiniz 50 karakterden uzun olamaz",
+			"bioSet": " {{{emoji}}} Biyografiniz başarıyla `{{{bio}}}` olarak ayarlandı.",
+			"noColor": " {{{emoji}}} Lütfen bir renk hek kodu belirtin [Örnek: #FF0000](https://g.co/kgs/q5nhF7)\n\nAyrıca aşağıdaki renk isimlerini de kullanabilirsiniz: {{{colors}}}",
+			"sameColor": " {{{emoji}}} Renginiz zaten `{{{color}}}` olarak ayarlı.",
+			"colorSet": " {{{emoji}}} Renginiz başarıyla `{{{color}}}` olarak ayarlandı.",
+			"sameVisibility": " {{{emoji}}} Görünürlüğünüz zaten `{{{visibility}}}` olarak ayarlı.",
+			"noVisibility": " {{{emoji}}} Lütfen bir görünürlük (public/private) belirtin.",
+			"visibilitySet": " {{{emoji}}} Görünürlüğünüz başarıyla `{{{visibility}}}` olarak ayarlandı.",
+			"privateProfile": " {{{emoji}}} Bu kullanıcının profili gizli"
+		},
+		"setting": {
+			"description": "Sunucu ayarlarını değiştir veya sunucu ayarları bilgisini al",
+			"options": {
+				"reset": "Tüm sunucu ayarlarını varsayılan ayarlara sıfırla",
+				"info": "Sunucu ayarları bilgisini al"
+			},
+			"noPermission": " {{{emoji}}} Bu komutu kullanmak için `manageGuild` iznine sahip değilsiniz.",
+			"isSure": " Sunucu ayarlarını sıfırlamak istediğinize emin misiniz?\nBu tüm ayarları varsayılan değerine sıfırlar\n\n**Eminseniz, aşağıdaki düğmeye basın**",
+			"buttons": {
+				"reset": "Sıfırla"
+			},
+			"fields": {
+				"247": "24/7",
+				"trackButton": "Takip Düğmesi",
+				"dj": "DJ",
+				"botChannel": "Bot Kanalı",
+				"disableCommand": "Komut Devre Dışı Bırakıldı",
+				"defaultVolume": "Varsayılan Ses Düzeyi",
+				"announce": "Duyuru",
+				"prunning": "Kesme",
+				"noPrefix": "Önek Yok",
+				"prefix": "Önek",
+				"djRole": "DJ Rolü",
+				"setup": "Kurulum",
+				"voteSkip": "Oyla Atlama",
+				"language": "Dil",
+				"trackButtonValue": "Mod: {{{mode}}}\nModeratör: {{{moderator}}}\nEklenen: {{{added}}}",
+				"setupValue": "Moderatör: {{{moderator}}}\nEklenen: {{{added}}}\n\n**Kanallar:**\n{{{channels}}}",
+				"djValue": "Mod: {{{mode}}}\nRoller: {{{roles}}}\nEklenen: {{{added}}}",
+				"defaultvolumeValue": "Ses Düzeyi: {{{volume}}}\nEklenen: {{{added}}}\nModeratör: {{{moderator}}}",
+				"announceValue": "Mod: {{{mode}}}\nKanal: {{{channel}}}\nEklenen: {{{added}}}\nModeratör: {{{moderator}}}",
+				"prunningValue": "Mod: {{{mode}}}\nEklenen: {{{added}}}\nModeratör: {{{moderator}}}",
+				"disableCommandValue": "Komutlar: {{{commands}}}\nEklenen: {{{added}}}\nModeratör: {{{moderator}}}",
+				"prefixValue": "Önek: {{{prefix}}}\nEklenen: {{{added}}}\nModeratör: {{{moderator}}}",
+				"voteSkipValue": "Mod: {{{mode}}}\nEklenen: {{{added}}}\nModeratör: {{{moderator}}}",
+				"247Value": "Mod: {{{mode}}}\nEklenen: {{{added}}}\nModeratör: {{{moderator}}}\nKanal: {{{channel}}}",
+				"botChannelValue": "Kanal: {{{channel}}}\nEklenen: {{{added}}}\nModeratör: {{{moderator}}}",
+				"languageValue": "Dil: {{{language}}}",
+				"enabled": "Etkinleştirildi",
+				"disabled": "Devre Dışı",
+				"none": "Hiçbiri"
+			},
+			"resetSuccess": " {{{emoji}}} Sunucu ayarlarını başlangıç ​​ayarlarına başarıyla sıfırlandı.",
+			"info": " Bu sunucu için yapılandırma bilgileri burada",
+			"noSettings": " {{{emoji}}} Bu sunucu için ayarlar bulunmamaktadır."
+		},
+		"voteskipsetting": {
+			"description": "Oyla Atlama ayarlarını yapılandırın.",
+			"options": {
+				"set": "Oyla Atlama modunu ayarlayın.",
+				"action": "Ayarlamak istediğiniz eylem (etkinleştir/devre dışı bırak)."
+			},
+			"success": " {{{emoji}}} Oyla Atlama başarıyla {{{action}}}ldı.",
+			"isConfirm": " Oyla Atlama'yı etkinleştirmek veya devre dışı bırakmak istiyor musunuz?",
+			"canceled": " {{{emoji}}} Oyla Atlama ayarı iptal edildi.",
+			"alreadyEnabled": " Oyla Atlama zaten etkinleştirilmiş.",
+			"alreadyDisabled": " Oyla Atlama zaten devre dışı bırakılmış.",
+			"buttons": {
+				"enable": "Etkinleştir",
+				"disable": "Devre Dışı Bırak",
+				"cancel": "İptal"
+			}
+		},
+		"add": {
+			"description": "Bir şarkıyı çalma listesine ekleyin.",
+			"options": {
+				"playlist": "Şarkıyı eklemek istediğiniz çalma listesi.",
+				"song": "Çalma listesine eklemek istediğiniz şarkı (ad/url)."
+			},
+			"playlistLength": " {{{emoji}}} Çalma listesi adı 3 ile 50 karakter arasında olmalıdır.",
+			"noPlaylists": " {{{emoji}}} Hesabınızda çalma listesi bulunamadı, lütfen önce bir tane oluşturun.",
+			"noResults": " {{{emoji}}} `{{{song}}}` için sonuç bulunamadı.",
+			"playlistFull": " {{{emoji}}} Çalma listesi dolu, lütfen daha fazla eklemek için bazı şarkıları kaldırın.",
+			"playlistAdded": " {{{emoji}}} **{{{count}}}** şarkı başarıyla **{{{playlist}}}** çalma listesine eklendi."
+		},
+		"addnowplaying": {
+			"description": "Geçerli şarkıyı çalma listesine ekleyin.",
+			"options": {
+				"playlist": "Şarkıyı eklemek istediğiniz çalma listesi."
+			},
+			"noSong": " {{{emoji}}} Şu anda çalınan bir şarkı yok.",
+			"songAlreadyInPlaylist": " {{{emoji}}} Bu şarkı zaten çalma listesinde bulunuyor.",
+			"success": " {{{emoji}}} **{{{song}}}** şarkısı **{{{playlist}}}** çalma listesine eklendi."
+		},
+		"addqueue": {
+			"description": "Bir çalma listesini sıraya ekleyin.",
+			"options": {
+				"name": "Sıraya eklemek istediğiniz çalma listesinin adı."
+			},
+			"noQueue": " {{{emoji}}} Sıra yok.",
+			"success": " {{{emoji}}} Sıradaki **{{{queueLength}}}** şarkıyı **{{{playlistName}}}** çalma listesine ekledi."
+		},
+		"create": {
+			"description": "Bir çalma listesi oluşturun.",
+			"options": {
+				"playlist": "Oluşturmak istediğiniz çalma listesinin adı.",
+				"visibility": "Çalma listesi görünürlüğü."
+			},
+			"playlist": " {{{emoji}}} Lütfen bir çalma listesi adı belirtin.",
+			"visibility": " {{{emoji}}} Görünürlük ya `public` ya da `private` olmalıdır.",
+			"maxPlaylists": " {{{emoji}}} En fazla 10 çalma listesi oluşturabilirsiniz.",
+			"playlistExists": " {{{emoji}}} **{{{playlist}}}** adında zaten bir çalma listesi bulunmaktadır.",
+			"success": " {{{emoji}}} **{{{playlist}}}** çalma listesi başarıyla oluşturuldu."
+		},
+		"delete": {
+			"description": "Bir çalma listesi silin.",
+			"options": {
+				"playlist": "Silmek istediğiniz çalma listesinin adı."
+			},
+			"noPlaylists": " {{{emoji}}} **{{{playlist}}}** adında bir çalma listesi bulunmamaktadır.",
+			"buttons": {
+				"confirm": "Onayla",
+				"cancel": "İptal"
+			},
+			"confirm": " **{{{playlist}}}** çalma listesini silmek istediğinizden emin misiniz?",
+			"success": " {{{emoji}}} **{{{playlist}}}** çalma listesi başarıyla silindi.",
+			"cancel": " {{{emoji}}} **{{{playlist}}}** çalma listesi silme işlemi iptal edildi."
+		},
+		"dupes": {
+			"description": "Bir çalma listesindeki tüm yinelenen şarkıları kaldırın.",
+			"options": {
+				"playlist": "Yinelenenleri kaldırmak istediğiniz çalma listesinin adı."
+			},
+			"noDupes": " {{{emoji}}} **{{{playlist}}}** çalma listesinde yinelenen şarkı bulunmamaktadır.",
+			"success": " {{{emoji}}} **{{{playlist}}}** çalma listesinden **{{{count}}}** yinelenen şarkı başarıyla kaldırıldı."
+		},
+		"edit": {
+			"description": "Bir çalma listesi düzenleyin.",
+			"options": {
+				"playlist": "Düzenlemek istediğiniz çalma listesinin adı.",
+				"old-name": "Eski çalma listesi adı.",
+				"new-name": "Yeni çalma listesi adı.",
+				"playlist-visibility": "Çalma listesi görünürlüğünü değiştirin.",
+				"visibility": "Çalma listesi görünürlüğü."
+			},
+			"sameName": " {{{emoji}}} Yeni ad eski adından farklı olmalıdır.",
+			"successName": " {{{emoji}}} **{{{oldName}}}** çalma listesinin adı başarıyla **{{{newName}}}** olarak değiştirildi.",
+			"sameVisibility": " {{{emoji}}} **{{{playlist}}}** çalma listesi zaten **{{{visibility}}}**.",
+			"successVisibility": " {{{emoji}}} **{{{playlist}}}** çalma listesi görünürlüğü başarıyla **{{{visibility}}}** olarak değiştirildi.",
+			"buttons": {
+				"playlist": "Çalma listesi adı",
+				"visibility": "Çalma listesi görünürlüğü",
+				"public": "Herkese Açık",
+				"private": "Özel"
+			},
+			"selectOption": " Aşağıdaki düğmelerden çalma listesini düzenlemek için bir seçenek seçin.",
+			"oldName": " Eski çalma listesi adını girin.",
+			"newName": " Yeni çalma listesi adını girin.",
+			"cancelled": " {{{emoji}}} Çalma listesi adı değiştirme işlemi iptal edildi.",
+			"playlist": " Çalma listesi adını girin.",
+			"selectVisibility": " Aşağıdaki düğmelerden çalma listesi görünürlüğünü seçin.",
+			"liked": " {{{emoji}}} Beğenilen çalma listesini düzenleyemezsiniz."
+		},
+		"import": {
+			"description": "Çalma listesini bir çalma listesi kimliğinden içe aktar.",
+			"options": {
+				"id": "İçe aktarmak istediğiniz çalma listesinin kimliği."
+			},
+			"noPlaylist": " {{{emoji}}} **{{{id}}}** kimliğiyle hiçbir çalma listesi bulamadım.",
+			"sameUser": " {{{emoji}}} Kendi çalma listenizi içe aktaramazsınız.",
+			"privatePlaylist": " {{{emoji}}} Özel bir çalma listesi içe aktaramazsınız.",
+			"success": " {{{emoji}}} **{{{playlist}}}** çalma listesi başarıyla içe aktarıldı."
+		},
+		"list": {
+			"description": "Tüm çalma listelerinizi listeler.",
+			"tracks": "Şarkı(lar): {{{tracks}}}"
+		},
+		"load": {
+			"description": "Bir çalma listesini kuyruğa ekler.",
+			"options": {
+				"song": "Bir çalma listesinden belirli bir şarkıyı yükler.",
+				"name": "Yüklemek istediğiniz çalma listesinin adı.",
+				"track": "Yüklemek için şarkı numarası veya başlığı."
+			},
+			"noPlaylists": " {{{emoji}}} **{{{playlist}}}** adında bir çalma listeniz yok.",
+			"noTracks": " {{{emoji}}} **{{{playlist}}}** çalma listesinde şarkı bulunmuyor.",
+			"noTrackFound": " {{{emoji}}} `{{{track}}}` ile eşleşen bir şarkı bulunamadı.",
+			"trackLoaded": " {{{emoji}}} **{{{playlist}}}** çalma listesinden **{{{track}}}** yüklendi.",
+			"privatePlaylist": " {{{emoji}}} Başka bir kullanıcının özel bir çalma listesini yükleyemezsiniz.",
+			"playlistLoaded": " {{{emoji}}} **{{{playlist}}}** çalma listesinden **{{{count}}}** şarkı başarıyla yüklendi."
+		},
+		"pl-remove": {
+			"description": "Bir şarkıyı bir çalma listesinden kaldırır.",
+			"options": {
+				"playlist": "Şarkıyı çalma listesinden kaldırmak istediğiniz çalma listenin adı.",
+				"track": "Kaldırmak istediğiniz şarkının numarası veya başlığı."
+			},
+			"notFound": " {{{emoji}}} Belirtilen numarada veya başlıkta bir şarkı bulunamadı.",
+			"success": " {{{emoji}}} **{{{track}}}** şarkısı **{{{playlist}}}** çalma listesinden başarıyla kaldırıldı."
+		},
+		"view": {
+			"description": "Bir çalma listesini görüntüler.",
+			"options": {
+				"playlist": "Görüntülemek istediğiniz çalma listenin adı."
+			},
+			"footer": "Sayfa {{{page}}} / {{{pages}}} | {{{tracks}}} şarkı | {{{duration}}}",
+			"buttons": {
+				"previous": "Önceki",
+				"stop": "Durdur",
+				"next": "Sonraki"
+			}
+		},
+		"playradio": {
+			"description": "Bir radyo istasyonu çal.",
+			"options": {
+				"station": "Çalmak istediğiniz radyo istasyonunun adı.",
+				"language": "cmd.playradio.options.language",
+				"country": "cmd.playradio.options.country"
+			},
+			"noStation": " {{{emoji}}} Bu isimle bir radyo istasyonu bulamadım.",
+			"country": "**Ülke:** {{{country}}}",
+			"votes": "**Oylar:** {{{votes}}}",
+			"codec": "**Kod Çözücü:** {{{codec}}}",
+			"bitrate": "**Bit Oranı:** {{{bitrate}}}",
+			"tags": "**Etiketler:** {{{tags}}}",
+			"results": " Aramanızın sonuçları aşağıda listelenmiştir:\n\n{{{results}}}",
+			"select": "Aşağıdaki açılır menüden 1 ile 10 arasında bir istasyon seçin.",
+			"added": " {{{emoji}}} [**{{{name}}}**]({{{homepage}}}) sıraya eklendi."
+		},
+		"setup": {
+			"description": "Şarkı İstek Kanalını Kurun.",
+			"options": {
+				"create": "Kurulum kanalını oluştur",
+				"delete": "Kurulum kanalını sil",
+				"info": "Kurulum kanalı bilgisini al",
+				"change": "Kurulum kanalını değiştir",
+				"channel": "Ayarlamak istediğiniz kanal."
+			},
+			"alreadySetup": " {{{emoji}}} Kurulum kanalı zaten **{{{channel}}}** olarak ayarlanmış.",
+			"created": " {{{emoji}}} Kurulum kanalı başarıyla oluşturuldu: **{{{channel}}}**.\n*Dilerseniz bu kanalı yeniden adlandırabilir/taşıyabilirsiniz.\n\nNot: İçindeki şablon gömleği silmek, bu kurulumun çalışmasını durdurabilir. (Lütfen silmeyin.)*",
+			"notSetup": " {{{emoji}}} Kurulum kanalı ayarlanmamış.",
+			"deleted": " {{{emoji}}} Kurulum kanalı başarıyla silindi.",
+			"noChannel": " {{{emoji}}} Lütfen geçerli bir metin kanalı belirtin.",
+			"notTextChannel": " {{{emoji}}} Lütfen geçerli bir metin kanalı belirtin.",
+			"sameChannel": " {{{emoji}}} Belirttiğiniz kanal zaten veritabanında mevcut.",
+			"join": "**Bir ses kanalına katılın ve şarkıları adı/url'si ile sıraya ekleyin.**",
+			"info": {
+				"title": "Kurulum Kanalı Bilgileri",
+				"description": "Bu sunucu için kurulum kanalı bilgileri aşağıda sunulmaktadır",
+				"channel": "Kanal",
+				"moderator": "Moderatör",
+				"message": "Mesaj",
+				"addedAt": "Eklendiği Tarih"
+			}
+		},
+		"buttonmode": {
+			"description": "Enable or disable button mode.",
+			"options": {
+				"boolean": "The boolean to set (true/false)"
+			}
+		}
+	},
+	"player": {
+		"embed": {
+			"247": " Birisi beni sesli kanaldan çıkardı, ancak **24/7 modu** sayesinde hala buradayım!\n\nBu özelliği devre dışı bırakmak için {{{cmd}}} komutunu kullanarak veya {{{cmd2}}} komutunu kullanarak **24/7 modunu** kapatabilirsiniz!",
+			"nowPlaying": "Şu Anda Çalınıyor",
+			"nowPlayingDesc": " **[{{{songName}}}]({{{songUrl}}})** - [{{{songAuthor}}}]({{{songAuthorUrl}}}) tarafından - Talep Eden: {{{requester}}}",
+			"footer": "Süre: {{{duration}}} | Sıra: {{{queue}}} | Ses Düzeyi: {{{volume}}}%",
+			"end": " Bir dakikadan uzun süredir kimse dinlemiyor, kanaldan çıkıyorum.\n\nBu özelliği devre dışı bırakmak için {{{cmd}}} komutunu kullanarak **24/7 modunu** etkinleştirebilirsiniz!",
+			"endTitle": "Sıra Tamamlandı",
+			"endDesc": " Müzik sıranız şimdi sona erdi. Yeniden müzik eklemek için {{{cmd}}} komutunu kullanabilirsiniz! Benimle müzik keyfi yaşıyor musunuz? Beni [oylayarak]({{{link}}}) destekleyebilirsiniz!",
+			"queue": "Sıradaki Parça(lar)",
+			"trackLoop": "Parça Döngüsü",
+			"queueLoop": "Sıra Döngüsü",
+			"volume": "Ses Düzeyi",
+			"autoplay": "Otomatik Oynatma",
+			"duration": "Süre",
+			"upcoming": "Gelecek Parça(lar)",
+			"queueStats": "Sıra İstatistikleri"
+		},
+		"error": "Parça Hatası",
+		"description": " [{{{title}}}]({{{uri}}}) yaş kısıtlamalı olduğu için ülkenizde mevcut değil!",
+		"buttons": {
+			"resume": "Devam Et",
+			"pause": "Duraklat",
+			"previous": "Önceki",
+			"shuffle": "Karıştır",
+			"skip": "Geç",
+			"stop": "Durdur",
+			"voldown": "Ses Azalt",
+			"volup": "Ses Artır",
+			"loop": "Döngü",
+			"like": "Beğen"
+		},
+		"noDispatcher": " Şu anda hiçbir şey çalmıyor..",
+		"nothingPlaying": " Şu anda hiçbir şey çalmıyor.."
+	},
+	"events": {
+		"buttonHandle": {
+			"notInVoice": "Bu düğmeyi kullanmak için bir sesli {{{channel}}} kanalına katılmanız gerekiyor!",
+			"noPrevious": "Sırada önceki şarkı yok.",
+			"playingPrevious": "{{{user}}} önceki şarkıyı çalıyor.",
+			"nothingToSkip": "Sırayı atlamak için herhangi bir şey yok.",
+			"alreadyVote": "{{{user}}} Bu sunucuda zaten bir oy var. Lütfen bitmesini bekleyin veya iptal edin.",
+			"voteSkip": "{{{user}}} mevcut şarkıyı atlamak istedi. Oy atlamayı durdurmak ister misiniz? {{{cmd}}} yapın",
+			"voteSkipLabel": "Mevcut şarkıyı atlamak için oy verin!",
+			"alreadyVoted": "{{{user}}} Mevcut şarkıyı atlamak için zaten oy kullandınız.",
+			"voteSkip2": "{{{user}}} mevcut şarkıyı atlamak istedi.",
+			"voteSkipLabel2": "Mevcut şarkıyı atlamak için oy verin! ({{{count}}}/{{{n}}})",
+			"needVoice": "{{{user}}} Bu düğmeyi kullanmak için sesli {{{channel}}} kanalına katılmanız gerekiyor!",
+			"voteSkipTrack": "{{{user}}} {{{count}}} olumlu oydan sonra şarkıyı atlıyor!",
+			"notEnoughVote": " Mevcut şarkıyı atlamak için yeterli oy yok.",
+			"skipTrack": "{{{user}}} mevcut şarkıyı atlattı.",
+			"playTrack": "{{{user}}} mevcut şarkıyı {{{paused}}} duraklattı.",
+			"paused": "Duraklatıldı",
+			"resumed": "Devam Ediyor",
+			"stopTrack": "{{{user}}} mevcut şarkıyı durdurdu.",
+			"volMax": " Ses düzeyi zaten maksimumda.",
+			"volUp": "{{{user}}} ses düzeyini **{{{vol}}}**% olarak artırdı.",
+			"volMin": " Ses düzeyi zaten minimumda.",
+			"volDown": "{{{user}}} ses düzeyini **{{{vol}}}**% olarak azalttı.",
+			"shuffleError": "{{{user}}} Karıştırma için yeterli şarkı sırası yok.",
+			"shuffleDisabled": "{{{user}}} Karıştırma devre dışı bırakıldı.",
+			"shuffleEnabled": "{{{user}}} Karıştırma etkinleştirildi.",
+			"loopSong": "{{{user}}} Mevcut şarkıyı döngüye aldı.",
+			"loopQueue": "{{{user}}} Sırayı döngüye aldı.",
+			"loopDisabled": "{{{user}}} Döngü devre dışı bırakıldı.",
+			"noTrack": "{{{user}}} Şu anda hiçbir şey çalmıyor.",
+			"liked": "{{{user}}} **{{{title}}}** şarkısını beğendi.",
+			"unliked": "{{{user}}} **{{{title}}}** şarkısını beğenmedi.",
+			"notSeekable": " Bu şarkı sıradan atlanamaz.",
+			"isPaused": " Bu şarkı duraklatıldı.",
+			"rewindTrack": "{{{user}}} Mevcut şarkıyı **{{{time}}}** zamanına geri sarıldı.",
+			"forwardTrack": "{{{user}}} Mevcut şarkıyı **{{{time}}}** zamanına ileri sarıldı.",
+			"autoplayDisabled": "{{{user}}} Otomatik oynatma başarıyla devre dışı bırakıldı.",
+			"autoplayEnabled": "{{{user}}} Otomatik oynatma başarıyla etkinleştirildi."
+		},
+		"int": {
+			"noSendMessages": " Merhaba! Komutunuza yanıt göndermeye çalıştım; ancak bunu yapmak için iznim yok. Lütfen sunucu yetkililerinden bana `Mesaj Gönder` Discord izni vermesini isteyin.\n\nSunucu: **{{{guildName}}}**\nKomut: **{{{commandName}}}**\nİzinler konusunda yardıma mı ihtiyacınız var? Destek sunucusuna katılın: {{{supportServer}}}",
+			"noEmbedLinks": " {{{emoji}}} Botun düzgün çalışabilmesi için `Linkleri Gömme` Discord iznine sahip olması gerekiyor! Lütfen bunu sağlayacak birini sunucu yetkilisi olarak atayın.",
+			"noBotChannel": " Bu kanalda komutlara yanıt vermem izin verilmiyor. Lütfen bot komutları için {{{emoji}}} <#{{{botChannel}}}> kanalını kullanın. İşbirliğiniz için teşekkür ederim.",
+			"deleteFooter": "• Bu mesaj 5 saniye içinde silinecektir",
+			"disabledCommand": " Bu komut bu sunucuda herkes için devre dışı bırakılmıştır. Sadece DJ'ler bu komutu kullanabilir.",
+			"disabledCommandList": "Devre Dışı Bırakılan Komutlar Listesi",
+			"noBotPermissions": " {{{emoji}}} Bu komutu çalıştırmak için **{{{permissions}}}** izin(leri)im yok.",
+			"noUserPermissions": " {{{emoji}}} Bu komutu çalıştırmak için **{{{permissions}}}** izniniz yok.",
+			"voteLocks": [
+				" Bu komutu kullanmak için oy vermeniz gerekiyor. [Top.gg]'den oy verebilirsiniz: {{{link}}}",
+				" Bu komutu kullanmak için oy vermeniz gerekiyor. [Top.gg]'den oy verebilir veya\n[buraya]({{{link2}}}) bağış yaparak premium alabilirsiniz."
+			],
+			"buttons": {
+				"vote": "Oy Ver",
+				"donate": "Bağış Yap",
+				"invite": "Davet Et",
+				"support": "Destekle"
+			},
+			"cooldown": " Lütfen **{{{command}}}** komutunu tekrar kullanmadan önce **{{{timeLeft}}}** saniye daha bekleyin.",
+			"noDjRole": " {{{emoji}}} Bu komutu kullanmak için DJ rolüne ihtiyacınız var.",
+			"noPremium": " Bu komutu kullanmak için bot premiuma sahip olmanız gerekiyor. [buradan]({{{link}}}) premium alabilirsiniz.",
+			"voicePerm": " {{{emoji}}} Ses kanalınıza katılmak için gerekli izinlere sahip değilim! `Kanalları Görüntüle`, `Bağlan` ve `Konuş` izinlerine ihtiyacım var. [İzinler Örneği](https://cdn.discordapp.com/attachments/979364157541462066/1123321728123285624/moe-voice-perm.png)\nSorun devam ederse, ses kanalı bölgesini `Europe` olarak değiştirin.",
+			"voiceJoin": " {{{emoji}}} Bu sunucudaki sesli bir kanala bağlı olmanız gerekiyor! Nasıl bir sesli kanala katılabilirim? Sadece hoparlör simgesi olan bir kanala tıklayın (örneğin, buraya tıklayın:  {{{channel}}}) [Resmi Discord kılavuzunu görüntüle](https://support.discord.com/hc/en-us/articles/360045138571-Beginner-s-Guide-to-Discord#h_9de92bc2-3bca-459f-8efd-e1e2739ca4f4)",
+			"voiceChannel": " {{{emoji}}} Bu komutu kullanmak için **{{{channel}}}** sesli kanalında olmanız gerekiyor.",
+			"noPlayer": " {{{emoji}}} Hiçbir sesli kanala bağlı değilim. Lütfen beni çağırmak için {{{command}}} komutunu kullanın.",
+			"noQueue": " {{{emoji}}} Sıra yok. Lütfen şarkı eklemek için {{{command}}} komutunu kullanın.",
+			"noSong": " {{{emoji}}} Şu anda hiçbir şarkı çalmıyor. Lütfen şarkı eklemek için {{{command}}} komutunu kullanın.",
+			"error": " {{{emoji}}} Komut çalıştırılırken bir hata oluştu. Lütfen bu hatayı [Destek Sunucusuna]({{{link}}}) bildirin."
+		}
+	},
+	"get_started": {
+		"embed_title": "Moe Bot | Başlangıç",
+		"embed_description": " Merhaba <@{{{user}}}>! Önek(ler)im: `{{{prefixList}}}`\nÖrneğin: `{{{prefix}}}yardım`, `{{{prefix}}}ping`",
+		"embed_description2": " Merhaba <@{{{user}}}>! Önek'im: `önek yok`, yani herhangi bir komutu önek olmadan kullanabilirsin.\nÖrneğin: `yardım`, `ping`"
+	},
+	"options": {
+		"title": "{{{commandName}}} için Seçenekler",
+		"no_description": "Açıklama yok",
+		"options": "Seçenekler",
+		"examples": "Örnek(ler)",
+		"long_des": "Bu, sayfalar arasında gezinme içindir",
+		"examples_button": "Örnekler",
+		"footer": "<Gerekli> | [İsteğe Bağlı] {{{long_des}}} Sayfa {{{page}}} / {{{total_pages}}}",
+		"title2": "{{{commandName}}} için Örnekler"
+	},
+	"Evaluate JavaScript code": "Evaluate JavaScript code",
+	"Generate a premium key": "Generate a premium key",
+	"Give a user premium.": "Give a user premium."
+}
