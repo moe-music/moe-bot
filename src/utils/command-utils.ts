@@ -1,11 +1,7 @@
-import {
-    CommandInteraction,
-    GuildChannel,
-    ThreadChannel,
-} from 'discord.js';
+import { GuildChannel, ThreadChannel } from 'discord.js';
 
-import { FormatUtils, InteractionUtils } from './index.js';
-import { BaseCommand } from '../base/index.js';
+import { FormatUtils } from './index.js';
+import { BaseCommand, Context } from '../base/index.js';
 import { Permission } from '../models/enum-helpers/index.js';
 
 export class CommandUtils {
@@ -13,8 +9,7 @@ export class CommandUtils {
         let found = [...commands];
         let closestMatch: BaseCommand;
         for (let [index, commandPart] of commandParts.entries()) {
-            found =
-                found.filter(command => command.name[index] === commandPart);
+            found = found.filter(command => command.name[index] === commandPart);
             if (found.length === 0) {
                 return closestMatch;
             }
@@ -23,8 +18,7 @@ export class CommandUtils {
                 return found[0];
             }
 
-            let exactMatch =
-                found.find(command => command.name.length === index + 1);
+            let exactMatch = found.find(command => command.name.length === index + 1);
             if (exactMatch) {
                 closestMatch = exactMatch;
             }
@@ -32,15 +26,11 @@ export class CommandUtils {
         return closestMatch;
     }
 
-    public static async runChecks(
-        command: BaseCommand,
-        intr: CommandInteraction
-    ): Promise<boolean> {
+    public static async runChecks(command: BaseCommand, ctx: Context): Promise<boolean> {
         if (command.cooldown) {
-            let limited = command.cooldown.take(intr.user.id);
+            let limited = command.cooldown.take(ctx.user.id);
             if (limited) {
-                await InteractionUtils.send(
-                    intr,
+                await ctx.sendMessage(
                     `Please wait ${FormatUtils.duration(
                         command.cooldown.interval
                     )} before using this command again.`
@@ -50,18 +40,19 @@ export class CommandUtils {
         }
 
         if (
-            (intr.channel instanceof GuildChannel || intr.channel instanceof ThreadChannel) &&
-            !intr.channel.permissionsFor(intr.client.user).has(command.permissions.bot)
+            (ctx.channel instanceof GuildChannel || ctx.channel instanceof ThreadChannel) &&
+            !ctx.channel.permissionsFor(ctx.client.user).has(command.permissions.bot)
         ) {
-            await InteractionUtils.send(
-                intr,
+            await ctx.sendMessage(
                 `I'm missing the following permissions: ${command.permissions.bot
                     .map(perm => `**${Permission.Data[perm].displayName()}**`)
                     .join(', ')}`
             );
             return false;
         }
-
+        if (ctx.isInteraction && command.slash) {
+            return true;
+        }
         return true;
     }
 }

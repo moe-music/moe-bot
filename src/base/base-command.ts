@@ -23,15 +23,18 @@ export interface BaseCommand {
         bot: PermissionsString[];
         dev: boolean;
         vote: boolean;
-        dj: boolean;
-        guildOnly: boolean;
     };
     premium: boolean;
-    voice: {
+    voice?: {
         inVoice: boolean;
         activePlayer: boolean;
         playingPlayer: boolean;
     };
+    dj?: {
+        require: boolean;
+        prem: PermissionsString[];
+    }
+    slash?: boolean;
     contextMenu?: {
         name?: string;
         type?: ApplicationCommandType;

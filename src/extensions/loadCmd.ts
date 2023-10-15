@@ -3,7 +3,6 @@ import { readdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { MoeClient } from './moe-client.js';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export function loadCommands(): RESTPostAPIApplicationCommandsJSONBody[] {
@@ -14,8 +13,8 @@ export function loadCommands(): RESTPostAPIApplicationCommandsJSONBody[] {
             file.endsWith('.js')
         );
         Catagory.forEach(async command => {
-            const Command = (await import(`../commands/${file}/${command}`)).default;
-            const commandClass = new Command(this, command);
+            const Command = (await import(`../commands/${file}/${command}`));
+            const commandClass = new Command();
             if (commandClass.slash) {
                 const data = {
                     name: commandClass.name,
@@ -48,28 +47,6 @@ export function loadCommands(): RESTPostAPIApplicationCommandsJSONBody[] {
                 const json = JSON.stringify(data);
                 cmd.push(JSON.parse(json));
             }
-        });
-    });
-    return cmd;
-}
-
-export function loadMessageCmd(client: MoeClient): string[] {
-    let cmd: string[] = [];
-    const commandFiles = readdirSync(join(__dirname, '../commands'));
-    commandFiles.forEach(async file => {
-        const Catagory = readdirSync(join(__dirname, `../commands/${file}`)).filter(file =>
-            file.endsWith('.js')
-        );
-        Catagory.forEach(async command => {
-            const Command = (await import(`../commands/${file}/${command}`)).default;
-            const commandClass = new Command(this, command);
-            commandClass.category = file;
-            commandClass.file = command;
-            commandClass.fileName = command.split('.')[0];
-            client.commands.set(commandClass.name, commandClass);
-            commandClass.aliases.forEach((alias: string) => {
-                client.aliases.set(alias, commandClass.name);
-            });
         });
     });
     return cmd;

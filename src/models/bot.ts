@@ -15,7 +15,7 @@ import {
 } from 'discord.js';
 import { createRequire } from 'node:module';
 
-import { InteractionHandler } from '../events/index.js';
+import { InteractionHandler, MessageHandler } from '../events/index.js';
 import { MoeClient } from '../extensions/moe-client.js';
 import { JobService, Logger } from '../services/index.js';
 import { PartialUtils } from '../utils/index.js';
@@ -32,6 +32,7 @@ export class Bot {
     constructor(
         private token: string,
         private client: MoeClient,
+        private messageHandler: MessageHandler,
         private interactionHandler: InteractionHandler,
         private jobService: JobService
     ) {}
@@ -122,7 +123,7 @@ export class Bot {
                 return;
             }
 
-            // await this.messageHandler.process(msg);
+            await this.messageHandler.process(msg);
         } catch (error) {
             this.logger.error(`Error processing message: ${error}`);
         }
