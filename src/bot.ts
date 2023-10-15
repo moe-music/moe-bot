@@ -32,8 +32,6 @@ async function start(): Promise<void> {
     let jobs: Job[] = [
         // TODO: Add new jobs here
     ];
-
-    // Event handlers
     // Bot
     let bot = new Bot(
         Config.client.token,

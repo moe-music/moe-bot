@@ -31,7 +31,7 @@ export class UpdateServerCountJob extends Job {
 
     public async run(): Promise<void> {
         let serverCount = await ShardUtils.serverCount(this.shardManager);
-
+        let shardCount = ShardUtils.shardIds(this.shardManager).length.toString();
         let type = ActivityType.Streaming;
         let name = `to ${serverCount.toLocaleString()} servers`;
         let url = `https://www.twitch.tv/${Config.client.username}`;
@@ -43,14 +43,14 @@ export class UpdateServerCountJob extends Job {
             { context: { type, name, url } }
         );
 
-        this.logger.info(
-            `Updated server count to ${serverCount.toLocaleString()}`
-        );
+        this.logger.info(`Updated server count to ${serverCount.toLocaleString()}`);
 
         for (let botSite of this.botSites) {
             try {
                 let body = JSON.parse(
-                    botSite.body.replaceAll('{{SERVER_COUNT}}', serverCount.toString())
+                    botSite.body
+                        .replaceAll('{{SERVER_COUNT}}', serverCount.toString())
+                        .replaceAll('{{SHARD_COUNT}}', shardCount)
                 );
                 let res = await this.httpService.post(botSite.url, botSite.authorization, body);
 
@@ -58,9 +58,7 @@ export class UpdateServerCountJob extends Job {
                     throw res;
                 }
             } catch (error) {
-                this.logger.error(
-                    `Error updating server count on ${botSite.name}: ${error}`
-                );
+                this.logger.error(`Error updating server count on ${botSite.name}: ${error}`);
                 continue;
             }
             this.logger.info(`Updated server count on ${botSite.name}`);

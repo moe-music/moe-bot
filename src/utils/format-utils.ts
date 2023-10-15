@@ -29,7 +29,7 @@ export class FormatUtils {
         let name = [command.name, ...subParts].join(' ');
         return `</${name}:${command.id}>`;
     }
-
+    
     public static duration(milliseconds: number): string {
         return Duration.fromObject(
             Object.fromEntries(
@@ -52,6 +52,22 @@ export class FormatUtils {
     }
 
     public static fileSize(bytes: number): string {
-        return filesize(bytes, { output: 'string', pad: true, round: 2 }) ;
+        return filesize(bytes, { output: 'string', pad: true, round: 2 });
+    }
+
+    public static capitalize(str: string): string {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    public static formatTime(ms: number): string {
+        let seconds = Math.floor(ms / 1000);
+        let minutes = Math.floor(seconds / 60);
+        let hours = Math.floor(minutes / 60);
+
+        let secondsStr = (seconds % 60).toString().padStart(2, '0');
+        let minutesStr = (minutes % 60).toString().padStart(2, '0');
+        let hoursStr = hours.toString().padStart(2, '0');
+
+        return `${hoursStr}:${minutesStr}:${secondsStr}`;
     }
 }

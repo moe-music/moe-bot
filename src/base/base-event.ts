@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { MoeClient } from '../extensions/index.js';
 
 export class BaseEvent {
@@ -13,7 +14,7 @@ export class BaseEvent {
         this.file = file;
         this.fileName = file.split('.')[0];
     }
-    public run(): void {
+    public run(...args: any[]): void {
         throw new Error(`Event ${this.name} doesn't have a run method.`);
     }
 }

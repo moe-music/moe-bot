@@ -1,3 +1,1 @@
-
-
-export { BaseEvent } from './base-event.js';
+export { BaseEvent } from '../base/base-event.js';

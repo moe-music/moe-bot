@@ -7,16 +7,17 @@ import {
 } from 'discord.js';
 
 import { FormatUtils, InteractionUtils } from './index.js';
-import { Command } from '../commands/index.js';
+import { BaseCommand } from '../base/index.js';
 import { Permission } from '../models/enum-helpers/index.js';
 
-
 export class CommandUtils {
-    public static findCommand(commands: Command[], commandParts: string[]): Command {
+    public static findCommand(commands: BaseCommand[], commandParts: string[]): BaseCommand {
         let found = [...commands];
-        let closestMatch: Command;
+        let closestMatch: BaseCommand;
         for (let [index, commandPart] of commandParts.entries()) {
-            found = found.filter(command => command.names[index] === commandPart);
+            found =
+                found.filter(command => command.name[index] === commandPart) ||
+                found.filter(command => command.aliases[index] === commandPart);
             if (found.length === 0) {
                 return closestMatch;
             }
@@ -25,7 +26,9 @@ export class CommandUtils {
                 return found[0];
             }
 
-            let exactMatch = found.find(command => command.names.length === index + 1);
+            let exactMatch =
+                found.find(command => command.name.length === index + 1) ||
+                found.find(command => command.aliases.length === index + 1);
             if (exactMatch) {
                 closestMatch = exactMatch;
             }
@@ -34,15 +37,17 @@ export class CommandUtils {
     }
 
     public static async runChecks(
-        command: Command,
-        intr: CommandInteraction | MessageComponentInteraction | ModalSubmitInteraction,
+        command: BaseCommand,
+        intr: CommandInteraction | MessageComponentInteraction | ModalSubmitInteraction
     ): Promise<boolean> {
         if (command.cooldown) {
             let limited = command.cooldown.take(intr.user.id);
             if (limited) {
                 await InteractionUtils.send(
                     intr,
-                    `Please wait ${FormatUtils.duration(command.cooldown.interval)} before using this command again.`
+                    `Please wait ${FormatUtils.duration(
+                        command.cooldown.interval
+                    )} before using this command again.`
                 );
                 return false;
             }
@@ -50,14 +55,13 @@ export class CommandUtils {
 
         if (
             (intr.channel instanceof GuildChannel || intr.channel instanceof ThreadChannel) &&
-            !intr.channel.permissionsFor(intr.client.user).has(command.requireClientPerms)
+            !intr.channel.permissionsFor(intr.client.user).has(command.permissions.bot)
         ) {
             await InteractionUtils.send(
                 intr,
-                `I'm missing the following permissions: ${command.requireClientPerms
+                `I'm missing the following permissions: ${command.permissions.bot
                     .map(perm => `**${Permission.Data[perm].displayName()}**`)
                     .join(', ')}`
-                
             );
             return false;
         }

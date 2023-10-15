@@ -1,0 +1,519 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Languages {
+  Arabic
+  Indonesian
+  EnglishUS
+  EnglishGB
+  German
+  Bulgarian
+  ChineseCN
+  ChineseTW
+  Croatian
+  Czech
+  Danish
+  Dutch
+  Finnish
+  French
+  Greek
+  Hindi
+  Hungarian
+  Italian
+  Japanese
+  Korean
+  Lithuanian
+  Norwegian
+  Polish
+  PortugueseBR
+  Romanian
+  Russian
+  SpanishES
+  Swedish
+  Thai
+  Turkish
+  Ukrainian
+  Vietnamese
+}
+
+enum logType {
+  ServerUpdate
+  MessageDelete
+  BulkMessageDelete
+  MessageEdit
+  MemberJoin
+  MemberLeave
+  MemberUpdate
+  MemberRoleAdd
+  MemberRoleRemove
+  MembersNicknameUpdate
+  MemberUsernameUpdate
+  MemberAvatarUpdate
+  MemberBan
+  MemberUnban
+  MemberKick
+  ChannelCreate
+  ChannelDelete
+  ChannelUpdate
+  ChannelPinsUpdate
+  EmojiCreate
+  EmojiDelete
+  EmojiUpdate
+  InviteCreate
+  InviteDelete
+  RoleCreate
+  RoleDelete
+  RoleUpdate
+  VoiceJoin
+  VoiceLeave
+  VoiceMove
+  VoiceServerDeafen
+  VoiceServerMute
+  VoiceDeafen
+  VoiceStream
+  threadCreate
+  threadDelete
+  threadUpdate
+  threadListSync
+  threadMemberUpdate
+  threadMembersUpdate
+}
+
+model Guild {
+  guildId          String            @unique
+  prefixs          Prefix[]
+  noPrefix         Boolean           @default(false)
+  trackButtons     TrackButton?
+  stay247          Stay247?
+  commands         Command[]
+  disabledCommands DisabledCommand[]
+  language         Languages         @default(EnglishUS)
+  voteSkip         voteSkip?
+  Dj               Dj?
+  botChannels      BotChannel[]
+  voiceChannels    VoiceChannel[]
+  tracks           Track[]
+  premium          Premium?
+  setup            Setup?
+  DjRole           DjRole[]
+  defaultVolume    DefaultVolume?
+  announce         Announce?
+  logger           Logger?
+  log              LogChannel[]
+  welcome          Welcome?
+  punishment       Punishment[]
+}
+
+model Announce {
+  mode         Boolean @default(false)
+  channelId    String
+  addTimestamp BigInt?
+  moderator    String?
+  guild        Guild   @relation(fields: [guildId], references: [guildId])
+  guildId      String
+  prunning     Boolean @default(true)
+
+  @@id([guildId])
+}
+
+model voteSkip {
+  mode         Boolean @default(true)
+  moderator    String  @default("977742811132743762")
+  addTimestamp BigInt
+  guild        Guild   @relation(fields: [guildId], references: [guildId])
+  guildId      String
+
+  @@id([guildId])
+}
+
+model DefaultVolume {
+  volume       Int     @default(100)
+  guild        Guild   @relation(fields: [guildId], references: [guildId])
+  guildId      String
+  moderator    String  @default("977742811132743762")
+  addTimestamp BigInt?
+
+  @@id([guildId])
+}
+
+model User {
+  userId     String       @unique
+  profile    Profile?
+  prefix     String?
+  noPrefix   Boolean      @default(false)
+  commands   Command[]
+  tracks     Track[]
+  lastPlayed LastPlayed[]
+  premium    Premium?
+  votes      Vote[]
+  playlists  Playlist[]
+  punishment Punishment[]
+}
+
+model Bot {
+  botId    String    @unique
+  tracks   Track[]
+  commands Command[]
+}
+
+model Prefix {
+  id           Int    @id @default(autoincrement())
+  prefix       String @default("?")
+  moderator    String @default("977742811132743762")
+  addTimestamp BigInt
+  guild        Guild  @relation(fields: [guildId], references: [guildId])
+  guildId      String
+
+  @@unique([guildId, prefix])
+}
+
+model TrackButton {
+  mode         Boolean @default(true)
+  moderator    String  @default("977742811132743762")
+  addTimestamp BigInt
+  guild        Guild   @relation(fields: [guildId], references: [guildId])
+  guildId      String
+
+  @@id([guildId])
+}
+
+model Stay247 {
+  mode           Boolean @default(false)
+  voiceChannelId String
+  textChannelId  String
+  addTimestamp   BigInt?
+  moderator      String?
+  guild          Guild   @relation(fields: [guildId], references: [guildId])
+  guildId        String
+
+  @@id([guildId])
+}
+
+model Command {
+  id            Int     @id @default(autoincrement())
+  name          String
+  times         BigInt  @default(0)
+  usedTimestamp BigInt?
+  guild         Guild?  @relation(fields: [guildId], references: [guildId])
+  guildId       String?
+  user          User?   @relation(fields: [userId], references: [userId])
+  userId        String?
+  bot           Bot?    @relation(fields: [botId], references: [botId])
+  botId         String?
+
+  @@unique([guildId, name])
+  @@unique([userId, name])
+  @@unique([botId, name])
+}
+
+model DisabledCommand {
+  name         String
+  moderator    String?
+  addTimestamp BigInt?
+  guild        Guild   @relation(fields: [guildId], references: [guildId])
+  guildId      String
+
+  @@unique([guildId, name])
+}
+
+model Dj {
+  roles   DjRole[]
+  mode    Boolean  @default(false)
+  guildId String
+  guild   Guild    @relation(fields: [guildId], references: [guildId])
+
+  @@unique([guildId])
+}
+
+model DjRole {
+  id           Int     @id @default(autoincrement())
+  roleId       String
+  moderator    String?
+  addTimestamp BigInt?
+  Dj           Dj?     @relation(fields: [djGuildId], references: [guildId])
+  djGuildId    String?
+  Guild        Guild?  @relation(fields: [guildGuildId], references: [guildId])
+  guildGuildId String?
+
+  @@unique([djGuildId, roleId])
+}
+
+model BotChannel {
+  channelId    String
+  moderator    String?
+  addTimestamp BigInt?
+  guild        Guild   @relation(fields: [guildId], references: [guildId])
+  guildId      String
+
+  @@unique([guildId, channelId])
+}
+
+model VoiceChannel {
+  channelId    String
+  moderator    String?
+  addTimestamp BigInt?
+  guild        Guild   @relation(fields: [guildId], references: [guildId])
+  guildId      String
+
+  @@unique([guildId, channelId])
+}
+
+model Track {
+  id                  String   @id @unique @default(cuid())
+  title               String
+  track               String?
+  identifier          String
+  author              String?
+  length              BigInt?
+  isSeekable          Boolean?
+  isStream            Boolean?
+  uri                 String   @default("https://moebot.pro")
+  times               BigInt   @default(1)
+  requesters          String[]
+  lastPlayedTimestamp BigInt?
+  guild               Guild?   @relation(fields: [guildId], references: [guildId])
+  guildId             String?
+  user                User?    @relation(fields: [userId], references: [userId])
+  userId              String?
+  like                Like?
+  bot                 Bot?     @relation(fields: [botId], references: [botId])
+  botId               String?
+
+  @@unique([guildId, identifier])
+  @@unique([userId, identifier])
+  @@unique([botId, identifier])
+}
+
+model LastPlayed {
+  id          Int      @id @default(autoincrement())
+  textChannel String
+  tracks      String[]
+  user        User?    @relation(fields: [userId], references: [userId])
+  userId      String?
+
+  @@unique([userId])
+}
+
+model Premium {
+  id                      String  @id @unique @default(cuid())
+  isPremium               Boolean @default(false)
+  premiumType             String  @default("none")
+  premiumTimestamp        BigInt
+  premiumExpiresTimestamp BigInt
+  user                    User?   @relation(fields: [userId], references: [userId])
+  userId                  String? @unique
+  guild                   Guild?  @relation(fields: [guildId], references: [guildId])
+  guildId                 String? @unique
+}
+
+model Code {
+  code      String @unique
+  expiresAt BigInt
+  plan      String
+  type      String @default("none")
+}
+
+model Setup {
+  moderator    String?
+  channelId    String
+  messageId    String
+  addTimestamp BigInt?
+  guildId      String
+  guild        Guild   @relation(fields: [guildId], references: [guildId])
+
+  @@id([guildId])
+}
+
+model Profile {
+  bio        String  @default("No bio provided.")
+  color      String  @default("#59D893")
+  visibility String  @default("public")
+  user       User    @relation(fields: [userId], references: [userId])
+  userId     String
+  badges  Badges[]  @default([NONE])
+
+  @@id([userId])
+}
+
+model Vote {
+  voted                Boolean @default(false)
+  voteTimestamp        BigInt?
+  voteExpiresTimestamp BigInt
+  voteIn               String  @default("none")
+  user                 User    @relation(fields: [userId], references: [userId])
+  userId               String
+
+  @@id([userId])
+}
+
+model Playlist {
+  id                   String   @id @unique @default(cuid())
+  name                 String
+  tracks               String[]
+  createdTimestamp     BigInt?
+  lastUpdatedTimestamp BigInt?
+  visibility           String   @default("private")
+  user                 User     @relation(fields: [userId], references: [userId])
+  userId               String
+
+  @@unique([userId, name])
+}
+
+model Like {
+  likes      BigInt   @default(0)
+  likedUsers String[]
+  track      Track    @relation(fields: [trackId], references: [id])
+  trackId    String
+
+  @@id([trackId])
+}
+
+model Logger {
+  id         String       @id @default(uuid())
+  guildId    String?
+  guild      Guild?       @relation(fields: [guildId], references: [guildId])
+  LogChannel LogChannel[]
+
+  @@unique([guildId])
+}
+
+model LogChannel {
+  id        String    @id @default(uuid())
+  guildId   String
+  logGuild  String?
+  guild     Guild?    @relation(fields: [guildId], references: [guildId])
+  logger    Logger?   @relation(fields: [logGuild], references: [guildId])
+  textId    String?
+  hookUrl   String?
+  mode      Boolean   @default(false)
+  type      logType[]
+  color     String    @default("#ff0000")
+  moderator String?
+
+  @@unique([guildId, type])
+}
+
+model Welcome {
+  id                   String        @id @default(uuid())
+  guildId              String
+  guild                Guild?        @relation(fields: [guildId], references: [guildId])
+  jsonCode             String?
+  jsonCodeLeave        String?
+  welcomeToggle        Boolean       @default(false)
+  leaveToggle          Boolean       @default(false)
+  welcomeBackground    String?
+  leaveBackground      String?
+  welcomePrivateToggle Boolean       @default(false)
+  leavePrivateToggle   Boolean       @default(false)
+  welcomeMessageToggle Boolean       @default(false)
+  leaveMessageToggle   Boolean       @default(false)
+  welcomeEmbedToggle   Boolean       @default(false)
+  leaveEmbedToggle     Boolean       @default(false)
+  welcomeRoleToggle    Boolean       @default(false)
+  welcomeRole          welcomeRole[]
+  welcomeMesage        String?       @default("Hello {user}, Welcome to **{server}**!")
+  leaveMessage         String?       @default("{user} just left server")
+  welcomeChannel       String?
+  leaveChannel         String?
+  welcomeEmbed         welcomeEmbed?
+  leaveEmbed           leaveEmbed?
+  moderator            String?
+
+  @@unique([guildId])
+  @@unique([welcomeChannel])
+  @@unique([leaveChannel])
+}
+
+model welcomeEmbed {
+  id          String  @id @default(uuid())
+  guildId     String
+  guild       Welcome @relation(fields: [guildId], references: [guildId])
+  title       String  @default("Welcome!")
+  titleUrl    String?
+  description String? @default("Welcome {user} to {server}, we now have {memberCount} Members!")
+  color       String? @default("#ff0000")
+  footer      String?
+  footerUrl   String?
+  thumbnail   String?
+  image       String?
+  authorName  String?
+  authorUrl   String?
+  authorIcon  String?
+
+  @@unique([guildId])
+}
+
+model leaveEmbed {
+  id          String  @id @default(uuid())
+  guildId     String
+  guild       Welcome @relation(fields: [guildId], references: [guildId])
+  title       String  @default("Goodbye!")
+  titleUrl    String?
+  description String? @default("{user} just left {server}, we now have {memberCount} Members!")
+  color       String? @default("#ff0000")
+  footer      String?
+  footerUrl   String?
+  thumbnail   String?
+  image       String?
+  authorName  String?
+  authorUrl   String?
+  authorIcon  String?
+
+  @@unique([guildId])
+}
+
+model welcomeRole {
+  id      String  @id @default(uuid())
+  guildId String
+  guild   Welcome @relation(fields: [guildId], references: [guildId])
+  roleId  String
+
+  @@unique([guildId, roleId])
+}
+
+model Punishment {
+  id        Int            @id @unique @default(autoincrement())
+  guildId   String
+  guild     Guild?         @relation(fields: [guildId], references: [guildId])
+  moderator String?
+  type      PunishmentType
+  reason    String?
+  createdAt BigInt?
+  flags     BigInt         @default(0)
+  expires   BigInt?
+  active    Boolean        @default(true)
+  User      User?          @relation(fields: [UserId], references: [userId])
+  UserId    String?
+  deleted   Boolean        @default(false)
+}
+
+enum PunishmentType {
+  MUTE
+  KICK
+  BAN
+  WARN
+  OTHER
+}
+
+enum Badges {
+  OWNER
+  DEVELOPER
+  ADMIN
+  MODERATOR
+  HELPER
+  STAFF
+  SUPPORTER
+  TRANSLATOR
+  TESTER
+  PARTNER
+  DONATOR
+  SPECIAL
+  TEAM
+  NONE
+}

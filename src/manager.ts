@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { ShardingManager } from 'discord.js';
 import { createRequire } from 'node:module';
 import 'reflect-metadata';
@@ -51,7 +52,7 @@ async function start(): Promise<void> {
         return;
     }
 
-    let shardManager = new ShardingManager('dist/start-bot.js', {
+    let shardManager = new ShardingManager('dist/bot.js', {
         token: Config.client.token,
         mode: Debug.override.shardMode.enabled ? Debug.override.shardMode.value : 'process',
         respawn: true,

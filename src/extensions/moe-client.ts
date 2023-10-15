@@ -1,6 +1,8 @@
 import { ActivityType, Client, ClientOptions, Presence } from 'discord.js';
+import { request } from 'undici';
 
 export class MoeClient extends Client {
+    public request = request;
     constructor(clientOptions: ClientOptions) {
         super(clientOptions);
     }
