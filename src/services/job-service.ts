@@ -1,15 +1,13 @@
 import parser from 'cron-parser';
 import { DateTime } from 'luxon';
 import schedule from 'node-schedule';
-import { createRequire } from 'node:module';
 
 import { Logger } from './index.js';
 import { Job } from '../jobs/index.js';
 
-const require = createRequire(import.meta.url);
-let Logs = require('../../lang/logs.json');
 
 export class JobService {
+    private logger = new Logger();
     constructor(private jobs: Job[]) {}
 
     public start(): void {
@@ -31,22 +29,20 @@ export class JobService {
             schedule.scheduleJob(jobSchedule, async () => {
                 try {
                     if (job.log) {
-                        Logger.info(Logs.info.jobRun.replaceAll('{JOB}', job.name));
+                        this.logger.info(`Job ${job.name} is running`);
                     }
 
                     await job.run();
 
                     if (job.log) {
-                        Logger.info(Logs.info.jobCompleted.replaceAll('{JOB}', job.name));
+                        this.logger.info(`Job ${job.name} completed`);
                     }
                 } catch (error) {
-                    Logger.error(Logs.error.job.replaceAll('{JOB}', job.name), error);
+                    this.logger.error(`Job ${job.name} failed: ${error}`);
                 }
             });
-            Logger.info(
-                Logs.info.jobScheduled
-                    .replaceAll('{JOB}', job.name)
-                    .replaceAll('{SCHEDULE}', job.schedule)
+            this.logger.info(
+                `Job ${job.name} scheduled to run ${job.schedule} starting`
             );
         }
     }

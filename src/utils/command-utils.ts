@@ -9,8 +9,7 @@ import {
 import { FormatUtils, InteractionUtils } from './index.js';
 import { Command } from '../commands/index.js';
 import { Permission } from '../models/enum-helpers/index.js';
-import { EventData } from '../models/internal-models.js';
-import { Lang } from '../services/index.js';
+
 
 export class CommandUtils {
     public static findCommand(commands: Command[], commandParts: string[]): Command {
@@ -37,17 +36,13 @@ export class CommandUtils {
     public static async runChecks(
         command: Command,
         intr: CommandInteraction | MessageComponentInteraction | ModalSubmitInteraction,
-        data: EventData
     ): Promise<boolean> {
         if (command.cooldown) {
             let limited = command.cooldown.take(intr.user.id);
             if (limited) {
                 await InteractionUtils.send(
                     intr,
-                    Lang.getEmbed('validationEmbeds.cooldownHit', data.lang, {
-                        AMOUNT: command.cooldown.amount.toLocaleString(data.lang),
-                        INTERVAL: FormatUtils.duration(command.cooldown.interval, data.lang),
-                    })
+                    `Please wait ${FormatUtils.duration(command.cooldown.interval)} before using this command again.`
                 );
                 return false;
             }
@@ -59,11 +54,10 @@ export class CommandUtils {
         ) {
             await InteractionUtils.send(
                 intr,
-                Lang.getEmbed('validationEmbeds.missingClientPerms', data.lang, {
-                    PERMISSIONS: command.requireClientPerms
-                        .map(perm => `**${Permission.Data[perm].displayName(data.lang)}**`)
-                        .join(', '),
-                })
+                `I'm missing the following permissions: ${command.requireClientPerms
+                    .map(perm => `**${Permission.Data[perm].displayName()}**`)
+                    .join(', ')}`
+                
             );
             return false;
         }

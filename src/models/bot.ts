@@ -16,34 +16,20 @@ import {
 } from 'discord.js';
 import { createRequire } from 'node:module';
 
-import {
-    ButtonHandler,
-    CommandHandler,
-    GuildJoinHandler,
-    GuildLeaveHandler,
-    MessageHandler,
-    ReactionHandler,
-} from '../events/index.js';
 import { JobService, Logger } from '../services/index.js';
 import { PartialUtils } from '../utils/index.js';
+
 
 const require = createRequire(import.meta.url);
 let Config = require('../../config/config.json');
 let Debug = require('../../config/debug.json');
-let Logs = require('../../lang/logs.json');
 
 export class Bot {
     private ready = false;
-
+    private logger = new Logger();
     constructor(
         private token: string,
         private client: Client,
-        private guildJoinHandler: GuildJoinHandler,
-        private guildLeaveHandler: GuildLeaveHandler,
-        private messageHandler: MessageHandler,
-        private commandHandler: CommandHandler,
-        private buttonHandler: ButtonHandler,
-        private reactionHandler: ReactionHandler,
         private jobService: JobService
     ) {}
 
@@ -75,48 +61,48 @@ export class Bot {
         try {
             await this.client.login(token);
         } catch (error) {
-            Logger.error(Logs.error.clientLogin, error);
+            this.logger.error(`Error logging in: ${error}`);
             return;
         }
     }
 
     private async onReady(): Promise<void> {
         let userTag = this.client.user?.tag;
-        Logger.info(Logs.info.clientLogin.replaceAll('{USER_TAG}', userTag));
+        this.logger.info(`Logged in as ${userTag}`);
 
         if (!Debug.dummyMode.enabled) {
             this.jobService.start();
         }
 
         this.ready = true;
-        Logger.info(Logs.info.clientReady);
+        this.logger.info('Connected to Discord');
     }
 
     private onShardReady(shardId: number, _unavailableGuilds: Set<string>): void {
-        Logger.setShardId(shardId);
+        this.logger.info(`Shard ${shardId} is ready`);
     }
 
-    private async onGuildJoin(guild: Guild): Promise<void> {
+    private async onGuildJoin(_guild: Guild): Promise<void> {
         if (!this.ready || Debug.dummyMode.enabled) {
             return;
         }
 
         try {
-            await this.guildJoinHandler.process(guild);
+            //await this.guildJoinHandler.process(guild);
         } catch (error) {
-            Logger.error(Logs.error.guildJoin, error);
+            this.logger.error(`Error processing guild join: ${error}`);
         }
     }
 
-    private async onGuildLeave(guild: Guild): Promise<void> {
+    private async onGuildLeave(_guild: Guild): Promise<void> {
         if (!this.ready || Debug.dummyMode.enabled) {
             return;
         }
 
         try {
-            await this.guildLeaveHandler.process(guild);
+            //await this.guildLeaveHandler.process(guild);
         } catch (error) {
-            Logger.error(Logs.error.guildLeave, error);
+            this.logger.error(`Error processing guild leave: ${error}`);
         }
     }
 
@@ -134,9 +120,9 @@ export class Bot {
                 return;
             }
 
-            await this.messageHandler.process(msg);
+            // await this.messageHandler.process(msg);
         } catch (error) {
-            Logger.error(Logs.error.message, error);
+            this.logger.error(`Error processing message: ${error}`);
         }
     }
 
@@ -150,15 +136,15 @@ export class Bot {
 
         if (intr instanceof CommandInteraction || intr instanceof AutocompleteInteraction) {
             try {
-                await this.commandHandler.process(intr);
+                // await this.commandHandler.process(intr);
             } catch (error) {
-                Logger.error(Logs.error.command, error);
+                this.logger.error(`Error processing command: ${error}`);
             }
         } else if (intr instanceof ButtonInteraction) {
             try {
-                await this.buttonHandler.process(intr);
+                // await this.buttonHandler.process(intr);
             } catch (error) {
-                Logger.error(Logs.error.button, error);
+                this.logger.error(`Error processing button: ${error}`);
             }
         }
     }
@@ -185,19 +171,19 @@ export class Bot {
                 return;
             }
 
-            await this.reactionHandler.process(
+            /*             await this.reactionHandler.process(
                 msgReaction,
                 msgReaction.message as Message,
                 reactor
-            );
+            ); */
         } catch (error) {
-            Logger.error(Logs.error.reaction, error);
+            this.logger.error(`Error processing reaction: ${error}`);
         }
     }
 
     private async onRateLimit(rateLimitData: RateLimitData): Promise<void> {
         if (rateLimitData.timeToReset >= Config.logging.rateLimit.minTimeout * 1000) {
-            Logger.error(Logs.error.apiRateLimit, rateLimitData);
+            this.logger.error(`API rate limit: ${JSON.stringify(rateLimitData)}`);
         }
     }
 }

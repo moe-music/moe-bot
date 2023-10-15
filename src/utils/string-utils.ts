@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { escapeMarkdown } from 'discord.js';
 import removeMarkdown from 'remove-markdown';
 

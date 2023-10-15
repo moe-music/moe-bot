@@ -12,10 +12,10 @@ import { MathUtils, ShardUtils } from './utils/index.js';
 const require = createRequire(import.meta.url);
 let Config = require('../config/config.json');
 let Debug = require('../config/debug.json');
-let Logs = require('../lang/logs.json');
+const logger = new Logger();
 
 async function start(): Promise<void> {
-    Logger.info(Logs.info.appStarted);
+    logger.info('Starting manager');
 
     // Dependencies
     let httpService = new HttpService();
@@ -42,12 +42,12 @@ async function start(): Promise<void> {
             totalShards = recommendedShards;
         }
     } catch (error) {
-        Logger.error(Logs.error.retrieveShards, error);
+        logger.error(`Error retrieving shards: ${error}`);
         return;
     }
 
     if (shardList.length === 0) {
-        Logger.warn(Logs.warn.managerNoShards);
+        logger.warn('No shards to spawn');
         return;
     }
 
@@ -82,9 +82,9 @@ async function start(): Promise<void> {
 }
 
 process.on('unhandledRejection', (reason, _promise) => {
-    Logger.error(Logs.error.unhandledRejection, reason);
+    logger.error(JSON.stringify(reason));
 });
 
 start().catch(error => {
-    Logger.error(Logs.error.unspecified, error);
+    logger.error(`Error starting manager: ${error}`);
 });

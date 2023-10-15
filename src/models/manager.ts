@@ -6,10 +6,13 @@ import { JobService, Logger } from '../services/index.js';
 const require = createRequire(import.meta.url);
 let Config = require('../../config/config.json');
 let Debug = require('../../config/debug.json');
-let Logs = require('../../lang/logs.json');
 
 export class Manager {
-    constructor(private shardManager: ShardingManager, private jobService: JobService) {}
+    private logger = new Logger();
+    constructor(
+        private shardManager: ShardingManager,
+        private jobService: JobService
+    ) {}
 
     public async start(): Promise<void> {
         this.registerListeners();
@@ -17,19 +20,15 @@ export class Manager {
         let shardList = this.shardManager.shardList as number[];
 
         try {
-            Logger.info(
-                Logs.info.managerSpawningShards
-                    .replaceAll('{SHARD_COUNT}', shardList.length.toLocaleString())
-                    .replaceAll('{SHARD_LIST}', shardList.join(', '))
-            );
+            this.logger.info(`Spawning shards of ${shardList.length.toLocaleString()}: ${shardList.join(', ')}`);
             await this.shardManager.spawn({
                 amount: this.shardManager.totalShards,
                 delay: Config.sharding.spawnDelay * 1000,
                 timeout: Config.sharding.spawnTimeout * 1000,
             });
-            Logger.info(Logs.info.managerAllShardsSpawned);
+            this.logger.info(`All shards spawned`);
         } catch (error) {
-            Logger.error(Logs.error.managerSpawningShards, error);
+            this.logger.error(`Error spawning shards`, error);
             return;
         }
 
@@ -45,6 +44,6 @@ export class Manager {
     }
 
     private onShardCreate(shard: Shard): void {
-        Logger.info(Logs.info.managerLaunchedShard.replaceAll('{SHARD_ID}', shard.id.toString()));
+        this.logger.info(`Launched shard ${shard.id.toString()}`);
     }
 }

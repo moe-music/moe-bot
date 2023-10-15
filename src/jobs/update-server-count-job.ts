@@ -2,17 +2,17 @@ import { ActivityType, ShardingManager } from 'discord.js';
 import { createRequire } from 'node:module';
 
 import { Job } from './index.js';
-import { CustomClient } from '../extensions/index.js';
+import { MoeClient } from '../extensions/index.js';
 import { BotSite } from '../models/config-models.js';
-import { HttpService, Lang, Logger } from '../services/index.js';
+import { HttpService, Logger } from '../services/index.js';
 import { ShardUtils } from '../utils/index.js';
 
 const require = createRequire(import.meta.url);
 let BotSites: BotSite[] = require('../../config/bot-sites.json');
 let Config = require('../../config/config.json');
-let Logs = require('../../lang/logs.json');
 
 export class UpdateServerCountJob extends Job {
+    private logger = new Logger();
     public name = 'Update Server Count';
     public schedule: string = Config.jobs.updateServerCount.schedule;
     public log: boolean = Config.jobs.updateServerCount.log;
@@ -21,7 +21,10 @@ export class UpdateServerCountJob extends Job {
 
     private botSites: BotSite[];
 
-    constructor(private shardManager: ShardingManager, private httpService: HttpService) {
+    constructor(
+        private shardManager: ShardingManager,
+        private httpService: HttpService
+    ) {
         super();
         this.botSites = BotSites.filter(botSite => botSite.enabled);
     }
@@ -31,17 +34,17 @@ export class UpdateServerCountJob extends Job {
 
         let type = ActivityType.Streaming;
         let name = `to ${serverCount.toLocaleString()} servers`;
-        let url = Lang.getCom('links.stream');
+        let url = `https://www.twitch.tv/${Config.client.username}`;
 
         await this.shardManager.broadcastEval(
-            (client: CustomClient, context) => {
+            (client: MoeClient, context) => {
                 return client.setPresence(context.type, context.name, context.url);
             },
             { context: { type, name, url } }
         );
 
-        Logger.info(
-            Logs.info.updatedServerCount.replaceAll('{SERVER_COUNT}', serverCount.toLocaleString())
+        this.logger.info(
+            `Updated server count to ${serverCount.toLocaleString()}`
         );
 
         for (let botSite of this.botSites) {
@@ -55,14 +58,12 @@ export class UpdateServerCountJob extends Job {
                     throw res;
                 }
             } catch (error) {
-                Logger.error(
-                    Logs.error.updatedServerCountSite.replaceAll('{BOT_SITE}', botSite.name),
-                    error
+                this.logger.error(
+                    `Error updating server count on ${botSite.name}: ${error}`
                 );
                 continue;
             }
-
-            Logger.info(Logs.info.updatedServerCountSite.replaceAll('{BOT_SITE}', botSite.name));
+            this.logger.info(`Updated server count on ${botSite.name}`);
         }
     }
 }

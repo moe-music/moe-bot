@@ -4,7 +4,7 @@ import router from 'express-promise-router';
 import { createRequire } from 'node:module';
 
 import { Controller } from './index.js';
-import { CustomClient } from '../extensions/index.js';
+import { MoeClient } from '../extensions/index.js';
 import { mapClass } from '../middleware/index.js';
 import {
     GetShardsResponse,
@@ -16,10 +16,10 @@ import { Logger } from '../services/index.js';
 
 const require = createRequire(import.meta.url);
 let Config = require('../../config/config.json');
-let Logs = require('../../lang/logs.json');
 
 export class ShardsController implements Controller {
     public path = '/shards';
+    private logger = new Logger();
     public router: Router = router();
     public authToken: string = Config.api.secret;
 
@@ -45,7 +45,8 @@ export class ShardsController implements Controller {
                     let uptime = (await shard.fetchClientValue('uptime')) as number;
                     shardInfo.uptimeSecs = Math.floor(uptime / 1000);
                 } catch (error) {
-                    Logger.error(Logs.error.managerShardInfo, error);
+                    //Logger.error(Logs.error.managerShardInfo, error);
+                    this.logger.error(`Error fetching shard info: ${error}`);
                     shardInfo.error = true;
                 }
 
@@ -69,7 +70,7 @@ export class ShardsController implements Controller {
         let reqBody: SetShardPresencesRequest = res.locals.input;
 
         await this.shardManager.broadcastEval(
-            (client: CustomClient, context) => {
+            (client: MoeClient, context) => {
                 return client.setPresence(context.type, context.name, context.url);
             },
             { context: { type: ActivityType[reqBody.type], name: reqBody.name, url: reqBody.url } }

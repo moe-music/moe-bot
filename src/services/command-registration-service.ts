@@ -12,9 +12,9 @@ import { Logger } from './logger.js';
 
 const require = createRequire(import.meta.url);
 let Config = require('../../config/config.json');
-let Logs = require('../../lang/logs.json');
 
 export class CommandRegistrationService {
+    private logger = new Logger();
     constructor(private rest: REST) {}
 
     public async process(
@@ -37,46 +37,39 @@ export class CommandRegistrationService {
 
         switch (args[3]) {
             case 'view': {
-                Logger.info(
-                    Logs.info.commandActionView
-                        .replaceAll(
-                            '{LOCAL_AND_REMOTE_LIST}',
-                            this.formatCommandList(localCmdsOnRemote)
-                        )
-                        .replaceAll('{LOCAL_ONLY_LIST}', this.formatCommandList(localCmdsOnly))
-                        .replaceAll('{REMOTE_ONLY_LIST}', this.formatCommandList(remoteCmdsOnly))
+                this.logger.info(
+                    `Local and remote commands: ${this.formatCommandList(
+                        localCmdsOnRemote
+                    )}\nLocal only commands: ${this.formatCommandList(
+                        localCmdsOnly
+                    )}\nRemote only commands: ${this.formatCommandList(remoteCmdsOnly)}`
                 );
                 return;
             }
             case 'register': {
                 if (localCmdsOnly.length > 0) {
-                    Logger.info(
-                        Logs.info.commandActionCreating.replaceAll(
-                            '{COMMAND_LIST}',
-                            this.formatCommandList(localCmdsOnly)
-                        )
-                    );
+                    this.logger.info(`Creating commands: ${this.formatCommandList(localCmdsOnly)}`);
                     for (let localCmd of localCmdsOnly) {
                         await this.rest.post(Routes.applicationCommands(Config.client.id), {
                             body: localCmd,
                         });
                     }
-                    Logger.info(Logs.info.commandActionCreated);
+                    this.logger.info(`Created commands: ${this.formatCommandList(localCmdsOnly)}`);
                 }
 
                 if (localCmdsOnRemote.length > 0) {
-                    Logger.info(
-                        Logs.info.commandActionUpdating.replaceAll(
-                            '{COMMAND_LIST}',
-                            this.formatCommandList(localCmdsOnRemote)
-                        )
+                    this.logger.info(
+                        `Updating commands: ${this.formatCommandList(localCmdsOnRemote)}`
                     );
+
                     for (let localCmd of localCmdsOnRemote) {
                         await this.rest.post(Routes.applicationCommands(Config.client.id), {
                             body: localCmd,
                         });
                     }
-                    Logger.info(Logs.info.commandActionUpdated);
+                    this.logger.info(
+                        `Updated commands: ${this.formatCommandList(localCmdsOnRemote)}`
+                    );
                 }
 
                 return;
@@ -85,63 +78,49 @@ export class CommandRegistrationService {
                 let oldName = args[4];
                 let newName = args[5];
                 if (!(oldName && newName)) {
-                    Logger.error(Logs.error.commandActionRenameMissingArg);
+                    this.logger.error(
+                        `Missing arguments. Usage: ${args[2]} ${args[3]} <old name> <new name>`
+                    );
                     return;
                 }
 
                 let remoteCmd = remoteCmds.find(remoteCmd => remoteCmd.name == oldName);
                 if (!remoteCmd) {
-                    Logger.error(
-                        Logs.error.commandActionNotFound.replaceAll('{COMMAND_NAME}', oldName)
-                    );
+                    this.logger.error(`Command not found: ${oldName}`);
                     return;
                 }
 
-                Logger.info(
-                    Logs.info.commandActionRenaming
-                        .replaceAll('{OLD_COMMAND_NAME}', remoteCmd.name)
-                        .replaceAll('{NEW_COMMAND_NAME}', newName)
-                );
+                this.logger.info(`Renaming command: ${remoteCmd.name} -> ${newName}`);
                 let body: RESTPatchAPIApplicationCommandJSONBody = {
                     name: newName,
                 };
                 await this.rest.patch(Routes.applicationCommand(Config.client.id, remoteCmd.id), {
                     body,
                 });
-                Logger.info(Logs.info.commandActionRenamed);
+                this.logger.info(`Renamed command: ${remoteCmd.name} -> ${newName}`);
                 return;
             }
             case 'delete': {
                 let name = args[4];
                 if (!name) {
-                    Logger.error(Logs.error.commandActionDeleteMissingArg);
+                    this.logger.error(`Missing argument. Usage: ${args[2]} ${args[3]} <name>`);
                     return;
                 }
 
                 let remoteCmd = remoteCmds.find(remoteCmd => remoteCmd.name == name);
                 if (!remoteCmd) {
-                    Logger.error(
-                        Logs.error.commandActionNotFound.replaceAll('{COMMAND_NAME}', name)
-                    );
+                    this.logger.error(`Command not found: ${name}`);
                     return;
                 }
-
-                Logger.info(
-                    Logs.info.commandActionDeleting.replaceAll('{COMMAND_NAME}', remoteCmd.name)
-                );
+                this.logger.info(`Deleting command: ${remoteCmd.name}`);
                 await this.rest.delete(Routes.applicationCommand(Config.client.id, remoteCmd.id));
-                Logger.info(Logs.info.commandActionDeleted);
+                this.logger.info(`Deleted command: ${remoteCmd.name}`);
                 return;
             }
             case 'clear': {
-                Logger.info(
-                    Logs.info.commandActionClearing.replaceAll(
-                        '{COMMAND_LIST}',
-                        this.formatCommandList(remoteCmds)
-                    )
-                );
+                this.logger.info(`Clearing commands: ${this.formatCommandList(remoteCmds)}`);
                 await this.rest.put(Routes.applicationCommands(Config.client.id), { body: [] });
-                Logger.info(Logs.info.commandActionCleared);
+                this.logger.info(`Cleared commands: ${this.formatCommandList(remoteCmds)}`);
                 return;
             }
         }
@@ -153,5 +132,17 @@ export class CommandRegistrationService {
         return cmds.length > 0
             ? cmds.map((cmd: { name: string }) => `'${cmd.name}'`).join(', ')
             : 'N/A';
+    }
+
+    public getCommands(): RESTPostAPIApplicationCommandsJSONBody[] {
+        let commands = [];
+        for (let command of Config.commands) {
+            commands.push({
+                name: command.name,
+                description: command.description,
+                options: command.options,
+            });
+        }
+        return commands;
     }
 }

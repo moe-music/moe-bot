@@ -1,4 +1,4 @@
-import { ApplicationCommand, Guild, Locale } from 'discord.js';
+import { ApplicationCommand, Guild } from 'discord.js';
 import { filesize } from 'filesize';
 import { Duration } from 'luxon';
 
@@ -30,11 +30,11 @@ export class FormatUtils {
         return `</${name}:${command.id}>`;
     }
 
-    public static duration(milliseconds: number, langCode: Locale): string {
+    public static duration(milliseconds: number): string {
         return Duration.fromObject(
             Object.fromEntries(
                 Object.entries(
-                    Duration.fromMillis(milliseconds, { locale: langCode })
+                    Duration.fromMillis(milliseconds)
                         .shiftTo(
                             'year',
                             'quarter',
@@ -52,6 +52,6 @@ export class FormatUtils {
     }
 
     public static fileSize(bytes: number): string {
-        return filesize(bytes, { output: 'string', pad: true, round: 2 }) as string;
+        return filesize(bytes, { output: 'string', pad: true, round: 2 }) ;
     }
 }

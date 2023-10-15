@@ -2,21 +2,21 @@ import {
     ApplicationCommand,
     Channel,
     Client,
+    Collection,
     DiscordAPIError,
     RESTJSONErrorCodes as DiscordApiErrors,
     Guild,
     GuildMember,
-    Locale,
     NewsChannel,
     Role,
     StageChannel,
     TextChannel,
     User,
-    VoiceChannel,
-} from 'discord.js';
+ VoiceChannel } from 'discord.js';
 
 import { PermissionUtils, RegexUtils } from './index.js';
-import { Lang } from '../services/index.js';
+
+
 
 const FETCH_MEMBER_LIMIT = 20;
 const IGNORED_ERRORS = [
@@ -107,12 +107,12 @@ export class ClientUtils {
 
             let tag = RegexUtils.tag(input);
             if (tag) {
-                return (
-                    await guild.members.fetch({ query: tag.username, limit: FETCH_MEMBER_LIMIT })
-                ).find(member => member.user.discriminator === tag.discriminator);
+                let members = await guild.members.fetch({ query: tag.username, limit: FETCH_MEMBER_LIMIT }) as unknown as Collection<string, GuildMember>;
+                return members.find(member => member.user.discriminator === tag.discriminator);
             }
 
-            return (await guild.members.fetch({ query: input, limit: 1 })).first();
+            let members = await guild.members.fetch({ query: input, limit: 1 }) as unknown as Collection<string, GuildMember>;
+            return members.first();
         } catch (error) {
             if (
                 error instanceof DiscordAPIError &&
@@ -228,7 +228,6 @@ export class ClientUtils {
 
     public static async findNotifyChannel(
         guild: Guild,
-        langCode: Locale
     ): Promise<TextChannel | NewsChannel> {
         // Prefer the system channel
         let systemChannel = guild.systemChannel;
@@ -241,7 +240,8 @@ export class ClientUtils {
             channel =>
                 (channel instanceof TextChannel || channel instanceof NewsChannel) &&
                 PermissionUtils.canSend(channel, true) &&
-                Lang.getRegex('channelRegexes.bot', langCode).test(channel.name)
+            /*  Lang.getRegex('channelRegexes.bot', langCode).test(channel.name) */
+                `${channel.name}`.includes('bot')
         ) as TextChannel | NewsChannel;
     }
 }
